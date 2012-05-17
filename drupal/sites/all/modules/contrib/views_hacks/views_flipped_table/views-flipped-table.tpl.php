@@ -6,7 +6,7 @@
  * - $title : The title of this group of rows.  May be empty.
  * - $header: An array of header labels keyed by field id.
  * - $fields: An array of CSS IDs to use for each field id.
- * - $classes: A class or classes to apply to the table, based on settings.
+ * - $class: A class or classes to apply to the table, based on settings.
  * - $row_classes: An array of classes to apply to each row, indexed by row
  *   number. This matches the index in $rows.
  * - $rows: An array of row items. Each row is an array of content.
@@ -26,19 +26,19 @@
   $first = isset($row['title']);
   $element = 'odd';
 ?>
-<table class="<?php print $classes; ?>">
+<table class="<?php print $class; ?>">
   <?php if (!empty($title)) : ?>
     <caption><?php print $title; ?></caption>
   <?php endif; ?>
 
   <?php if ($first) : ?>
   <thead>
-    <tr class="<?php print $element; ?>">
+    <tr class="<?php echo $element; ?>">
       <th>
       </th>
       <?php foreach ($row['title'] as $title) : ?>
       <th>
-      <?php print $title; ?>
+      <?php echo $title; ?>
       </th>
       <?php endforeach; ?>
     </tr>
@@ -51,13 +51,13 @@
   <tbody>
     <?php foreach ($row as $field => $rowname) : ?>
       <?php if ($field != 'title') : ?>
-      <tr class="<?php print $element; ?>">
+      <tr class="<? echo $element; ?>">
         <th>
-          <?php print $header[$field]; ?>
+          <?php echo $header[$field]; ?>
         </th>
       <?php foreach ($rowname as $count => $item): ?>
         <td>
-          <?php print $item; ?>
+          <?php echo $item; ?>
         </td>
       <?php endforeach; ?>
       </tr>

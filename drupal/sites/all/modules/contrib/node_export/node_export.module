@@ -813,27 +813,3 @@ if (!function_exists('uuid_get_uuid')) {
     return db_result(db_query("SELECT uuid FROM {{$uuid_table}} WHERE $key = %d", $id));
   }
 }
-
-/**
- * Returns the node associated with a UUID. Has the same functionality as
- *   node_get_by_uuid() in uuid.module but does NOT uses db_rewrite_sql.
- *
- * @return
- *   Either the $node object, or FALSE on failure.
- */
-function node_export_node_get_by_uuid($uuid) {
-  $nid = db_result(db_query(
-    "SELECT n.nid
-     FROM {node} AS n
-     INNER JOIN {uuid_node} AS un ON n.nid = un.nid
-     WHERE un.uuid = '%s'",
-    $uuid
-  ));
-
-  if ($nid) {
-    return node_load($nid);
-  }
-  else {
-    return FALSE;
-  }
-}

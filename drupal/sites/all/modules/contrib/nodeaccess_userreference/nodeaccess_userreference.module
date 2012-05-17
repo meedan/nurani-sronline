@@ -102,6 +102,9 @@ function nodeaccess_userreference_content_field_edit_form_submit($form, &$form_s
  *  and 'delete'.
  */
 function nodeaccess_userreference_add_grant(&$grants, $realm, $gid, $priority, $settings) {
+  if (empty($settings['view']) && empty($settings['update']) && empty($settings['delete'])) {
+    return;
+  }
   $key = $realm . $gid;
   if (!isset($grants[$key])) {
     // Setup the record.
