@@ -1,0 +1,11 @@
+name = Compass
+description = Compass stylesheet framework tool support
+core = 6.x
+php = 5.x
+
+; Information added by drupal.org packaging script on 2011-04-24
+version = "6.x-1.0-beta3"
+core = "6.x"
+project = "compass"
+datestamp = "1303656715"
+
