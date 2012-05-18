@@ -7,7 +7,7 @@ if (theme_get_setting('basic_rebuild_registry')) {
 
 // Add Zen Tabs styles
 if (theme_get_setting('basic_zen_tabs')) {
-  drupal_add_css( drupal_get_path('theme', 'basic') .'/css/tabs.css', 'theme', 'screen');
+  drupal_add_css( drupal_get_path('theme', 'sronline') .'/css/tabs.css', 'theme', 'screen');
 }
 
 /**
@@ -19,7 +19,7 @@ if (theme_get_setting('basic_zen_tabs')) {
  *	  The name of the theme function being called ("page" in this case.)
  */
 
-function basic_preprocess_page(&$vars, $hook) {
+function sronline_preprocess_page(&$vars, $hook) {
 
   // Don't display empty help from node_help().
   if ($vars['help'] == "<div class=\"help\"><p></p>\n</div>") {
@@ -121,7 +121,7 @@ function basic_preprocess_page(&$vars, $hook) {
  *  The name of the theme function being called ("node" in this case.)
  */
 
-function basic_preprocess_node(&$vars, $hook) {
+function sronline_preprocess_node(&$vars, $hook) {
   // Special classes for nodes
   $classes = array('node');
   if ($vars['sticky']) {
@@ -151,7 +151,7 @@ function basic_preprocess_node(&$vars, $hook) {
   $vars['classes'] = implode(' ', $classes); // Concatenate with spaces
 }
 
-function basic_preprocess_comment_wrapper(&$vars) {
+function sronline_preprocess_comment_wrapper(&$vars) {
   $classes = array();
   $classes[] = 'comment-wrapper';
   
@@ -175,7 +175,7 @@ function basic_preprocess_comment_wrapper(&$vars) {
  *  The name of the theme function being called ("block" in this case.)
  */ 
 
-function basic_preprocess_block(&$vars, $hook) {
+function sronline_preprocess_block(&$vars, $hook) {
   $block = $vars['block'];
 
   // special block classes
@@ -275,7 +275,7 @@ function basic_preprocess_block(&$vars, $hook) {
  *  The name of the template being rendered ("comment" in this case.)
  */
 
-function basic_preprocess_comment(&$vars, $hook) {
+function sronline_preprocess_comment(&$vars, $hook) {
   // Add an "unpublished" flag.
   $vars['unpublished'] = ($vars['comment']->status == COMMENT_NOT_PUBLISHED);
 
@@ -324,7 +324,7 @@ function basic_preprocess_comment(&$vars, $hook) {
  * 	string The rendered menu item.
  */ 	
 
-function basic_menu_item_link($link) {
+function sronline_menu_item_link($link) {
   if (empty($link['localized_options'])) {
     $link['localized_options'] = array();
   }
@@ -343,7 +343,7 @@ function basic_menu_item_link($link) {
  * Duplicate of theme_menu_local_tasks() but adds clear-block to tabs.
  */
 
-function basic_menu_local_tasks() {
+function sronline_menu_local_tasks() {
   $output = '';
   if ($primary = menu_primary_local_tasks()) {
     if(menu_secondary_local_tasks()) {
@@ -363,7 +363,7 @@ function basic_menu_local_tasks() {
  * Add custom classes to menu item
  */	
 	
-function basic_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) {
+function sronline_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) {
   $class = ($menu ? 'expanded' : ($has_children ? 'collapsed' : 'leaf'));
   if (!empty($extra_class)) {
     $class .= ' '. $extra_class;
@@ -410,7 +410,7 @@ function basic_id_safe($string) {
  * @return
  *  A string containing the breadcrumb output.
  */
-function basic_breadcrumb($breadcrumb) {
+function sronline_breadcrumb($breadcrumb) {
   // Determine if we are to display the breadcrumb.
   $show_breadcrumb = theme_get_setting('basic_breadcrumb');
   if ($show_breadcrumb == 'yes' || $show_breadcrumb == 'admin' && arg(0) == 'admin') {
