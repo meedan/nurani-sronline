@@ -1,0 +1,153 @@
+@import 'compass/css3/border-radius'; 
+*{padding:0; margin:0;}
+body {font-family:verdana; font-size:12px; line-height:18px; color:#4A4A4A; }
+	body, h1, h2, h3, h4, h5, h6, form, fieldset, label, p, span, input, img, blockquote, ul, ul li {margin:0; padding:0px; border:0px; outline:0; font-weight:normal}
+
+#bg {position:fixed; top:0%; left:-50%; width:200%; height:200%;}
+#bg img {	position:absolute; 	top:0; left:0; 	right:0; bottom:0;	margin:auto; min-width:50%;	min-height:50%;}
+		
+.wrapper{width: 960px; height:2000px; margin: 0 auto; display:block;}
+
+div#header{ width:960px; height:139px; margin: 0 auto;  
+          a.logo{ background:url("../images/logo.png")left no-repeat; width:296px; height:128px; position:absolute;}
+          
+          #search_bar{width:240px; height:46px; position:relative; background:url("../images/search.png")no-repeat; float:right; margin: 32px 0 50px  0}	
+          #searchinput{ position:absolute; top:51px; left:7px; width:184px; height:34px; margin:-48px 1px 5px -5px; font:inherit 20px Verdana, Geneva, sans-serif; color:#999; border:0; background-color:transparent; border:none;}
+          #submit_btn{ position:absolute; top:-5px; right:2px; width:50px; height:40px; margin-top:5px; padding:0;}
+}
+
+#banner_area{width:942px; height:345px; padding:5px; margin:85px 24px 0; position:absolute;
+  ul{float:left;
+      .slides{background:url("../images/banner_bg.jpg") no-repeat; height: 321px; margin: 0; width: 622px; padding:5px;}
+      li{float: left; list-style-type: none; display: block;}
+}
+}
+
+#main{
+width:960px;
+padding: 20px 0 10px 15px;
+min-height:1360px;
+height: 100%;
+display:block;
+position:absolute;
+margin-top:80px;
+
+}
+
+@mixin breadcumb{
+ #breadcumb{
+    float:left; padding:15px 14px 0 20px; width:500px; height:24px; clear:both; overflow:hidden; 
+    ul{
+       float:left; padding:0; margin:0; width:500px;
+       li{float:left; padding:0 14px 0 5px; margin:0; list-style:none; font-size:12px; line-height:18px; background:url("../images/arrow8x8.jpg") no-repeat right 5px;
+          .last {padding-right:0; background:none}
+       }
+     }
+ a {color:gray; font-weight:bold;}
+ .last {padding-right:0; background:none; }
+  }	
+
+}
+
+@mixin content{
+ min-height:1335px;
+// margin-top:82px; 
+}
+
+ div.main_content{
+   @include content;
+    width:612px;
+    background:#fff;
+    float:left; 
+    @include breadcumb;
+    p {display:block; padding: 10px 20px; font-size:12px; line-height:22px; color:#000000; font-family:verdana}
+}
+
+#contact_us {min-height:685px;
+   p { padding: 10px 40px; }
+  .row{padding: 25px 0 0 40px; width:500px; float:left;}
+  input{width:443px; height:38px; background:url(../images/text_field.png) no-repeat; padding: 4px 10px 5px; color:#999;}
+  textarea{width:444px; height:212px; background:url(../images/text_area.png) no-repeat; padding:10px; border:none; display: block; font-family: verdana; font-size: 12px; line-height: 22px}
+
+}
+
+ h2 {display:block; padding:10px 0 0 22px ; font-size:27px; line-height:40px; color:#572983;}
+ #banner{ width:569px; height:280px; background:url(../images/banner_holder.jpg); margin:10px auto;
+    img{ width:560px; height:271px;margin: 0; padding: 5px 5px 0;}
+ }
+
+@mixin rounded{
+  background-image:-moz-linear-gradient(top, #F4F4F4, #F9F9F9);
+     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4));
+     @include border-radius(6px);
+     border:1px solid #b1a6b7;
+} 
+	
+div.right_col{
+  @include content;
+  width:320px;
+  float:right;
+  //padding:10px;
+  
+  .sub_menu{
+     @include rounded;
+     height:385px; 
+     margin:0;
+      ul{
+      list-style:none;
+      margin:0 0 0 20px;
+      padding-top:13px;
+        li{border-bottom:1px dashed #c9c6c4; margin:10px 22px 0 5px; padding:10px;}
+        a {color:gray; font-weight:bold; text-decoration:none; display:block;
+            &:hover{background:#467707; padding:10px;}
+           
+        }
+       
+      
+      }
+      
+  }
+  .about_us.newsletter{
+    @include rounded;
+    width:304px;
+    margin-top:18px;
+  }
+  .testimonial_box{
+   @include rounded;
+   margin-top: 20px;
+   //padding: 10px;
+   height:452px;
+  }
+.text_bundles{
+    @include rounded;
+    height:313px;
+    margin-top:162px;
+    
+  .title{
+    background:url(../images/text_bundles_03.gif) no-repeat;
+    height: 31px;
+    margin: 28px;
+    width: 137px; 
+  }
+  .download{ padding:5px; margin:20px;
+  .dl_icon{margin:5px;}
+    a{padding:5px;  text-decoration: none;}
+  
+    }
+}
+  #contact_details{
+    @include rounded;
+    height:286px;
+  }
+    
+}
+
+
+  
+
+  
+
+  
+
+		
+   
