@@ -13,7 +13,9 @@ body.page-user.not-logged-in div.description {
   display: none;
 }
 /* line 17, ../scss/login.scss */
-body.page-user.not-logged-in h1.title, body.page-user.not-logged-in span.form-required, body.page-user.not-logged-in #content-header ul.tabs {
+body.page-user.not-logged-in h1.title,
+body.page-user.not-logged-in span.form-required,
+body.page-user.not-logged-in #content-header ul.tabs {
   display: none;
 }
 /* line 21, ../scss/login.scss */

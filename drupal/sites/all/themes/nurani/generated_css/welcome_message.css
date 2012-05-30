@@ -1,119 +1,91 @@
-/* ================== */
-/* = "soft buttons" = */
-/* ================== */
-/* =================== */
-/* = toggle buttons = */
-/* =================== */
-/* ================ */
-/* = icon buttons = */
-/* ================ */
-/*aapplied to list*/
-/* theme core colors*/
-/*basics*/
-/*section names */
-/*bright colors*/
-/*dark colors*/
-/* line 8, ../scss/welcome_message.scss */
-body.page-overview .more-links a, body.page-overview .view-discussions .views-field-view-node a {
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -o-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -khtml-border-radius: 15px;
-  border-radius: 15px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #d5d5d5));
-  background-image: -webkit-linear-gradient(top, #ffffff, #d5d5d5);
-  background-image: -moz-linear-gradient(top, #ffffff, #d5d5d5);
-  background-image: -o-linear-gradient(top, #ffffff, #d5d5d5);
-  background-image: -ms-linear-gradient(top, #ffffff, #d5d5d5);
-  background-image: linear-gradient(top, #ffffff, #d5d5d5);
-  background-color: white;
-  border: 1px solid #d3d3d3;
-  float: right;
-  padding: 3px 7px 0;
-  color: gray;
-  font-weight: normal;
-  font-family: arial, sans-serif;
-  text-transform: uppercase;
-  display: block;
-  font-size: 0.9em;
-  text-decoration: none;
-  margin-top: -5px;
-}
-/* line 21, C:/xampp/htdocs/meedan-nurani/drupal/sites/all/themes/nurani/scss/_buttons.scss */
-body.page-overview .more-links a:hover, body.page-overview .view-discussions .views-field-view-node a:hover {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #d5d5d5));
-  background-image: -webkit-linear-gradient(top, #ffffff, #d5d5d5);
-  background-image: -moz-linear-gradient(top, #ffffff, #d5d5d5);
-  background-image: -o-linear-gradient(top, #ffffff, #d5d5d5);
-  background-image: -ms-linear-gradient(top, #ffffff, #d5d5d5);
-  background-image: linear-gradient(top, #ffffff, #d5d5d5);
-}
-/* line 25, C:/xampp/htdocs/meedan-nurani/drupal/sites/all/themes/nurani/scss/_buttons.scss */
-body.page-overview .more-links a:active, body.page-overview .view-discussions .views-field-view-node a:active {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #888888), color-stop(100%, #d5d5d5));
-  background-image: -webkit-linear-gradient(top, #888888, #d5d5d5);
-  background-image: -moz-linear-gradient(top, #888888, #d5d5d5);
-  background-image: -o-linear-gradient(top, #888888, #d5d5d5);
-  background-image: -ms-linear-gradient(top, #888888, #d5d5d5);
-  background-image: linear-gradient(top, #888888, #d5d5d5);
-}
-/* line 12, ../scss/welcome_message.scss */
-body.page-overview #slash {
-  margin: 0px 20px 0;
-  padding: 20px;
-  position: relative;
-  -moz-box-shadow: 0px 3px 3px #cccccc;
-  -webkit-box-shadow: 0px 3px 3px #cccccc;
-  -o-box-shadow: 0px 3px 3px #cccccc;
-  box-shadow: 0px 3px 3px #cccccc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fff0c2), color-stop(50%, #fff9e6), color-stop(100%, #fff9e6));
-  background-image: -webkit-linear-gradient(top, #fff0c2, #fff9e6, #fff9e6);
-  background-image: -moz-linear-gradient(top, #fff0c2, #fff9e6, #fff9e6);
-  background-image: -o-linear-gradient(top, #fff0c2, #fff9e6, #fff9e6);
-  background-image: -ms-linear-gradient(top, #fff0c2, #fff9e6, #fff9e6);
-  background-image: linear-gradient(top, #fff0c2, #fff9e6, #fff9e6);
-  background-color: #fff9e6;
-}
-/* line 19, ../scss/welcome_message.scss */
-body.page-overview #slash h3 {
-  text-shadow: 0px, 1px, 0px, white;
-  color: #333;
-  font-weight: 300px;
-  font-size: 1.6em;
-}
-/* line 26, ../scss/welcome_message.scss */
-body.page-overview #slash div.block .contextual-links-wrapper {
-  display: none;
-}
-/* line 30, ../scss/welcome_message.scss */
-body.page-overview #slash div.block .edit {
-  top: auto;
-  right: 0px;
-  bottom: 0px;
-}
-/* line 37, ../scss/welcome_message.scss */
-body.page-overview #slash #block-boxes-welcome_box img.d_ford {
-  float: right;
-  width: 80px;
-  margin: 15px;
-  border: 5px solid #fff;
-  -moz-box-shadow: 3px 3px 3px #cccccc;
-  -webkit-box-shadow: 3px 3px 3px #cccccc;
-  -o-box-shadow: 3px 3px 3px #cccccc;
-  box-shadow: 3px 3px 3px #cccccc;
-}
-/* line 46, ../scss/welcome_message.scss */
-body.page-overview #slash .toggle {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-/* line 51, ../scss/welcome_message.scss */
-body.page-overview #slash .toggle a {
-  color: #888;
-}
-/* line 53, ../scss/welcome_message.scss */
-body.page-overview #slash .toggle a:hover {
-  text-decoration: underline;
-}
+/*
+Syntax error: Undefined mixin 'linear-gradient'.
+        on line 8 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/_buttons.scss, in `linear-gradient'
+        from line 8 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/_buttons.scss, in `soft_button'
+        from line 9 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/welcome_message.scss
+
+Backtrace:
+C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/_buttons.scss:8:in `linear-gradient'
+C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/_buttons.scss:8:in `soft_button'
+C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/welcome_message.scss:9
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:169:in `visit_mixin'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:200:in `block (2 levels) in visit_mixin'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:200:in `map'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:200:in `block in visit_mixin'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:200:in `visit_mixin'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:235:in `visit_rule'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:235:in `visit_rule'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:235:in `visit_rule'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/engine.rb:293:in `_render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.7/lib/sass/engine.rb:240:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:126:in `timed'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:139:in `block in compile'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/logger.rb:45:in `red'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:138:in `compile'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:118:in `compile_if_required'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:101:in `each'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:101:in `block in run'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:126:in `timed'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/compiler.rb:100:in `run'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/commands/watch_project.rb:147:in `recompile'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/commands/watch_project.rb:68:in `perform'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/bin/compass:29:in `block in <top (required)>'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/bin/compass:43:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.1/bin/compass:43:in `<top (required)>'
+C:/Ruby192/bin/compass:19:in `load'
+C:/Ruby192/bin/compass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'linear-gradient'.\A         on line 8 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/_buttons.scss, in `linear-gradient'\A         from line 8 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/_buttons.scss, in `soft_button'\A         from line 9 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/nurani/scss/welcome_message.scss"; }
