@@ -392,7 +392,7 @@ function print_mail_insert_link($path = NULL, $node = NULL) {
   }
   else {
     if ($path === NULL) {
-      $nid = preg_replace('!^node/!', '', $_GET['q']);
+      $nid = preg_replace('!^node/([\d]+)!', '$1', $_GET['q']);
       $path = $_GET['q'];
     }
     else {
@@ -560,22 +560,6 @@ function print_mail_views_api() {
   return array(
     'api' => 2.0,
     'path' => drupal_get_path('module', 'print_mail'),
-  );
-}
-
-/**
- * Implements hook_views_data_alter().
- *
- * Provide a new option the views sorts for the number of times
- *  a node has been emailed.
- */
-function print_mail_views_data_alter(&$data) {
-  $data['node']['print_mail_sentcount'] = array(
-    'title' => t('Number of times emailed'),
-    'help' => t("The total number of times the node has been sent through print module's send by email feature."),
-    'sort' => array(
-      'handler' => 'views_handler_sort_print_mail_sentcount',
-    ),
   );
 }
 

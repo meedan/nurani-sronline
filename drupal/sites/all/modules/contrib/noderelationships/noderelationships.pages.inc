@@ -856,10 +856,20 @@ function noderelationships_noderef_ahah_search($type_name, $field_name, $item_co
   $form_state['item_count'] = array($field_name => count($_POST[$field_name]));
   $form_element = content_field_form($form, $form_state, $field);
   // Let other modules alter it.
-  drupal_alter('form', $form_element, array(), 'content_add_more_js');
+  // We pass an empty array as hook_form_alter's usual 'form_state' parameter,
+  // instead of $form_atate (for reasons we may never remember).
+  // However, this argument is still expected to be passed by-reference
+  // (and PHP5.3 will throw an error if it isn't.) This leads to:
+  $data = &$form_element;
+  $empty_form_state = array();
+  $data['__drupal_alter_by_ref'] = array(&$empty_form_state);
+  drupal_alter('form', $data, 'content_add_more_js');
 
   // Add the new element at the right place in the (original, unbuilt) form.
-  if (module_exists('fieldgroup') && ($group_name = _fieldgroup_field_get_group($type['type'], $field_name))) {
+  if (function_exists('content_set_nested_elements')) {
+    content_set_nested_elements($form, $field_name, $form_element[$field_name]);
+  }
+  elseif (module_exists('fieldgroup') && ($group_name = _fieldgroup_field_get_group($type['type'], $field_name))) {
     $form[$group_name][$field_name] = $form_element[$field_name];
   }
   else {
@@ -880,7 +890,13 @@ function noderelationships_noderef_ahah_search($type_name, $field_name, $item_co
   $form = form_builder($_POST['form_id'], $form, $form_state);
 
   // Render the new output.
-  $field_form = (!empty($group_name)) ? $form[$group_name][$field_name] : $form[$field_name];
+  if (function_exists('content_get_nested_elements')) {
+    $field_form = array_shift(content_get_nested_elements($form, $field_name));
+  }
+  else {
+    $field_form = (!empty($group_name)) ? $form[$group_name][$field_name] : $form[$field_name];
+  }
+
   // We add a div around the new content to receive the ahah effect.
   $field_form['#prefix'] = '<div class="ahah-new-content">'. (isset($field_form['#prefix']) ? $field_form['#prefix'] : '');
   $field_form['#suffix'] = (isset($field_form['#suffix']) ? $field_form['#suffix'] : '') .'</div>';

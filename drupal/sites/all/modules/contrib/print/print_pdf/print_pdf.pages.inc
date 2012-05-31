@@ -40,20 +40,27 @@ function print_pdf_controller() {
 
     $pdf_filename = variable_get('print_pdf_filename', PRINT_PDF_FILENAME_DEFAULT);
     if (function_exists('token_replace') && !empty($pdf_filename) && !empty($node)) {
-      $pdf_filename = token_replace($pdf_filename, 'node', $node) .'.pdf';
+      $pdf_filename = token_replace($pdf_filename, 'node', $node);
     }
     else {
-      $pdf_filename = str_replace('/', '_', $path) .'.pdf';
+      $pdf_filename = token_replace($pdf_filename, 'global');
+      if (empty($pdf_filename) || count(token_scan($pdf_filename))) {
+        // If there are still tokens, use a fallback solution
+        $pdf_filename = str_replace('/', '_', $path);
+      }
     }
   }
   else {
-    $pdf_filename = 'page.pdf';
+    $pdf_filename = 'page';
   }
+
   if (function_exists('transliteration_clean_filename')) {
     $pdf_filename = transliteration_clean_filename($pdf_filename, language_default('language'));
   }
 
-  $pdf = print_pdf_generate_path($path, $cid, $pdf_filename);
+  drupal_alter('print_pdf_filename', $pdf_filename, $path);
+
+  $pdf = print_pdf_generate_path($path, $cid, $pdf_filename . '.pdf');
   if ($pdf == NULL) {
     drupal_goto($path);
     exit;
@@ -188,6 +195,10 @@ function _print_pdf_dompdf($print, $html, $filename = NULL) {
 
   // Try to use local file access for image files
   $html = _print_pdf_file_access_images($html);
+
+  // Spaces in img URLs must be replaced with %20
+  $pattern = '!<(img\s[^>]*?)>!is';
+  $html = preg_replace_callback($pattern, '_print_replace_spaces', $html);
 
   // dompdf seems to have problems with something in system.css so let's not use it
   $html = preg_replace('!<link.*?modules/system/system.css.*?/>!', '', $html);
