@@ -227,13 +227,6 @@ function nurani_general_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_last_comment_timestamp_video';
-  $strongarm->value = 1;
-  $export['node_export_reset_last_comment_timestamp_video'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'ds_all_build_modes';
   $strongarm->value = array(
     'nd' => array(
@@ -297,13 +290,6 @@ function nurani_general_strongarm() {
   $strongarm->name = 'node_export_reset_last_comment_timestamp_response';
   $strongarm->value = 1;
   $export['node_export_reset_last_comment_timestamp_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_revision_timestamp_video';
-  $strongarm->value = 1;
-  $export['node_export_reset_revision_timestamp_video'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2634,20 +2620,6 @@ return theme(\'links\', $links);
   $strongarm->name = 'node_comment_text';
   $strongarm->value = 0;
   $export['node_comment_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_last_comment_timestamp_webform';
-  $strongarm->value = 1;
-  $export['node_export_reset_last_comment_timestamp_webform'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_revision_timestamp_webform';
-  $strongarm->value = 1;
-  $export['node_export_reset_revision_timestamp_webform'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

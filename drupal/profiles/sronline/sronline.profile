@@ -118,6 +118,7 @@ function sronline_profile_tasks(&$task, $url) {
     $features = array(
       'nurani_general',
       'sronline_general',
+      'sronline_video',
       'nurani_notifications_system',
     );
     variable_set('nurani_selected_features', $features);
