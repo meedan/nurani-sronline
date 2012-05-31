@@ -15,6 +15,17 @@ function sronline_general_ctools_plugin_api() {
  */
 function sronline_general_node_info() {
   $items = array(
+    'video' => array(
+      'name' => t('Video'),
+      'module' => 'features',
+      'description' => t('Upload a scriptural reasoning video.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '1',
+      'body_label' => t('Body'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
     'webform' => array(
       'name' => t('Webform'),
       'module' => 'features',
