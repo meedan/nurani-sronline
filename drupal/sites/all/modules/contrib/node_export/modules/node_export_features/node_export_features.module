@@ -121,3 +121,50 @@ function node_export_features_features_rebuild($module) {
   }
 }
 
+/**
+ * Implements hook_node_export_alter().
+ */
+function node_export_features_node_export_alter(&$nodes, $op, $format) {
+  // FIXME: This detection is difficult, make this less hackish.
+  if ($op == 'export') {
+    // Only make these alterations when exporting the node_code for a feature.
+    $is_features_page = (boolean) preg_match('@^admin/build/features@', $_GET['q']);
+    $is_drush = (PHP_SAPI == 'cli' && function_exists('drush_main')); // See: http://drupal.org/node/548798
+    if ($is_drush) {
+      // Available as of Drush 5.x-2.0-alpha2, determine what drush command is
+      // being run
+      $args = drush_get_arguments();
+      $command = array_shift($args);
+
+      // Attempt to match the current command against the commands that the
+      // features module provides (eg: features-diff, features-revert)
+      module_load_include('drush.inc', 'features');
+      $is_features_drush_command = FALSE;
+      foreach (features_drush_command() as $item_command => $items) {
+        if ($item_command == $command) {
+          $is_features_drush_command = TRUE;
+          break;
+        }
+        foreach ($items['aliases'] as $alias) {
+          if ($alias == $command) {
+            $is_features_drush_command = TRUE;
+            break 2;
+          }
+        }
+      }
+
+      $is_drush = $is_features_drush_command;
+    }
+
+    // This export is definitely happening due to something invoked by the
+    // features module.  Apply necessary alterations.
+    if ($is_features_page || $is_drush) {
+      foreach ($nodes as $key => $node) {
+        // Perform cleaning of the node before creating the export for features.
+        // This can help strip volatile attributes like 'created' and 'changed'.
+        $nodes[$key] = node_export_node_clone($node);
+      }
+    }
+  }
+}
+

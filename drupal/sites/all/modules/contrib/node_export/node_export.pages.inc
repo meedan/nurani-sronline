@@ -165,6 +165,16 @@ function node_export_settings() {
       '#title' => t('Changed time (<em>Last updated</em> date/time)'),
       '#default_value' => variable_get('node_export_reset_changed_'. $type, TRUE),
     );
+    $form['publishing'][$type]['node_export_reset_revision_timestamp_'. $type] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Revision changed time'),
+      '#default_value' => variable_get('node_export_reset_revision_timestamp_'. $type, TRUE),
+    );
+    $form['publishing'][$type]['node_export_reset_last_comment_timestamp_'. $type] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Last comment time (date/time the last comment was made)'),
+      '#default_value' => variable_get('node_export_reset_last_comment_timestamp_'. $type, TRUE),
+    );
     $form['publishing'][$type]['node_export_reset_menu_'. $type] = array(
       '#type' => 'checkbox',
       '#title' => t('Menu link'),
