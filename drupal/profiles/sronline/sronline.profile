@@ -50,10 +50,13 @@ function sronline_profile_modules() {
     'strongarm', 
     
     // Features
-    'features',
+    'features', 'diff',
+
+    // Nurani modules
+    // 'nurani_general',
 
     // SR-Online modules
-    'sronline_general',
+    // 'sronline_general',
   );
 
   return $modules;
@@ -114,6 +117,7 @@ function sronline_profile_tasks(&$task, $url) {
   if ($task == 'configure-nurani') {
     $features = array(
       'nurani_general',
+      'sronline_general',
       'nurani_notifications_system',
     );
     variable_set('nurani_selected_features', $features);
@@ -139,7 +143,7 @@ function sronline_profile_tasks(&$task, $url) {
     }
 
     // Post-installation operations
-    $operations[] = array('sronline_config_filters', array());
+    // $operations[] = array('sronline_config_filters', array());
     $operations[] = array('sronline_config_ctools', array());
     $operations[] = array('sronline_config_taxonomy', array());
     $operations[] = array('sronline_config_theme', array());
@@ -227,20 +231,20 @@ function sronline_install_languages() {
   }
 }
 
-/**
- * Configure filters
- */
-function sronline_config_filters() {
-  // Add SR-Online glossary filter to Filtered HTML
-  $filter = new stdClass;
-  $filter->format = 1;
-  $filter->module = 'nurani_glossary';
-  $filter->delta = 0;
-  $filter->weight = 10;
-  drupal_write_record('filters', $filter);
+// /**
+//  * Configure filters
+//  */
+// function sronline_config_filters() {
+//   // Add SR-Online glossary filter to Filtered HTML
+//   $filter = new stdClass;
+//   $filter->format = 1;
+//   $filter->module = 'nurani_glossary';
+//   $filter->delta = 0;
+//   $filter->weight = 10;
+//   drupal_write_record('filters', $filter);
 
-  db_query("UPDATE {filter_formats} SET cache = 0 WHERE format = 1");
-}
+//   db_query("UPDATE {filter_formats} SET cache = 0 WHERE format = 1");
+// }
 
 /**
  * Configure ctools

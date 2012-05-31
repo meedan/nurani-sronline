@@ -70,9 +70,9 @@ function nurani_general_node_info() {
       'help' => '',
     ),
     'discussion' => array(
-      'name' => t('Discussion'),
+      'name' => t('Text Bundle'),
       'module' => 'features',
-      'description' => t('A scholarly discussion.'),
+      'description' => t('A collection of passages. Houses a scholarly discussion.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',
@@ -125,9 +125,9 @@ function nurani_general_node_info() {
       'help' => '',
     ),
     'text' => array(
-      'name' => t('Text'),
+      'name' => t('Passage'),
       'module' => 'features',
-      'description' => t('A scholarly text.'),
+      'description' => t('A passage from a scholarly text.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',
