@@ -1,13 +1,13 @@
 <?php
 
 // Define the default theme
-define('NURANI_THEME', 'sronline');
+define('SRONLINE_THEME', 'sronline');
 
 /**
  * Return an array of the modules to be enabled when this profile is installed.
  * 
  * To save time during installation, only enable module here that are either
- * required by Features or not included in any Nurani features
+ * required by Features or not included in any SR-Online features
  *
  * @return
  *   An array of modules to enable.
@@ -51,6 +51,9 @@ function sronline_profile_modules() {
     
     // Features
     'features',
+
+    // SR-Online modules
+    'sronline_general',
   );
 
   return $modules;
@@ -82,8 +85,8 @@ function sronline_profile_details() {
  */
 function sronline_profile_task_list() {
   $tasks = array();
-  $tasks['configure-nurani'] = st('Configure Nurani');
-  $tasks['install-nurani'] = st('Install Nurani');
+  $tasks['configure-nurani'] = st('Configure SR-Online');
+  $tasks['install-nurani'] = st('Install SR-Online');
   return $tasks;
 }
 
@@ -141,7 +144,7 @@ function sronline_profile_tasks(&$task, $url) {
     $operations[] = array('sronline_config_taxonomy', array());
     $operations[] = array('sronline_config_theme', array());
     $operations[] = array('sronline_config_icl', array());
-    $operations[] = array('sronline_config_nodes', array());
+    // $operations[] = array('sronline_config_nodes', array());
     $operations[] = array('sronline_config_noderelationships', array());
     $operations[] = array('sronline_config_i18n', array());
     // $operations[] = array('sronline_import_users', array());
@@ -154,7 +157,7 @@ function sronline_profile_tasks(&$task, $url) {
     // Build the batch process
     $batch = array(
       'operations' => $operations,
-      'title' => st('Configuring Nurani'),
+      'title' => st('Configuring SR-Online'),
       'error_message' => st('An error occurred. Please try reinstalling again.'),
       'finished' => 'sronline_cleanup',
     );
@@ -228,7 +231,7 @@ function sronline_install_languages() {
  * Configure filters
  */
 function sronline_config_filters() {
-  // Add Nurani glossary filter to Filtered HTML
+  // Add SR-Online glossary filter to Filtered HTML
   $filter = new stdClass;
   $filter->format = 1;
   $filter->module = 'nurani_glossary';
@@ -282,11 +285,11 @@ function sronline_config_taxonomy() {
  * Configure theme
  */
 function sronline_config_theme() {
-  // Enable Nurani theme
-  db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' and name = '%s'", NURANI_THEME);
+  // Enable SR-Online theme
+  db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' and name = '%s'", SRONLINE_THEME);
   
-  // Set Nurani theme as the default
-  variable_set('theme_default', NURANI_THEME);
+  // Set SR-Online theme as the default
+  variable_set('theme_default', SRONLINE_THEME);
   
   // Refresh registry
   list_themes(TRUE);
@@ -311,17 +314,17 @@ function sronline_load_autoload() {
   }
 }
 
-/**
- * Import static nodes
- */
-function sronline_config_nodes() {
-  sronline_load_autoload();
-  $path = drupal_get_path('profile', 'nurani') . '/nodes/*.inc';
-  foreach (glob($path) as $file) {
-    $node_code = file_get_contents($file);
-    node_export_import($node_code);
-  }
-}
+// /**
+//  * Import static nodes
+//  */
+// function sronline_config_nodes() {
+//   sronline_load_autoload();
+//   $path = drupal_get_path('profile', 'nurani') . '/nodes/*.inc';
+//   foreach (glob($path) as $file) {
+//     $node_code = file_get_contents($file);
+//     node_export_import($node_code);
+//   }
+// }
 
 /**
  * Configure Node Relationships
@@ -393,7 +396,7 @@ function sronline_cleanup() {
   features_revert($revert);
   
   // Say hello to the dog!
-  watchdog('nurani', st('Welcome to Nurani!'));
+  watchdog('nurani', st('Welcome to SR-Online!'));
   
   // Remove the feature choices
   variable_del('nurani_selected_features');

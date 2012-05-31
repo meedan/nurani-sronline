@@ -1,0 +1,27 @@
+diff --git a/uuid.admin.inc b/uuid.admin.inc
+index da608ab..f3dec5a 100644
+--- a/uuid.admin.inc
++++ b/uuid.admin.inc
+@@ -86,7 +86,7 @@ function uuid_admin() {
+   $form['settings']['sync'] = array(
+     '#type' => 'submit',
+     '#value' => t('Create missing UUIDs'),
+-    '#submit' => array('uuid_sync'),
++    '#submit' => array('uuid_sync_submit'),
+     '#weight' => 10,
+   );
+ 
+@@ -94,6 +94,13 @@ function uuid_admin() {
+ }
+ 
+ /**
++ * Submit handler for sync
++ */
++function uuid_sync_submit($form, &$form_state) {
++  return uuid_sync();
++}
++
++/**
+  * Ensure all content and users have UUIDs, if they are supposed to.
+  */
+ function uuid_sync($types = NULL) {

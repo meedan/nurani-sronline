@@ -194,6 +194,39 @@ function sronline_general_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_automatic_for_comments';
+  $strongarm->value = FALSE;
+  $export['uuid_automatic_for_comments'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_automatic_for_nodes';
+  $strongarm->value = array(
+    'webform' => 'webform',
+    'comment' => 0,
+  );
+  $export['uuid_automatic_for_nodes'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_automatic_for_taxonomy';
+  $strongarm->value = array(
+    1 => 0,
+  );
+  $export['uuid_automatic_for_taxonomy'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_automatic_for_users';
+  $strongarm->value = FALSE;
+  $export['uuid_automatic_for_users'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'webform_node_types';
   $strongarm->value = array(
     0 => 'webform',
