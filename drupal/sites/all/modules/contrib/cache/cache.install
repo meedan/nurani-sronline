@@ -1,0 +1,148 @@
+<?php
+// $Id: cache.install,v 1.1.2.8 2009/09/03 09:56:10 doq Exp $
+
+/**
+ * @file
+ * Install for cache module.
+ */
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function cache_uninstall() {
+  variable_del('cache_path_max');
+
+  // Remove tables.
+  drupal_uninstall_schema('cache');
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function cache_install() {
+  // Create tables.
+  drupal_install_schema('cache');
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function cache_schema() {
+  $t = get_t();
+
+  require_once './modules/system/system.install';
+  $system_schema = system_schema();
+
+  // Path alternative caching.
+  $schema['cache_path_alias'] = $system_schema['cache'];
+  $schema['cache_path_alias']['description'] = $t('Cache table to store URL aliases.');
+  $schema['cache_path_source'] = $system_schema['cache'];
+  $schema['cache_path_source']['description'] = $t('Cache table to store URL aliases.');
+
+  // Session alternative caching.
+  $schema['cache_session'] = $system_schema['cache'];
+  $schema['cache_session']['description'] = $t('Cache table to store sessions.');
+  $schema['cache_session_user'] = $system_schema['cache'];
+  $schema['cache_session_user']['description'] = $t('Cache table to store session users.');
+
+  return $schema;
+}
+
+/**
+ * Implementation of hook_requirements().
+ *
+ * @todo add xcache requirements. Check for specific version.
+ * @todo Check for supported APC version.
+ */
+function cache_requirements($phase) {
+  $requirements = array();
+
+  include_once dirname(__FILE__) .'/CacheEngine.php';
+
+  if ($phase == 'runtime') {
+    global $cache;
+
+    if (isset($cache)) {
+      $data = array();
+      foreach ($cache->bins as $bin => $v) {
+        $data[$bin] = array();
+        foreach ($v as $value) {
+          $class = get_class($value);
+          $data[$bin][] = substr($class, 0, - strlen('CacheEngine'));
+        }
+        $data[$bin] = $bin .': '. implode(', ', $data[$bin]);
+        $requirements['cache_settings'] = array(
+          'value' => t('Configured'),
+          'severity' => REQUIREMENT_INFO,
+          /// @todo Make more descriptive. Improve this stuff.
+          'description' => theme('item_list', $data),
+        );
+      }
+    }
+    else {
+      $requirements['cache_settings'] = array(
+        'value' => t('Not configured'),
+        'severity' => REQUIREMENT_WARNING,
+          /// @todo Make more descriptive.
+        'description' => '',
+      );
+    }
+    $requirements['cache_settings']['title'] = t('Cache settings');
+
+    foreach (_cache_requires() as $engine_type) {
+      $class = $engine_type .'CacheEngine';
+      if (!class_exists($class)) {
+        include dirname(__FILE__) .'/engines/'. $engine_type .'.inc';
+      }
+
+      eval("\$req = $class::requirements();");
+      $requirements = array_merge($requirements, $req);
+    }
+
+    // APC performance hints. We want to show them in case APC is available even
+    // if it is not used for variable caching.
+    if (function_exists('apc_fetch')) {
+      $stat = ini_get('apc.stat');
+      $requirements['apc.stat'] = array(
+        'title' => t('APC stat files'),
+        'value' => l($stat ? t('Enabled') : t('Disabled'), 'admin/reports/status/php', array('fragment' => 'module_apc')),
+        'severity' => $stat ? REQUIREMENT_WARNING : REQUIREMENT_OK,
+        'description' => t('APC stats PHP files to determine if they have been updated when <code>apc.stat</code> is set to 1. Disabling updates (set to 0) will increase performance. But web-server restart or call to <code>apc_cache_clear()</code> will be required to update.'),
+      );
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * @param $engine
+ *   Caching engine, e.g. 'memcache', 'apc', 'redis'. Can be NULL to
+ *   return array of engines used.
+ * @return
+ *   If $engine is NULL the return array of engines used. Else TRUE if
+ *   specified caching engine is required; FALSE otherwise.
+ */
+function _cache_requires($engine = NULL) {
+  static $engines;
+  global $conf;
+
+  if (!isset($engines)) {
+    $engines = array();
+    // We simply loop through all engines. It can be not used, e.g.
+    // schema that uses it is disabled but still we will display
+    // information about it on Status report page.
+    if (isset($conf['cache_settings']['engines'])) {
+      foreach ($conf['cache_settings']['engines'] as $_engine) {
+        $engines[] = $_engine['engine'];
+      }
+    }
+
+    $engines = array_unique($engines);
+  }
+
+  if ($engine === NULL) {
+    return $engines;
+  }
+
+  return array_search($engine, $engines) !== FALSE;
+}

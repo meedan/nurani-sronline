@@ -1,0 +1,117 @@
+<?php
+// $Id: cache.module,v 1.1.2.4 2009/09/03 09:56:10 doq Exp $
+
+/**
+ * @file
+ * Alternative cache handler implementation.
+ */
+
+/**
+ * Implementation of hook_init().
+ */
+function cache_init() {
+  // Move all logs into watchdog.
+  if (function_exists('_cache_early_watchdog')) {
+    _cache_early_watchdog();
+  }
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function cache_menu() {
+  $items['admin/reports/cache'] = array(
+    'title' => 'Cache',
+    'description' => 'View cache statistics.',
+    'page callback' => 'cache_reports_page',
+    'access arguments' => array('access cache statistics'),
+    'file' => 'cache.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_user().
+ *
+ * When logged in you don't want to hit the page_fast_cache or else you
+ * will serve a cached page to a logged in user.
+ */
+function cache_user($op, &$edit, &$account, $category = NULL) {
+  switch ($op) {
+    case 'login':
+      setcookie('cache', TRUE, time() + (60 * 60 * 24 * 30), '/');
+      break;
+    case 'logout':
+      // Set in past to delete cookie.
+      setcookie('cache', TRUE, time() - 3600, '/');
+      break;
+  }
+}
+
+
+/**
+ * Implementation of hook_perm().
+ */
+function cache_perm() {
+  return array('access cache statistics');
+}
+
+
+/**
+ * Implementation of hook_patch().
+ */
+function cache_patch() {
+  $path = drupal_get_path('module', 'cache') .'/patches';
+
+  return array(
+    'user_load-static-caching.patch' => array(
+      'name' => t('user_load() static caching'),
+      'description' => t('Static caching of user object in user_load() function. Possible side effects when this patch applied.'),
+      'file' => realpath($path .'/user_load-static-caching.patch'),
+      'patch arguments' => '-u -p0',
+    ),
+    'module_implements-caching.patch' => array(
+      'name' => t('module_implements() caching'),
+      'description' => t('Caching of module hooks into cache table.'),
+      'file' => realpath($path .'/module_implements-caching.patch'),
+      'patch arguments' => '-u -p0',
+    ),
+    'path_inc-variable-support.patch' => array(
+      'name' => t('path.inc back-end'),
+      'description' => t('Extends Drupal with ability to change path.inc implementation from settings.php'),
+      'file' => realpath($path .'/path_inc-variable-support.patch'),
+      'patch arguments' => '-u -p0',
+    ),
+    'drupal_get_filename-caching.patch' => array(
+      'name' => t('drupal_get_filename() caching'),
+      'description' => t('Caching of filenames into cache table.'),
+      'file' => realpath($path .'/drupal_get_filename-caching.patch'),
+      'patch arguments' => '-u -p0',
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function cache_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'system_performance_settings') {
+    $path1 = realpath(drupal_get_path('module', 'cache') .'/path-max.inc');
+    $path2 = realpath(variable_get('path_inc', './includes/path.inc'));
+    if ($path1 == $path2) {
+      $form['path_cache'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Path cache'),
+        '#weight' => 0.002,
+      );
+      $form['path_cache']['cache_path_max'] = array(
+        '#type' => 'select',
+        '#title' => t('Maximum path aliases'),
+        '#default_value' => variable_get('cache_path_max', 30),
+        '#options' => drupal_map_assoc(array(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300, 400, 500)),
+        '#description' => t('If there are less then specified value path aliases then all pathes will be get at once and saved into static variable.')
+      );
+    }
+  }
+}

@@ -1,0 +1,188 @@
+Index: modules/user/user.module
+===================================================================
+--- modules/user/user.module	(revision 0)
++++ modules/user/user.module	(working copy)
+@@ -130,27 +130,84 @@
+ /**
+  * Fetch a user object.
+  *
+- * @param $array
++ * @param $conditions
+  *   An associative array of attributes to search for in selecting the
+  *   user, such as user name or e-mail address.
+  *
++ * @param $reset
++ *   Resets the internal cache for the first user object that is saved
++ *   in the cache that matches the $conditions, or when $conditions is
++ *   an empty array it resets the whole internal cache
++ *
+  * @return
+  *   A fully-loaded $user object upon successful user load or FALSE if user
+- *   cannot be loaded.
++ *   cannot be loaded. When $conditions is empty and $reset is TRUE a
++ *   FALSE boolean is returned.
+  */
+-function user_load($array = array()) {
+-  // Dynamically compose a SQL query:
+-  $query = array();
+-  $params = array();
++function user_load($conditions = array(), $reset = NULL) {
++  static $cache;
+ 
+-  if (is_numeric($array)) {
+-    $array = array('uid' => $array);
++  // Instantiate cache or reset cache when conditions are zero.
++  if (!$cache || (empty($conditions) && $reset)) {
++    $cache = array();
++    $cache['users'] = $cache['conditions'] = array();
++
++    if (empty($conditions)) {
++      return FALSE;
++    }
+   }
+-  elseif (!is_array($array)) {
++
++  // Make sure $conditions is an array at all times or return FALSE.
++  if (is_numeric($conditions)) {
++    $conditions = array('uid' => $conditions);
++  }
++  elseif (!is_array($conditions)) {
+     return FALSE;
+   }
+ 
+-  foreach ($array as $key => $value) {
++  // Return user from cache if only uid was given.
++  if (isset($conditions['uid']) && (count($conditions)==1) && !$reset) {
++    $uid = $conditions['uid'];
++    if (isset($cache['users'][$uid])) {
++      return $cache['users'][$uid];
++    }
++  }
++
++  // Try to match the exact condition set and return from cache.
++  $uid_matches = array();
++  foreach ($conditions as $key => $value) {
++    if ($key == 'uid') continue;
++    if (isset($cache['conditions'][$key], $cache['conditions'][$key][$value])) {
++
++      // Collect the matching uid's.
++      foreach ($cache['conditions'][$key][$value] as $uid) {
++        $uid_matches[] = (int)$uid;
++      }
++    }
++    else {
++      break;
++    }
++  }
++
++  if ($match_count = count($uid_matches)) {
++    if ((array_sum($uid_matches) / $match_count) == $uid_matches[0]) { // Are all uid's in the array equal?
++      $uid = $uid_matches[0];
++
++      if (isset($cache['users'][$uid])) {
++        if ($reset) {
++          unset($cache['users'][$uid]);
++        }
++        else {
++          return $cache['users'][$uid];
++        }
++      }
++    }
++  }
++
++  // Dynamically compose a SQL query.
++  $query = $params = array();
++
++  foreach ($conditions as $key => $value) {
+     if ($key == 'uid' || $key == 'status') {
+       $query[] = "$key = %d";
+       $params[] = $value;
+@@ -164,10 +221,10 @@
+       $params[] = $value;
+     }
+   }
+-  $result = db_query('SELECT * FROM {users} u WHERE '. implode(' AND ', $query), $params);
++  $result = db_fetch_object(db_query('SELECT * FROM {users} u WHERE ' . implode(' AND ', $query), $params));
+ 
+-  if ($user = db_fetch_object($result)) {
+-    $user = drupal_unpack($user);
++  if (isset($result->uid)) {
++    $user = drupal_unpack($result);
+ 
+     $user->roles = array();
+     if ($user->uid) {
+@@ -180,9 +237,30 @@
+     while ($role = db_fetch_object($result)) {
+       $user->roles[$role->rid] = $role->name;
+     }
+-    user_module_invoke('load', $array, $user);
++    user_module_invoke('load', $conditions, $user);
++
++    // Save the uid of the object in the conditions cache,
++    // we group the database keys, then their values so we
++    // have a unique match at all times.
++    foreach ($conditions as $key => $value) {
++      if (!isset($cache['conditions'][$key][$value])) {
++        $cache['conditions'][$key][$value] = array();
++      }
++      if (!in_array($user->uid, $cache['conditions'][$key][$value])) {
++        $cache['conditions'][$key][$value][] = $user->uid;
++      }
++    }
++
++    // Save user object in cache.
++    $cache['users'][$user->uid] = $user;
+   }
+   else {
++    if (isset($conditions['uid'])) {
++      $uid = $conditions['uid'];
++      if (isset($cache['users'][$uid])) {
++        unset($cache['users'][$uid]);
++      }
++    }
+     $user = FALSE;
+   }
+ 
+@@ -276,7 +354,7 @@
+     }
+ 
+     // Refresh user object.
+-    $user = user_load(array('uid' => $account->uid));
++    $user = user_load(array('uid' => $account->uid), TRUE);
+ 
+     // Send emails after we have the new user object.
+     if (isset($array['status']) && $array['status'] != $account->status) {
+@@ -333,7 +411,7 @@
+ 
+     // Build the initial user object.
+     $array['uid'] = db_last_insert_id('users', 'uid');
+-    $user = user_load(array('uid' => $array['uid']));
++    $user = user_load(array('uid' => $array['uid']), TRUE);
+ 
+     user_module_invoke('insert', $array, $user, $category);
+ 
+@@ -357,7 +435,7 @@
+     }
+ 
+     // Build the finished user object.
+-    $user = user_load(array('uid' => $array['uid']));
++    $user = user_load(array('uid' => $array['uid']), TRUE);
+   }
+ 
+   // Save distributed authentication mappings.
+@@ -1594,6 +1672,7 @@
+   db_query('DELETE FROM {users} WHERE uid = %d', $uid);
+   db_query('DELETE FROM {users_roles} WHERE uid = %d', $uid);
+   db_query('DELETE FROM {authmap} WHERE uid = %d', $uid);
++  user_load($uid, TRUE); // Update user_load()'s cache.
+   $variables = array('%name' => $account->name, '%email' => '<'. $account->mail .'>');
+   watchdog('user', 'Deleted user: %name %email.', $variables, WATCHDOG_NOTICE);
+   module_invoke_all('user', 'delete', $edit, $account);
+@@ -2252,6 +2331,7 @@
+     $uid = $user->uid;
+   }
+   db_query("UPDATE {users} SET status = 0 WHERE uid = %d", $uid);
++  user_load((int)$uid, TRUE); // Refresh user_load()'s static cache.
+   sess_destroy_uid($uid);
+   watchdog('action', 'Blocked user %name.', array('%name' => check_plain($user->name)));
+ }

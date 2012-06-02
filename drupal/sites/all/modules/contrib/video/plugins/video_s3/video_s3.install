@@ -1,0 +1,169 @@
+<?php
+
+/**
+ * @file
+ * Provides installation functions for video_s3.module.
+ */
+
+/**
+ * Implementation of hook_schema().
+ */
+function video_s3_schema() {
+  $schema['video_s3'] = array(
+    'description' => t('Store video s3 cdn'),
+    'fields' => array(
+      'vid' => array(
+        'description' => t('Auto Increment id'),
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'fid' => array(
+        'description' => t('Original file id'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'nid' => array(
+        'description' => t('Node id'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'bucket' => array(
+        'type' => 'varchar',
+        'length' => '255',
+        'default' => '',
+        'description' => t('The bucket the video is stored in.'),
+      ),
+      'filename' => array(
+        'type' => 'varchar',
+        'length' => '255',
+        'default' => '',
+        'description' => t('The filename of the video.'),
+      ),
+      'filepath' => array(
+        'type' => 'varchar',
+        'length' => '255',
+        'default' => '',
+        'description' => t('The filepath of the video.'),
+      ),
+      'filemime' => array(
+        'type' => 'varchar',
+        'length' => '255',
+        'default' => '',
+        'description' => t('The filemime of the video.'),
+      ),
+      'filesize' => array(
+        'description' => t('Filesize of the video.'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'status' => array(
+        'description' => t('Status of the cdn transfer'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'completed' => array(
+        'description' => t('Time of successful completion to amazon.'),
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'indexes' => array(
+      'status' => array('status'),
+      'file' => array('fid'),
+    ),
+    'primary key' => array('vid'),
+  );
+  return $schema;
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function video_s3_install() {
+  drupal_install_schema('video_s3');
+  
+  // The video_s3 module cron hook must execute after the video module
+  // in order for ffmpeg converted files to be uploaded to S3 in the same cron run.
+  db_query("UPDATE {system} SET weight = 10 WHERE name = 'video_s3'");
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function video_s3_uninstall() {
+  global $conf;
+  drupal_uninstall_schema('video_s3');
+  // Delete our variables.
+  foreach (array_keys($conf) as $var) {
+    if (strpos($var, 'amazon_s3') === 0) {
+      variable_del($var);
+    }
+  }
+}
+
+/**
+* Implementation of hook_requirements().
+*/
+function video_s3_requirements($phase) {
+  $t = get_t();
+  $requirements = array();
+  
+  if (!module_exists('libraries')) {
+    $requirements['video_s3_libraries'] = array(
+      'title' => $t('Video Amazon S3 requirements'),
+      'description' => $t('The <a href="@libraries-url">Libraries API</a> module is required to use the Video Amazon S3 module since version 4.8.', array('@libraries-url' => 'http://drupal.org/project/libraries')),
+      'value' => l($t('Download'), 'http://drupal.org/project/libraries'),
+      'severity' => REQUIREMENT_ERROR,
+    );
+  }
+  else {
+    $path = libraries_get_path('awssdk');
+    $file = $path .'/sdk.class.php';
+
+    if (!is_dir($path)) {
+      $requirements['video_s3_library'] = array(
+        'title' => $t('Video Amazon S3 library'),
+        'description' => $t('The <a href="@aws-library-url">Amazon Web Services SDK</a> must be installed to %libpath to use Amazon S3 to store videos.', array('@aws-library-url' => 'http://aws.amazon.com/sdkforphp/', '%libpath' => $path)),
+        'value' => l($t('Download'), 'http://aws.amazon.com/sdkforphp/'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+    elseif (!is_file($file)) {
+      $requirements['video_s3_library'] = array(
+        'title' => $t('Video Amazon S3 library'),
+        'description' => $t('The directory %libpath is found, but the <a href="@aws-library-url">Amazon Web Services SDK</a> does not appear to be installed correctly, as the file %libfile is not found. Check if the library archive has been extracted correctly.', array('@aws-library-url' => 'http://aws.amazon.com/sdkforphp/', '%libpath' => $path, '%libfile' => $file)),
+        'value' => l($t('Download'), 'http://aws.amazon.com/sdkforphp/'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+    else {
+      require_once $file;
+      
+      $requirements['video_s3_library'] = array(
+        'title' => $t('Video Amazon S3 library'),
+        'value' => check_plain(CFRUNTIME_VERSION),
+        'severity' => REQUIREMENT_OK,
+      );
+    }
+  }
+
+  return $requirements;
+}
+
+function video_s3_update_6000() {
+  $ret = array();
+  
+  $ret[] = update_sql("UPDATE {system} SET weight = 10 WHERE name = 'video_s3'");
+  
+  return $ret;
+}

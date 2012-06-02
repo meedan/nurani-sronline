@@ -1,0 +1,44 @@
+Index: includes/bootstrap.inc
+===================================================================
+--- includes/bootstrap.inc	(revision 0)
++++ includes/bootstrap.inc	(working copy)
+@@ -422,13 +422,29 @@
+  */
+ function drupal_get_filename($type, $name, $filename = NULL) {
+   static $files = array();
++  static $cache_exists;
+ 
++  if (!isset($cache_exists)) {
++    $cache_exists = function_exists('cache_get');
++  }
++
++  if ($cache_exists && empty($files)) {
++    $cache = cache_get('drupal_get_filename');
++    if ($cache) {
++      $files = $cache->data;
++    }
++  }
++
+   if (!isset($files[$type])) {
+     $files[$type] = array();
+   }
+ 
+   if (!empty($filename) && file_exists($filename)) {
++    $cache_set = $cache_exists && (!isset($files[$type][$name]) || $files[$type][$name] != $filename);
+     $files[$type][$name] = $filename;
++    if ($cache_set) {
++      cache_set('drupal_get_filename', $files);
++    }
+   }
+   elseif (isset($files[$type][$name])) {
+     // nothing
+@@ -439,6 +455,9 @@
+   // when a database connection fails.
+   elseif (db_is_active() && (($file = db_result(db_query("SELECT filename FROM {system} WHERE name = '%s' AND type = '%s'", $name, $type))) && file_exists($file))) {
+     $files[$type][$name] = $file;
++    if ($cache_exists) {
++      cache_set('drupal_get_filename', $files);
++    }
+   }
+   else {
+     // Fallback to searching the filesystem if the database connection is
