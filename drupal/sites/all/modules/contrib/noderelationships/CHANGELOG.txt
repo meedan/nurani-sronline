@@ -9,6 +9,7 @@ Features:
 Bugfixes:
 - #589296 follow up by Ozeuss and markus_petrux - Render page container in child node edit form.
 - #966460 by chromix: "Search & Reference" form validation error?
+- #1548184 by markus_petrux - Node reference extra Search and reference view throws error when a module with hook_form_alter is enabled.
 
 
 6.x-1.6 (2010-05-16)

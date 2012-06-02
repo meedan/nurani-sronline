@@ -618,6 +618,14 @@ function node_export_node_clone($original_node) {
       $node->changed = NULL;
     }
 
+    if (variable_get('node_export_reset_revision_timestamp_'. $node->type, TRUE)) {
+      $node->revision_timestamp = NULL;
+    }
+
+    if (variable_get('node_export_reset_last_comment_timestamp_'. $node->type, TRUE)) {
+      $node->last_comment_timestamp = NULL;
+    }
+
     if (variable_get('node_export_reset_menu_'. $node->type, TRUE)) {
       $node->menu = NULL;
     }

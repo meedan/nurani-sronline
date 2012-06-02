@@ -477,7 +477,7 @@ function print_pdf_insert_link($path = NULL, $node = NULL) {
   }
   else {
     if ($path === NULL) {
-      $nid = preg_replace('!^node/!', '', $_GET['q']);
+      $nid = preg_replace('!^node/([\d]+)!', '$1', $_GET['q']);
       $path = $_GET['q'];
     }
     else {
@@ -648,4 +648,14 @@ function _print_pdf_wkhtmltopdf_version() {
   }
 
   return ($matches[1]);
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function print_pdf_views_api() {
+  return array(
+    'api' => 2.0,
+    'path' => drupal_get_path('module', 'print_pdf'),
+  );
 }

@@ -75,74 +75,11 @@ function nurani_general_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-50',
   );
-  // Exported menu link: secondary-links:node/3
-  $menu_links['secondary-links:node/3'] = array(
-    'menu_name' => 'secondary-links',
-    'link_path' => 'node/3',
-    'router_path' => 'node/%',
-    'link_title' => 'Privacy',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Privacy',
-      ),
-      'alter' => TRUE,
-      'langcode' => 'en',
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-46',
-  );
-  // Exported menu link: secondary-links:node/31
-  $menu_links['secondary-links:node/31'] = array(
-    'menu_name' => 'secondary-links',
-    'link_path' => 'node/31',
-    'router_path' => 'node/%',
-    'link_title' => 'How to do Scriptural Reasoning',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'langcode' => 'en',
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-49',
-  );
-  // Exported menu link: secondary-links:node/4
-  $menu_links['secondary-links:node/4'] = array(
-    'menu_name' => 'secondary-links',
-    'link_path' => 'node/4',
-    'router_path' => 'node/%',
-    'link_title' => 'Terms',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Terms',
-      ),
-      'alter' => TRUE,
-      'langcode' => 'en',
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-47',
-  );
   // Translatables
   // Included for use with string extractors like potx.
   t('About Nurani.org');
   t('Getting started');
-  t('How to do Scriptural Reasoning');
   t('Overview');
-  t('Privacy');
-  t('Terms');
   t('Texts');
 
 

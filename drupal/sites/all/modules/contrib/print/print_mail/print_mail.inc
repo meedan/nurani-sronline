@@ -280,7 +280,7 @@ function print_mail_form_submit($form, &$form_state) {
 
     // Spaces in img URLs must be replaced with %20
     $pattern = '!<(img\s[^>]*?)>!is';
-    $print['content'] = preg_replace_callback($pattern, '_print_mail_encode_urls', $print['content']);
+    $print['content'] = preg_replace_callback($pattern, '_print_replace_spaces', $print['content']);
 
     if ($print !== FALSE) {
       $print_mail_send_option_default = variable_get('print_mail_send_option_default', PRINT_MAIL_SEND_OPTION_DEFAULT);
@@ -294,6 +294,14 @@ function print_mail_form_submit($form, &$form_state) {
       $node = $print['node'];
       $params['body'] = theme('print_page', $print, PRINT_MAIL_FORMAT, $node);
       $params['body'] = drupal_final_markup($params['body']);
+
+      // Img elements must be set to absolute
+      $pattern = '!<(img\s[^>]*?)>!is';
+      $params['body'] = preg_replace_callback($pattern, '_print_rewrite_urls', $params['body']);
+
+      // Convert the a href elements, to make sure no relative links remain
+      $pattern = '!<(a\s[^>]*?)>!is';
+      $params['body'] = preg_replace_callback($pattern, '_print_rewrite_urls', $params['body']);
 
       $ok = FALSE;
       if (function_exists('job_queue_add') && variable_get('print_mail_job_queue', PRINT_MAIL_JOB_QUEUE_DEFAULT)) {
@@ -371,6 +379,8 @@ function print_mail_mail($key, &$message, $params) {
       // Configure new MIME object
       $mime = new Mail_mime("\n");
       $mime_params['html_encoding'] = '7bit';
+      $mime_params['html_charset'] = 'utf-8';
+      $mime_params['text_charset'] = 'utf-8';
 
       // Pass message contents into MIME object
       switch ($key) {
@@ -405,40 +415,4 @@ function print_mail_mail($key, &$message, $params) {
  */
 function print_mail_form_cancel($form, &$form_state) {
   $form_state['redirect'] = preg_replace('!^book/export/html/!', 'node/', $form_state['values']['path']);
-}
-
-/**
- * Callback function for the preg_replace_callback replacing spaces with %20
- *
- * Replace spaces in URLs with %20
- *
- * @param $matches
- *   array with the matched tag patterns, usually <a...>+text+</a>
- * @return
- *   tag with re-written URL
- */
-function _print_mail_encode_urls($matches) {
-  // first, split the html into the different tag attributes
-  $pattern = '!\s*(\w+\s*=\s*"(?:\\\"|[^"])*")\s*|\s*(\w+\s*=\s*\'(?:\\\\\'|[^\'])*\')\s*|\s*(\w+\s*=\s*\w+)\s*|\s+!';
-  $attribs = preg_split($pattern, $matches[1], -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
-  foreach ($attribs as $key => $value) {
-    $attribs[$key] = preg_replace('!(\w)\s*=\s*(.*)!', '$1=$2', $value);
-  }
-
-  $size = count($attribs);
-  for ($i=1; $i < $size; $i++) {
-    // If the attribute is href or src, we may need to rewrite the URL in the value
-    if (preg_match('!^(?:href|src)\s*?=(.*)!i', $attribs[$i], $urls) > 0) {
-      $url = trim($urls[1], " \t\n\r\0\x0B\"'");
-      $new_url = str_replace(' ', '%20', $url);
-      $matches[1] = str_replace($url, $new_url, $matches[1]);
-    }
-  }
-
-  $ret = '<'. $matches[1] .'>';
-  if (count($matches) == 4) {
-    $ret .= $matches[2] . $matches[3];
-  }
-
-  return $ret;
 }

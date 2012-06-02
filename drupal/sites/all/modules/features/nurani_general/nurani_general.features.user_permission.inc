@@ -294,8 +294,7 @@ function nurani_general_user_default_permissions() {
   $permissions['view imagecache thumbnail'] = array(
     'name' => 'view imagecache thumbnail',
     'roles' => array(
-      '0' => 'administrator',
-      '1' => 'authenticated user',
+      '0' => 'authenticated user',
     ),
   );
 
@@ -303,8 +302,7 @@ function nurani_general_user_default_permissions() {
   $permissions['view imagecache thumbnail_view'] = array(
     'name' => 'view imagecache thumbnail_view',
     'roles' => array(
-      '0' => 'administrator',
-      '1' => 'authenticated user',
+      '0' => 'authenticated user',
     ),
   );
 

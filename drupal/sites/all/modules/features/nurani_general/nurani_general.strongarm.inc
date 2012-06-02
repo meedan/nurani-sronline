@@ -9,9 +9,296 @@ function nurani_general_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_forum';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_forum'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_modulelist';
+  $strongarm->value = array(
+    0 => 'node',
+    1 => 'user',
+    2 => 'taxonomy',
+  );
+  $export['pathauto_modulelist'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_supportsfeeds';
+  $strongarm->value = '0/feed';
+  $export['pathauto_taxonomy_supportsfeeds'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_pattern';
+  $strongarm->value = 'category/[vocab-raw]/[catpath-raw]';
+  $export['pathauto_taxonomy_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_bulkupdate';
+  $strongarm->value = FALSE;
+  $export['pathauto_taxonomy_bulkupdate'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_applytofeeds';
+  $strongarm->value = FALSE;
+  $export['pathauto_taxonomy_applytofeeds'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_2_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_2_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_1_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_1_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_ignore_words';
+  $strongarm->value = 'a,an,as,at,before,but,by,for,from,is,in,into,like,of,off,on,onto,per,since,than,the,this,that,to,up,via,with';
+  $export['pathauto_ignore_words'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_indexaliases';
+  $strongarm->value = FALSE;
+  $export['pathauto_indexaliases'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_max_component_length';
+  $strongarm->value = '100';
+  $export['pathauto_max_component_length'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_max_length';
+  $strongarm->value = '100';
+  $export['pathauto_max_length'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_bulkupdate';
+  $strongarm->value = FALSE;
+  $export['pathauto_node_bulkupdate'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_forum_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_forum_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_image_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_image_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_term';
+  $strongarm->value = 0;
+  $export['node_export_reset_term'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_pattern';
+  $strongarm->value = 'content/[title-raw]';
+  $export['pathauto_node_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_story_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_story_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_punctuation_quotes';
+  $strongarm->value = 0;
+  $export['pathauto_punctuation_quotes'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_separator';
+  $strongarm->value = '-';
+  $export['pathauto_separator'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_update_action';
+  $strongarm->value = '2';
+  $export['pathauto_update_action'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_user_bulkupdate';
+  $strongarm->value = FALSE;
+  $export['pathauto_user_bulkupdate'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_user_pattern';
+  $strongarm->value = 'users/[user-raw]';
+  $export['pathauto_user_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_user_supportsfeeds';
+  $strongarm->value = '';
+  $export['pathauto_user_supportsfeeds'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_applytofeeds';
+  $strongarm->value = '';
+  $export['pathauto_node_applytofeeds'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_punctuation_hyphen';
+  $strongarm->value = 1;
+  $export['pathauto_punctuation_hyphen'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'agreement_checkbox_text';
   $strongarm->value = 'I agree.';
   $export['agreement_checkbox_text'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ds_build_mode_4';
+  $strongarm->value = 'not_all';
+  $export['ds_build_mode_4'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_comment';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_comment'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_comment';
+  $strongarm->value = 0;
+  $export['comment_comment'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ds_all_build_modes';
+  $strongarm->value = array(
+    'nd' => array(
+      'full' => array(
+        'weight' => -1,
+        'title' => 'Full node',
+      ),
+      'teaser' => array(
+        'weight' => 1,
+        'title' => 'Teaser',
+      ),
+      'sticky' => array(
+        'weight' => 2,
+        'title' => 'Sticky',
+      ),
+      4 => array(
+        'weight' => 3,
+        'title' => 'RSS',
+      ),
+      2 => array(
+        'weight' => 13,
+        'title' => 'Search Index',
+      ),
+      3 => array(
+        'weight' => 14,
+        'title' => 'Search Result',
+      ),
+      5 => array(
+        'weight' => 17,
+        'title' => 'Print',
+      ),
+      'token' => array(
+        'weight' => 18,
+        'title' => 'Token',
+      ),
+      'text_summary' => array(
+        'weight' => 10,
+        'title' => 'Text summary',
+        'build modes' => array(
+          'text_summary' => array(
+            'title' => 'Text summary',
+          ),
+        ),
+      ),
+      'discussion_participants' => array(
+        'weight' => 11,
+        'title' => 'Discussion participants',
+        'build modes' => array(
+          'discussion_participants' => array(
+            'title' => 'Discussion participants',
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['ds_all_build_modes'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_last_comment_timestamp_response';
+  $strongarm->value = 1;
+  $export['node_export_reset_last_comment_timestamp_response'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18ntaxonomy_vocabulary';
+  $strongarm->value = array(
+    1 => '1',
+  );
+  $export['i18ntaxonomy_vocabulary'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -130,62 +417,6 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ant_annotation';
-  $strongarm->value = '0';
-  $export['ant_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_pattern_annotation';
-  $strongarm->value = '';
-  $export['ant_pattern_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_pattern_profile';
-  $strongarm->value = '[author-name]';
-  $export['ant_pattern_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_php_annotation';
-  $strongarm->value = 0;
-  $export['ant_php_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_php_profile';
-  $strongarm->value = 0;
-  $export['ant_php_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_profile';
-  $strongarm->value = '1';
-  $export['ant_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_annotation';
-  $strongarm->value = '0';
-  $export['comment_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_annotation';
-  $strongarm->value = 0;
-  $export['comment_anonymous_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_comment';
   $strongarm->value = 0;
   $export['comment_anonymous_comment'] = $strongarm;
@@ -193,44 +424,16 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_discussion';
-  $strongarm->value = 0;
-  $export['comment_anonymous_discussion'] = $strongarm;
+  $strongarm->name = 'node_export_reset_revision_timestamp_page';
+  $strongarm->value = 1;
+  $export['node_export_reset_revision_timestamp_page'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_page';
-  $strongarm->value = 0;
-  $export['comment_anonymous_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_profile';
-  $strongarm->value = 0;
-  $export['comment_anonymous_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_term';
-  $strongarm->value = 0;
-  $export['comment_anonymous_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_comment';
-  $strongarm->value = 0;
-  $export['comment_comment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_annotation';
-  $strongarm->value = '3';
-  $export['comment_controls_annotation'] = $strongarm;
+  $strongarm->name = 'node_export_reset_last_comment_timestamp_page';
+  $strongarm->value = 1;
+  $export['node_export_reset_last_comment_timestamp_page'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -242,37 +445,16 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_discussion';
-  $strongarm->value = '3';
-  $export['comment_controls_discussion'] = $strongarm;
+  $strongarm->name = 'node_export_reset_text';
+  $strongarm->value = 0;
+  $export['node_export_reset_text'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_page';
-  $strongarm->value = '3';
-  $export['comment_controls_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_profile';
-  $strongarm->value = '3';
-  $export['comment_controls_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_term';
-  $strongarm->value = '3';
-  $export['comment_controls_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_annotation';
-  $strongarm->value = '4';
-  $export['comment_default_mode_annotation'] = $strongarm;
+  $strongarm->name = 'node_export_reset_revision_timestamp_text';
+  $strongarm->value = 1;
+  $export['node_export_reset_revision_timestamp_text'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -284,37 +466,16 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_discussion';
-  $strongarm->value = '4';
-  $export['comment_default_mode_discussion'] = $strongarm;
+  $strongarm->name = 'node_export_reset_response';
+  $strongarm->value = 0;
+  $export['node_export_reset_response'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_page';
-  $strongarm->value = '4';
-  $export['comment_default_mode_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_profile';
-  $strongarm->value = '4';
-  $export['comment_default_mode_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_term';
-  $strongarm->value = '4';
-  $export['comment_default_mode_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_annotation';
-  $strongarm->value = '1';
-  $export['comment_default_order_annotation'] = $strongarm;
+  $strongarm->name = 'node_export_reset_revision_timestamp_response';
+  $strongarm->value = 1;
+  $export['node_export_reset_revision_timestamp_response'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -326,37 +487,16 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_discussion';
-  $strongarm->value = '1';
-  $export['comment_default_order_discussion'] = $strongarm;
+  $strongarm->name = 'node_export_reset_revision_timestamp_profile';
+  $strongarm->value = 1;
+  $export['node_export_reset_revision_timestamp_profile'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_page';
-  $strongarm->value = '1';
-  $export['comment_default_order_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_profile';
-  $strongarm->value = '1';
-  $export['comment_default_order_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_term';
-  $strongarm->value = '1';
-  $export['comment_default_order_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_annotation';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_annotation'] = $strongarm;
+  $strongarm->name = 'node_export_reset_last_comment_timestamp_profile';
+  $strongarm->value = 1;
+  $export['node_export_reset_last_comment_timestamp_profile'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -368,44 +508,16 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_discussion';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_discussion'] = $strongarm;
+  $strongarm->name = 'node_export_reset_last_comment_timestamp_text';
+  $strongarm->value = 1;
+  $export['node_export_reset_last_comment_timestamp_text'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_page';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_profile';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_term';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_discussion';
+  $strongarm->name = 'node_export_reset_profile';
   $strongarm->value = 0;
-  $export['comment_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_annotation';
-  $strongarm->value = '0';
-  $export['comment_form_location_annotation'] = $strongarm;
+  $export['node_export_reset_profile'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -417,93 +529,9 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_discussion';
-  $strongarm->value = '1';
-  $export['comment_form_location_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_page';
-  $strongarm->value = '0';
-  $export['comment_form_location_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_profile';
-  $strongarm->value = '0';
-  $export['comment_form_location_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_term';
-  $strongarm->value = '1';
-  $export['comment_form_location_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_page';
-  $strongarm->value = '0';
-  $export['comment_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_annotation';
-  $strongarm->value = '1';
-  $export['comment_preview_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_comment';
   $strongarm->value = '1';
   $export['comment_preview_comment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_discussion';
-  $strongarm->value = '0';
-  $export['comment_preview_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_page';
-  $strongarm->value = '1';
-  $export['comment_preview_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_profile';
-  $strongarm->value = '1';
-  $export['comment_preview_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_term';
-  $strongarm->value = '0';
-  $export['comment_preview_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_profile';
-  $strongarm->value = '0';
-  $export['comment_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_annotation';
-  $strongarm->value = '1';
-  $export['comment_subject_field_annotation'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -515,37 +543,16 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_discussion';
-  $strongarm->value = '0';
-  $export['comment_subject_field_discussion'] = $strongarm;
+  $strongarm->name = 'node_export_reset_last_comment_timestamp_comment';
+  $strongarm->value = 1;
+  $export['node_export_reset_last_comment_timestamp_comment'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_page';
-  $strongarm->value = '1';
-  $export['comment_subject_field_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_profile';
-  $strongarm->value = '1';
-  $export['comment_subject_field_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_term';
-  $strongarm->value = '0';
-  $export['comment_subject_field_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_term';
+  $strongarm->name = 'node_export_reset_page';
   $strongarm->value = 0;
-  $export['comment_term'] = $strongarm;
+  $export['node_export_reset_page'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -620,58 +627,9 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'content_profile_profile';
-  $strongarm->value = array();
-  $export['content_profile_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_profile_use_annotation';
-  $strongarm->value = 0;
-  $export['content_profile_use_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'content_profile_use_comment';
   $strongarm->value = 0;
   $export['content_profile_use_comment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_profile_use_discussion';
-  $strongarm->value = 0;
-  $export['content_profile_use_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_profile_use_page';
-  $strongarm->value = 0;
-  $export['content_profile_use_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_profile_use_profile';
-  $strongarm->value = 1;
-  $export['content_profile_use_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_profile_use_term';
-  $strongarm->value = 0;
-  $export['content_profile_use_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ds_build_mode_4';
-  $strongarm->value = 'not_all';
-  $export['ds_build_mode_4'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -975,15 +933,6 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'i18ntaxonomy_vocabulary';
-  $strongarm->value = array(
-    1 => '1',
-  );
-  $export['i18ntaxonomy_vocabulary'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'icl_content_dashboard_hide_legend';
   $strongarm->value = array(
     1 => FALSE,
@@ -1064,44 +1013,9 @@ The Service Providers may use session cookies when you visit our website while y
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_annotation';
-  $strongarm->value = '2';
-  $export['language_content_type_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_comment';
   $strongarm->value = '2';
   $export['language_content_type_comment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_discussion';
-  $strongarm->value = '2';
-  $export['language_content_type_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_page';
-  $strongarm->value = '2';
-  $export['language_content_type_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_profile';
-  $strongarm->value = '2';
-  $export['language_content_type_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_term';
-  $strongarm->value = '1';
-  $export['language_content_type_term'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2002,44 +1916,9 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_plural_annotation';
-  $strongarm->value = 'comments';
-  $export['node_comment_plural_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_comment_plural_comment';
   $strongarm->value = 'comments';
   $export['node_comment_plural_comment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_plural_discussion';
-  $strongarm->value = 'responses';
-  $export['node_comment_plural_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_plural_page';
-  $strongarm->value = 'comments';
-  $export['node_comment_plural_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_plural_profile';
-  $strongarm->value = 'comments';
-  $export['node_comment_plural_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_plural_term';
-  $strongarm->value = 'annotations';
-  $export['node_comment_plural_term'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2058,51 +1937,9 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_topic_review_annotation';
-  $strongarm->value = '0';
-  $export['node_comment_topic_review_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_comment_topic_review_comment';
   $strongarm->value = '0';
   $export['node_comment_topic_review_comment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_topic_review_discussion';
-  $strongarm->value = '0';
-  $export['node_comment_topic_review_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_topic_review_page';
-  $strongarm->value = '0';
-  $export['node_comment_topic_review_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_topic_review_profile';
-  $strongarm->value = '0';
-  $export['node_comment_topic_review_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_topic_review_term';
-  $strongarm->value = '0';
-  $export['node_comment_topic_review_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_type_annotation';
-  $strongarm->value = '';
-  $export['node_comment_type_annotation'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2114,72 +1951,9 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_type_discussion';
-  $strongarm->value = 'response';
-  $export['node_comment_type_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_type_page';
-  $strongarm->value = '';
-  $export['node_comment_type_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_type_profile';
-  $strongarm->value = '';
-  $export['node_comment_type_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_type_term';
-  $strongarm->value = 'annotation';
-  $export['node_comment_type_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_view_annotation';
-  $strongarm->value = 'nodecomments';
-  $export['node_comment_view_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_comment_view_comment';
   $strongarm->value = 'nodecomments';
   $export['node_comment_view_comment'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_view_discussion';
-  $strongarm->value = 'nurani_comments';
-  $export['node_comment_view_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_view_page';
-  $strongarm->value = 'nodecomments';
-  $export['node_comment_view_page'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_view_profile';
-  $strongarm->value = 'nodecomments';
-  $export['node_comment_view_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_view_term';
-  $strongarm->value = 'nurani_comments';
-  $export['node_comment_view_term'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2230,15 +2004,8 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_annotation';
-  $strongarm->value = 0;
-  $export['node_export_reset_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_book_mlid_annotation';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_book_mlid_annotation'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2259,7 +2026,7 @@ return theme(\'links\', $links);
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_book_mlid_page';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_book_mlid_page'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2287,7 +2054,7 @@ return theme(\'links\', $links);
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_changed_annotation';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_changed_annotation'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2308,7 +2075,7 @@ return theme(\'links\', $links);
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_changed_page';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_changed_page'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2343,7 +2110,7 @@ return theme(\'links\', $links);
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_created_annotation';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_created_annotation'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2364,7 +2131,7 @@ return theme(\'links\', $links);
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_created_page';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_created_page'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2391,15 +2158,8 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_discussion';
-  $strongarm->value = 0;
-  $export['node_export_reset_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_menu_annotation';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_menu_annotation'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2420,7 +2180,7 @@ return theme(\'links\', $links);
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_menu_page';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_menu_page'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2447,15 +2207,15 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_page';
-  $strongarm->value = 0;
-  $export['node_export_reset_page'] = $strongarm;
+  $strongarm->name = 'node_export_reset_revision_timestamp_term';
+  $strongarm->value = 1;
+  $export['node_export_reset_revision_timestamp_term'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_path_annotation';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_path_annotation'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2476,7 +2236,7 @@ return theme(\'links\', $links);
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_export_reset_path_page';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_export_reset_path_page'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -2503,41 +2263,11 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_profile';
-  $strongarm->value = 0;
-  $export['node_export_reset_profile'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_term';
-  $strongarm->value = 0;
-  $export['node_export_reset_term'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_reset_text';
-  $strongarm->value = 0;
-  $export['node_export_reset_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_annotation';
   $strongarm->value = array(
     0 => 'status',
   );
   $export['node_options_annotation'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_comment';
-  $strongarm->value = array(
-    0 => 'status',
-  );
-  $export['node_options_comment'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2548,15 +2278,6 @@ return theme(\'links\', $links);
     1 => 'promote',
   );
   $export['node_options_discussion'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_forum';
-  $strongarm->value = array(
-    0 => 'status',
-  );
-  $export['node_options_forum'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2649,94 +2370,6 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_ignore_words';
-  $strongarm->value = 'a,an,as,at,before,but,by,for,from,is,in,into,like,of,off,on,onto,per,since,than,the,this,that,to,up,via,with';
-  $export['pathauto_ignore_words'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_indexaliases';
-  $strongarm->value = FALSE;
-  $export['pathauto_indexaliases'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_max_component_length';
-  $strongarm->value = '100';
-  $export['pathauto_max_component_length'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_max_length';
-  $strongarm->value = '100';
-  $export['pathauto_max_length'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_modulelist';
-  $strongarm->value = array(
-    0 => 'node',
-    1 => 'user',
-    2 => 'taxonomy',
-  );
-  $export['pathauto_modulelist'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_applytofeeds';
-  $strongarm->value = '';
-  $export['pathauto_node_applytofeeds'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_bulkupdate';
-  $strongarm->value = FALSE;
-  $export['pathauto_node_bulkupdate'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_forum_pattern';
-  $strongarm->value = '';
-  $export['pathauto_node_forum_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_image_pattern';
-  $strongarm->value = '';
-  $export['pathauto_node_image_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_page_pattern';
-  $strongarm->value = '';
-  $export['pathauto_node_page_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_pattern';
-  $strongarm->value = 'content/[title-raw]';
-  $export['pathauto_node_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_story_pattern';
-  $strongarm->value = '';
-  $export['pathauto_node_story_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_supportsfeeds';
   $strongarm->value = 'feed';
   $export['pathauto_node_supportsfeeds'] = $strongarm;
@@ -2744,100 +2377,9 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_punctuation_hyphen';
-  $strongarm->value = 1;
-  $export['pathauto_punctuation_hyphen'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_punctuation_quotes';
-  $strongarm->value = 0;
-  $export['pathauto_punctuation_quotes'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_separator';
-  $strongarm->value = '-';
-  $export['pathauto_separator'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_1_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_1_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_2_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_2_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_applytofeeds';
-  $strongarm->value = FALSE;
-  $export['pathauto_taxonomy_applytofeeds'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_bulkupdate';
-  $strongarm->value = FALSE;
-  $export['pathauto_taxonomy_bulkupdate'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_pattern';
-  $strongarm->value = 'category/[vocab-raw]/[catpath-raw]';
-  $export['pathauto_taxonomy_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_supportsfeeds';
-  $strongarm->value = '0/feed';
-  $export['pathauto_taxonomy_supportsfeeds'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_transliterate';
   $strongarm->value = FALSE;
   $export['pathauto_transliterate'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_update_action';
-  $strongarm->value = '2';
-  $export['pathauto_update_action'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_user_bulkupdate';
-  $strongarm->value = FALSE;
-  $export['pathauto_user_bulkupdate'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_user_pattern';
-  $strongarm->value = 'users/[user-raw]';
-  $export['pathauto_user_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_user_supportsfeeds';
-  $strongarm->value = '';
-  $export['pathauto_user_supportsfeeds'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3075,114 +2617,9 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_text';
-  $strongarm->value = '2';
-  $export['language_content_type_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_profile_use_text';
-  $strongarm->value = 0;
-  $export['content_profile_use_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_text';
-  $strongarm->value = '0';
-  $export['comment_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_text';
-  $strongarm->value = '4';
-  $export['comment_default_mode_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_text';
-  $strongarm->value = '1';
-  $export['comment_default_order_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_text';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_text';
-  $strongarm->value = '3';
-  $export['comment_controls_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_text';
-  $strongarm->value = 0;
-  $export['comment_anonymous_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_text';
-  $strongarm->value = '1';
-  $export['comment_subject_field_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_text';
-  $strongarm->value = '1';
-  $export['comment_preview_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_text';
-  $strongarm->value = '0';
-  $export['comment_form_location_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_comment_text';
   $strongarm->value = 0;
   $export['node_comment_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_type_text';
-  $strongarm->value = '';
-  $export['node_comment_type_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_plural_text';
-  $strongarm->value = 'comments';
-  $export['node_comment_plural_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_view_text';
-  $strongarm->value = 'nodecomments';
-  $export['node_comment_view_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_topic_review_text';
-  $strongarm->value = '0';
-  $export['node_comment_topic_review_text'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3228,66 +2665,6 @@ return theme(\'links\', $links);
     8 => 'comment',
   );
   $export['i18nsync_nodeapi_text'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ds_all_build_modes';
-  $strongarm->value = array(
-    'nd' => array(
-      'full' => array(
-        'weight' => -1,
-        'title' => 'Full node',
-      ),
-      'teaser' => array(
-        'weight' => 1,
-        'title' => 'Teaser',
-      ),
-      'sticky' => array(
-        'weight' => 2,
-        'title' => 'Sticky',
-      ),
-      4 => array(
-        'weight' => 3,
-        'title' => 'RSS',
-      ),
-      2 => array(
-        'weight' => 13,
-        'title' => 'Search Index',
-      ),
-      3 => array(
-        'weight' => 14,
-        'title' => 'Search Result',
-      ),
-      5 => array(
-        'weight' => 17,
-        'title' => 'Print',
-      ),
-      'token' => array(
-        'weight' => 18,
-        'title' => 'Token',
-      ),
-      'text_summary' => array(
-        'weight' => 10,
-        'title' => 'Text summary',
-        'build modes' => array(
-          'text_summary' => array(
-            'title' => 'Text summary',
-          ),
-        ),
-      ),
-      'discussion_participants' => array(
-        'weight' => 11,
-        'title' => 'Discussion participants',
-        'build modes' => array(
-          'discussion_participants' => array(
-            'title' => 'Discussion participants',
-          ),
-        ),
-      ),
-    ),
-  );
-  $export['ds_all_build_modes'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3361,135 +2738,9 @@ return theme(\'links\', $links);
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_response';
-  $strongarm->value = '2';
-  $export['language_content_type_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_profile_use_response';
-  $strongarm->value = 0;
-  $export['content_profile_use_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_response';
-  $strongarm->value = '0';
-  $export['comment_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_response';
-  $strongarm->value = '4';
-  $export['comment_default_mode_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_response';
-  $strongarm->value = '1';
-  $export['comment_default_order_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_response';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_response';
-  $strongarm->value = '3';
-  $export['comment_controls_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_response';
-  $strongarm->value = 0;
-  $export['comment_anonymous_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_response';
-  $strongarm->value = '1';
-  $export['comment_subject_field_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_response';
-  $strongarm->value = '1';
-  $export['comment_preview_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_response';
-  $strongarm->value = '0';
-  $export['comment_form_location_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_comment_response';
   $strongarm->value = 0;
   $export['node_comment_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_type_response';
-  $strongarm->value = '';
-  $export['node_comment_type_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_plural_response';
-  $strongarm->value = 'comments';
-  $export['node_comment_plural_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_view_response';
-  $strongarm->value = 'nodecomments';
-  $export['node_comment_view_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_comment_topic_review_response';
-  $strongarm->value = '0';
-  $export['node_comment_topic_review_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_response';
-  $strongarm->value = '0';
-  $export['ant_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_pattern_response';
-  $strongarm->value = '';
-  $export['ant_pattern_response'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_php_response';
-  $strongarm->value = 0;
-  $export['ant_php_response'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3535,6 +2786,97 @@ return theme(\'links\', $links);
     8 => 'comment',
   );
   $export['i18nsync_nodeapi_response'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_created_response';
+  $strongarm->value = 1;
+  $export['node_export_reset_created_response'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_changed_response';
+  $strongarm->value = 1;
+  $export['node_export_reset_changed_response'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_menu_response';
+  $strongarm->value = 1;
+  $export['node_export_reset_menu_response'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_path_response';
+  $strongarm->value = 1;
+  $export['node_export_reset_path_response'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_book_mlid_response';
+  $strongarm->value = 1;
+  $export['node_export_reset_book_mlid_response'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_annotation';
+  $strongarm->value = 0;
+  $export['node_export_reset_annotation'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_revision_timestamp_annotation';
+  $strongarm->value = 1;
+  $export['node_export_reset_revision_timestamp_annotation'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_last_comment_timestamp_annotation';
+  $strongarm->value = 1;
+  $export['node_export_reset_last_comment_timestamp_annotation'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_revision_timestamp_comment';
+  $strongarm->value = 1;
+  $export['node_export_reset_revision_timestamp_comment'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_last_comment_timestamp_term';
+  $strongarm->value = 1;
+  $export['node_export_reset_last_comment_timestamp_term'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_discussion';
+  $strongarm->value = 0;
+  $export['node_export_reset_discussion'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_revision_timestamp_discussion';
+  $strongarm->value = 1;
+  $export['node_export_reset_revision_timestamp_discussion'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_reset_last_comment_timestamp_discussion';
+  $strongarm->value = 1;
+  $export['node_export_reset_last_comment_timestamp_discussion'] = $strongarm;
 
   return $export;
 }

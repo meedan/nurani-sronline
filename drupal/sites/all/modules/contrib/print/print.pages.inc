@@ -80,7 +80,7 @@ function print_controller($path, $cid = NULL, $format = PRINT_HTML_FORMAT, $teas
     $path = $alias;
   }
   $parts = explode('/', $path);
-  if (($parts[0] == 'node') && (count($parts) > 1)) {
+  if (($parts[0] == 'node') && (count($parts) > 1) && ctype_digit($parts[1])) {
     array_shift($parts);
     $path = implode('/', $parts);
   }
@@ -219,7 +219,7 @@ function _print_var_generator($node, $message = NULL, $cid = NULL) {
   }
 
   $window_close = ($print_html_new_window && $print_html_windowclose) ? 'window.close();' : '';
-  $print['sendtoprinter'] = $print_html_sendtoprinter ? "<script type='text/javascript'>Drupal.behaviors.print = function(context) {window.print();$window_close}</script>" : '';
+  $print['sendtoprinter'] = $print_html_sendtoprinter ? '<script type="text/javascript">Drupal.behaviors.print = function(context) {$(window).load(function() {window.print();' . $window_close . '})};</script>' : '';
 
   switch ($print_logo_options) {
     case 0: // none
@@ -268,7 +268,7 @@ function _print_var_generator($node, $message = NULL, $cid = NULL) {
       $url = $base_url .'/'. (((bool)variable_get('clean_url', '0')) ? '' : '?q=') . $path;
     }
     if (is_int($cid)) {
-      $url .= '#comment-$cid';
+      $url .= "#comment-$cid";
     }
     $retrieved_date = format_date(time(), 'small');
     $print_text_retrieved = filter_xss(variable_get('print_text_retrieved', t('retrieved on %date')));
@@ -345,9 +345,25 @@ function _print_rewrite_urls($matches) {
     if (preg_match('!^(?:href|src)\s*?=(.*)!i', $attribs[$i], $urls) > 0) {
       $url = trim($urls[1], " \t\n\r\0\x0B\"'");
 
-      if (strpos(html_entity_decode($url), '://') || preg_match('!^mailto:.*?@.*?\..*?$!iu', html_entity_decode($url))) {
+      if (empty($url)) {
+        // If URL is empty, use current_url
+        $path = explode('/', $_GET['q']);
+        unset($path[0]);
+        $path = implode('/', $path);
+        if (ctype_digit($path)) {
+          $path = "node/$path";
+        }
+        // Printer-friendly URLs is on, so we need to make it absolute
+        $newurl = url($path, array('fragment' => drupal_substr($url, 1), 'absolute' => TRUE));
+      }
+      elseif (strpos(html_entity_decode($url), '://') || preg_match('!^mailto:.*?@.*?\..*?$!iu', html_entity_decode($url))) {
         // URL is absolute, do nothing
         $newurl = $url;
+      }
+      elseif (strpos(html_entity_decode($url), '//') === 0) {
+        // URL is 'almost absolute', but it does not contain protocol; replace with base_path protocol
+        $newurl = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . ":" . $url;
+        $matches[1] = str_replace($url, $newurl, $matches[1]);
       }
       else {
         if ($url[0] == '#') {
@@ -407,7 +423,7 @@ function _print_rewrite_urls($matches) {
  */
 function _print_friendly_urls($url = 0) {
   static $urls = array();
-  if ($url) {
+  if ($url !== 0) {
     $url_idx = array_search($url, $urls);
     if ($url_idx !== FALSE) {
       return ($url_idx + 1);

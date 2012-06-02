@@ -86,11 +86,18 @@ function uuid_admin() {
   $form['settings']['sync'] = array(
     '#type' => 'submit',
     '#value' => t('Create missing UUIDs'),
-    '#submit' => array('uuid_sync'),
+    '#submit' => array('uuid_sync_submit'),
     '#weight' => 10,
   );
 
   return system_settings_form($form);
+}
+
+/**
+ * Submit handler for sync
+ */
+function uuid_sync_submit($form, &$form_state) {
+  return uuid_sync();
 }
 
 /**
