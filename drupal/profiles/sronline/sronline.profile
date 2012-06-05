@@ -55,11 +55,9 @@ function sronline_profile_modules() {
     // Features
     'features', 'diff',
 
-    // Nurani modules
-    // 'nurani_general',
-
-    // SR-Online modules
-    // 'sronline_general',
+    //
+    // NOTE: Features modules are enabled in the function sronline_profile_tasks()
+    //
   );
 
   return $modules;
@@ -123,6 +121,7 @@ function sronline_profile_tasks(&$task, $url) {
       'sronline_general',
       'sronline_video',
       'nurani_notifications_system',
+      'news_section',
     );
     variable_set('nurani_selected_features', $features);
 
