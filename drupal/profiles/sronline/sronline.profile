@@ -27,6 +27,9 @@ function sronline_profile_modules() {
     // Context
     'context',
     
+    // Views
+    'views_ui',
+
     // Date
     'date_api', 'date_timezone',
 
@@ -116,7 +119,7 @@ function sronline_profile_tasks(&$task, $url) {
   // Provide a form to choose features
   if ($task == 'configure-nurani') {
     $features = array(
-      'nurani_general',
+      // 'nurani_general',
       'sronline_general',
       'sronline_video',
       'nurani_notifications_system',
