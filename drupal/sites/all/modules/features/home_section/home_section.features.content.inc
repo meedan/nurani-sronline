@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_content_default_fields().
  */
-function sronline_general_content_default_fields() {
+function home_section_content_default_fields() {
   $fields = array();
 
   // Exported field: field_banner_image
