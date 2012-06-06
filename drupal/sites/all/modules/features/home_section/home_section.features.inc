@@ -84,48 +84,6 @@ function home_section_imagecache_default_presets() {
 }
 
 /**
- * Implementation of hook_node_info().
- */
-function home_section_node_info() {
-  $items = array(
-    'home_banner' => array(
-      'name' => t('Home banner'),
-      'module' => 'features',
-      'description' => t('A content type to upload banner on the home page'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'has_body' => '1',
-      'body_label' => t('Body'),
-      'min_word_count' => '0',
-      'help' => '',
-    ),
-    'testimonial' => array(
-      'name' => t('Testimonial'),
-      'module' => 'features',
-      'description' => t('Create Testimonial Content'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'has_body' => '1',
-      'body_label' => t('Body'),
-      'min_word_count' => '0',
-      'help' => '',
-    ),
-    'text_bundle' => array(
-      'name' => t('Text Bundles'),
-      'module' => 'features',
-      'description' => t('A Content Type to create Text bundles'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'has_body' => '1',
-      'body_label' => t('Body'),
-      'min_word_count' => '0',
-      'help' => '',
-    ),
-  );
-  return $items;
-}
-
-/**
  * Implementation of hook_views_api().
  */
 function home_section_views_api() {
