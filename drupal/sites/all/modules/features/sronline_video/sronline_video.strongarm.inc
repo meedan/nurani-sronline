@@ -80,6 +80,8 @@ function sronline_video_strongarm() {
     'author' => '0',
     'options' => '1',
     'comment_settings' => '3',
+    'language' => '0',
+    'translation' => '30',
     'menu' => '-4',
     'path' => '4',
     'print' => '2',

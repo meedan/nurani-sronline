@@ -11,6 +11,43 @@ function sronline_video_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_imagecache_default_presets().
+ */
+function sronline_video_imagecache_default_presets() {
+  $items = array(
+    'Video_image_295' => array(
+      'presetname' => 'Video_image_295',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '295',
+            'height' => '200',
+          ),
+        ),
+      ),
+    ),
+    'Video_image_556' => array(
+      'presetname' => 'Video_image_556',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '556',
+            'height' => '322',
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implementation of hook_node_info().
  */
 function sronline_video_node_info() {
@@ -28,4 +65,13 @@ function sronline_video_node_info() {
     ),
   );
   return $items;
+}
+
+/**
+ * Implementation of hook_views_api().
+ */
+function sronline_video_views_api() {
+  return array(
+    'api' => '2',
+  );
 }
