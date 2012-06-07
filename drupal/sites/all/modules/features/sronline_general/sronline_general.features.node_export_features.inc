@@ -38,7 +38,7 @@ function sronline_general_node_export_features_default() {
     \'print_display_comment\' => 0,
     \'print_display_urllist\' => 1,
     \'webform\' => array(
-      \'nid\' => \'20\',
+      \'nid\' => \'1\',
       \'confirmation\' => \'\',
       \'confirmation_format\' => \'2\',
       \'redirect_url\' => \'<confirmation>\',
@@ -61,7 +61,7 @@ function sronline_general_node_export_features_default() {
       \'emails\' => array(),
       \'components\' => array(
         \'1\' => array(
-          \'nid\' => \'20\',
+          \'nid\' => \'1\',
           \'cid\' => \'1\',
           \'form_key\' => \'email_address\',
           \'name\' => \'Email Address\',
@@ -130,7 +130,7 @@ function sronline_general_node_export_features_default() {
     \'print_display_comment\' => 0,
     \'print_display_urllist\' => 1,
     \'webform\' => array(
-      \'nid\' => \'21\',
+      \'nid\' => \'2\',
       \'confirmation\' => \'\',
       \'confirmation_format\' => \'1\',
       \'redirect_url\' => \'<confirmation>\',
@@ -153,7 +153,7 @@ function sronline_general_node_export_features_default() {
       \'emails\' => array(),
       \'components\' => array(
         \'1\' => array(
-          \'nid\' => \'21\',
+          \'nid\' => \'2\',
           \'cid\' => \'1\',
           \'form_key\' => \'name\',
           \'name\' => \'Name\',
@@ -180,7 +180,7 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'2\' => array(
-          \'nid\' => \'21\',
+          \'nid\' => \'2\',
           \'cid\' => \'2\',
           \'form_key\' => \'email_address\',
           \'name\' => \'Email Address\',
@@ -204,7 +204,7 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'3\' => array(
-          \'nid\' => \'21\',
+          \'nid\' => \'2\',
           \'cid\' => \'3\',
           \'form_key\' => \'telephone\',
           \'name\' => \'Telephone\',
@@ -231,7 +231,7 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'4\' => array(
-          \'nid\' => \'21\',
+          \'nid\' => \'2\',
           \'cid\' => \'4\',
           \'form_key\' => \'message\',
           \'name\' => \'Message\',
