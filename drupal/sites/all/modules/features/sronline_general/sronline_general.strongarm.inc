@@ -549,8 +549,14 @@ function sronline_general_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'uuid_automatic_for_nodes';
   $strongarm->value = array(
+    'basic_page' => 'basic_page',
+    'home_banner' => 'home_banner',
+    'image' => 'image',
+    'news_articles' => 'news_articles',
+    'testimonial' => 'testimonial',
+    'text_bundle' => 'text_bundle',
+    'video' => 'video',
     'webform' => 'webform',
-    'comment' => 0,
   );
   $export['uuid_automatic_for_nodes'] = $strongarm;
 
