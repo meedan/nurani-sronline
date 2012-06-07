@@ -25,8 +25,8 @@ function sronline_profile_modules() {
     'page_manager', 'panels', 
     
     // Context
-    'context',
-    
+    'context', 'context_ui',
+
     // Views
     'views_ui',
 
@@ -119,9 +119,10 @@ function sronline_profile_tasks(&$task, $url) {
     $features = array(
       // 'nurani_general',
       'sronline_general',
+      'about_us',
+      'home_section',
+      'home_section',
       'sronline_video',
-      'nurani_notifications_system',
-      'news_section',
     );
     variable_set('nurani_selected_features', $features);
 
@@ -150,10 +151,10 @@ function sronline_profile_tasks(&$task, $url) {
     $operations[] = array('sronline_config_ctools', array());
     $operations[] = array('sronline_config_taxonomy', array());
     $operations[] = array('sronline_config_theme', array());
-    $operations[] = array('sronline_config_icl', array());
+    // $operations[] = array('sronline_config_icl', array());
     // $operations[] = array('sronline_config_nodes', array());
-    $operations[] = array('sronline_config_noderelationships', array());
-    $operations[] = array('sronline_config_i18n', array());
+    // $operations[] = array('sronline_config_noderelationships', array());
+    // $operations[] = array('sronline_config_i18n', array());
     // $operations[] = array('sronline_import_users', array());
     // $operations[] = array('sronline_import_texts', array());
     // $operations[] = array('sronline_import_discussions', array());
@@ -388,19 +389,19 @@ function sronline_cleanup() {
   // Clear out caches
   drupal_flush_all_caches();
  
-  // Some features will need reverting
-  $revert = array(
-    'nurani_general' => array('menu_links', 'variable'),
-  );
+  // // Some features will need reverting
+  // $revert = array(
+  //   'nurani_general' => array('menu_links', 'variable'),
+  // );
   
-  // Make sure we only try to revert features we've enabled
-  $enabled = variable_get('nurani_selected_features', array('nurani_general'));
-  foreach ($revert as $feature => $value) {
-    if (!in_array($feature, $enabled)) {
-      unset($revert[$feature]);
-    }
-  }
-  features_revert($revert);
+  // // Make sure we only try to revert features we've enabled
+  // $enabled = variable_get('nurani_selected_features', array('nurani_general'));
+  // foreach ($revert as $feature => $value) {
+  //   if (!in_array($feature, $enabled)) {
+  //     unset($revert[$feature]);
+  //   }
+  // }
+  // features_revert($revert);
   
   // Say hello to the dog!
   watchdog('nurani', st('Welcome to SR-Online!'));
