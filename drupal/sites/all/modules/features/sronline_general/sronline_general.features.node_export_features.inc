@@ -32,11 +32,6 @@ function sronline_general_node_export_features_default() {
     \'picture\' => \'\',
     \'data\' => \'a:0:{}\',
     \'path\' => NULL,
-    \'has_body\' => \'1\',
-    \'comment_type\' => \'\',
-    \'print_display\' => 1,
-    \'print_display_comment\' => 0,
-    \'print_display_urllist\' => 1,
     \'webform\' => array(
       \'nid\' => \'1\',
       \'confirmation\' => \'\',
@@ -98,6 +93,147 @@ function sronline_general_node_export_features_default() {
   ),
     array(
     \'nid\' => NULL,
+    \'type\' => \'basic_page\',
+    \'language\' => \'\',
+    \'uid\' => \'1\',
+    \'status\' => \'1\',
+    \'created\' => NULL,
+    \'changed\' => NULL,
+    \'comment\' => \'2\',
+    \'promote\' => \'0\',
+    \'moderate\' => \'0\',
+    \'sticky\' => \'0\',
+    \'tnid\' => \'0\',
+    \'translate\' => \'0\',
+    \'vid\' => NULL,
+    \'revision_uid\' => \'1\',
+    \'title\' => \'About SR\',
+    \'body\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Nulla lacinia, ante a sagittis bibendum, elit risus ultricies sem, sollicitudin malesuada massa magna nec ante. Donec et lacus nulla, ut interdum nunc. Sed interdum erat vitae mi consectetur eleifend. Aenean euismod justo vel felis lobortis sed ornare mi porta. Donec ut massa erat, sit amet molestie nisl. Sed lobortis purus at nisi dapibus a egestas velit ornare. Nunc imperdiet, nibh ac lobortis adipiscing, ante tellus luctus sem, id volutpat sem mi nec est. Maecenas auctor rhoncus mauris, eu suscipit ante dictum in.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Etiam sollicitudin viverra justo, non feugiat enim cursus at. Praesent ut mi nec eros rhoncus mattis a sit amet ipsum. Donec eu diam non risus rutrum aliquet eget dictum nibh. Phasellus nec elit eget tellus volutpat dapibus. Morbi volutpat purus sit amet tellus pellentesque ut ornare orci pellentesque. Praesent ut consequat nulla. Nullam vel purus massa. Maecenas a velit vitae nisi porttitor auctor ac sit amet nisi. Maecenas ut turpis purus. Nunc turpis diam, accumsan et molestie eget, egestas nec lorem. Maecenas laoreet enim ut lorem lacinia congue. Donec quis lectus quam. Phasellus lobortis, turpis a feugiat egestas, risus enim ultricies arcu, non aliquet tellus augue a justo.</p>
+\',
+    \'teaser\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>\',
+    \'log\' => \'\',
+    \'revision_timestamp\' => NULL,
+    \'format\' => \'1\',
+    \'name\' => \'admin\',
+    \'picture\' => \'\',
+    \'data\' => \'a:0:{}\',
+    \'path\' => NULL,
+    \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_attachment\' => array(
+      \'0\' => NULL,
+    ),
+    \'last_comment_timestamp\' => NULL,
+    \'last_comment_name\' => NULL,
+    \'comment_count\' => \'0\',
+    \'taxonomy\' => array(),
+    \'uuid\' => \'5e9faa8e-b0a8-11e1-ae37-0a27a7ce15fc\',
+    \'revision_uuid\' => \'5e9fdf86-b0a8-11e1-ae37-0a27a7ce15fc\',
+    \'menu\' => NULL,
+    \'files\' => array(),
+    \'#_export_node_encode_object\' => \'1\',
+  ),
+    array(
+    \'nid\' => NULL,
+    \'type\' => \'basic_page\',
+    \'language\' => \'\',
+    \'uid\' => \'1\',
+    \'status\' => \'1\',
+    \'created\' => NULL,
+    \'changed\' => NULL,
+    \'comment\' => \'2\',
+    \'promote\' => \'0\',
+    \'moderate\' => \'0\',
+    \'sticky\' => \'0\',
+    \'tnid\' => \'0\',
+    \'translate\' => \'0\',
+    \'vid\' => NULL,
+    \'revision_uid\' => \'1\',
+    \'title\' => \'Resources\',
+    \'body\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Nulla lacinia, ante a sagittis bibendum, elit risus ultricies sem, sollicitudin malesuada massa magna nec ante. Donec et lacus nulla, ut interdum nunc. Sed interdum erat vitae mi consectetur eleifend. Aenean euismod justo vel felis lobortis sed ornare mi porta. Donec ut massa erat, sit amet molestie nisl. Sed lobortis purus at nisi dapibus a egestas velit ornare. Nunc imperdiet, nibh ac lobortis adipiscing, ante tellus luctus sem, id volutpat sem mi nec est. Maecenas auctor rhoncus mauris, eu suscipit ante dictum in.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Etiam sollicitudin viverra justo, non feugiat enim cursus at. Praesent ut mi nec eros rhoncus mattis a sit amet ipsum. Donec eu diam non risus rutrum aliquet eget dictum nibh. Phasellus nec elit eget tellus volutpat dapibus. Morbi volutpat purus sit amet tellus pellentesque ut ornare orci pellentesque. Praesent ut consequat nulla. Nullam vel purus massa. Maecenas a velit vitae nisi porttitor auctor ac sit amet nisi. Maecenas ut turpis purus. Nunc turpis diam, accumsan et molestie eget, egestas nec lorem. Maecenas laoreet enim ut lorem lacinia congue. Donec quis lectus quam. Phasellus lobortis, turpis a feugiat egestas, risus enim ultricies arcu, non aliquet tellus augue a justo.</p>
+\',
+    \'teaser\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>\',
+    \'log\' => \'\',
+    \'revision_timestamp\' => NULL,
+    \'format\' => \'1\',
+    \'name\' => \'admin\',
+    \'picture\' => \'\',
+    \'data\' => \'a:0:{}\',
+    \'path\' => NULL,
+    \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_attachment\' => array(
+      \'0\' => NULL,
+    ),
+    \'last_comment_timestamp\' => NULL,
+    \'last_comment_name\' => NULL,
+    \'comment_count\' => \'0\',
+    \'taxonomy\' => array(),
+    \'uuid\' => \'5e9fbd3a-b0a8-11e1-ae37-0a27a7ce15fc\',
+    \'revision_uuid\' => \'5e9fe954-b0a8-11e1-ae37-0a27a7ce15fc\',
+    \'menu\' => NULL,
+    \'files\' => array(),
+    \'#_export_node_encode_object\' => \'1\',
+  ),
+    array(
+    \'nid\' => NULL,
+    \'type\' => \'basic_page\',
+    \'language\' => \'\',
+    \'uid\' => \'1\',
+    \'status\' => \'1\',
+    \'created\' => NULL,
+    \'changed\' => NULL,
+    \'comment\' => \'2\',
+    \'promote\' => \'0\',
+    \'moderate\' => \'0\',
+    \'sticky\' => \'0\',
+    \'tnid\' => \'0\',
+    \'translate\' => \'0\',
+    \'vid\' => NULL,
+    \'revision_uid\' => \'1\',
+    \'title\' => \'SR Online\',
+    \'body\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Nulla lacinia, ante a sagittis bibendum, elit risus ultricies sem, sollicitudin malesuada massa magna nec ante. Donec et lacus nulla, ut interdum nunc. Sed interdum erat vitae mi consectetur eleifend. Aenean euismod justo vel felis lobortis sed ornare mi porta. Donec ut massa erat, sit amet molestie nisl. Sed lobortis purus at nisi dapibus a egestas velit ornare. Nunc imperdiet, nibh ac lobortis adipiscing, ante tellus luctus sem, id volutpat sem mi nec est. Maecenas auctor rhoncus mauris, eu suscipit ante dictum in.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Etiam sollicitudin viverra justo, non feugiat enim cursus at. Praesent ut mi nec eros rhoncus mattis a sit amet ipsum. Donec eu diam non risus rutrum aliquet eget dictum nibh. Phasellus nec elit eget tellus volutpat dapibus. Morbi volutpat purus sit amet tellus pellentesque ut ornare orci pellentesque. Praesent ut consequat nulla. Nullam vel purus massa. Maecenas a velit vitae nisi porttitor auctor ac sit amet nisi. Maecenas ut turpis purus. Nunc turpis diam, accumsan et molestie eget, egestas nec lorem. Maecenas laoreet enim ut lorem lacinia congue. Donec quis lectus quam. Phasellus lobortis, turpis a feugiat egestas, risus enim ultricies arcu, non aliquet tellus augue a justo.</p>
+\',
+    \'teaser\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>\',
+    \'log\' => \'\',
+    \'revision_timestamp\' => NULL,
+    \'format\' => \'1\',
+    \'name\' => \'admin\',
+    \'picture\' => \'\',
+    \'data\' => \'a:0:{}\',
+    \'path\' => NULL,
+    \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_attachment\' => array(
+      \'0\' => NULL,
+    ),
+    \'last_comment_timestamp\' => NULL,
+    \'last_comment_name\' => NULL,
+    \'comment_count\' => \'0\',
+    \'taxonomy\' => array(),
+    \'uuid\' => \'5e9fc6ea-b0a8-11e1-ae37-0a27a7ce15fc\',
+    \'revision_uuid\' => \'5e9ff2be-b0a8-11e1-ae37-0a27a7ce15fc\',
+    \'menu\' => NULL,
+    \'files\' => array(),
+    \'#_export_node_encode_object\' => \'1\',
+  ),
+    array(
+    \'nid\' => NULL,
     \'type\' => \'webform\',
     \'language\' => \'\',
     \'uid\' => \'1\',
@@ -124,13 +260,12 @@ function sronline_general_node_export_features_default() {
     \'picture\' => \'\',
     \'data\' => \'a:0:{}\',
     \'path\' => NULL,
-    \'has_body\' => \'1\',
-    \'comment_type\' => \'\',
-    \'print_display\' => 1,
-    \'print_display_comment\' => 0,
-    \'print_display_urllist\' => 1,
     \'webform\' => array(
+<<<<<<< HEAD
       \'nid\' => \'2\',
+=======
+      \'nid\' => \'5\',
+>>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
       \'confirmation\' => \'\',
       \'confirmation_format\' => \'1\',
       \'redirect_url\' => \'<confirmation>\',
@@ -153,7 +288,11 @@ function sronline_general_node_export_features_default() {
       \'emails\' => array(),
       \'components\' => array(
         \'1\' => array(
+<<<<<<< HEAD
           \'nid\' => \'2\',
+=======
+          \'nid\' => \'5\',
+>>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
           \'cid\' => \'1\',
           \'form_key\' => \'name\',
           \'name\' => \'Name\',
@@ -180,7 +319,11 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'2\' => array(
+<<<<<<< HEAD
           \'nid\' => \'2\',
+=======
+          \'nid\' => \'5\',
+>>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
           \'cid\' => \'2\',
           \'form_key\' => \'email_address\',
           \'name\' => \'Email Address\',
@@ -204,7 +347,11 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'3\' => array(
+<<<<<<< HEAD
           \'nid\' => \'2\',
+=======
+          \'nid\' => \'5\',
+>>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
           \'cid\' => \'3\',
           \'form_key\' => \'telephone\',
           \'name\' => \'Telephone\',
@@ -231,7 +378,11 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'4\' => array(
+<<<<<<< HEAD
           \'nid\' => \'2\',
+=======
+          \'nid\' => \'5\',
+>>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
           \'cid\' => \'4\',
           \'form_key\' => \'message\',
           \'name\' => \'Message\',
@@ -263,6 +414,100 @@ function sronline_general_node_export_features_default() {
     \'taxonomy\' => array(),
     \'uuid\' => \'b4d9fa12-ab26-11e1-a665-e89e5bed9625\',
     \'revision_uuid\' => \'b4da1434-ab26-11e1-a665-e89e5bed9625\',
+    \'menu\' => NULL,
+    \'files\' => array(),
+    \'#_export_node_encode_object\' => \'1\',
+  ),
+    array(
+    \'nid\' => NULL,
+    \'type\' => \'basic_page\',
+    \'language\' => \'\',
+    \'uid\' => \'1\',
+    \'status\' => \'1\',
+    \'created\' => NULL,
+    \'changed\' => NULL,
+    \'comment\' => \'2\',
+    \'promote\' => \'0\',
+    \'moderate\' => \'0\',
+    \'sticky\' => \'0\',
+    \'tnid\' => \'0\',
+    \'translate\' => \'0\',
+    \'vid\' => NULL,
+    \'revision_uid\' => \'1\',
+    \'title\' => \'Terms of Use\',
+    \'body\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Nulla lacinia, ante a sagittis bibendum, elit risus ultricies sem, sollicitudin malesuada massa magna nec ante. Donec et lacus nulla, ut interdum nunc. Sed interdum erat vitae mi consectetur eleifend. Aenean euismod justo vel felis lobortis sed ornare mi porta. Donec ut massa erat, sit amet molestie nisl. Sed lobortis purus at nisi dapibus a egestas velit ornare. Nunc imperdiet, nibh ac lobortis adipiscing, ante tellus luctus sem, id volutpat sem mi nec est. Maecenas auctor rhoncus mauris, eu suscipit ante dictum in.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Etiam sollicitudin viverra justo, non feugiat enim cursus at. Praesent ut mi nec eros rhoncus mattis a sit amet ipsum. Donec eu diam non risus rutrum aliquet eget dictum nibh. Phasellus nec elit eget tellus volutpat dapibus. Morbi volutpat purus sit amet tellus pellentesque ut ornare orci pellentesque. Praesent ut consequat nulla. Nullam vel purus massa. Maecenas a velit vitae nisi porttitor auctor ac sit amet nisi. Maecenas ut turpis purus. Nunc turpis diam, accumsan et molestie eget, egestas nec lorem. Maecenas laoreet enim ut lorem lacinia congue. Donec quis lectus quam. Phasellus lobortis, turpis a feugiat egestas, risus enim ultricies arcu, non aliquet tellus augue a justo.</p>
+\',
+    \'teaser\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>\',
+    \'log\' => \'\',
+    \'revision_timestamp\' => NULL,
+    \'format\' => \'1\',
+    \'name\' => \'admin\',
+    \'picture\' => \'\',
+    \'data\' => \'a:0:{}\',
+    \'path\' => NULL,
+    \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_attachment\' => array(
+      \'0\' => NULL,
+    ),
+    \'last_comment_timestamp\' => NULL,
+    \'last_comment_name\' => NULL,
+    \'comment_count\' => \'0\',
+    \'taxonomy\' => array(),
+    \'uuid\' => \'e3ae5006-b0ab-11e1-ae37-0a27a7ce15fc\',
+    \'revision_uuid\' => \'e3ae53c6-b0ab-11e1-ae37-0a27a7ce15fc\',
+    \'menu\' => NULL,
+    \'files\' => array(),
+    \'#_export_node_encode_object\' => \'1\',
+  ),
+    array(
+    \'nid\' => NULL,
+    \'type\' => \'basic_page\',
+    \'language\' => \'\',
+    \'uid\' => \'1\',
+    \'status\' => \'1\',
+    \'created\' => NULL,
+    \'changed\' => NULL,
+    \'comment\' => \'2\',
+    \'promote\' => \'0\',
+    \'moderate\' => \'0\',
+    \'sticky\' => \'0\',
+    \'tnid\' => \'0\',
+    \'translate\' => \'0\',
+    \'vid\' => NULL,
+    \'revision_uid\' => \'1\',
+    \'title\' => \'Privacy Policy\',
+    \'body\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Nulla lacinia, ante a sagittis bibendum, elit risus ultricies sem, sollicitudin malesuada massa magna nec ante. Donec et lacus nulla, ut interdum nunc. Sed interdum erat vitae mi consectetur eleifend. Aenean euismod justo vel felis lobortis sed ornare mi porta. Donec ut massa erat, sit amet molestie nisl. Sed lobortis purus at nisi dapibus a egestas velit ornare. Nunc imperdiet, nibh ac lobortis adipiscing, ante tellus luctus sem, id volutpat sem mi nec est. Maecenas auctor rhoncus mauris, eu suscipit ante dictum in.</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Etiam sollicitudin viverra justo, non feugiat enim cursus at. Praesent ut mi nec eros rhoncus mattis a sit amet ipsum. Donec eu diam non risus rutrum aliquet eget dictum nibh. Phasellus nec elit eget tellus volutpat dapibus. Morbi volutpat purus sit amet tellus pellentesque ut ornare orci pellentesque. Praesent ut consequat nulla. Nullam vel purus massa. Maecenas a velit vitae nisi porttitor auctor ac sit amet nisi. Maecenas ut turpis purus. Nunc turpis diam, accumsan et molestie eget, egestas nec lorem. Maecenas laoreet enim ut lorem lacinia congue. Donec quis lectus quam. Phasellus lobortis, turpis a feugiat egestas, risus enim ultricies arcu, non aliquet tellus augue a justo.</p>
+\',
+    \'teaser\' => \'<p>&nbsp;</p>
+<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>\',
+    \'log\' => \'\',
+    \'revision_timestamp\' => NULL,
+    \'format\' => \'1\',
+    \'name\' => \'admin\',
+    \'picture\' => \'\',
+    \'data\' => \'a:0:{}\',
+    \'path\' => NULL,
+    \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_attachment\' => array(
+      \'0\' => NULL,
+    ),
+    \'last_comment_timestamp\' => NULL,
+    \'last_comment_name\' => NULL,
+    \'comment_count\' => \'0\',
+    \'taxonomy\' => array(),
+    \'uuid\' => \'ee2f2708-b0ab-11e1-ae37-0a27a7ce15fc\',
+    \'revision_uuid\' => \'ee2f2d98-b0ab-11e1-ae37-0a27a7ce15fc\',
     \'menu\' => NULL,
     \'files\' => array(),
     \'#_export_node_encode_object\' => \'1\',
