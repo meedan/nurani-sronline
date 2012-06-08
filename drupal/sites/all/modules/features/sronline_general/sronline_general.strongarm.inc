@@ -649,5 +649,12 @@ function sronline_general_strongarm() {
   $strongarm->value = 0;
   $export['menu_block_1_sort'] = $strongarm;
 
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_frontpage';
+  $strongarm->value = 'node/8';
+  $export['site_frontpage'] = $strongarm;
+
   return $export;
 }
