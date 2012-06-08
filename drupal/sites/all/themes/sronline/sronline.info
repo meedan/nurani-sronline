@@ -5,12 +5,16 @@ core = "6.x"
 project = "sronline"
 engine = phptemplate
 
-regions[content_top] = Content top
+
 regions[header] = Header
-regions[left] = First sidebar
+regions[content_top] = Content top
+regions[content] = content
+regions[content_center] = Content center
+regions[content_bottom] = Content bottom
+regions[left] = first sidebar
 regions[right] = Second sidebar
 regions[footer_block] = Footer
-regions[content_bottom] = Content bottom
+
 
 features[] = logo
 features[] = name
