@@ -283,7 +283,7 @@ function sronline_config_ctools() {
  */
 function sronline_config_taxonomy() {
   module_load_include('inc', 'install_profile_api', 'contrib/taxonomy_export');
-  $path = drupal_get_path('profile', 'nurani') . '/taxonomy/*.inc';
+  $path = drupal_get_path('profile', 'sronline') . '/taxonomy/*.inc';
   foreach (glob($path) as $file) {
     install_taxonomy_export_import_from_file($file);
   }

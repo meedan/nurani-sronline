@@ -24,12 +24,12 @@ function sronline_general_default_fe_nodequeue_queue() {
   $fe_nodequeue_queue->title = 'Featured text bundles';
   $fe_nodequeue_queue->subqueue_title = '';
   $fe_nodequeue_queue->size = '5';
-  $fe_nodequeue_queue->link = '';
-  $fe_nodequeue_queue->link_remove = '';
+  $fe_nodequeue_queue->link = 'Feature text bundle';
+  $fe_nodequeue_queue->link_remove = 'Unfeature text bundle';
   $fe_nodequeue_queue->owner = 'nodequeue';
   $fe_nodequeue_queue->show_in_ui = '1';
   $fe_nodequeue_queue->show_in_tab = '1';
-  $fe_nodequeue_queue->show_in_links = '0';
+  $fe_nodequeue_queue->show_in_links = '1';
   $fe_nodequeue_queue->reference = '0';
   $fe_nodequeue_queue->reverse = '0';
   $fe_nodequeue_queue->i18n = '1';
