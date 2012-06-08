@@ -9,7 +9,7 @@ function sronline_general_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'sidebar_menu';
+  $context->name = 'right_sidebar';
   $context->description = '';
   $context->tag = 'sronline';
   $context->conditions = array(
@@ -34,6 +34,18 @@ function sronline_general_context_default_contexts() {
           'region' => 'right',
           'weight' => 0,
         ),
+        'webform-client-block-1' => array(
+          'module' => 'webform',
+          'delta' => 'client-block-1',
+          'region' => 'right',
+          'weight' => 1,
+        ),
+        'views-text_bundles_featured-block_1' => array(
+          'module' => 'views',
+          'delta' => 'text_bundles_featured-block_1',
+          'region' => 'right',
+          'weight' => 2,
+        ),
       ),
     ),
   );
@@ -42,7 +54,7 @@ function sronline_general_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('sronline');
-  $export['sidebar_menu'] = $context;
+  $export['right_sidebar'] = $context;
 
   return $export;
 }
