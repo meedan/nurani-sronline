@@ -110,7 +110,6 @@ function sronline_general_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-<<<<<<< HEAD
   $strongarm->name = 'comment_anonymous_webform';
   $strongarm->value = 0;
   $export['comment_anonymous_webform'] = $strongarm;
@@ -314,8 +313,6 @@ function sronline_general_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-=======
->>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
   $strongarm->name = 'comment_controls_home_banner';
   $strongarm->value = '3';
   $export['comment_controls_home_banner'] = $strongarm;
@@ -581,9 +578,6 @@ function sronline_general_strongarm() {
     1 => 'promote',
   );
   $export['node_options_text_bundle'] = $strongarm;
-
-<<<<<<< HEAD
-=======
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -872,7 +866,5 @@ function sronline_general_strongarm() {
     0 => 'webform',
   );
   $export['webform_node_types'] = $strongarm;
-
->>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
   return $export;
 }
