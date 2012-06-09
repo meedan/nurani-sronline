@@ -261,11 +261,8 @@ function sronline_general_node_export_features_default() {
     \'data\' => \'a:0:{}\',
     \'path\' => NULL,
     \'webform\' => array(
-<<<<<<< HEAD
       \'nid\' => \'2\',
-=======
       \'nid\' => \'5\',
->>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
       \'confirmation\' => \'\',
       \'confirmation_format\' => \'1\',
       \'redirect_url\' => \'<confirmation>\',
@@ -288,11 +285,8 @@ function sronline_general_node_export_features_default() {
       \'emails\' => array(),
       \'components\' => array(
         \'1\' => array(
-<<<<<<< HEAD
           \'nid\' => \'2\',
-=======
           \'nid\' => \'5\',
->>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
           \'cid\' => \'1\',
           \'form_key\' => \'name\',
           \'name\' => \'Name\',
@@ -319,11 +313,8 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'2\' => array(
-<<<<<<< HEAD
           \'nid\' => \'2\',
-=======
           \'nid\' => \'5\',
->>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
           \'cid\' => \'2\',
           \'form_key\' => \'email_address\',
           \'name\' => \'Email Address\',
@@ -347,11 +338,8 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'3\' => array(
-<<<<<<< HEAD
           \'nid\' => \'2\',
-=======
           \'nid\' => \'5\',
->>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
           \'cid\' => \'3\',
           \'form_key\' => \'telephone\',
           \'name\' => \'Telephone\',
@@ -378,11 +366,8 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'4\' => array(
-<<<<<<< HEAD
           \'nid\' => \'2\',
-=======
           \'nid\' => \'5\',
->>>>>>> 76ddffb4a3489e06038fba6bd1c8ed4c10a74de8
           \'cid\' => \'4\',
           \'form_key\' => \'message\',
           \'name\' => \'Message\',
@@ -508,6 +493,48 @@ function sronline_general_node_export_features_default() {
     \'taxonomy\' => array(),
     \'uuid\' => \'ee2f2708-b0ab-11e1-ae37-0a27a7ce15fc\',
     \'revision_uuid\' => \'ee2f2d98-b0ab-11e1-ae37-0a27a7ce15fc\',
+    \'menu\' => NULL,
+    \'files\' => array(),
+    \'#_export_node_encode_object\' => \'1\',
+  ),
+    array(
+    \'nid\' => NULL,
+    \'type\' => \'basic_page\',
+    \'language\' => \'\',
+    \'uid\' => \'1\',
+    \'status\' => \'1\',
+    \'created\' => NULL,
+    \'changed\' => NULL,
+    \'comment\' => \'2\',
+    \'promote\' => \'0\',
+    \'moderate\' => \'0\',
+    \'sticky\' => \'0\',
+    \'tnid\' => \'0\',
+    \'translate\' => \'0\',
+    \'vid\' => NULL,
+    \'revision_uid\' => \'1\',
+    \'title\' => \'Home\',
+    \'body\' => \'\',
+    \'teaser\' => \'\',
+    \'log\' => \'\',
+    \'revision_timestamp\' => NULL,
+    \'format\' => \'1\',
+    \'name\' => \'admin\',
+    \'picture\' => \'\',
+    \'data\' => \'a:0:{}\',
+    \'path\' => NULL,
+    \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_attachment\' => array(
+      \'0\' => NULL,
+    ),
+    \'last_comment_timestamp\' => NULL,
+    \'last_comment_name\' => NULL,
+    \'comment_count\' => \'0\',
+    \'taxonomy\' => array(),
+    \'uuid\' => \'f060b792-b166-11e1-9501-a4b9b14a620d\',
+    \'revision_uuid\' => \'f060c034-b166-11e1-9501-a4b9b14a620d\',
     \'menu\' => NULL,
     \'files\' => array(),
     \'#_export_node_encode_object\' => \'1\',

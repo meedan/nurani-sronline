@@ -59,8 +59,8 @@ function sronline_general_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
     'weight' => '-49',
   );
   // Exported menu link: primary-links:node/3
@@ -79,7 +79,7 @@ function sronline_general_menu_default_menu_links() {
     'hidden' => '0',
     'external' => '0',
     'has_children' => '0',
-    'expanded' => '0',
+    'expanded' => '1',
     'weight' => '-48',
   );
   // Exported menu link: primary-links:node/4
@@ -98,7 +98,7 @@ function sronline_general_menu_default_menu_links() {
     'hidden' => '0',
     'external' => '0',
     'has_children' => '0',
-    'expanded' => '0',
+    'expanded' => '1',
     'weight' => '-47',
   );
   // Exported menu link: primary-links:node/5
