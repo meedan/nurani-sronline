@@ -261,7 +261,6 @@ function sronline_general_node_export_features_default() {
     \'data\' => \'a:0:{}\',
     \'path\' => NULL,
     \'webform\' => array(
-      \'nid\' => \'2\',
       \'nid\' => \'5\',
       \'confirmation\' => \'\',
       \'confirmation_format\' => \'1\',
@@ -285,7 +284,6 @@ function sronline_general_node_export_features_default() {
       \'emails\' => array(),
       \'components\' => array(
         \'1\' => array(
-          \'nid\' => \'2\',
           \'nid\' => \'5\',
           \'cid\' => \'1\',
           \'form_key\' => \'name\',
@@ -313,7 +311,6 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'2\' => array(
-          \'nid\' => \'2\',
           \'nid\' => \'5\',
           \'cid\' => \'2\',
           \'form_key\' => \'email_address\',
@@ -338,7 +335,6 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'3\' => array(
-          \'nid\' => \'2\',
           \'nid\' => \'5\',
           \'cid\' => \'3\',
           \'form_key\' => \'telephone\',
@@ -366,7 +362,6 @@ function sronline_general_node_export_features_default() {
           \'page_num\' => 1,
         ),
         \'4\' => array(
-          \'nid\' => \'2\',
           \'nid\' => \'5\',
           \'cid\' => \'4\',
           \'form_key\' => \'message\',
