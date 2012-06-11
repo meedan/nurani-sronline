@@ -9,7 +9,6 @@ regions[header] = Header
 regions[naviagion_bar] = Navigation bar
 regions[content_top] = Content top
 regions[content] = content
-regions[content_center] = Content center
 regions[content_bottom] = Content bottom
 regions[left] = first sidebar
 regions[right] = Second sidebar
