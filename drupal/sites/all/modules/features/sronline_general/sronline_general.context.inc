@@ -81,6 +81,12 @@ function sronline_general_context_default_contexts() {
           'region' => 'right',
           'weight' => 2,
         ),
+        'views-32bfceaf56e91407f76ac3a77c3d8a4b' => array(
+          'module' => 'views',
+          'delta' => '32bfceaf56e91407f76ac3a77c3d8a4b',
+          'region' => 'right',
+          'weight' => 3,
+        ),
       ),
     ),
   );
