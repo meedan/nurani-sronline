@@ -1,0 +1,39 @@
+
+
+ /*purpule Quote*/
+  blockquote.purpule {
+  background-image: url(../images/open_quote.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin: 50px 16px 0;
+  padding: 16px 0 10px 10px;
+  text-indent: 36px;
+    span {
+    display: block;
+    background-image: url(../images/close_quote.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding-bottom:10px;
+    } 
+    
+    cite{color:#5e2c8d; font-weight:bold;}
+  }
+ 
+ 
+
+ blockquote.orange {
+  background-image: url(../images/orange_openquote.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin: 50px 16px 0;
+  padding: 16px 0 10px 10px;
+  text-indent: 36px;
+    span {
+    display: block;
+    background-image: url(../images/orange_closequote.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding-bottom:10px;
+    } 
+     cite{color:#f15518; font-weight:bold;}
+  }

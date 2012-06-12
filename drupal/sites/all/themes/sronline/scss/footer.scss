@@ -1,0 +1,9 @@
+
+
+@mixin footer{ #footer_top{ background:url(../images/footer.png) no-repeat;height: 60px;  padding: 42px; position: absolute; width: 961px}
+  #bottom_footer{ background:url(../images/footer_img.gif) no-repeat; width:961px; height:60px; margin-top:67px; position:absolute;}
+}
+#footer.home{ @include footer; margin: 1155px 20px;}
+#footer.news, #footer.about{ @include footer; margin: 1459px 14px;}
+#footer.videos{ @include footer; margin: 1516px 14px;}
+#footer.contact{ @include footer; margin: 823px 13px;}
