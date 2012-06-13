@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-/* Welcome to Compass. Use this file to define print styles.
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
-=======
 /*
-Syntax error: Invalid CSS after "": expected selector or at-rule, was "/* Use this sty..."
-        on line 1 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/print.scss
+Syntax error: Invalid CSS after "": expected selector or at-rule, was "/* Yes, we all ..."
+        on line 1 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/ie6.scss
 
-1: C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/print.scss
+1: C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/ie6.scss
 
 Backtrace:
-C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/print.scss:1
+C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/ie6.scss:1
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.18/lib/sass/scss/parser.rb:1010:in `expected'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.18/lib/sass/scss/parser.rb:956:in `expected'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.18/lib/sass/scss/parser.rb:28:in `parse'
@@ -43,5 +38,4 @@ C:/Ruby193/bin/compass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"\": expected selector or at-rule, was \"/* Use this sty...\"\A         on line 1 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/print.scss\A \A 1: C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/print.scss"; }
->>>>>>> c6eef2cc54810a224b26e8c29d29084174916aa1
+  content: "Syntax error: Invalid CSS after \"\": expected selector or at-rule, was \"/* Yes, we all ...\"\A         on line 1 of C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/ie6.scss\A \A 1: C:/xampp/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/ie6.scss"; }

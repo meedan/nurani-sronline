@@ -11,7 +11,7 @@ function sronline_general_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'header';
   $context->description = '';
-  $context->tag = 'sronline';
+  $context->tag = '';
   $context->conditions = array(
     'sitewide' => array(
       'values' => array(
@@ -32,10 +32,6 @@ function sronline_general_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('sronline');
   $export['header'] = $context;
 
   $context = new stdClass;
@@ -112,6 +108,12 @@ function sronline_general_context_default_contexts() {
           'delta' => 'text_bundles_featured-block_1',
           'region' => 'right',
           'weight' => 2,
+        ),
+        'views-32bfceaf56e91407f76ac3a77c3d8a4b' => array(
+          'module' => 'views',
+          'delta' => '32bfceaf56e91407f76ac3a77c3d8a4b',
+          'region' => 'right',
+          'weight' => 3,
         ),
       ),
     ),
