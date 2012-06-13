@@ -6,7 +6,7 @@ project = "sronline"
 engine = phptemplate
 
 regions[header] = Header
-regions[naviagion_bar] = Navigation bar
+regions[navigation] = navigation
 regions[content_top] = Content top
 regions[content] = content
 regions[left] = first sidebar
@@ -29,6 +29,8 @@ features[] = secondary_links
 ;stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 stylesheets[all][] = styles/core.css
+
+scripts[] = js/superfish.js
 
 ; Compass Support
 ; http://drupal.org/project/compass

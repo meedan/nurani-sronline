@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
-<html>
- <head>
+  <head>
+    
     <title><?php print $head_title; ?></title>
     <?php print $head; ?>
     <?php print $styles; ?>
@@ -11,142 +11,125 @@
     <!--[if IE 8]><link type="text/css" rel="stylesheet" media="all" href="<?php print $base_path . path_to_theme(); ?>/css/ie8.css" /><![endif]-->
     <?php print $scripts; ?>
   </head>
-  <body>
-  <div id="bg">
-    <img src="images/bg.jpg" alt="">
-  </div>
-  <div class="wrapper">
-    <div id="header"> <!--header-->
-        <a class="logo" title="" href="/"> </a>
-        <div id="search_bar">
-          <input type="text" id="searchinput" name="searchinput" value= "Search Site..."/>
-          <input type="image" id="submit_btn" name="submit_btn" value="Go" src="images/gobutton.png" />
-        </div>
-    </div> <!--header ends-->
-   
-  <ul id="nav" class="nav_main"><!--menu-->  
-    <li><a href="/">Home</a></li>  
-    <li class="list"><a href="#">About SR</a>
-        <ul class="nav_sub">
-            <li><a href="#">Introduction to SR</a></li>
-            <li><a href="#">Guidelines & Rules</a></li>
-            <li><a href="#">How to set up SR</a></li>
-        </ul>
-    </li>  
-    <li><a href="#">Resources</a></li>  
-    <li><a href="#">SR online</a></li>
-    <li><a href="#">News & Events</a></li>  
-    <li><a href="#">Contact Us</a></li>  
-  </ul> <!--menu ends--> 
-  
-  <!-- top content-->
-  <div id="banner_area">
-    <ul>
-      <li class="slides"> <a href="" ><img src="images/img_banner.jpg"/></a></li>
-    </ul>
-    <div id="video"></div>
-    <div class="newsletter">
-      <div class="title"></div>
-      <input type="text" class="newsinput" name="newsinput" value= "Enter Email Adress..."/>
-      <input type="submit" class="button" name="submit_btn" value="submit" />
-    </div>
-  </div>
-  <!--top content ends>
-  <!-- main_body-->
-  <div id="bottom" class="home">
-    <div class="box news">
-      <div id="heading_1"> </div>
-        <div class="content">
-            <div class="item">
-                <div class="icon"><img src="images/thumbnail.png" alt=""/></div>
-                <div class="info">
-                  <h2>Article Title</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius pulvinar sem at fermentum. Ut scelerisque felis non leo sagittis elementum. Proin auctor feugiat </p>
-                </div>
-            </div>
-          
-        </div>
-        <div class="content">
-            <div class="item">
-                <div class="icon"><img src="images/thumbnail.png" alt=""/></div>
-                <div class="info">
-                  <h2>Article Title</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius pulvinar sem at fermentum. </p>
-                </div>
-            </div>
-          
-        </div>
-        <div class="content">
-            <div class="item">
-                <div class="icon"><img src="images/thumbnail.png" alt=""/></div>
-                <div class="info">
-                  <h2>Article Title</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-          
-        </div>
-         <div class="content">
-            <div class="item">
-                <div class="icon"><img src="images/thumbnail.png" alt=""/></div>
-                <div class="info">
-                  <h2>Article Title</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-        </div>
-      </div>
-    <div class="box text">
-     <div id="heading_2"> </div>
-     <div class="content">
-            <div class="item">
-                <div class="icon pdf"><img src="images/pdf.gif" alt=""/></div>
-                <div class="info">
-                  <h2>Article Title</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Duis varius pulvinar sem at fermentum. Ut scelerisque felis non leo sagittis elementum.</p>
-                </div>
-            </div>
-        </div>
-         <div class="content">
-            <div class="item">
-                <div class="icon pdf"><img src="images/pdf.gif" alt=""/></div>
-                <div class="info">
-                  <h2>Article Title</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-        </div>
-         <div class="content">
-            <div class="item">
-                <div class="icon pdf"><img src="images/pdf.gif" alt=""/></div>
-                <div class="info">
-                  <h2>Article Title</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Duis varius pulvinar sem at fermentum. Ut scelerisque felis non leo sagittis elementum.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="box testimonials">
-     <div id="heading_3"> </div>
-       <blockquote class="purpule">
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius pulvinar sem at fermentum. Ut scelerisque felis non leo sagittis elementum. Proin auctor feugiat sapien, vel scelerisque urna fringilla et. Maecenas ut. <cite> Zainab B.</cite> </span>
-       </blockquote>
-        <blockquote class="orange">
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius pulvinar sem at fermentum. Ut scelerisque felis non leo sagittis elementum. Proin auctor feugiat sapien, vel scelerisque urna fringilla et. Maecenas ut <cite> Zainab B.</cite> </span>
-       </blockquote>
 
+  <body class="<?php print $body_classes; ?>">
+    <div id="bg">
+    	<img src="/meedan-sronline/drupal/sites/all/themes/sronline/images/bg.jpg" alt="">
     </div>
-  </div>
-  <!-- main_body ends-->
-  <div id="footer" class="home"> 
-    <div id="footer_top"></div>
-    <div id="bottom_footer">
-        <p class="address"></p>
-        <div class="secondary-menu"></div>
+    <div id="skip">
+      <a href="#content"><?php print t('Skip to Content'); ?></a>
+      <?php if (!empty($primary_links) || !empty($secondary_links)): ?>
+        <a href="#navigation"><?php print t('Skip to Navigation'); ?></a>
+      <?php endif; ?>
+    </div>
     
-    </div>
-  </div>
-  </div>
-</body>
+    <div class="wrapper">
+    <!-- ______________________ HEADER _______________________ -->
+
+    <div id="header">
+        <?php if (!empty($logo)): ?>
+          <a href="<?php print $front_page; ?>" class="logo" title="<?php print t('Home'); ?>" rel="home" id="logo">
+            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+          </a>
+        <?php endif; ?>
+        <div id="search_bar">
+         <?php //print $header; ?>
+         <?php // print $search_box; ?>
+        </div>
+    </div> <!-- /header -->
+    
+     <!-- ______________________ NAVIGATION _______________________ -->
+     <?php if (!empty($navigation)): ?>
+         <ul id="nav" class="main_menu"><?php print $navigation; ?></ul><!--/navigation-->
+     <?php endif; ?>
+     
+    <!-- ______________________ MAIN _______________________ -->
+
+    <div id="main" class="clearfix">
+    
+      <div id="content">
+        <div id="content-inner" class="inner column center">
+
+          <?php if ($content_top): ?>
+            <div id="content-top">
+              <?php print $content_top; ?>
+            </div> <!-- /#content-top -->
+          <?php endif; ?>
+
+          <?php if ($breadcrumb || $title || $mission || $messages || $help || $tabs): ?>
+            <div id="content-header">
+
+              <?php print $breadcrumb; ?>
+
+              <?php if ($title): ?>
+                <h1 class="title"><?php print $title; ?></h1>
+              <?php endif; ?>
+
+              <?php if ($mission): ?>
+                <div id="mission"><?php print $mission; ?></div>
+              <?php endif; ?>
+
+              <?php print $messages; ?>
+
+              <?php print $help; ?> 
+
+              <?php if ($tabs): ?>
+                <div class="tabs"><?php print $tabs; ?></div>
+              <?php endif; ?>
+
+            </div> <!-- /#content-header -->
+          <?php endif; ?>
+
+          <div id="content-area">
+            <?php print $content; ?>
+          </div> <!-- /#content-area -->
+
+          <?php print $feed_icons; ?>
+
+          <?php if ($content_bottom): ?>
+            <div id="content-bottom">
+              <?php print $content_bottom; ?>
+            </div><!-- /#content-bottom -->
+          <?php endif; ?>
+
+          </div>
+        </div> <!-- /content-inner /content -->
+
+        <?php if (!empty($primary_links) || !empty($secondary_links)): ?>
+          <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "with-main-menu"; } if (!empty($secondary_links)) { print " with-sub-menu"; } ?>">
+            <?php if (!empty($primary_links)){ print theme('links', $primary_links, array('id' => 'primary', 'class' => 'links main-menu')); } ?>
+            <?php if (!empty($secondary_links)){ print theme('links', $secondary_links, array('id' => 'secondary', 'class' => 'links sub-menu')); } ?>
+          </div> <!-- /navigation -->
+        <?php endif; ?>
+
+        <?php if ($left): ?>
+          <div id="sidebar-first" class="column sidebar first">
+            <div id="sidebar-first-inner" class="inner">
+              <?php print $left; ?>
+            </div>
+          </div>
+        <?php endif; ?> <!-- /sidebar-left -->
+
+        <?php if ($right): ?>
+          <div id="sidebar-second" class="column sidebar second">
+            <div id="sidebar-second-inner" class="inner">
+              <?php print $right; ?>
+            </div>
+          </div>
+        <?php endif; ?> <!-- /sidebar-second -->
+
+      </div> <!-- /main -->
+
+      <!-- ______________________ FOOTER _______________________ -->
+
+      <?php if(!empty($footer_message) || !empty($footer_block)): ?>
+        <div id="footer">
+          <?php print $footer_message; ?>
+          <?php print $footer_block; ?>
+        </div> <!-- /footer -->
+      <?php endif; ?>
+
+    </div> <!-- /page -->
+    <?php print $closure; ?>
+  </body>
 </html>

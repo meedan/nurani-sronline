@@ -1,5 +1,5 @@
 /* line 4, ../scss/navigation.scss */
-#nav {
+.menu {
   width: 960px;
   height: 41px;
   background: url(../images/nav_bg.jpg) repeat-x center top;

@@ -44,6 +44,57 @@ function sronline_general_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-46',
   );
+  // Exported menu link: primary-links:node/11
+  $menu_links['primary-links:node/11'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'node/11',
+    'router_path' => 'node/%',
+    'link_title' => 'Rules about SR',
+    'options' => array(
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+    'parent_path' => 'node/2',
+  );
+  // Exported menu link: primary-links:node/12
+  $menu_links['primary-links:node/12'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'node/12',
+    'router_path' => 'node/%',
+    'link_title' => 'More Sr Stuff',
+    'options' => array(
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+    'parent_path' => 'node/2',
+  );
+  // Exported menu link: primary-links:node/13
+  $menu_links['primary-links:node/13'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'node/13',
+    'router_path' => 'node/%',
+    'link_title' => 'How to do SR',
+    'options' => array(
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '1',
+    'weight' => '0',
+    'parent_path' => 'node/2',
+  );
   // Exported menu link: primary-links:node/2
   $menu_links['primary-links:node/2'] = array(
     'menu_name' => 'primary-links',
@@ -163,9 +214,12 @@ function sronline_general_menu_default_menu_links() {
   t('About SR');
   t('Contact Us');
   t('Home');
+  t('How to do SR');
+  t('More Sr Stuff');
   t('News & Events');
   t('Privacy Policy');
   t('Resources');
+  t('Rules about SR');
   t('SR Online');
   t('Terms of Use');
 

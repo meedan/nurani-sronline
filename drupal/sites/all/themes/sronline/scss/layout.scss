@@ -9,7 +9,7 @@ body {font-family:verdana; font-size:12px; line-height:18px; color:#4A4A4A; }
 .wrapper{width: 960px; height:2000px; margin: 0 auto; display:block;}
 
 div#header{ width:960px; height:139px; margin: 0 auto;  
-          a.logo{ background:url("../images/logo.png")left no-repeat; width:296px; height:128px; position:absolute;}
+          a.logo{ background:url("../images/logo.png") no-repeat; width:296px; height:128px; position:absolute;}
           
           #search_bar{width:240px; height:46px; position:relative; background:url("../images/search.png")no-repeat; float:right; margin: 32px 0 50px  0}	
           #searchinput{ position:absolute; top:51px; left:7px; width:184px; height:34px; margin:-48px 1px 5px -5px; font:inherit 20px Verdana, Geneva, sans-serif; color:#999; border:0; background-color:transparent; border:none;}

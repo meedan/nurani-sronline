@@ -58,7 +58,7 @@ div#header {
 }
 /* line 12, ../scss/layout.scss */
 div#header a.logo {
-  background: url("../images/logo.png") left no-repeat;
+  background: url("../images/logo.png") no-repeat;
   width: 296px;
   height: 128px;
   position: absolute;
@@ -369,7 +369,7 @@ div.right_col #contact_details {
 }
 
 /* line 4, ../scss/navigation.scss */
-#nav {
+.menu {
   width: 960px;
   height: 41px;
   background: url(../images/nav_bg.jpg) repeat-x center top;
@@ -645,11 +645,7 @@ ul.nav_sub li a:hover {
   border: 0;
   height: 30px;
 }
-<<<<<<< HEAD
-/* line 10, ../../../../Ruby192/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-=======
-/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
->>>>>>> c6eef2cc54810a224b26e8c29d29084174916aa1
+/* line 10, ../../../../../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .newsletter .button:hover {
   background-color: #0a86aa;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #0fbff1), color-stop(75%, #0a86aa));
@@ -659,11 +655,7 @@ ul.nav_sub li a:hover {
   background: -ms-linear-gradient(#0fbff1 3%, #0a86aa 75%);
   background: linear-gradient(#0fbff1 3%, #0a86aa 75%);
 }
-<<<<<<< HEAD
-/* line 13, ../../../../Ruby192/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-=======
-/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
->>>>>>> c6eef2cc54810a224b26e8c29d29084174916aa1
+/* line 13, ../../../../../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .newsletter .button:active {
   -webkit-box-shadow: #097b9b 0 1px 2px inset;
   -moz-box-shadow: #097b9b 0 1px 2px inset;
