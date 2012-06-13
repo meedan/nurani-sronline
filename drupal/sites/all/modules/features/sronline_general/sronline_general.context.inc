@@ -22,9 +22,9 @@ function sronline_general_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu_block-2' => array(
-          'module' => 'menu_block',
-          'delta' => 2,
+        'search-0' => array(
+          'module' => 'search',
+          'delta' => 0,
           'region' => 'header',
           'weight' => 0,
         ),
