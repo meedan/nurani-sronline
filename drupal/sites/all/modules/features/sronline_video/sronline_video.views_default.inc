@@ -149,9 +149,9 @@ function sronline_video_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('items_per_page', 3);
+  $handler->override_option('offset', 1);
   $handler->override_option('use_pager', '1');
   $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->override_option('offset', 1);
   $handler->override_option('path', 'videos');
   $handler->override_option('menu', array(
     'type' => 'none',

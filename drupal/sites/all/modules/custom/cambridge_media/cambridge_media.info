@@ -1,0 +1,6 @@
+name = Cambridge Media
+description = Integration with the Cambridge Streaming Media Service (http://sms.cam.ac.uk/).
+core = 6.x
+version = 6.x-1.0
+package = Nurani
+dependencies[] = link
