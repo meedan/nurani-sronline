@@ -2,7 +2,7 @@
 
 function theme_cambridge_media_formatter_media_small($element) {
   $data = $element['#item']['cambridge_media'];
-  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 240, 144, FALSE);
+  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 295, 200, FALSE);
 }
 
 function theme_cambridge_media_formatter_media_normal($element) {
@@ -12,7 +12,7 @@ function theme_cambridge_media_formatter_media_normal($element) {
 
 function theme_cambridge_media_formatter_media_large($element) {
   $data = $element['#item']['cambridge_media'];
-  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 640, 384, FALSE);
+  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 556, 322, FALSE);
 }
 
 function theme_cambridge_media($media_id, $video_url, $thubmnail_path, $width, $height, $autoplay) {

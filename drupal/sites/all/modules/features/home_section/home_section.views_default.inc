@@ -17,7 +17,7 @@ function home_section_views_default_views() {
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
-    'field_video_fid' => array(
+    'field_video_url_url' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -45,7 +45,7 @@ function home_section_views_default_views() {
       'hide_alter_empty' => 1,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'Home-video_294_default',
+      'format' => 'media_normal',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -53,9 +53,9 @@ function home_section_views_default_views() {
         'multiple_reversed' => FALSE,
       ),
       'exclude' => 0,
-      'id' => 'field_video_fid',
-      'table' => 'node_data_field_video',
-      'field' => 'field_video_fid',
+      'id' => 'field_video_url_url',
+      'table' => 'node_data_field_video_url',
+      'field' => 'field_video_url_url',
       'relationship' => 'none',
     ),
   ));

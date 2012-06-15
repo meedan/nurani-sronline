@@ -50,7 +50,7 @@ function sronline_video_views_default_views() {
       'field' => 'title',
       'relationship' => 'none',
     ),
-    'field_video_fid' => array(
+    'field_video_url_url' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -78,7 +78,7 @@ function sronline_video_views_default_views() {
       'hide_alter_empty' => 1,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'Video_image_295_default',
+      'format' => 'media_normal',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -86,9 +86,9 @@ function sronline_video_views_default_views() {
         'multiple_reversed' => FALSE,
       ),
       'exclude' => 0,
-      'id' => 'field_video_fid',
-      'table' => 'node_data_field_video',
-      'field' => 'field_video_fid',
+      'id' => 'field_video_url_url',
+      'table' => 'node_data_field_video_url',
+      'field' => 'field_video_url_url',
       'relationship' => 'none',
     ),
     'body' => array(
@@ -202,7 +202,7 @@ function sronline_video_views_default_views() {
       'field' => 'title',
       'relationship' => 'none',
     ),
-    'field_video_fid' => array(
+    'field_video_url_url' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -230,7 +230,7 @@ function sronline_video_views_default_views() {
       'hide_alter_empty' => 1,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'Video_image_556_default',
+      'format' => 'media_large',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -238,13 +238,13 @@ function sronline_video_views_default_views() {
         'multiple_reversed' => FALSE,
       ),
       'exclude' => 0,
-      'id' => 'field_video_fid',
-      'table' => 'node_data_field_video',
-      'field' => 'field_video_fid',
-      'relationship' => 'none',
+      'id' => 'field_video_url_url',
+      'table' => 'node_data_field_video_url',
+      'field' => 'field_video_url_url',
       'override' => array(
         'button' => 'Use default',
       ),
+      'relationship' => 'none',
     ),
     'body' => array(
       'label' => '',
