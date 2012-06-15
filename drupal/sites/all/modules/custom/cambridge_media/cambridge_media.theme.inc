@@ -1,17 +1,28 @@
 <?php
 
+function _cambridge_media_data_from_element($element) {
+  if (isset($element['#item']['cambridge_media'])) {
+    $data = $element['#item']['cambridge_media'];
+  }
+  else {
+    $data = cambridge_media_load_by_vid($element['#node']->vid);
+    $data['thumbnail_file'] = db_fetch_object(db_query("SELECT * FROM {files} WHERE fid = %d", $data['thumbnail_fid']));
+  }
+  return $data;
+}
+
 function theme_cambridge_media_formatter_media_small($element) {
-  $data = $element['#item']['cambridge_media'];
+  $data = _cambridge_media_data_from_element($element);
   return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 295, 200, FALSE);
 }
 
 function theme_cambridge_media_formatter_media_normal($element) {
-  $data = $element['#item']['cambridge_media'];
+  $data = _cambridge_media_data_from_element($element);
   return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 480, 288, FALSE);
 }
 
 function theme_cambridge_media_formatter_media_large($element) {
-  $data = $element['#item']['cambridge_media'];
+  $data = _cambridge_media_data_from_element($element);
   return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 556, 322, FALSE);
 }
 
