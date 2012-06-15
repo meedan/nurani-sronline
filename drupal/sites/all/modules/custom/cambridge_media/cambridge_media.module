@@ -4,6 +4,49 @@ define('CAMBRIDGE_MEDIA_TYPE', 'video');
 define('CAMBRIDGE_MEDIA_FIELD', 'field_video_url');
 
 /**
+ * Implements hook_field_formatter_info().
+ */
+function cambridge_media_field_formatter_info() {
+  return array(
+    'media_small' => array(
+      'label' => t('Cambridge Media: Small'),
+      'field types' => array('link'),
+    ),
+    'media_normal' => array(
+      'label' => t('Cambridge Media: Normal'),
+      'field types' => array('link'),
+    ),
+    'media_large' => array(
+      'label' => t('Cambridge Media: Large'),
+      'field types' => array('link'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cambridge_media_theme() {
+  $common = array(
+    'file' => 'cambridge_media.theme.inc'
+  );
+  return array(
+    'cambridge_media_formatter_media_small' => $common + array(
+      'arguments' => array('element' => NULL),
+    ),
+    'cambridge_media_formatter_media_normal' => $common + array(
+      'arguments' => array('element' => NULL),
+    ),
+    'cambridge_media_formatter_media_large' => $common + array(
+      'arguments' => array('element' => NULL),
+    ),
+    'cambridge_media' => $common + array(
+      'arguments' => array('media_id' => NULL, 'video_url' => NULL, 'thubmnail_path' => NULL, 'width' => 480, 'height' => 360, 'autoplay' => FALSE),
+    ),
+  );
+}
+
+/**
  * Implements hook_form_alter().
  */
 function cambridge_media_form_alter(&$form, $form_state, $form_id) {
@@ -66,14 +109,8 @@ function cambridge_media_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     case 'load':
       if ($node->{CAMBRIDGE_MEDIA_FIELD}[0]) {
         $data = cambridge_media_load_by_vid($node->vid);
-        $node->{CAMBRIDGE_MEDIA_FIELD}[0]['cambridge_media'] = $data;
-      }
-      break;
-
-    case 'view':
-      if ($node->{CAMBRIDGE_MEDIA_FIELD}[0]) {
-        $data =& $node->{CAMBRIDGE_MEDIA_FIELD}[0]['cambridge_media'];
         $data['thumbnail_file'] = db_fetch_object(db_query("SELECT * FROM {files} WHERE fid = %d", $data['thumbnail_fid']));
+        $node->{CAMBRIDGE_MEDIA_FIELD}[0]['cambridge_media'] = $data;
       }
       break;
 

@@ -11,16 +11,17 @@ function sronline_video_content_default_fields() {
     'field_name' => 'field_video_url',
     'type_name' => 'video',
     'display_settings' => array(
+      'weight' => '-3',
+      'parent' => '',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'media_normal',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'media_large',
         'exclude' => 0,
       ),
       '4' => array(
