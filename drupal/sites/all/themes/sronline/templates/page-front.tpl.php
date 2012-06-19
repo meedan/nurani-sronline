@@ -85,16 +85,19 @@
         <?php endif; ?>
         
         <div class="box news">
+          <div id="heading_1"> </div>
         <?php if (!empty($home_left)): ?>
               <div><?php print $home_left; ?></div>
         <?php endif; ?>
         </div>
         <div class="box text">
-        <?php if (!empty($home_center)): ?>
-              <div><?php print $home_center; ?></div>
-        <?php endif; ?>
+          <div id="heading_2"> </div>
+          <?php if (!empty($home_center)): ?>
+                <div><?php print $home_center; ?></div>
+          <?php endif; ?>
          </div>
         <div class="box testimonials">
+         <div id="heading_3"> </div>
         <?php if (!empty($home_right)): ?>
               <div><?php print $home_right; ?></div>
         <?php endif; ?>
