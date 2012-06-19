@@ -54,10 +54,10 @@ function sronline_general_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'superfish-1' => array(
-          'module' => 'superfish',
-          'delta' => 1,
-          'region' => 'Superfish_menu',
+        'menu_block-2' => array(
+          'module' => 'menu_block',
+          'delta' => 2,
+          'region' => 'navigation',
           'weight' => 0,
         ),
       ),
