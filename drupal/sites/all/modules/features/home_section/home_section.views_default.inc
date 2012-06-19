@@ -45,7 +45,7 @@ function home_section_views_default_views() {
       'hide_alter_empty' => 1,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'media_normal',
+      'format' => 'media_small',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',

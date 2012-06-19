@@ -1,0 +1,230 @@
+/* Font styles. */
+/* line 2, ../scss/style.sass */
+body {
+  margin: 0;
+  /* Setting up font size, leading and font family
+   * http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
+  font: 13px/1.5em "Helvetica Neue", helvetica, Arial, sans-serif;
+}
+
+/* Links */
+/* line 10, ../scss/style.sass */
+a:link, a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+/* line 15, ../scss/style.sass */
+a:hover, a:active {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Titles. */
+/* line 21, ../scss/style.sass */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3em;
+}
+
+/* line 24, ../scss/style.sass */
+h1 {
+  font-size: 2.2em;
+  font-weight: 300;
+  padding: 0 0 0.5em;
+  margin: 0;
+}
+
+/* line 30, ../scss/style.sass */
+h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 0.75em;
+}
+
+/* line 35, ../scss/style.sass */
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+/* line 39, ../scss/style.sass */
+h4 {
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+/* line 43, ../scss/style.sass */
+h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* line 48, ../scss/style.sass */
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Paragraph styles. */
+/* line 53, ../scss/style.sass */
+p {
+  margin: 0 0 1em 0;
+}
+
+/* List styles. */
+/* line 57, ../scss/style.sass */
+ul, ol {
+  margin-left: 0;
+  padding-left: 2em;
+}
+
+/* Table styles. */
+/* line 62, ../scss/style.sass */
+table {
+  width: 99%;
+}
+
+/* line 67, ../scss/style.sass */
+tr.even td,
+tr.odd td {
+  padding: 10px 5px;
+}
+
+/* line 70, ../scss/style.sass */
+tr.odd {
+  background-color: white;
+}
+
+/* Code. */
+/* line 74, ../scss/style.sass */
+pre, code, tt {
+  font: 1em "andale mono", "lucida console", monospace;
+  line-height: 1.5;
+}
+
+/* line 78, ../scss/style.sass */
+pre {
+  background-color: #efefef;
+  display: block;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #aaaaaa;
+}
+
+/* List styles. */
+/* line 86, ../scss/style.sass */
+ul {
+  list-style-type: disc;
+}
+/* line 88, ../scss/style.sass */
+ul ul {
+  list-style-type: circle;
+}
+/* line 90, ../scss/style.sass */
+ul ul ul {
+  list-style-type: square;
+}
+/* line 92, ../scss/style.sass */
+ul ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 95, ../scss/style.sass */
+ol {
+  list-style-type: decimal;
+}
+/* line 97, ../scss/style.sass */
+ol ol {
+  list-style-type: lower-alpha;
+}
+/* line 99, ../scss/style.sass */
+ol ol ol {
+  list-style-type: decimal;
+}
+
+/* Abbreviation. */
+/* line 103, ../scss/style.sass */
+abbr {
+  border-bottom: 1px dotted #666666;
+  cursor: help;
+  white-space: nowrap;
+}
+
+/* UI improvments. */
+/* line 109, ../scss/style.sass */
+#edit-title {
+  font-size: 24px;
+  width: 98%;
+}
+
+/* line 113, ../scss/style.sass */
+#system-themes-form img {
+  width: 100px;
+}
+
+/* line 116, ../scss/style.sass */
+.form-item .description {
+  font-style: italic;
+  line-height: 1.2em;
+  font-size: 0.8em;
+  margin-top: 5px;
+  color: #777777;
+}
+
+/* line 123, ../scss/style.sass */
+#edit-delete {
+  color: #cc0000;
+}
+
+/* Console, style from slate theme. */
+/* line 127, ../scss/style.sass */
+div.messages {
+  padding: 9px;
+  margin: 1em 0;
+  color: #003366;
+  background: #bbddff;
+  border: 1px solid #aaccee;
+}
+
+/* line 134, ../scss/style.sass */
+div.warning {
+  color: #884400;
+  background: #ffee66;
+  border-color: #eedd55;
+}
+
+/* line 139, ../scss/style.sass */
+div.error {
+  color: white;
+  background: #ee6633;
+  border-color: #dd5522;
+}
+
+/* line 144, ../scss/style.sass */
+div.status {
+  color: #336600;
+  background: #ccff88;
+  border-color: #bbee77;
+}
+
+/* Region Colors. delete when starting a new theme. */
+/* line 150, ../scss/style.sass */
+#header, #footer {
+  background: #efefef;
+}
+
+/* line 153, ../scss/style.sass */
+#sidebar-first {
+  background: #e7edff;
+}
+
+/* line 156, ../scss/style.sass */
+#sidebar-second {
+  background: #ffd075;
+}
+
+/* line 159, ../scss/style.sass */
+#navigation {
+  background: #feffa5;
+}

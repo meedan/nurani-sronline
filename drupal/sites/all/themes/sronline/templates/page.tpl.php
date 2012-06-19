@@ -40,7 +40,7 @@
     
      <!-- ______________________ NAVIGATION _______________________ -->
      <?php if (!empty($navigation)): ?>
-         <ul id="nav" class="main_menu"><?php print $navigation; ?></ul><!--/navigation-->
+         <div><?php print $navigation; ?></div><!--/navigation-->
      <?php endif; ?>
      
     <!-- ______________________ MAIN _______________________ -->

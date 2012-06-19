@@ -10,28 +10,28 @@
 }
 
 /* line 15, ../scss/navigation.scss */
-ul.nav_main,
-ul.nav_main li {
+ul.menu,
+ul.menu li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 20, ../scss/navigation.scss */
-ul.nav_main {
+/* line 21, ../scss/navigation.scss */
+ul.menu {
   position: relative;
   z-index: 597;
 }
 
-/* line 25, ../scss/navigation.scss */
-ul.nav_main li:hover > ul {
+/* line 26, ../scss/navigation.scss */
+ul.menu li:hover > ul {
   visibility: visible;
   color: #2a4704;
 }
 
-/* line 30, ../scss/navigation.scss */
-ul.nav_main li.hover,
-ul.nav_main li:hover {
+/* line 31, ../scss/navigation.scss */
+ul.menu li.hover,
+ul.menu li:hover {
   position: relative;
   z-index: 599;
   border-radius: 6px;
@@ -39,8 +39,8 @@ ul.nav_main li:hover {
   background: url(../images/Hover_bg.jpg) repeat-x left top;
 }
 
-/* line 38, ../scss/navigation.scss */
-ul.nav_main li {
+/* line 39, ../scss/navigation.scss */
+ul.menu li {
   float: left;
   display: block;
   height: 45px;
@@ -49,8 +49,8 @@ ul.nav_main li {
   background: url(../images/spacer.jpg) no-repeat right center;
 }
 
-/* line 46, ../scss/navigation.scss */
-ul.nav_main li a {
+/* line 47, ../scss/navigation.scss */
+ul.menu li a {
   display: block;
   padding: 11px 20px 0 20px;
   height: 35px;
@@ -60,13 +60,13 @@ ul.nav_main li a {
   text-transform: uppercase;
 }
 
-/* line 55, ../scss/navigation.scss */
-ul.nav_main li a:hover {
+/* line 56, ../scss/navigation.scss */
+ul.menu li a:hover {
   color: #2a4704;
 }
 
-/* line 60, ../scss/navigation.scss */
-ul.nav_sub {
+/* line 61, ../scss/navigation.scss */
+ul.menu.nav_sub {
   visibility: hidden;
   position: absolute;
   padding: 17px;
@@ -79,7 +79,7 @@ ul.nav_sub {
   border-bottom-left-radius: 6px;
 }
 
-/* line 75, ../scss/navigation.scss */
+/* line 76, ../scss/navigation.scss */
 ul.nav_sub li {
   list-style: none;
   display: block;
@@ -91,7 +91,7 @@ ul.nav_sub li {
   background: none;
 }
 
-/* line 87, ../scss/navigation.scss */
+/* line 88, ../scss/navigation.scss */
 ul.nav_sub li a {
   color: #999;
   list-style: none;
@@ -103,7 +103,7 @@ ul.nav_sub li a {
   font: 12px Arial, Helvetica, sans-serif;
 }
 
-/* line 98, ../scss/navigation.scss */
+/* line 99, ../scss/navigation.scss */
 ul.nav_sub li a:hover {
   background: #2a4704;
   color: #fff;

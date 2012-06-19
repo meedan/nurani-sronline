@@ -102,15 +102,15 @@ div#header #submit_btn {
   width: 942px;
   height: 345px;
   padding: 5px;
-  margin: 85px 24px 0;
+  margin: 15px 24px 0;
   position: absolute;
 }
 /* line 20, ../scss/layout.scss */
-#banner_area ul {
+#banner_area #block-views-home_page_banner-block_1 {
   float: left;
 }
 /* line 21, ../scss/layout.scss */
-#banner_area ul .slides {
+#banner_area #block-views-home_page_banner-block_1 .slides {
   background: url("../images/banner_bg.jpg") no-repeat;
   height: 321px;
   margin: 0;
@@ -118,7 +118,7 @@ div#header #submit_btn {
   padding: 5px;
 }
 /* line 22, ../scss/layout.scss */
-#banner_area ul li {
+#banner_area #block-views-home_page_banner-block_1 li {
   float: left;
   list-style-type: none;
   display: block;
@@ -380,28 +380,28 @@ div.right_col #contact_details {
 }
 
 /* line 15, ../scss/navigation.scss */
-ul.nav_main,
-ul.nav_main li {
+ul.menu,
+ul.menu li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 20, ../scss/navigation.scss */
-ul.nav_main {
+/* line 21, ../scss/navigation.scss */
+ul.menu {
   position: relative;
   z-index: 597;
 }
 
-/* line 25, ../scss/navigation.scss */
-ul.nav_main li:hover > ul {
+/* line 26, ../scss/navigation.scss */
+ul.menu li:hover > ul {
   visibility: visible;
   color: #2a4704;
 }
 
-/* line 30, ../scss/navigation.scss */
-ul.nav_main li.hover,
-ul.nav_main li:hover {
+/* line 31, ../scss/navigation.scss */
+ul.menu li.hover,
+ul.menu li:hover {
   position: relative;
   z-index: 599;
   border-radius: 6px;
@@ -409,8 +409,8 @@ ul.nav_main li:hover {
   background: url(../images/Hover_bg.jpg) repeat-x left top;
 }
 
-/* line 38, ../scss/navigation.scss */
-ul.nav_main li {
+/* line 39, ../scss/navigation.scss */
+ul.menu li {
   float: left;
   display: block;
   height: 45px;
@@ -419,8 +419,8 @@ ul.nav_main li {
   background: url(../images/spacer.jpg) no-repeat right center;
 }
 
-/* line 46, ../scss/navigation.scss */
-ul.nav_main li a {
+/* line 47, ../scss/navigation.scss */
+ul.menu li a {
   display: block;
   padding: 11px 20px 0 20px;
   height: 35px;
@@ -430,13 +430,13 @@ ul.nav_main li a {
   text-transform: uppercase;
 }
 
-/* line 55, ../scss/navigation.scss */
-ul.nav_main li a:hover {
+/* line 56, ../scss/navigation.scss */
+ul.menu li a:hover {
   color: #2a4704;
 }
 
-/* line 60, ../scss/navigation.scss */
-ul.nav_sub {
+/* line 61, ../scss/navigation.scss */
+ul.menu.nav_sub {
   visibility: hidden;
   position: absolute;
   padding: 17px;
@@ -449,7 +449,7 @@ ul.nav_sub {
   border-bottom-left-radius: 6px;
 }
 
-/* line 75, ../scss/navigation.scss */
+/* line 76, ../scss/navigation.scss */
 ul.nav_sub li {
   list-style: none;
   display: block;
@@ -461,7 +461,7 @@ ul.nav_sub li {
   background: none;
 }
 
-/* line 87, ../scss/navigation.scss */
+/* line 88, ../scss/navigation.scss */
 ul.nav_sub li a {
   color: #999;
   list-style: none;
@@ -473,7 +473,7 @@ ul.nav_sub li a {
   font: 12px Arial, Helvetica, sans-serif;
 }
 
-/* line 98, ../scss/navigation.scss */
+/* line 99, ../scss/navigation.scss */
 ul.nav_sub li a:hover {
   background: #2a4704;
   color: #fff;
@@ -564,30 +564,29 @@ ul.nav_sub li a:hover {
 }
 
 /* line 13, ../scss/core.scss */
-#video {
+#video, .field-content {
   width: 302px;
   height: 182px;
   float: right;
-  background: url(../images/video_content_03.jpg) no-repeat;
 }
 
 /* line 14, ../scss/core.scss */
-.newsletter {
+#block-webform-client-block-1 {
   width: 290px;
   height: 104px;
   float: right;
   background: #fff;
-  margin: 15px -1px 5px 5px;
+  margin: 237px -1px 5px 634px;
   padding: 20px 0 0 15px;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   -ms-border-radius: 0.2em;
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
-  position: relative;
+  position: absolute;
 }
 /* line 24, ../scss/core.scss */
-.newsletter .title {
+#block-webform-client-block-1 .title {
   background: url(../images/newsletter_text.png) no-repeat;
   width: 188px;
   height: 26px;
@@ -595,7 +594,7 @@ ul.nav_sub li a:hover {
   margin: 0px 14px;
 }
 /* line 25, ../scss/core.scss */
-.newsletter .newsinput {
+#block-webform-client-block-1 .form-text {
   width: 186px;
   height: 29px;
   margin: 38px 0 0 16px;
@@ -607,7 +606,7 @@ ul.nav_sub li a:hover {
   color: #999999;
 }
 /* line 26, ../scss/core.scss */
-.newsletter .button {
+#block-webform-client-block-1 .form-submit {
   line-height: 30px;
   -webkit-box-sizing: border-box;
   padding: 0 15px;
@@ -641,12 +640,14 @@ ul.nav_sub li a:hover {
   border: 1px solid #0a86aa;
   color: white;
   text-shadow: #086d8a 0 -1px 0;
-  margin: 0;
+  margin-top: -48px;
+  margin-right: 10px;
   border: 0;
   height: 30px;
+  float: right;
 }
-/* line 10, ../../../../../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-.newsletter .button:hover {
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+#block-webform-client-block-1 .form-submit:hover {
   background-color: #0a86aa;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #0fbff1), color-stop(75%, #0a86aa));
   background: -webkit-linear-gradient(#0fbff1 3%, #0a86aa 75%);
@@ -655,8 +656,8 @@ ul.nav_sub li a:hover {
   background: -ms-linear-gradient(#0fbff1 3%, #0a86aa 75%);
   background: linear-gradient(#0fbff1 3%, #0a86aa 75%);
 }
-/* line 13, ../../../../../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-.newsletter .button:active {
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+#block-webform-client-block-1 .form-submit:active {
   -webkit-box-shadow: #097b9b 0 1px 2px inset;
   -moz-box-shadow: #097b9b 0 1px 2px inset;
   box-shadow: #097b9b 0 1px 2px inset;

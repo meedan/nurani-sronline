@@ -11,23 +11,24 @@
   border-radius:6px;
 }
 
-ul.nav_main,
-ul.nav_main li {
+ul.menu,
+ul.menu li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+
 }
-ul.nav_main {
+ul.menu {
 	position: relative;
 	z-index: 597;
 }
 
-ul.nav_main li:hover > ul {
+ul.menu li:hover > ul {
 	visibility: visible;
 	color:#2a4704;
 } 
-ul.nav_main li.hover,
-ul.nav_main li:hover {
+ul.menu li.hover,
+ul.menu li:hover {
 	position: relative;
 	z-index: 599;
 	border-radius:6px;
@@ -35,7 +36,7 @@ ul.nav_main li:hover {
 	background: url(../images/Hover_bg.jpg) repeat-x left top;
 }
 
-ul.nav_main li {
+ul.menu li {
 	float:left;
 	display:block;
 	height: 45px;
@@ -43,7 +44,7 @@ ul.nav_main li {
 	font: 14px Verdana;
 	background: url(../images/spacer.jpg) no-repeat right center;
 }
-ul.nav_main li a {
+ul.menu li a {
 	display:block;
 	padding: 11px 20px 0 20px;
 	height: 35px;
@@ -52,12 +53,12 @@ ul.nav_main li a {
 	text-decoration:none;
 	text-transform:uppercase;
 }
-ul.nav_main li a:hover{
+ul.menu li a:hover{
 	color:#2a4704;
 }
 
 
-ul.nav_sub {
+ul.menu.nav_sub {
 	visibility: hidden;
 	position: absolute;
 	padding:17px;
