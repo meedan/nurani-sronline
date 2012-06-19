@@ -15,7 +15,7 @@ function home_section_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        '<front>' => '<front>',
+        '<p><front></front></p>' => '<p><front></front></p>',
       ),
     ),
   );
@@ -25,38 +25,38 @@ function home_section_context_default_contexts() {
         'views-Featured_video_home-block_1' => array(
           'module' => 'views',
           'delta' => 'Featured_video_home-block_1',
-          'region' => 'content_top',
+          'region' => 'content_top_right',
           'weight' => 0,
-        ),
-        'views-home_page_banner-block_1' => array(
-          'module' => 'views',
-          'delta' => 'home_page_banner-block_1',
-          'region' => 'content_top',
-          'weight' => 1,
         ),
         'webform-client-block-1' => array(
           'module' => 'webform',
           'delta' => 'client-block-1',
-          'region' => 'content_top',
-          'weight' => 2,
+          'region' => 'content_top_right',
+          'weight' => 1,
+        ),
+        'views-home_page_banner-block_1' => array(
+          'module' => 'views',
+          'delta' => 'home_page_banner-block_1',
+          'region' => 'content_top_left',
+          'weight' => 0,
         ),
         'views-news_articles_featured-block_1' => array(
           'module' => 'views',
           'delta' => 'news_articles_featured-block_1',
-          'region' => 'content',
+          'region' => 'home_left',
           'weight' => 0,
         ),
         'views-text_bundles_featured-block_1' => array(
           'module' => 'views',
           'delta' => 'text_bundles_featured-block_1',
-          'region' => 'content',
-          'weight' => 1,
+          'region' => 'home_center',
+          'weight' => 0,
         ),
         'views-32bfceaf56e91407f76ac3a77c3d8a4b' => array(
           'module' => 'views',
           'delta' => '32bfceaf56e91407f76ac3a77c3d8a4b',
-          'region' => 'content',
-          'weight' => 2,
+          'region' => 'home_right',
+          'weight' => 0,
         ),
       ),
     ),

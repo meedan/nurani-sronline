@@ -15,10 +15,10 @@
      height:104px;
      float:right;
      background:#fff; 
-     margin:237px -1px 5px 634px;
+     margin:35px -1px 5px ;
      padding:20px 0 0 15px;
      @include border-radius(0.2em);
-     position:absolute;
+     position:relative;
      //@include buttonz($base_color: #5291C5, $button_size: 30px);
      
      .title{background:url(../images/newsletter_text.png)no-repeat; width:188px; height:26px; position:absolute; margin:0px 14px;}

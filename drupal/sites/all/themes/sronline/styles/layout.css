@@ -102,7 +102,7 @@ div#header #submit_btn {
   width: 942px;
   height: 345px;
   padding: 5px;
-  margin: 15px 24px 0;
+  margin: 15px 24px 0 9px;
   position: absolute;
 }
 /* line 20, ../scss/layout.scss */
@@ -125,6 +125,18 @@ div#header #submit_btn {
 }
 
 /* line 26, ../scss/layout.scss */
+#banner_left {
+  float: left;
+  width: 640px;
+}
+
+/* line 27, ../scss/layout.scss */
+#banner_right {
+  float: right;
+  width: 300px;
+}
+
+/* line 29, ../scss/layout.scss */
 #main {
   width: 960px;
   padding: 20px 0 10px 15px;
@@ -135,14 +147,14 @@ div#header #submit_btn {
   margin-top: 80px;
 }
 
-/* line 57, ../scss/layout.scss */
+/* line 60, ../scss/layout.scss */
 div.main_content {
   min-height: 1335px;
   width: 612px;
   background: #fff;
   float: left;
 }
-/* line 38, ../scss/layout.scss */
+/* line 41, ../scss/layout.scss */
 div.main_content #breadcumb {
   float: left;
   padding: 15px 14px 0 20px;
@@ -151,14 +163,14 @@ div.main_content #breadcumb {
   clear: both;
   overflow: hidden;
 }
-/* line 40, ../scss/layout.scss */
+/* line 43, ../scss/layout.scss */
 div.main_content #breadcumb ul {
   float: left;
   padding: 0;
   margin: 0;
   width: 500px;
 }
-/* line 42, ../scss/layout.scss */
+/* line 45, ../scss/layout.scss */
 div.main_content #breadcumb ul li {
   float: left;
   padding: 0 14px 0 5px;
@@ -168,22 +180,22 @@ div.main_content #breadcumb ul li {
   line-height: 18px;
   background: url("../images/arrow8x8.jpg") no-repeat right 5px;
 }
-/* line 43, ../scss/layout.scss */
+/* line 46, ../scss/layout.scss */
 div.main_content #breadcumb ul li .last {
   padding-right: 0;
   background: none;
 }
-/* line 46, ../scss/layout.scss */
+/* line 49, ../scss/layout.scss */
 div.main_content #breadcumb a {
   color: gray;
   font-weight: bold;
 }
-/* line 47, ../scss/layout.scss */
+/* line 50, ../scss/layout.scss */
 div.main_content #breadcumb .last {
   padding-right: 0;
   background: none;
 }
-/* line 63, ../scss/layout.scss */
+/* line 66, ../scss/layout.scss */
 div.main_content p {
   display: block;
   padding: 10px 20px;
@@ -193,21 +205,21 @@ div.main_content p {
   font-family: verdana;
 }
 
-/* line 66, ../scss/layout.scss */
+/* line 69, ../scss/layout.scss */
 #contact_us {
   min-height: 685px;
 }
-/* line 67, ../scss/layout.scss */
+/* line 70, ../scss/layout.scss */
 #contact_us p {
   padding: 10px 40px;
 }
-/* line 68, ../scss/layout.scss */
+/* line 71, ../scss/layout.scss */
 #contact_us .row {
   padding: 25px 0 0 40px;
   width: 500px;
   float: left;
 }
-/* line 69, ../scss/layout.scss */
+/* line 72, ../scss/layout.scss */
 #contact_us input {
   width: 443px;
   height: 38px;
@@ -215,7 +227,7 @@ div.main_content p {
   padding: 4px 10px 5px;
   color: #999;
 }
-/* line 70, ../scss/layout.scss */
+/* line 73, ../scss/layout.scss */
 #contact_us textarea {
   width: 444px;
   height: 212px;
@@ -228,7 +240,7 @@ div.main_content p {
   line-height: 22px;
 }
 
-/* line 74, ../scss/layout.scss */
+/* line 77, ../scss/layout.scss */
 h2 {
   display: block;
   padding: 10px 0 0 22px;
@@ -237,14 +249,14 @@ h2 {
   color: #572983;
 }
 
-/* line 75, ../scss/layout.scss */
+/* line 78, ../scss/layout.scss */
 #banner {
   width: 569px;
   height: 280px;
   background: url(../images/banner_holder.jpg);
   margin: 10px auto;
 }
-/* line 76, ../scss/layout.scss */
+/* line 79, ../scss/layout.scss */
 #banner img {
   width: 560px;
   height: 271px;
@@ -252,13 +264,13 @@ h2 {
   padding: 5px 5px 0;
 }
 
-/* line 86, ../scss/layout.scss */
+/* line 89, ../scss/layout.scss */
 div.right_col {
   min-height: 1335px;
   width: 320px;
   float: right;
 }
-/* line 92, ../scss/layout.scss */
+/* line 95, ../scss/layout.scss */
 div.right_col .sub_menu {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
@@ -271,31 +283,31 @@ div.right_col .sub_menu {
   height: 385px;
   margin: 0;
 }
-/* line 96, ../scss/layout.scss */
+/* line 99, ../scss/layout.scss */
 div.right_col .sub_menu ul {
   list-style: none;
   margin: 0 0 0 20px;
   padding-top: 13px;
 }
-/* line 100, ../scss/layout.scss */
+/* line 103, ../scss/layout.scss */
 div.right_col .sub_menu ul li {
   border-bottom: 1px dashed #c9c6c4;
   margin: 10px 22px 0 5px;
   padding: 10px;
 }
-/* line 101, ../scss/layout.scss */
+/* line 104, ../scss/layout.scss */
 div.right_col .sub_menu ul a {
   color: gray;
   font-weight: bold;
   text-decoration: none;
   display: block;
 }
-/* line 102, ../scss/layout.scss */
+/* line 105, ../scss/layout.scss */
 div.right_col .sub_menu ul a:hover {
   background: #467707;
   padding: 10px;
 }
-/* line 110, ../scss/layout.scss */
+/* line 113, ../scss/layout.scss */
 div.right_col .about_us.newsletter {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
@@ -308,7 +320,7 @@ div.right_col .about_us.newsletter {
   width: 304px;
   margin-top: 18px;
 }
-/* line 115, ../scss/layout.scss */
+/* line 118, ../scss/layout.scss */
 div.right_col .testimonial_box {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
@@ -321,7 +333,7 @@ div.right_col .testimonial_box {
   margin-top: 20px;
   height: 452px;
 }
-/* line 121, ../scss/layout.scss */
+/* line 124, ../scss/layout.scss */
 div.right_col .text_bundles {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
@@ -334,28 +346,28 @@ div.right_col .text_bundles {
   height: 313px;
   margin-top: 162px;
 }
-/* line 126, ../scss/layout.scss */
+/* line 129, ../scss/layout.scss */
 div.right_col .text_bundles .title {
   background: url(../images/text_bundles_03.gif) no-repeat;
   height: 31px;
   margin: 28px;
   width: 137px;
 }
-/* line 132, ../scss/layout.scss */
+/* line 135, ../scss/layout.scss */
 div.right_col .text_bundles .download {
   padding: 5px;
   margin: 20px;
 }
-/* line 133, ../scss/layout.scss */
+/* line 136, ../scss/layout.scss */
 div.right_col .text_bundles .download .dl_icon {
   margin: 5px;
 }
-/* line 134, ../scss/layout.scss */
+/* line 137, ../scss/layout.scss */
 div.right_col .text_bundles .download a {
   padding: 5px;
   text-decoration: none;
 }
-/* line 138, ../scss/layout.scss */
+/* line 141, ../scss/layout.scss */
 div.right_col #contact_details {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));

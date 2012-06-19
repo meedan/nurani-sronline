@@ -42,11 +42,68 @@
      <?php if (!empty($navigation)): ?>
          <div><?php print $navigation; ?></div><!--/navigation-->
      <?php endif; ?>
-     <?php if (!empty($content_top)): ?>
-         <div id="banner_area"><?php print $content_top; ?></div<!--/navigation-->
-     <?php endif; ?>
     
-   
+     <!-- ______________________ CONTENT-TOP _______________________ -->
+     <div id="banner_area">
+       <div id="banner_left">
+          <?php if (!empty($content_top_left)): ?>
+              <div><?php print $content_top_left; ?></div><!--/navigation-->
+          <?php endif; ?>
+       </div>
+     
+       <div id="banner_right">
+          <?php if (!empty($content_top_right)): ?>
+             <div><?php print $content_top_right; ?></div><!--/navigation-->
+          <?php endif; ?>
+       </div>
+     </div>
+     
+     <!-- ______________________ BOTTOM_HOME _______________________ -->
+     <div id="bottom">
+        <?php if ($breadcrumb || $title || $mission || $messages || $help || $tabs): ?>
+              <div id="content-header">
+  
+                <?php print $breadcrumb; ?>
+  
+                <?php if ($title): ?>
+                  <h1 class="title"><?php //print $title; ?></h1>
+                <?php endif; ?>
+  
+                <?php if ($mission): ?>
+                  <div id="mission"><?php print $mission; ?></div>
+                <?php endif; ?>
+  
+                <?php print $messages; ?>
+  
+                <?php print $help; ?> 
+  
+                <?php if ($tabs): ?>
+                  <div class="tabs"><?php print $tabs; ?></div>
+                <?php endif; ?>
+  
+              </div> 
+        <?php endif; ?>
+        
+        <div class="box news">
+        <?php if (!empty($home_left)): ?>
+              <div><?php print $home_left; ?></div>
+        <?php endif; ?>
+        </div>
+        <div class="box text">
+        <?php if (!empty($home_center)): ?>
+              <div><?php print $home_center; ?></div>
+        <?php endif; ?>
+         </div>
+        <div class="box testimonials">
+        <?php if (!empty($home_right)): ?>
+              <div><?php print $home_right; ?></div>
+        <?php endif; ?>
+         </div>
+            
+            
+    </div>
+     
+    
       <!-- ______________________ FOOTER _______________________ -->
 
       <?php if(!empty($footer_message) || !empty($footer_block)): ?>

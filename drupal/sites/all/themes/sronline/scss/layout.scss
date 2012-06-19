@@ -16,12 +16,15 @@ div#header{ width:960px; height:139px; margin: 0 auto;
           #submit_btn{ position:absolute; top:-5px; right:2px; width:50px; height:40px; margin-top:5px; padding:0;}
 }
 
-#banner_area{width:942px; height:345px; padding:5px; margin:15px 24px 0; position:absolute;
+#banner_area{width:942px; height:345px; padding:5px; margin:15px 24px 0 9px; position:absolute;
   #block-views-home_page_banner-block_1{float:left;
       .slides{background:url("../images/banner_bg.jpg") no-repeat; height: 321px; margin: 0; width: 622px; padding:5px;}
       li{float: left; list-style-type: none; display: block;}
 }
 }
+
+#banner_left{float:left; width:640px;}
+#banner_right{float:right; width:300px;}
 
 #main{
 width:960px;

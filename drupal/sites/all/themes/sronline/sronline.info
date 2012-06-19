@@ -7,8 +7,13 @@ engine = phptemplate
 
 regions[header] = Header
 regions[navigation] = navigation
-regions[content_top] = Content top
+regions[content_top_right] = Content top (on the right)
+regions[content_top_left] = Content top (on the left)
+regions[home_left] = Home left
+regions[home_center] = Home center
+regions[home_right] = Home right
 regions[content] = content
+
 regions[left] = first sidebar
 regions[right] = Second sidebar
 regions[footer_block] = Footer
