@@ -109,6 +109,8 @@ function sronline_preprocess_page(&$vars, $hook) {
       $vars['template_files'][] = "page-node-" . $vars['node']->nid;
     }
   $vars['body_classes'] = implode(' ', $body_classes); // Concatenate with spaces
+
+  $vars['theme_path'] = url(drupal_get_path('theme', 'sronline'));
 }
 
 /**

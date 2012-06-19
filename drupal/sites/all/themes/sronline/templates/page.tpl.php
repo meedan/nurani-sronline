@@ -14,7 +14,7 @@
 
   <body class="<?php print $body_classes; ?>">
     <div id="bg">
-    	<img src="/meedan-sronline/drupal/sites/all/themes/sronline/images/bg.jpg" alt="">
+    	<img src="<?php print $theme_path; ?>/images/bg.jpg" alt="">
     </div>
     <div id="skip">
       <a href="#content"><?php print t('Skip to Content'); ?></a>
