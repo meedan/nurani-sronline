@@ -22,7 +22,7 @@ function sronline_general_node_export_features_default() {
     \'translate\' => \'0\',
     \'vid\' => NULL,
     \'revision_uid\' => \'1\',
-    \'title\' => \'Newsletter Signup\',
+    \'title\' => \'<none>\',
     \'body\' => \'\',
     \'teaser\' => \'\',
     \'log\' => \'\',
