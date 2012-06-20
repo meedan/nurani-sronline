@@ -15,7 +15,7 @@ function home_section_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        '<p><front></front></p>' => '<p><front></front></p>',
+        '<front>' => '<front>',
       ),
     ),
   );
