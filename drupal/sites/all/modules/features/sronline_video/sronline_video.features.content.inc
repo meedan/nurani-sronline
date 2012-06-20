@@ -64,14 +64,17 @@ function sronline_video_content_default_fields() {
     'widget' => array(
       'default_value' => array(
         '0' => array(
-          'title' => '',
           'url' => '',
         ),
       ),
       'default_value_php' => NULL,
       'label' => 'Video URL',
       'weight' => '-3',
-      'description' => '',
+      'description' => 'Instructions:
+<ol>
+  <li>Navigate to <a href="http://upload.sms.cam.ac.uk/" target="_blank">http://upload.sms.cam.ac.uk/</a> and upload a video.</li>
+  <li>Copy the URL of the video page and paste it here.  For example, your URL should be formatted like this: <strong>http://upload.sms.cam.ac.uk/media/1212118</strong></li>
+</ol>',
       'type' => 'link',
       'module' => 'link',
     ),

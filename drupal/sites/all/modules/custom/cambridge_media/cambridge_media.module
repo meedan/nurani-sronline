@@ -176,7 +176,8 @@ function cambridge_media_fetch_download_and_thumbnail($data) {
 
   // Fetch the download URL
   $matches = array();
-  if (preg_match_all('@<a href="(http[s]?://downloads.sms.cam.ac.uk/' . $data['media_id'] . '/[0-9]+.mp4)[^"]*"@', $result->data, $matches) && isset($matches[1][0])) {
+
+  if (preg_match_all('@http://downloads.sms.cam.ac.uk/mediaplayer.swf\?file=(http[s]?://downloads.sms.cam.ac.uk/' . $data['media_id'] . '/[0-9]+.mp4)@', $result->data, $matches) && isset($matches[1][0])) {
     $data['download_url'] = $matches[1][0];
   }
   else {
