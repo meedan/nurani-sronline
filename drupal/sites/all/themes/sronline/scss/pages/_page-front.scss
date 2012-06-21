@@ -1,0 +1,45 @@
+/* FRONT PAGE */
+
+// Top banner area
+#banner_area {
+  padding:5px;
+  margin:15px 24px 0 9px;
+  position:absolute;
+
+  #block-views-home_page_banner-block_1{
+    .slides {
+      background:url("../images/banner_bg.jpg") no-repeat;
+      height: 321px;
+      margin: 0;
+      width: 622px;
+      padding:5px;
+    }
+    li{
+      float: left;
+      list-style-type: none;
+      display: block;
+    }
+  }
+}
+#banner_left{
+  float: left;
+  width: 620px;
+  margin-right: 20px;
+}
+#banner_right{
+  float: right;
+  width: 300px;
+}
+
+// Bottom 3 boxes
+.box {
+  float: left;
+  margin-left: 20px;
+  width: 233px;
+  height: 526px;
+  overflow: hidden; // HACK: This should be more elegant;
+}
+
+#block-views-Featured_video_home-block_1 {
+  padding: 3px;
+}

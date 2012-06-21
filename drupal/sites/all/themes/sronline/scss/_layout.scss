@@ -1,3 +1,56 @@
+// Globally applied CSS
+@import "reset";
+@import "blocks";
+@import "forms";
+@import "nodes";
+@import "header";
+@import "navigation";
+@import "footer";
+
+/* Specific site sections and pages */
+body.front                     { @import "pages/page-front"; }
+body.page-news                 { @import "pages/page-news"; }
+body.page-videos               { @import "pages/page-videos"; }
+body.page-text-bundles         { @import "pages/page-text-bundles"; }
+
+// Node types
+body.node-type-basic-page      { @import "nodes/node-basic-page"; }
+body.node-type-webform         { @import "nodes/node-webform"; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import 'compass/css3/border-radius'; 
 *{padding:0; margin:0;}
 body {font-family:verdana; font-size:12px; line-height:18px; color:#4A4A4A; }
@@ -15,16 +68,6 @@ div#header{ width:960px; height:139px; margin: 0 auto;
           #searchinput{ position:absolute; top:51px; left:7px; width:184px; height:34px; margin:-48px 1px 5px -5px; font:inherit 20px Verdana, Geneva, sans-serif; color:#999; border:0; background-color:transparent; border:none;}
           #submit_btn{ position:absolute; top:-5px; right:2px; width:50px; height:40px; margin-top:5px; padding:0;}
 }
-
-#banner_area{width:942px; height:345px; padding:5px; margin:15px 24px 0 9px; position:absolute;
-  #block-views-home_page_banner-block_1{float:left;
-      .slides{background:url("../images/banner_bg.jpg") no-repeat; height: 321px; margin: 0; width: 622px; padding:5px;}
-      li{float: left; list-style-type: none; display: block;}
-}
-}
-
-#banner_left{float:left; width:640px;}
-#banner_right{float:right; width:300px;}
 
 #main{
 width:960px;
@@ -73,6 +116,11 @@ margin-top:80px;
   textarea{width:444px; height:212px; background:url(../images/text_area.png) no-repeat; padding:10px; border:none; display: block; font-family: verdana; font-size: 12px; line-height: 22px}
 
 }
+
+
+
+
+
 
  h2 {display:block; padding:10px 0 0 22px ; font-size:27px; line-height:40px; color:#572983;}
  #banner{ width:569px; height:280px; background:url(../images/banner_holder.jpg); margin:10px auto;

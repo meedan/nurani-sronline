@@ -1,0 +1,21 @@
+
+// Theme textarea textfield button input[type=submit] ... etc.
+// Do sassybuttons stuff....
+
+
+.form-text {
+  height: 23px;
+  padding: 3px 10px;
+  // font-size: 10px;
+  // border: 0;
+  color: darken($color_body_text, 20%);
+
+  @include border-radius(0.2em);
+  background: #eee;
+  border: 1px solid #ccc;
+
+  @include single-box-shadow(#ccc, 0, 0, 1px, 0.1px, inset);
+}
+.form-submit {
+  @include buttonz($color_button);
+}

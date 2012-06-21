@@ -1,4 +1,5 @@
-@mixin buttonz($base_color: #ff8c00, $button_size: 30px){
+@mixin buttonz($base_color: #ff8c00, $button_size: 30px) {
+  // Top section is making a button ...
   line-height: $button_size;
   -webkit-box-sizing: border-box;
   padding: 0 $button_size/2;
@@ -13,6 +14,10 @@
   @include border-radius(4px, 4px);
   width: $button_size + 38;
   text-align: center;
-  @include sassy-button-gradient("matte");
+
+  @include sassy-button-gradient("matte", $base_color);
+  
+  // FIXME: Ideally just use SassyButtons, don't have all this custom override CSS above..;
+  // @include sassy-button("matte", $button_size/4, 14px, lighten($base_color, 30%), $base_color);
 }
 
