@@ -2,7 +2,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain) */
-/* line 17, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_reset.scss */
+/* line 17, ../scss/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,42 +25,50 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 28, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_reset.scss */
+/* line 28, ../scss/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 32, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_reset.scss */
+/* line 32, ../scss/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 36, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_reset.scss */
+/* line 36, ../scss/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 40, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_reset.scss */
+/* line 40, ../scss/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 45, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_reset.scss */
+/* line 45, ../scss/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 50, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_reset.scss */
+/* line 50, ../scss/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* line 1, ../scss/_typography.scss */
+body {
+  font-family: verdana;
+  font-size: 12px;
+  line-height: 18px;
+  color: #4a4a4a;
+}
+
 /* BLOCKS / BOXES */
-/* line 2, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
+/* line 2, ../scss/_blocks.scss */
 .block, .box {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
@@ -76,7 +84,7 @@ table {
   overflow: hidden;
   /* Box model tweak, expands all blocks */
 }
-/* line 9, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
+/* line 9, ../scss/_blocks.scss */
 .block .title, .box .title {
   height: 21px;
   /* 24px - 3px padding */
@@ -90,28 +98,28 @@ table {
 }
 
 /* Newsletter block */
-/* line 25, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
+/* line 25, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email {
   float: left;
 }
-/* line 27, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
+/* line 27, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email .form-item {
   margin: 0;
 }
-/* line 31, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
+/* line 31, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-text {
   width: 146px;
 }
-/* line 34, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
+/* line 34, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-submit {
   margin-left: 10px;
 }
 
-/* line 6, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_forms.scss */
+/* line 6, ../scss/_forms.scss */
 .form-text {
   height: 23px;
   padding: 3px 10px;
-  color: #666666;
+  color: #171717;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   -ms-border-radius: 0.2em;
@@ -124,7 +132,7 @@ table {
   box-shadow: inset 0 0 1px 0.1px #cccccc;
 }
 
-/* line 19, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_forms.scss */
+/* line 19, ../scss/_forms.scss */
 .form-submit {
   line-height: 30px;
   -webkit-box-sizing: border-box;
@@ -160,7 +168,7 @@ table {
   color: white;
   text-shadow: #c46c00 0 -1px 0;
 }
-/* line 10, /opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:hover {
   background-color: #e67e00;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #ffa333), color-stop(75%, #e67e00));
@@ -170,7 +178,7 @@ table {
   background: -ms-linear-gradient(#ffa333 3%, #e67e00 75%);
   background: linear-gradient(#ffa333 3%, #e67e00 75%);
 }
-/* line 13, /opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:active {
   -webkit-box-shadow: #d67600 0 1px 2px inset;
   -moz-box-shadow: #d67600 0 1px 2px inset;
@@ -178,7 +186,48 @@ table {
 }
 
 /* Global page header */
-/* line 4, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 4, ../scss/_header.scss */
+div#header a.logo {
+  background: url("../images/logo.png") no-repeat;
+  height: 128px;
+  position: absolute;
+  width: 296px;
+}
+/* line 10, ../scss/_header.scss */
+div#header #search_bar {
+  background: url("../images/search.png") no-repeat;
+  float: right;
+  height: 46px;
+  margin: 32px 0 50px 0;
+  position: relative;
+  width: 240px;
+}
+/* line 18, ../scss/_header.scss */
+div#header #searchinput {
+  background-color: transparent;
+  border: 0;
+  border: none;
+  color: #999;
+  font: inherit 20px Verdana, Geneva, sans-serif;
+  height: 34px;
+  left: 7px;
+  margin: -48px 1px 5px -5px;
+  position: absolute;
+  top: 51px;
+  width: 184px;
+}
+/* line 31, ../scss/_header.scss */
+div#header #submit_btn {
+  height: 40px;
+  margin-top: 5px;
+  padding: 0;
+  position: absolute;
+  right: 2px;
+  top: -5px;
+  width: 50px;
+}
+
+/* line 4, ../scss/_navigation.scss */
 .menu {
   width: 960px;
   height: 41px;
@@ -189,7 +238,7 @@ table {
   border-radius: 6px;
 }
 
-/* line 15, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 15, ../scss/_navigation.scss */
 ul.menu,
 ul.menu li {
   list-style: none;
@@ -197,19 +246,19 @@ ul.menu li {
   padding: 0;
 }
 
-/* line 21, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 21, ../scss/_navigation.scss */
 ul.menu {
   position: relative;
   z-index: 597;
 }
 
-/* line 26, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 26, ../scss/_navigation.scss */
 ul.menu li:hover > ul {
   visibility: visible;
   color: #2a4704;
 }
 
-/* line 31, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 31, ../scss/_navigation.scss */
 ul.menu li.hover,
 ul.menu li:hover {
   position: relative;
@@ -219,7 +268,7 @@ ul.menu li:hover {
   background: url(../images/Hover_bg.jpg) repeat-x left top;
 }
 
-/* line 39, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 39, ../scss/_navigation.scss */
 ul.menu li {
   float: left;
   display: block;
@@ -229,7 +278,7 @@ ul.menu li {
   background: url(../images/spacer.jpg) no-repeat right center;
 }
 
-/* line 47, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 47, ../scss/_navigation.scss */
 ul.menu li a {
   display: block;
   padding: 11px 20px 0 20px;
@@ -240,12 +289,12 @@ ul.menu li a {
   text-transform: uppercase;
 }
 
-/* line 56, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 56, ../scss/_navigation.scss */
 ul.menu li a:hover {
   color: #2a4704;
 }
 
-/* line 61, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 61, ../scss/_navigation.scss */
 ul.menu.nav_sub {
   visibility: hidden;
   position: absolute;
@@ -259,7 +308,7 @@ ul.menu.nav_sub {
   border-bottom-left-radius: 6px;
 }
 
-/* line 76, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 76, ../scss/_navigation.scss */
 ul.nav_sub li {
   list-style: none;
   display: block;
@@ -271,7 +320,7 @@ ul.nav_sub li {
   background: none;
 }
 
-/* line 88, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 88, ../scss/_navigation.scss */
 ul.nav_sub li a {
   color: #999;
   list-style: none;
@@ -283,17 +332,17 @@ ul.nav_sub li a {
   font: 12px Arial, Helvetica, sans-serif;
 }
 
-/* line 99, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
+/* line 99, ../scss/_navigation.scss */
 ul.nav_sub li a:hover {
   background: #2a4704;
   color: #fff;
 }
 
-/* line 6, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 6, ../scss/_footer.scss */
 #footer.home {
   margin: 1155px 20px;
 }
-/* line 3, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 3, ../scss/_footer.scss */
 #footer.home #footer_top {
   background: url(../images/footer.png) no-repeat;
   height: 60px;
@@ -301,7 +350,7 @@ ul.nav_sub li a:hover {
   position: absolute;
   width: 961px;
 }
-/* line 4, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 4, ../scss/_footer.scss */
 #footer.home #bottom_footer {
   background: url(../images/footer_img.gif) no-repeat;
   width: 961px;
@@ -310,11 +359,11 @@ ul.nav_sub li a:hover {
   position: absolute;
 }
 
-/* line 7, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 7, ../scss/_footer.scss */
 #footer.news, #footer.about {
   margin: 1459px 14px;
 }
-/* line 3, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 3, ../scss/_footer.scss */
 #footer.news #footer_top, #footer.about #footer_top {
   background: url(../images/footer.png) no-repeat;
   height: 60px;
@@ -322,7 +371,7 @@ ul.nav_sub li a:hover {
   position: absolute;
   width: 961px;
 }
-/* line 4, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 4, ../scss/_footer.scss */
 #footer.news #bottom_footer, #footer.about #bottom_footer {
   background: url(../images/footer_img.gif) no-repeat;
   width: 961px;
@@ -331,11 +380,11 @@ ul.nav_sub li a:hover {
   position: absolute;
 }
 
-/* line 8, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 8, ../scss/_footer.scss */
 #footer.videos {
   margin: 1516px 14px;
 }
-/* line 3, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 3, ../scss/_footer.scss */
 #footer.videos #footer_top {
   background: url(../images/footer.png) no-repeat;
   height: 60px;
@@ -343,7 +392,7 @@ ul.nav_sub li a:hover {
   position: absolute;
   width: 961px;
 }
-/* line 4, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 4, ../scss/_footer.scss */
 #footer.videos #bottom_footer {
   background: url(../images/footer_img.gif) no-repeat;
   width: 961px;
@@ -352,11 +401,11 @@ ul.nav_sub li a:hover {
   position: absolute;
 }
 
-/* line 9, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 9, ../scss/_footer.scss */
 #footer.contact {
   margin: 823px 13px;
 }
-/* line 3, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 3, ../scss/_footer.scss */
 #footer.contact #footer_top {
   background: url(../images/footer.png) no-repeat;
   height: 60px;
@@ -364,7 +413,7 @@ ul.nav_sub li a:hover {
   position: absolute;
   width: 961px;
 }
-/* line 4, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_footer.scss */
+/* line 4, ../scss/_footer.scss */
 #footer.contact #bottom_footer {
   background: url(../images/footer_img.gif) no-repeat;
   width: 961px;
@@ -373,7 +422,7 @@ ul.nav_sub li a:hover {
   position: absolute;
 }
 
-/* line 1, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
+/* line 1, ../scss/_pagination.scss */
 #pagination {
   border: 0;
   margin: 10px 0;
@@ -381,7 +430,7 @@ ul.nav_sub li a:hover {
   float: right;
   width: 250px;
 }
-/* line 3, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
+/* line 3, ../scss/_pagination.scss */
 #pagination li {
   border: 0;
   margin: 0;
@@ -390,12 +439,12 @@ ul.nav_sub li a:hover {
   list-style: none;
   margin-right: 2px;
 }
-/* line 5, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
+/* line 5, ../scss/_pagination.scss */
 #pagination a {
   background: #e7e7e7;
   margin-right: 2px;
 }
-/* line 6, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
+/* line 6, ../scss/_pagination.scss */
 #pagination a:link, #pagination a:visited {
   color: #2a4704;
   display: block;
@@ -403,11 +452,11 @@ ul.nav_sub li a:hover {
   padding: 10px 8px;
   text-decoration: none;
 }
-/* line 7, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
+/* line 7, ../scss/_pagination.scss */
 #pagination a:hover {
   border: solid 1px #2a4704;
 }
-/* line 10, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
+/* line 10, ../scss/_pagination.scss */
 #pagination .active {
   background: #2a4704;
   color: #FFFFFF;
@@ -418,7 +467,7 @@ ul.nav_sub li a:hover {
 }
 
 /*purpule Quote*/
-/* line 4, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
+/* line 4, ../scss/_testimonial.scss */
 blockquote.purpule {
   background-image: url(../images/open_quote.png);
   background-position: top left;
@@ -427,7 +476,7 @@ blockquote.purpule {
   padding: 16px 0 10px 10px;
   text-indent: 36px;
 }
-/* line 11, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
+/* line 11, ../scss/_testimonial.scss */
 blockquote.purpule span {
   display: block;
   background-image: url(../images/close_quote.png);
@@ -435,13 +484,13 @@ blockquote.purpule span {
   background-position: bottom right;
   padding-bottom: 10px;
 }
-/* line 19, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
+/* line 19, ../scss/_testimonial.scss */
 blockquote.purpule cite {
   color: #5e2c8d;
   font-weight: bold;
 }
 
-/* line 24, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
+/* line 24, ../scss/_testimonial.scss */
 blockquote.orange {
   background-image: url(../images/orange_openquote.png);
   background-position: top left;
@@ -450,7 +499,7 @@ blockquote.orange {
   padding: 16px 0 10px 10px;
   text-indent: 36px;
 }
-/* line 31, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
+/* line 31, ../scss/_testimonial.scss */
 blockquote.orange span {
   display: block;
   background-image: url(../images/orange_closequote.png);
@@ -458,13 +507,13 @@ blockquote.orange span {
   background-position: bottom right;
   padding-bottom: 10px;
 }
-/* line 38, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
+/* line 38, ../scss/_testimonial.scss */
 blockquote.orange cite {
   color: #f15518;
   font-weight: bold;
 }
 
-/* line 13, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 14, ../scss/_layout.scss */
 #bottom {
   width: 942px;
   margin: 448px 30px;
@@ -472,13 +521,14 @@ blockquote.orange cite {
   height: 100%;
 }
 
-/* line 15, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* Main page layout, from basic theme's layout.sass */
+/* line 17, ../scss/_layout.scss */
 #main {
   width: 960px;
   margin: 0 auto;
 }
 
-/* line 20, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 21, ../scss/_layout.scss */
 #content {
   float: left;
   width: 100%;
@@ -486,23 +536,23 @@ blockquote.orange cite {
   padding: 0;
 }
 
-/* line 27, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 27, ../scss/_layout.scss */
 .sidebar {
   float: left;
 }
 
-/* line 31, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 30, ../scss/_layout.scss */
 #sidebar-second {
   float: right;
 }
 
-/* line 35, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 33, ../scss/_layout.scss */
 #footer {
   float: none;
   clear: both;
 }
 
-/* line 44, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 41, ../scss/_layout.scss */
 #header,
 #footer,
 .mission,
@@ -511,41 +561,182 @@ blockquote.orange cite {
   clear: both;
 }
 
-/* line 50, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 46, ../scss/_layout.scss */
 .two-sidebars .center,
 .sidebar-left .center {
-  margin-left: 190px;
+  margin-left: 220px;
 }
 
-/* line 55, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 50, ../scss/_layout.scss */
 #sidebar-first {
-  width: 190px;
-  margin-right: -190px;
+  width: 200px;
+  margin-right: -220px;
 }
 
-/* line 62, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 56, ../scss/_layout.scss */
 .two-sidebars .center,
 .sidebar-right .center {
-  margin-right: 200px;
+  margin-right: 320px;
 }
 
-/* line 67, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 60, ../scss/_layout.scss */
 #sidebar-second {
-  width: 200px;
+  width: 300px;
+}
+
+/* line 78, ../scss/_layout.scss */
+#bg {
+  height: 200%;
+  left: -50%;
+  position: fixed;
+  top: 0%;
+  width: 200%;
+}
+
+/* line 85, ../scss/_layout.scss */
+#bg img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  min-height: 50%;
+  min-width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 95, ../scss/_layout.scss */
+.wrapper {
+  display: block;
+  height: 2000px;
+  margin: 0 auto;
+  width: 960px;
+}
+
+/* line 101, ../scss/_layout.scss */
+#main {
+  display: block;
+  height: 100%;
+  margin-top: 80px;
+  min-height: 1360px;
+  padding: 20px 0 10px 15px;
+  position: absolute;
+  width: 960px;
+}
+
+/* line 118, ../scss/_layout.scss */
+div.main_content p {
+  color: #000000;
+  display: block;
+  font-family: verdana;
+  font-size: 12px;
+  line-height: 22px;
+  padding: 10px 20px;
+}
+
+/* line 128, ../scss/_layout.scss */
+#contact_us p {
+  padding: 10px 40px;
+}
+/* line 131, ../scss/_layout.scss */
+#contact_us .row {
+  float: left;
+  padding: 25px 0 0 40px;
+  width: 500px;
+}
+/* line 136, ../scss/_layout.scss */
+#contact_us input {
+  background: url(../images/text_field.png) no-repeat;
+  color: #999;
+  height: 38px;
+  padding: 4px 10px 5px;
+  width: 443px;
+}
+/* line 143, ../scss/_layout.scss */
+#contact_us textarea {
+  background: url(../images/text_area.png) no-repeat;
+  border: none;
+  display: block;
+  font-family: verdana;
+  font-size: 12px;
+  height: 212px;
+  line-height: 22px;
+  padding: 10px;
+  width: 444px;
+}
+
+/* line 155, ../scss/_layout.scss */
+h2 {
+  color: #572983;
+  display: block;
+  font-size: 27px;
+  line-height: 40px;
+  padding: 10px 0 0 22px;
+}
+
+/* line 163, ../scss/_layout.scss */
+#banner img {
+  height: 271px;
+  margin: 0;
+  padding: 5px 5px 0;
+  width: 560px;
+}
+
+/* line 178, ../scss/_layout.scss */
+div.right_col .sub_menu ul li {
+  border-bottom: 1px dashed #c9c6c4;
+  margin: 10px 22px 0 5px;
+  padding: 10px;
+}
+/* line 184, ../scss/_layout.scss */
+div.right_col .sub_menu ul a:hover {
+  background: #467707;
+  padding: 10px;
+}
+/* line 191, ../scss/_layout.scss */
+div.right_col .about_us.newsletter {
+  margin-top: 18px;
+  width: 304px;
+}
+/* line 195, ../scss/_layout.scss */
+div.right_col .testimonial_box {
+  height: 452px;
+  margin-top: 20px;
+  padding: 10px;
+}
+/* line 201, ../scss/_layout.scss */
+div.right_col .text_bundles .title {
+  background: url(../images/text_bundles_03.gif) no-repeat;
+  height: 31px;
+  margin: 28px;
+  width: 137px;
+}
+/* line 208, ../scss/_layout.scss */
+div.right_col .text_bundles .download .dl_icon {
+  margin: 5px;
+}
+/* line 211, ../scss/_layout.scss */
+div.right_col .text_bundles .download a {
+  padding: 5px;
+  text-decoration: none;
+}
+/* line 217, ../scss/_layout.scss */
+div.right_col #contact_details {
+  height: 286px;
 }
 
 /* Specific site sections and pages */
-/* line 73, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
+/* line 21, ../scss/core.scss */
 body.front {
   /* FRONT PAGE */
 }
-/* line 4, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/pages/_page-front.scss */
+/* line 4, ../scss/pages/_page-front.scss */
 body.front #banner_area {
   padding: 5px;
   margin: 15px 24px 0 9px;
   position: absolute;
 }
-/* line 10, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/pages/_page-front.scss */
+/* line 10, ../scss/pages/_page-front.scss */
 body.front #banner_area #block-views-home_page_banner-block_1 .slides {
   background: url("../images/banner_bg.jpg") no-repeat;
   height: 321px;
@@ -553,24 +744,24 @@ body.front #banner_area #block-views-home_page_banner-block_1 .slides {
   width: 622px;
   padding: 5px;
 }
-/* line 17, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/pages/_page-front.scss */
+/* line 17, ../scss/pages/_page-front.scss */
 body.front #banner_area #block-views-home_page_banner-block_1 li {
   float: left;
   list-style-type: none;
   display: block;
 }
-/* line 24, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/pages/_page-front.scss */
+/* line 24, ../scss/pages/_page-front.scss */
 body.front #banner_left {
   float: left;
   width: 620px;
   margin-right: 20px;
 }
-/* line 29, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/pages/_page-front.scss */
+/* line 29, ../scss/pages/_page-front.scss */
 body.front #banner_right {
   float: right;
   width: 300px;
 }
-/* line 35, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/pages/_page-front.scss */
+/* line 35, ../scss/pages/_page-front.scss */
 body.front .box {
   float: left;
   margin-left: 20px;
@@ -578,350 +769,7 @@ body.front .box {
   height: 526px;
   overflow: hidden;
 }
-/* line 43, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/pages/_page-front.scss */
+/* line 43, ../scss/pages/_page-front.scss */
 body.front #block-views-Featured_video_home-block_1 {
   padding: 3px;
-}
-
-/* line 117, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-* {
-  padding: 0;
-  margin: 0;
-}
-
-/* line 118, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-body {
-  font-family: verdana;
-  font-size: 12px;
-  line-height: 18px;
-  color: #4A4A4A;
-}
-
-/* line 119, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-body, h1, h2, h3, h4, h5, h6, form, fieldset, label, p, span, input, img, blockquote, ul, ul li {
-  margin: 0;
-  padding: 0px;
-  border: 0px;
-  outline: 0;
-  font-weight: normal;
-}
-
-/* line 121, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#bg {
-  position: fixed;
-  top: 0%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-}
-
-/* line 122, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#bg img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;
-}
-
-/* line 124, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-.wrapper {
-  width: 960px;
-  height: 2000px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* line 126, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div#header {
-  width: 960px;
-  height: 139px;
-  margin: 0 auto;
-}
-/* line 127, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div#header a.logo {
-  background: url("../images/logo.png") no-repeat;
-  width: 296px;
-  height: 128px;
-  position: absolute;
-}
-/* line 129, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div#header #search_bar {
-  width: 240px;
-  height: 46px;
-  position: relative;
-  background: url("../images/search.png") no-repeat;
-  float: right;
-  margin: 32px 0 50px  0;
-}
-/* line 130, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div#header #searchinput {
-  position: absolute;
-  top: 51px;
-  left: 7px;
-  width: 184px;
-  height: 34px;
-  margin: -48px 1px 5px -5px;
-  font: inherit 20px Verdana, Geneva, sans-serif;
-  color: #999;
-  border: 0;
-  background-color: transparent;
-  border: none;
-}
-/* line 131, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div#header #submit_btn {
-  position: absolute;
-  top: -5px;
-  right: 2px;
-  width: 50px;
-  height: 40px;
-  margin-top: 5px;
-  padding: 0;
-}
-
-/* line 134, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#main {
-  width: 960px;
-  padding: 20px 0 10px 15px;
-  min-height: 1360px;
-  height: 100%;
-  display: block;
-  position: absolute;
-  margin-top: 80px;
-}
-
-/* line 165, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.main_content {
-  min-height: 1335px;
-  width: 612px;
-  background: #fff;
-  float: left;
-}
-/* line 146, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.main_content #breadcumb {
-  float: left;
-  padding: 15px 14px 0 20px;
-  width: 500px;
-  height: 24px;
-  clear: both;
-  overflow: hidden;
-}
-/* line 148, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.main_content #breadcumb ul {
-  float: left;
-  padding: 0;
-  margin: 0;
-  width: 500px;
-}
-/* line 150, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.main_content #breadcumb ul li {
-  float: left;
-  padding: 0 14px 0 5px;
-  margin: 0;
-  list-style: none;
-  font-size: 12px;
-  line-height: 18px;
-  background: url("../images/arrow8x8.jpg") no-repeat right 5px;
-}
-/* line 151, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.main_content #breadcumb ul li .last {
-  padding-right: 0;
-  background: none;
-}
-/* line 154, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.main_content #breadcumb a {
-  color: gray;
-  font-weight: bold;
-}
-/* line 155, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.main_content #breadcumb .last {
-  padding-right: 0;
-  background: none;
-}
-/* line 171, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.main_content p {
-  display: block;
-  padding: 10px 20px;
-  font-size: 12px;
-  line-height: 22px;
-  color: #000000;
-  font-family: verdana;
-}
-
-/* line 174, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#contact_us {
-  min-height: 685px;
-}
-/* line 175, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#contact_us p {
-  padding: 10px 40px;
-}
-/* line 176, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#contact_us .row {
-  padding: 25px 0 0 40px;
-  width: 500px;
-  float: left;
-}
-/* line 177, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#contact_us input {
-  width: 443px;
-  height: 38px;
-  background: url(../images/text_field.png) no-repeat;
-  padding: 4px 10px 5px;
-  color: #999;
-}
-/* line 178, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#contact_us textarea {
-  width: 444px;
-  height: 212px;
-  background: url(../images/text_area.png) no-repeat;
-  padding: 10px;
-  border: none;
-  display: block;
-  font-family: verdana;
-  font-size: 12px;
-  line-height: 22px;
-}
-
-/* line 187, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-h2 {
-  display: block;
-  padding: 10px 0 0 22px;
-  font-size: 27px;
-  line-height: 40px;
-  color: #572983;
-}
-
-/* line 188, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#banner {
-  width: 569px;
-  height: 280px;
-  background: url(../images/banner_holder.jpg);
-  margin: 10px auto;
-}
-/* line 189, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-#banner img {
-  width: 560px;
-  height: 271px;
-  margin: 0;
-  padding: 5px 5px 0;
-}
-
-/* line 199, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col {
-  min-height: 1335px;
-  width: 320px;
-  float: right;
-}
-/* line 205, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .sub_menu {
-  background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #b1a6b7;
-  height: 385px;
-  margin: 0;
-}
-/* line 209, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .sub_menu ul {
-  list-style: none;
-  margin: 0 0 0 20px;
-  padding-top: 13px;
-}
-/* line 213, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .sub_menu ul li {
-  border-bottom: 1px dashed #c9c6c4;
-  margin: 10px 22px 0 5px;
-  padding: 10px;
-}
-/* line 214, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .sub_menu ul a {
-  color: gray;
-  font-weight: bold;
-  text-decoration: none;
-  display: block;
-}
-/* line 215, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .sub_menu ul a:hover {
-  background: #467707;
-  padding: 10px;
-}
-/* line 223, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .about_us.newsletter {
-  background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #b1a6b7;
-  width: 304px;
-  margin-top: 18px;
-}
-/* line 228, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .testimonial_box {
-  background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #b1a6b7;
-  margin-top: 20px;
-  height: 452px;
-}
-/* line 234, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .text_bundles {
-  background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #b1a6b7;
-  height: 313px;
-  margin-top: 162px;
-}
-/* line 239, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .text_bundles .title {
-  background: url(../images/text_bundles_03.gif) no-repeat;
-  height: 31px;
-  margin: 28px;
-  width: 137px;
-}
-/* line 245, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .text_bundles .download {
-  padding: 5px;
-  margin: 20px;
-}
-/* line 246, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .text_bundles .download .dl_icon {
-  margin: 5px;
-}
-/* line 247, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col .text_bundles .download a {
-  padding: 5px;
-  text-decoration: none;
-}
-/* line 251, /Users/james/Code/Meedan/SROnline/drupal/sites/all/themes/sronline/scss/_layout.scss */
-div.right_col #contact_details {
-  background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #b1a6b7;
-  height: 286px;
 }

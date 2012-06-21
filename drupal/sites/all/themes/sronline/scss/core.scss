@@ -15,3 +15,14 @@
 // Bootstrap the SR-Online site style, the layout.scss includes and renders
 // all styles.
 @import "layout";
+
+
+/* Specific site sections and pages */
+body.front                     { @import "pages/page-front"; }
+body.page-news                 { @import "pages/page-news"; }
+body.page-videos               { @import "pages/page-videos"; }
+body.page-text-bundles         { @import "pages/page-text-bundles"; }
+
+// Node types
+body.node-type-basic-page      { @import "nodes/node-basic-page"; }
+body.node-type-webform         { @import "nodes/node-webform"; }

@@ -1,1 +1,40 @@
 /* Global page header */
+
+div#header {
+  a.logo {
+    background: url("../images/logo.png") no-repeat;
+    height: 128px;
+    position: absolute;
+    width: 296px;
+  }
+  #search_bar {
+    background: url("../images/search.png")no-repeat;
+    float: right;
+    height: 46px;
+    margin: 32px 0 50px 0;
+    position: relative;
+    width: 240px;
+  }
+  #searchinput {
+    background-color: transparent;
+    border: 0;
+    border: none;
+    color: #999;
+    font: inherit 20px Verdana, Geneva, sans-serif;
+    height: 34px;
+    left: 7px;
+    margin: -48px 1px 5px -5px;
+    position: absolute;
+    top: 51px;
+    width: 184px;
+  }
+  #submit_btn {
+    height: 40px;
+    margin-top: 5px;
+    padding: 0;
+    position: absolute;
+    right: 2px;
+    top: -5px;
+    width: 50px;
+  }
+}
