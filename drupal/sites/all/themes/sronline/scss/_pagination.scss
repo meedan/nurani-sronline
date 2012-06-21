@@ -1,0 +1,11 @@
+#pagination {
+  border:0; margin:10px 0; padding:0; float:right; width:250px;
+    li{border:0; margin:0; padding:0; font-size:22px; list-style:none; margin-right:2px;
+    }
+     a{ background:#e7e7e7; margin-right:2px;
+      &:link, &:visited{color:#2a4704; display:block; float:left; padding:10px 8px; text-decoration:none;}
+      &:hover{border:solid 1px #2a4704}
+      }
+    
+    .active{background:#2a4704; color:#FFFFFF; font-weight:bold; display:block; float:left; padding:10px 8px;}
+}

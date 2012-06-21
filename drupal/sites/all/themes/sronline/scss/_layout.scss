@@ -6,6 +6,68 @@
 @import "header";
 @import "navigation";
 @import "footer";
+@import "pagination";
+@import "testimonial";
+
+// TODO: Refactor this code;
+#bottom { width:942px; margin:448px 30px; position:absolute; height:100%; }
+
+#main {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#content {
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  padding: 0;
+}
+
+.sidebar {
+  float: left;
+}
+
+#sidebar-second {
+  float: right;
+}
+
+#footer {
+  float: none;
+  clear: both;
+}
+
+#header,
+#footer,
+.mission,
+.breadcrumb,
+.node {
+  clear: both;
+}
+
+.two-sidebars,
+.sidebar-left {
+  .center {
+    margin-left: $first_sidebar_width;
+  }
+}
+
+#sidebar-first {
+  width: $first_sidebar_width;
+  margin-right: -$first_sidebar_width;
+}
+
+.two-sidebars,
+.sidebar-right {
+  .center {
+    margin-right: $second_sidebar_width;
+  }
+}
+
+#sidebar-second {
+  width: $second_sidebar_width;
+}
+
 
 /* Specific site sections and pages */
 body.front                     { @import "pages/page-front"; }

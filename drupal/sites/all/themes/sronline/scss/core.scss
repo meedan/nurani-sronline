@@ -5,99 +5,13 @@
 @import "compass/css3/box-shadow";
 @import 'sassy-buttons';
 
-// Helper partials
+// Global variables
+@import "variables";
+
+// Helper mixins
 @import "helpers/button";
 @import "helpers/rounded_box";
-@import "helpers/colors";
 
-// Overall site style
+// Bootstrap the SR-Online site style, the layout.scss includes and renders
+// all styles.
 @import "layout";
-
-
-
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-
-// #video,.field-content{ width:302px; height:182px; float:right;}
-
-#bottom{ width:942px; margin:448px 30px; position:absolute; height:100%;}
-.item{
-  float:left;
-  width:100%;
-  padding:7px 0 7px 0;
-    .icon{float:left; margin:20px 15px; width:70px; height:70px;}
-    .pdf{float:left; margin:26px 15px; width:37px; height:44px;}
-    .info{ margin:0;}  
-      p{display:block; width:175px; margin-top:4px; float:left; margin-top:4px; }
-      h2{color: #7d3bb5; font-size: 16px; margin-bottom:-9px}
-     
-}
-
-
-.featured_news{
-  height:318px;
-  width:556px;
-  margin:0 auto;
-  border-bottom:1px dashed #c9c6c4; //margin:8px 22px 0 5px; padding:13px 5px;
-
-    #featured_img{ width:305px; height:282px; background:url(../images/featured_holder.png)no-repeat; margin:10px auto; float:left; }
-
-    #featured_text{ float:right; width:238px; height:282px;
-      h2{display:block; font-size:22px; padding:10px; color:ff6600;}
-      p{ display:block; padding:10px; margin-top:-12px;}
-       a {text-decoration:none; color:#000; padding:10px; color:ff6600;
-        &:hover{text-decoration:underline;} 
-       }
-    }
-}
-
-.news_list{
-  width:556px;
-  height:195;
-  margin:0 auto;
-  border-bottom:1px dashed #c9c6c4; // margin:8px 22px 0 5px; padding:13px 5px;
-  #news_image{width:113px; height:114px; background:url(../images/news_holder.png)no-repeat; margin:10px auto; float:left;}
-  #news_text{ float:right; width:443px; height:136px;
-    
-    a {text-decoration:none; color:#000; padding:10px; color:ff6600;
-        &:hover{text-decoration:underline;} 
-       }
-  }
-  h2{ color:#ff6600; margin-left:-22px;}
-}
-.news_list.last{border-bottom:none;}
-
-#pagination {
-  border:0; margin:10px 0; padding:0; float:right; width:250px;
-    li{border:0; margin:0; padding:0; font-size:22px; list-style:none; margin-right:2px;
-    }
-     a{ background:#e7e7e7; margin-right:2px;
-      &:link, &:visited{color:#2a4704; display:block; float:left; padding:10px 8px; text-decoration:none;}
-      &:hover{border:solid 1px #2a4704}
-      }
-    
-    .active{background:#2a4704; color:#FFFFFF; font-weight:bold; display:block; float:left; padding:10px 8px;}
-}
-
-.featured_video{ width:566px; height:450px; margin:0 auto; border-bottom:1px dashed #c9c6c4; //margin:8px 22px 0 5px; padding:13px 5px;                                    
-  #featured_vid{width:569px; height:337px; background:url(../images/video_holder.png)no-repeat; margin:10px  auto; }
-}
-
-.video_list{ width:566px; height:257px; margin:0 auto; border-bottom:1px dashed #c9c6c4; // margin:8px 22px 0 5px; padding:13px 5px;
-  #video_holder{width:308px; height:211px; background:url(../images/video_list.jpg)no-repeat; float:left; margin:10px 0;}
-  #video_text{width:239px; height:211px; float:right; margin:0 9px;
-     p{ display:block; padding:5px; margin:0;}
-     h2{ color:#426b0d; margin-left:-22px;}
-    
-  }
-}
-.video_list.last{border-bottom:none;}
-
-@import "testimonial.scss";
-
-
- 	
-  
