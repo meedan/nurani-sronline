@@ -433,11 +433,11 @@ function home_section_views_default_views() {
   $handler = $view->new_display('block', 'home page banner', 'block_1');
   $handler->override_option('style_plugin', 'jcarousel');
   $handler->override_option('style_options', array(
-    'wrap' => '0',
-    'skin' => 'tango',
-    'visible' => '',
-    'scroll' => '',
-    'auto' => '0',
+    'wrap' => 'circular',
+    'skin' => '',
+    'visible' => '1',
+    'scroll' => '1',
+    'auto' => '3',
     'navigation' => 'after',
     'ajax' => 0,
     'animation' => '',
