@@ -31,6 +31,10 @@ features[] = secondary_links
 
 stylesheets[print][] = css/print.css
 stylesheets[all][] = css/core.css
+stylesheets[all][] = libs/labels/labels.css
+
+scripts[] = libs/labels/labels.js
+
 
 ; Compass Support
 ; http://drupal.org/project/compass

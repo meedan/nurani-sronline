@@ -4,7 +4,6 @@
 #banner_area {
   // padding:5px;
   // margin:15px 24px 0 9px;
-  position: absolute;
 
   #block-views-home_page_banner-block_1 {
     padding: 4px;
@@ -17,13 +16,6 @@
       overflow: hidden;
     }
 
-    .slides {
-      background:url("../images/banner_bg.jpg") no-repeat;
-      height: 321px;
-      margin: 0;
-      width: 622px;
-      padding:5px;
-    }
     li {
       float: left;
       list-style-type: none;

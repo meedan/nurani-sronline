@@ -19,6 +19,17 @@
   }
 }
 
+@mixin undo-block-style {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+@mixin undo-block-style-no-title {
+  @include undo-block-style;
+  .title { display: none; }
+}
+
 /* GLOBALLY VISIBLE BLOCKS */
 /* Newsletter block */
 #block-webform-client-block-1 {

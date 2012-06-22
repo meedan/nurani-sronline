@@ -4,11 +4,14 @@ div#header {
   a.logo {
     background: url("../images/logo.png") no-repeat;
     height: 128px;
-    position: absolute;
     width: 296px;
   }
+
+  #block-search-0 {
+    @include undo-block-style-no-title;
+    
+  }
   #search_bar {
-    background: url("../images/search.png")no-repeat;
     float: right;
     height: 46px;
     margin: 32px 0 50px 0;
