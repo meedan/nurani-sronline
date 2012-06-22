@@ -2,11 +2,21 @@
 
 // Top banner area
 #banner_area {
-  padding:5px;
-  margin:15px 24px 0 9px;
-  position:absolute;
+  // padding:5px;
+  // margin:15px 24px 0 9px;
+  position: absolute;
 
-  #block-views-home_page_banner-block_1{
+  #block-views-home_page_banner-block_1 {
+    padding: 4px;
+
+    // Ensure the slideshow never escapes the container
+    .block-inner {
+      // Width and height should match imagecache style "Home-image_613"
+      width: 610px;
+      height: 312px;
+      overflow: hidden;
+    }
+
     .slides {
       background:url("../images/banner_bg.jpg") no-repeat;
       height: 321px;
@@ -14,10 +24,32 @@
       width: 622px;
       padding:5px;
     }
-    li{
+    li {
       float: left;
       list-style-type: none;
       display: block;
+      position: relative;
+
+      .views-field-teaser {
+        position: absolute;
+        width: 370px;
+        padding: 20px;
+        bottom: 25px;
+        left: 0px;
+        background: #fff;
+
+        .field-content {
+          overflow: hidden;
+          height: 50px;
+
+          .banner-title h3 {
+            // TODO: Style up this H3
+          }
+          .banner-teaser {
+            // TODO: Style up this teaser;
+          }
+        }
+      }
     }
   }
 }
@@ -35,9 +67,13 @@
 .box {
   float: left;
   margin-left: 20px;
-  width: 233px;
+  width: 300px;
   height: 526px;
   overflow: hidden; // HACK: This should be more elegant;
+
+  &.news {
+    margin-left: 0;
+  };
 }
 
 #block-views-Featured_video_home-block_1 {

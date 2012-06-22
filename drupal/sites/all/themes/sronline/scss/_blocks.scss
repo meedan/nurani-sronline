@@ -1,5 +1,5 @@
-/* BLOCKS / BOXES */
-.block, .box {
+/* General blocks style */
+.block {
   @include rounded-box-with-gradient;
   padding: 18px 27px;
   margin: 0 0 20px 0;
@@ -19,7 +19,7 @@
   }
 }
 
-
+/* GLOBALLY VISIBLE BLOCKS */
 /* Newsletter block */
 #block-webform-client-block-1 {
   .webform-component-email {

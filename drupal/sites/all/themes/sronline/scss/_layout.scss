@@ -10,10 +10,10 @@
 @import "pagination";
 @import "testimonial";
 
-// TODO: Refactor this code, what is this doing?
+// TODO: Have Chris look at this. Refactor this code, what is this doing?
 #bottom { width:942px; margin:448px 30px; position:absolute; height:100%; }
 
-/* Main page layout, from basic theme's layout.sass */
+/* Main page layout structure, from basic theme's layout.sass */
 #main {
   width: 960px;
   margin: 0 auto;
@@ -62,6 +62,14 @@
 }
 
 
+/* Styles for the main layout */
+#content-inner {
+  background: #fff;
+
+  #content-header, #content-area {
+    padding: 20px 30px;
+  }
+}
 
 
 
@@ -73,8 +81,9 @@
 
 
 
-
-
+///////////////
+////////////// TODO: Clean this up!
+//////////////
 #bg {
   height: 200%;
   left: -50%;

@@ -67,9 +67,9 @@ body {
   color: #4a4a4a;
 }
 
-/* BLOCKS / BOXES */
+/* General blocks style */
 /* line 2, ../scss/_blocks.scss */
-.block, .box {
+.block {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
   border: 1px solid #b1a6b7;
@@ -85,7 +85,7 @@ body {
   /* Box model tweak, expands all blocks */
 }
 /* line 9, ../scss/_blocks.scss */
-.block .title, .box .title {
+.block .title {
   height: 21px;
   /* 24px - 3px padding */
   padding: 3px 0 0 21px;
@@ -97,6 +97,7 @@ body {
   color: #FF8B00;
 }
 
+/* GLOBALLY VISIBLE BLOCKS */
 /* Newsletter block */
 /* line 25, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email {
@@ -172,7 +173,7 @@ body {
   color: white;
   text-shadow: #c46c00 0 -1px 0;
 }
-/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:hover {
   background-color: #e67e00;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #ffa333), color-stop(75%, #e67e00));
@@ -182,7 +183,7 @@ body {
   background: -ms-linear-gradient(#ffa333 3%, #e67e00 75%);
   background: linear-gradient(#ffa333 3%, #e67e00 75%);
 }
-/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:active {
   -webkit-box-shadow: #d67600 0 1px 2px inset;
   -moz-box-shadow: #d67600 0 1px 2px inset;
@@ -525,7 +526,7 @@ blockquote.orange cite {
   height: 100%;
 }
 
-/* Main page layout, from basic theme's layout.sass */
+/* Main page layout structure, from basic theme's layout.sass */
 /* line 17, ../scss/_layout.scss */
 #main {
   width: 960px;
@@ -588,7 +589,17 @@ blockquote.orange cite {
   width: 300px;
 }
 
-/* line 78, ../scss/_layout.scss */
+/* Styles for the main layout */
+/* line 66, ../scss/_layout.scss */
+#content-inner {
+  background: #fff;
+}
+/* line 69, ../scss/_layout.scss */
+#content-inner #content-header, #content-inner #content-area {
+  padding: 20px 30px;
+}
+
+/* line 87, ../scss/_layout.scss */
 #bg {
   height: 200%;
   left: -50%;
@@ -597,7 +608,7 @@ blockquote.orange cite {
   width: 200%;
 }
 
-/* line 85, ../scss/_layout.scss */
+/* line 94, ../scss/_layout.scss */
 #bg img {
   bottom: 0;
   left: 0;
@@ -609,7 +620,7 @@ blockquote.orange cite {
   top: 0;
 }
 
-/* line 95, ../scss/_layout.scss */
+/* line 104, ../scss/_layout.scss */
 .wrapper {
   display: block;
   height: 2000px;
@@ -617,7 +628,7 @@ blockquote.orange cite {
   width: 960px;
 }
 
-/* line 101, ../scss/_layout.scss */
+/* line 110, ../scss/_layout.scss */
 #main {
   display: block;
   height: 100%;
@@ -628,7 +639,7 @@ blockquote.orange cite {
   width: 960px;
 }
 
-/* line 118, ../scss/_layout.scss */
+/* line 127, ../scss/_layout.scss */
 div.main_content p {
   color: #000000;
   display: block;
@@ -638,17 +649,17 @@ div.main_content p {
   padding: 10px 20px;
 }
 
-/* line 128, ../scss/_layout.scss */
+/* line 137, ../scss/_layout.scss */
 #contact_us p {
   padding: 10px 40px;
 }
-/* line 131, ../scss/_layout.scss */
+/* line 140, ../scss/_layout.scss */
 #contact_us .row {
   float: left;
   padding: 25px 0 0 40px;
   width: 500px;
 }
-/* line 136, ../scss/_layout.scss */
+/* line 145, ../scss/_layout.scss */
 #contact_us input {
   background: url(../images/text_field.png) no-repeat;
   color: #999;
@@ -656,7 +667,7 @@ div.main_content p {
   padding: 4px 10px 5px;
   width: 443px;
 }
-/* line 143, ../scss/_layout.scss */
+/* line 152, ../scss/_layout.scss */
 #contact_us textarea {
   background: url(../images/text_area.png) no-repeat;
   border: none;
@@ -669,7 +680,7 @@ div.main_content p {
   width: 444px;
 }
 
-/* line 155, ../scss/_layout.scss */
+/* line 164, ../scss/_layout.scss */
 h2 {
   color: #572983;
   display: block;
@@ -678,7 +689,7 @@ h2 {
   padding: 10px 0 0 22px;
 }
 
-/* line 163, ../scss/_layout.scss */
+/* line 172, ../scss/_layout.scss */
 #banner img {
   height: 271px;
   margin: 0;
@@ -686,45 +697,45 @@ h2 {
   width: 560px;
 }
 
-/* line 178, ../scss/_layout.scss */
+/* line 187, ../scss/_layout.scss */
 div.right_col .sub_menu ul li {
   border-bottom: 1px dashed #c9c6c4;
   margin: 10px 22px 0 5px;
   padding: 10px;
 }
-/* line 184, ../scss/_layout.scss */
+/* line 193, ../scss/_layout.scss */
 div.right_col .sub_menu ul a:hover {
   background: #467707;
   padding: 10px;
 }
-/* line 191, ../scss/_layout.scss */
+/* line 200, ../scss/_layout.scss */
 div.right_col .about_us.newsletter {
   margin-top: 18px;
   width: 304px;
 }
-/* line 195, ../scss/_layout.scss */
+/* line 204, ../scss/_layout.scss */
 div.right_col .testimonial_box {
   height: 452px;
   margin-top: 20px;
   padding: 10px;
 }
-/* line 201, ../scss/_layout.scss */
+/* line 210, ../scss/_layout.scss */
 div.right_col .text_bundles .title {
   background: url(../images/text_bundles_03.gif) no-repeat;
   height: 31px;
   margin: 28px;
   width: 137px;
 }
-/* line 208, ../scss/_layout.scss */
+/* line 217, ../scss/_layout.scss */
 div.right_col .text_bundles .download .dl_icon {
   margin: 5px;
 }
-/* line 211, ../scss/_layout.scss */
+/* line 220, ../scss/_layout.scss */
 div.right_col .text_bundles .download a {
   padding: 5px;
   text-decoration: none;
 }
-/* line 217, ../scss/_layout.scss */
+/* line 226, ../scss/_layout.scss */
 div.right_col #contact_details {
   height: 286px;
 }
@@ -736,11 +747,19 @@ body.front {
 }
 /* line 4, ../scss/pages/_page-front.scss */
 body.front #banner_area {
-  padding: 5px;
-  margin: 15px 24px 0 9px;
   position: absolute;
 }
-/* line 10, ../scss/pages/_page-front.scss */
+/* line 9, ../scss/pages/_page-front.scss */
+body.front #banner_area #block-views-home_page_banner-block_1 {
+  padding: 4px;
+}
+/* line 13, ../scss/pages/_page-front.scss */
+body.front #banner_area #block-views-home_page_banner-block_1 .block-inner {
+  width: 610px;
+  height: 312px;
+  overflow: hidden;
+}
+/* line 20, ../scss/pages/_page-front.scss */
 body.front #banner_area #block-views-home_page_banner-block_1 .slides {
   background: url("../images/banner_bg.jpg") no-repeat;
   height: 321px;
@@ -748,32 +767,51 @@ body.front #banner_area #block-views-home_page_banner-block_1 .slides {
   width: 622px;
   padding: 5px;
 }
-/* line 17, ../scss/pages/_page-front.scss */
+/* line 27, ../scss/pages/_page-front.scss */
 body.front #banner_area #block-views-home_page_banner-block_1 li {
   float: left;
   list-style-type: none;
   display: block;
+  position: relative;
 }
-/* line 24, ../scss/pages/_page-front.scss */
+/* line 33, ../scss/pages/_page-front.scss */
+body.front #banner_area #block-views-home_page_banner-block_1 li .views-field-teaser {
+  position: absolute;
+  width: 370px;
+  padding: 20px;
+  bottom: 25px;
+  left: 0px;
+  background: #fff;
+}
+/* line 41, ../scss/pages/_page-front.scss */
+body.front #banner_area #block-views-home_page_banner-block_1 li .views-field-teaser .field-content {
+  overflow: hidden;
+  height: 50px;
+}
+/* line 56, ../scss/pages/_page-front.scss */
 body.front #banner_left {
   float: left;
   width: 620px;
   margin-right: 20px;
 }
-/* line 29, ../scss/pages/_page-front.scss */
+/* line 61, ../scss/pages/_page-front.scss */
 body.front #banner_right {
   float: right;
   width: 300px;
 }
-/* line 35, ../scss/pages/_page-front.scss */
+/* line 67, ../scss/pages/_page-front.scss */
 body.front .box {
   float: left;
   margin-left: 20px;
-  width: 233px;
+  width: 300px;
   height: 526px;
   overflow: hidden;
 }
-/* line 43, ../scss/pages/_page-front.scss */
+/* line 74, ../scss/pages/_page-front.scss */
+body.front .box.news {
+  margin-left: 0;
+}
+/* line 79, ../scss/pages/_page-front.scss */
 body.front #block-views-Featured_video_home-block_1 {
   padding: 3px;
 }
