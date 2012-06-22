@@ -108,15 +108,11 @@ body {
 }
 /* line 31, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-text {
-  width: 142px;
+  width: 146px;
 }
 /* line 34, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-submit {
   margin-left: 10px;
-}
-/* line 37, ../scss/_blocks.scss */
-#block-webform-client-block-1 label {
-  display: none;
 }
 
 /* line 6, ../scss/_forms.scss */

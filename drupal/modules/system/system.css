@@ -135,7 +135,7 @@ tr.merge-up, tr.merge-up td, tr.merge-up th {
   font-size: 0.85em;
 }
 .form-item label {
-  display: none;
+  //display: none;
   font-weight: bold;
 }
 .form-item label.option {
