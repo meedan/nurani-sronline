@@ -158,7 +158,7 @@ function home_section_views_default_views() {
         'max_length' => '200',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'html' => 0,
+        'html' => 1,
         'strip_tags' => 0,
       ),
       'empty' => '',
@@ -170,6 +170,9 @@ function home_section_views_default_views() {
       'table' => 'node_revisions',
       'field' => 'body',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
     'field_quoted_from_value' => array(
       'label' => '',
@@ -275,6 +278,7 @@ function home_section_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('title', 'Testimonials');
   $handler->override_option('items_per_page', 2);
   $handler = $view->new_display('block', 'Home page testimonial', 'block_1');
   $handler->override_option('block_description', '');
@@ -361,10 +365,49 @@ function home_section_views_default_views() {
       'empty_zero' => 0,
       'hide_alter_empty' => 1,
       'link_to_node' => 1,
-      'exclude' => 0,
+      'exclude' => 1,
       'id' => 'title',
       'table' => 'node',
       'field' => 'title',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'teaser' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '<div class="banner-title"><h3>[title]</h3></div>
+<div class="banner-teaser">[teaser]</div>',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'teaser',
+      'table' => 'node_revisions',
+      'field' => 'teaser',
+      'override' => array(
+        'button' => 'Override',
+      ),
       'relationship' => 'none',
     ),
   ));
