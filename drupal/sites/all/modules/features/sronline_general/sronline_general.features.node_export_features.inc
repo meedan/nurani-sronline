@@ -125,6 +125,9 @@ function sronline_general_node_export_features_default() {
     \'field_about_image\' => array(
       \'0\' => NULL,
     ),
+    \'field_resource\' => array(
+      \'0\' => NULL,
+    ),
     \'field_attachment\' => array(
       \'0\' => NULL,
     ),
@@ -156,12 +159,35 @@ function sronline_general_node_export_features_default() {
     \'revision_uid\' => \'1\',
     \'title\' => \'Resources\',
     \'body\' => \'<p>&nbsp;</p>
-<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>
-<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Nulla lacinia, ante a sagittis bibendum, elit risus ultricies sem, sollicitudin malesuada massa magna nec ante. Donec et lacus nulla, ut interdum nunc. Sed interdum erat vitae mi consectetur eleifend. Aenean euismod justo vel felis lobortis sed ornare mi porta. Donec ut massa erat, sit amet molestie nisl. Sed lobortis purus at nisi dapibus a egestas velit ornare. Nunc imperdiet, nibh ac lobortis adipiscing, ante tellus luctus sem, id volutpat sem mi nec est. Maecenas auctor rhoncus mauris, eu suscipit ante dictum in.</p>
-<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Etiam sollicitudin viverra justo, non feugiat enim cursus at. Praesent ut mi nec eros rhoncus mattis a sit amet ipsum. Donec eu diam non risus rutrum aliquet eget dictum nibh. Phasellus nec elit eget tellus volutpat dapibus. Morbi volutpat purus sit amet tellus pellentesque ut ornare orci pellentesque. Praesent ut consequat nulla. Nullam vel purus massa. Maecenas a velit vitae nisi porttitor auctor ac sit amet nisi. Maecenas ut turpis purus. Nunc turpis diam, accumsan et molestie eget, egestas nec lorem. Maecenas laoreet enim ut lorem lacinia congue. Donec quis lectus quam. Phasellus lobortis, turpis a feugiat egestas, risus enim ultricies arcu, non aliquet tellus augue a justo.</p>
+<p><strong>Resources:</strong></p>
+<ol>
+	<li>
+		How to pitch a tent</li>
+	<li>
+		asdfsdf</li>
+	<li>
+		asdfsdf</li>
+	<li>
+		&nbsp;</li>
+</ol>
+<p>&nbsp;</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>
+<p>Nulla lacinia, ante a sagittis bibendum, elit risus ultricies sem, sollicitudin malesuada massa magna nec ante. Donec et lacus nulla, ut interdum nunc. Sed interdum erat vitae mi consectetur eleifend. Aenean euismod justo vel felis lobortis sed ornare mi porta. Donec ut massa erat, sit amet molestie nisl. Sed lobortis purus at nisi dapibus a egestas velit ornare. Nunc imperdiet, nibh ac lobortis adipiscing, ante tellus luctus sem, id volutpat sem mi nec est. Maecenas auctor rhoncus mauris, eu suscipit ante dictum in.</p>
+<p>Etiam sollicitudin viverra justo, non feugiat enim cursus at. Praesent ut mi nec eros rhoncus mattis a sit amet ipsum. Donec eu diam non risus rutrum aliquet eget dictum nibh. Phasellus nec elit eget tellus volutpat dapibus. Morbi volutpat purus sit amet tellus pellentesque ut ornare orci pellentesque. Praesent ut consequat nulla. Nullam vel purus massa. Maecenas a velit vitae nisi porttitor auctor ac sit amet nisi. Maecenas ut turpis purus. Nunc turpis diam, accumsan et molestie eget, egestas nec lorem. Maecenas laoreet enim ut lorem lacinia congue. Donec quis lectus quam. Phasellus lobortis, turpis a feugiat egestas, risus enim ultricies arcu, non aliquet tellus augue a justo.</p>
 \',
     \'teaser\' => \'<p>&nbsp;</p>
-<p style="text-align: justify; font-size: 11px; line-height: 14px; margin-bottom: 14px; font-family: Arial, Helvetica, sans; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, urna felis consequat quam, id tincidunt dolor turpis vel sem. Quisque quis pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>\',
+<p><strong>Resources:</strong></p>
+<ol>
+	<li>
+		How to pitch a tent</li>
+	<li>
+		asdfsdf</li>
+	<li>
+		asdfsdf</li>
+	<li>
+		&nbsp;</li>
+</ol>
+<p>&nbsp;</p>\',
     \'log\' => \'\',
     \'revision_timestamp\' => NULL,
     \'format\' => \'1\',
@@ -170,6 +196,9 @@ function sronline_general_node_export_features_default() {
     \'data\' => \'a:0:{}\',
     \'path\' => NULL,
     \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_resource\' => array(
       \'0\' => NULL,
     ),
     \'field_attachment\' => array(
@@ -217,6 +246,9 @@ function sronline_general_node_export_features_default() {
     \'data\' => \'a:0:{}\',
     \'path\' => NULL,
     \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_resource\' => array(
       \'0\' => NULL,
     ),
     \'field_attachment\' => array(
@@ -432,6 +464,9 @@ function sronline_general_node_export_features_default() {
     \'field_about_image\' => array(
       \'0\' => NULL,
     ),
+    \'field_resource\' => array(
+      \'0\' => NULL,
+    ),
     \'field_attachment\' => array(
       \'0\' => NULL,
     ),
@@ -479,6 +514,9 @@ function sronline_general_node_export_features_default() {
     \'field_about_image\' => array(
       \'0\' => NULL,
     ),
+    \'field_resource\' => array(
+      \'0\' => NULL,
+    ),
     \'field_attachment\' => array(
       \'0\' => NULL,
     ),
@@ -519,6 +557,9 @@ function sronline_general_node_export_features_default() {
     \'data\' => \'a:0:{}\',
     \'path\' => NULL,
     \'field_about_image\' => array(
+      \'0\' => NULL,
+    ),
+    \'field_resource\' => array(
       \'0\' => NULL,
     ),
     \'field_attachment\' => array(

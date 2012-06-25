@@ -25,12 +25,12 @@ function sronline_general_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-50',
   );
-  // Exported menu link: primary-links:node
-  $menu_links['primary-links:node'] = array(
+  // Exported menu link: primary-links:news
+  $menu_links['primary-links:news'] = array(
     'menu_name' => 'primary-links',
-    'link_path' => 'node',
-    'router_path' => 'node',
-    'link_title' => 'News & Events',
+    'link_path' => 'news',
+    'router_path' => 'news',
+    'link_title' => 'News',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -42,7 +42,7 @@ function sronline_general_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
+    'weight' => '-45',
   );
   // Exported menu link: primary-links:node/11
   $menu_links['primary-links:node/11'] = array(
@@ -133,25 +133,6 @@ function sronline_general_menu_default_menu_links() {
     'expanded' => '1',
     'weight' => '-48',
   );
-  // Exported menu link: primary-links:node/4
-  $menu_links['primary-links:node/4'] = array(
-    'menu_name' => 'primary-links',
-    'link_path' => 'node/4',
-    'router_path' => 'node/%',
-    'link_title' => 'SR Online',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '1',
-    'weight' => '-47',
-  );
   // Exported menu link: primary-links:node/5
   $menu_links['primary-links:node/5'] = array(
     'menu_name' => 'primary-links',
@@ -169,7 +150,45 @@ function sronline_general_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '-44',
+  );
+  // Exported menu link: primary-links:text-bundles
+  $menu_links['primary-links:text-bundles'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'text-bundles',
+    'router_path' => 'text-bundles',
+    'link_title' => 'Text Bundles',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-47',
+  );
+  // Exported menu link: primary-links:videos
+  $menu_links['primary-links:videos'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'videos',
+    'router_path' => 'videos',
+    'link_title' => 'Videos',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-46',
   );
   // Exported menu link: secondary-links:node/6
   $menu_links['secondary-links:node/6'] = array(
@@ -216,12 +235,13 @@ function sronline_general_menu_default_menu_links() {
   t('Home');
   t('How to do SR');
   t('More Sr Stuff');
-  t('News & Events');
+  t('News');
   t('Privacy Policy');
   t('Resources');
   t('Rules about SR');
-  t('SR Online');
   t('Terms of Use');
+  t('Text Bundles');
+  t('Videos');
 
 
   return $menu_links;

@@ -81,7 +81,7 @@ function about_us_content_default_fields() {
       'title_type' => 'textfield',
       'default_image' => NULL,
       'use_default_image' => 0,
-      'label' => 'About_image',
+      'label' => 'Image',
       'weight' => '-3',
       'description' => '',
       'type' => 'imagefield_widget',
@@ -163,10 +163,68 @@ function about_us_content_default_fields() {
     ),
   );
 
+  // Exported field: field_resource
+  $fields['basic_page-field_resource'] = array(
+    'field_name' => 'field_resource',
+    'type_name' => 'basic_page',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'filefield',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'filefield',
+    'active' => '1',
+    'list_field' => '0',
+    'list_default' => 1,
+    'description_field' => '0',
+    'widget' => array(
+      'file_extensions' => 'txt pdf doc',
+      'file_path' => '',
+      'progress_indicator' => 'bar',
+      'max_filesize_per_file' => '',
+      'max_filesize_per_node' => '',
+      'label' => 'Resource',
+      'weight' => '-2',
+      'description' => '',
+      'type' => 'filefield_widget',
+      'module' => 'filefield',
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
-  t('About_image');
   t('Doc attach');
+  t('Image');
+  t('Resource');
 
   return $fields;
 }
