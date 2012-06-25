@@ -46,30 +46,9 @@ function sronline_preprocess_page(&$vars, $hook) {
     $body_classes[] = 'tax-' . eregi_replace('[^a-z0-9]', '-', $term->name);
     }
   }
-  if (!$vars['is_front']) {
-    // Add unique classes for each page and website section
-    $path = drupal_get_path_alias($_GET['q']);
-    list($section, ) = explode('/', $path, 2);
-    $body_classes[] = basic_id_safe('page-'. $path);
-    $body_classes[] = basic_id_safe('section-'. $section);
 
-    if (arg(0) == 'node') {
-      if (arg(1) == 'add') {
-        if ($section == 'node') {
-          array_pop($body_classes); // Remove 'section-node'
-        }
-        $body_classes[] = 'section-node-add'; // Add 'section-node-add'
-      }
-      elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
-        if ($section == 'node') {
-          array_pop($body_classes); // Remove 'section-node'
-        }
-        $body_classes[] = 'section-node-'. arg(2); // Add 'section-node-edit' or 'section-node-delete'
-      }
-    }
-  }
   // Add special variables for the front page ONLY
-  else {
+  if ($vars['is_front']) {
     // TODO: Put the homepage "Boxes" here.
     $vars['content'] = '<div class="box news">
           <div id="heading_1"> </div>
@@ -89,6 +68,28 @@ function sronline_preprocess_page(&$vars, $hook) {
               <div><?php print $home_right; ?></div>
         <?php endif; ?>
          </div>';
+  }
+  // Add unique classes for each page and website section
+  else {
+    $path = drupal_get_path_alias($_GET['q']);
+    list($section, ) = explode('/', $path, 2);
+    $body_classes[] = basic_id_safe('page-'. $path);
+    $body_classes[] = basic_id_safe('section-'. $section);
+
+    if (arg(0) == 'node') {
+      if (arg(1) == 'add') {
+        if ($section == 'node') {
+          array_pop($body_classes); // Remove 'section-node'
+        }
+        $body_classes[] = 'section-node-add'; // Add 'section-node-add'
+      }
+      elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
+        if ($section == 'node') {
+          array_pop($body_classes); // Remove 'section-node'
+        }
+        $body_classes[] = 'section-node-'. arg(2); // Add 'section-node-edit' or 'section-node-delete'
+      }
+    }
   }
   /*// Check what the user's browser is and add it as a body class
     // DEACTIVATED - Only works if page cache is deactivated
@@ -133,6 +134,9 @@ function sronline_preprocess_page(&$vars, $hook) {
   $vars['body_classes'] = implode(' ', $body_classes); // Concatenate with spaces
 
   $vars['theme_path'] = url(drupal_get_path('theme', 'sronline'));
+
+  // $vars['content'] = 'HELLO!';
+  // drupal_set_message('<pre>' . print_r($vars, 1) . '</pre>');
 }
 
 /**

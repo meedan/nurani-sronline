@@ -10,7 +10,7 @@
 	
   	
 }
- .menu-block-2{
+.menu-block-2 {
   width:960px;
   height:41px;
   margin:20px auto;
@@ -20,7 +20,12 @@
   border-radius:6px;
   background:url(../images/nav_bg.jpg) repeat-x center top;
   padding:0px 20px 0px 20px;
-  
+
+  & > ul {
+    position: absolute;
+    z-index: 500;
+  }
+
   ul li{
         list-style:none; /* removes bullets on list*/
         float:left;
@@ -46,4 +51,3 @@
         ul li.expanded:hover ul{display:block; position:absolute; background: url(../images/drop_down_bg.jpg) repeat-x left top; padding:17px; height:200px;}
  
  }
- 
