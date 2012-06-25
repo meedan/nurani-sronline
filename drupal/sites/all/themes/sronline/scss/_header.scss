@@ -2,13 +2,19 @@
 
 div#header {
   a.logo {
-    background: url("../images/logo.png") no-repeat;
+    
     height: 128px;
     width: 296px;
   }
 
   #block-search-0 {
     @include undo-block-style-no-title;
+    float:right;
+    margin:10px;
+    
+    label{display:none;}
+    .form-text{width:153px; height:25px;}
+    
     
   }
   #search_bar {

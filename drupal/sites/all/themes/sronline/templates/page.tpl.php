@@ -32,10 +32,8 @@
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
           </a>
         <?php endif; ?>
-        <div id="search_bar">
-          <?php print $header; ?>
-          <?php print $search_box; ?>
-        </div>
+        
+        <?php print $header; ?>
     </div> <!-- /header -->
     
      <!-- ______________________ NAVIGATION _______________________ -->

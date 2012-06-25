@@ -14,7 +14,7 @@
 // #bottom { width:942px; margin:448px 30px; position:absolute; height:100%; }
 
 /* Main page layout structure, from basic theme's layout.sass */
-#main {
+#main, #header, #footer {
   width: 960px;
   margin: 0 auto;
 }

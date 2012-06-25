@@ -4,7 +4,7 @@
   padding: 18px 27px;
   margin: 0 0 20px 0;
   background: #fff;
-  overflow: hidden; /* Box model tweak, expands all blocks */
+  overflow: visible; /* Box model tweak, expands all blocks */
 
   .title {
     height: 21px; /* 24px - 3px padding */
@@ -20,8 +20,8 @@
 }
 
 @mixin undo-block-style {
-  padding: 0;
-  margin: 0;
+  //padding: 0;
+  //margin: 0;
   background: transparent;
   border: none;
 }
@@ -29,6 +29,7 @@
   @include undo-block-style;
   .title { display: none; }
 }
+
 
 /* GLOBALLY VISIBLE BLOCKS */
 /* Newsletter block */
