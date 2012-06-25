@@ -12,7 +12,6 @@
   text-decoration: none;
   //padding: 7px;
   @include border-radius(4px, 4px);
-  width: $button_size + 38;
   text-align: center;
 
   @include sassy-button-gradient("matte", $base_color);

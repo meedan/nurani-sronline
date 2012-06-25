@@ -136,7 +136,7 @@ function sronline_general_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_home_banner';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_home_banner'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -185,7 +185,7 @@ function sronline_general_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_testimonial';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_testimonial'] = $strongarm;
 
   $strongarm = new stdClass;
