@@ -33,6 +33,15 @@
 .form-submit {
   @include buttonz($color_button);
 }
+// CKEditor info
+.textarea-identifier {
+  color: lighten($color_body_text, 30%);
+  font-size: 0.8em;
+}
+// Container for form buttons, eg: Submit, Cancel, etc.
+#edit-actions {
+  margin-top: 20px;
+}
 
 
 /* CSS to fit the compact_forms plugin better into the sronline theme */

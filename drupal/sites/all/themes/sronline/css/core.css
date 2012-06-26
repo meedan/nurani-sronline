@@ -399,18 +399,29 @@ body {
   box-shadow: #d67600 0 1px 2px inset;
 }
 
+/* line 37, ../scss/_forms.scss */
+.textarea-identifier {
+  color: #979797;
+  font-size: 0.8em;
+}
+
+/* line 42, ../scss/_forms.scss */
+#edit-actions {
+  margin-top: 20px;
+}
+
 /* CSS to fit the compact_forms plugin better into the sronline theme */
-/* line 39, ../scss/_forms.scss */
+/* line 48, ../scss/_forms.scss */
 .compact-form .compact-form-label {
   padding: 6px 7px;
   color: #7d7d7d;
   font-weight: normal;
 }
-/* line 44, ../scss/_forms.scss */
+/* line 53, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover {
   color: #cacaca;
 }
-/* line 47, ../scss/_forms.scss */
+/* line 56, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover .form-required {
   color: #ff9999;
 }
@@ -811,8 +822,12 @@ blockquote.orange cite {
   background: #fff;
 }
 /* line 88, ../scss/_layout.scss */
-#content-inner #content-header, #content-inner #content-area {
-  padding: 20px 30px;
+#content-inner #content-area {
+  padding: 0 40px 30px 40px;
+}
+/* line 91, ../scss/_layout.scss */
+#content-inner #content-header {
+  padding: 20px 40px 10px 40px;
 }
 
 /* .wrapper {
@@ -1073,6 +1088,10 @@ body.page-news .view-news-articles .view-content .views-row .views-field-field-n
 }
 
 /* line 1, ../scss/pages/_page-content-contact-us.scss */
+body.page-content-contact-us .webform-client-form {
+  margin-top: 20px;
+}
+/* line 5, ../scss/pages/_page-content-contact-us.scss */
 body.page-content-contact-us .webform-component {
   width: 450px;
 }

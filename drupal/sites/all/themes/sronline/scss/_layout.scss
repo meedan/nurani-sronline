@@ -85,8 +85,11 @@
 #content-inner {
   background: #fff;
 
-  #content-header, #content-area {
-    padding: 20px 30px;
+  #content-area {
+    padding: 0 40px 30px 40px;
+  }
+  #content-header {
+    padding: 20px 40px 10px 40px;
   }
 }
 
