@@ -69,7 +69,7 @@ body {
 
 /* General blocks style */
 /* line 2, ../scss/_blocks.scss */
-.block {
+.block, .pane-block {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
   border: 1px solid #b1a6b7;
@@ -85,7 +85,7 @@ body {
   /* Box model tweak, expands all blocks */
 }
 /* line 9, ../scss/_blocks.scss */
-.block .title {
+.block .title, .pane-block .title {
   height: 21px;
   /* 24px - 3px padding */
   padding: 3px 0 0 21px;
@@ -720,25 +720,35 @@ div.right_col {
 body.front {
   /* FRONT PAGE */
 }
-/* line 8, ../scss/pages/_page-front.scss */
-body.front #banner_area #block-views-home_page_banner-block_1 {
-  padding: 4px;
+/* line 2, ../scss/pages/_page-front.scss */
+body.front #content-inner {
+  background: inherit;
+}
+/* line 7, ../scss/pages/_page-front.scss */
+body.front #content-inner #content-area {
+  padding: 0 10px;
 }
 /* line 12, ../scss/pages/_page-front.scss */
-body.front #banner_area #block-views-home_page_banner-block_1 .block-inner {
+body.front #block-views-home_page_banner-block_1 {
+  padding: 4px;
+  width: 611px;
+  float: left;
+}
+/* line 18, ../scss/pages/_page-front.scss */
+body.front #block-views-home_page_banner-block_1 .block-inner {
   width: 610px;
   height: 312px;
   overflow: hidden;
 }
-/* line 19, ../scss/pages/_page-front.scss */
-body.front #banner_area #block-views-home_page_banner-block_1 li {
+/* line 25, ../scss/pages/_page-front.scss */
+body.front #block-views-home_page_banner-block_1 li {
   float: left;
   list-style-type: none;
   display: block;
   position: relative;
 }
-/* line 25, ../scss/pages/_page-front.scss */
-body.front #banner_area #block-views-home_page_banner-block_1 li .views-field-teaser {
+/* line 31, ../scss/pages/_page-front.scss */
+body.front #block-views-home_page_banner-block_1 li .views-field-teaser {
   position: absolute;
   width: 370px;
   padding: 20px;
@@ -746,35 +756,36 @@ body.front #banner_area #block-views-home_page_banner-block_1 li .views-field-te
   left: 0px;
   background: #fff;
 }
-/* line 33, ../scss/pages/_page-front.scss */
-body.front #banner_area #block-views-home_page_banner-block_1 li .views-field-teaser .field-content {
+/* line 39, ../scss/pages/_page-front.scss */
+body.front #block-views-home_page_banner-block_1 li .views-field-teaser .field-content {
   overflow: hidden;
   height: 50px;
 }
-/* line 48, ../scss/pages/_page-front.scss */
-body.front #banner_left {
-  float: left;
-  width: 620px;
-  margin-right: 20px;
-}
-/* line 53, ../scss/pages/_page-front.scss */
-body.front #banner_right {
-  float: right;
-  width: 300px;
-}
-/* line 59, ../scss/pages/_page-front.scss */
-body.front .box {
-  float: left;
-  margin-left: 20px;
-  width: 300px;
-  height: 526px;
-  overflow: hidden;
-}
-/* line 66, ../scss/pages/_page-front.scss */
-body.front .box.news {
-  margin-left: 0;
-}
-/* line 71, ../scss/pages/_page-front.scss */
+/* line 54, ../scss/pages/_page-front.scss */
 body.front #block-views-Featured_video_home-block_1 {
   padding: 3px;
+  width: 293px;
+  float: right;
+}
+/* line 60, ../scss/pages/_page-front.scss */
+body.front #block-webform-client-block-1 {
+  width: 243px;
+  height: 83px;
+  float: right;
+}
+/* line 65, ../scss/pages/_page-front.scss */
+body.front #block-webform-client-block-1 .form-text {
+  width: 135px;
+}
+/* line 73, ../scss/pages/_page-front.scss */
+body.front .panel-display .panel-col-top .panel-region-separator {
+  display: none;
+}
+/* line 78, ../scss/pages/_page-front.scss */
+body.front .panel-display .center-wrapper .panel-col-first {
+  clear: both;
+}
+/* line 81, ../scss/pages/_page-front.scss */
+body.front .panel-display .center-wrapper .panel-panel {
+  width: 313px;
 }

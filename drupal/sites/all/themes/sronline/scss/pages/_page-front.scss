@@ -1,73 +1,85 @@
 /* FRONT PAGE */
+#content-inner {
+  // Remove the white background on the content area
+  background: inherit;
 
-// Top banner area
-#banner_area {
-  // padding:5px;
-  // margin:15px 24px 0 9px;
+  // Remove the 
+  #content-area {
+    padding: 0 10px;
+  }
+}
 
-  #block-views-home_page_banner-block_1 {
-    padding: 4px;
+#block-views-home_page_banner-block_1 {
+  padding: 4px;
+  width: 611px;
+  float: left;
 
-    // Ensure the slideshow never escapes the container
-    .block-inner {
-      // Width and height should match imagecache style "Home-image_613"
-      width: 610px;
-      height: 312px;
-      overflow: hidden;
-    }
+  // Ensure the slideshow never escapes the container
+  .block-inner {
+    // Width and height should match imagecache style "Home-image_613"
+    width: 610px;
+    height: 312px;
+    overflow: hidden;
+  }
 
-    li {
-      float: left;
-      list-style-type: none;
-      display: block;
-      position: relative;
+  li {
+    float: left;
+    list-style-type: none;
+    display: block;
+    position: relative;
 
-      .views-field-teaser {
-        position: absolute;
-        width: 370px;
-        padding: 20px;
-        bottom: 25px;
-        left: 0px;
-        background: #fff;
+    .views-field-teaser {
+      position: absolute;
+      width: 370px;
+      padding: 20px;
+      bottom: 25px;
+      left: 0px;
+      background: #fff;
 
-        .field-content {
-          overflow: hidden;
-          height: 50px;
+      .field-content {
+        overflow: hidden;
+        height: 50px;
 
-          .banner-title h3 {
-            // TODO: Style up this H3
-          }
-          .banner-teaser {
-            // TODO: Style up this teaser;
-          }
+        .banner-title h3 {
+          // TODO: Style up this H3
+        }
+        .banner-teaser {
+          // TODO: Style up this teaser;
         }
       }
     }
   }
 }
-#banner_left{
-  float: left;
-  width: 620px;
-  margin-right: 20px;
-}
-#banner_right{
-  float: right;
-  width: 300px;
-}
-
-// Bottom 3 boxes
-.box {
-  float: left;
-  margin-left: 20px;
-  width: 300px;
-  height: 526px;
-  overflow: hidden; // HACK: This should be more elegant;
-
-  &.news {
-    margin-left: 0;
-  };
-}
 
 #block-views-Featured_video_home-block_1 {
   padding: 3px;
+  width: 293px;
+  float: right;
 }
+
+#block-webform-client-block-1 {
+  width: 243px;
+  height: 83px;
+  float: right;
+
+  .form-text {
+    width: 135px;
+  }
+}
+
+// A few tweaks to the panels layout to ensure it renders nicely cross browser
+.panel-display {
+  .panel-col-top {
+    .panel-region-separator {
+      display: none;
+    }
+  }
+  .center-wrapper {
+    .panel-col-first {
+      clear: both;
+    }
+    .panel-panel {
+      width: 313px;
+    }
+  }
+} 
