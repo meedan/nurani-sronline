@@ -2,9 +2,9 @@
 // Theme textarea textfield button input[type=submit] ... etc.
 // Do sassybuttons stuff....
 
-
-.form-text {
-  height: 23px;
+/* Common CSS between the textfield and textarea elements */
+@mixin form-field {
+  width: 100%;
   padding: 3px 10px;
   // font-size: 10px;
   // border: 0;
@@ -16,7 +16,32 @@
 
   @include single-box-shadow(#ccc, 0, 0, 1px, 0.1px, inset);
 }
+
+
+.form-text {
+  @include form-field;
+  height: 23px;
+}
+.form-textarea {
+  @include form-field;
+  padding: 10px 11px;
+}
 .form-submit {
   @include buttonz($color_button);
 }
 
+
+/* CSS to fit the compact_forms plugin better into the sronline theme */
+.compact-form .compact-form-label {
+  padding: 6px 7px;
+  color: lighten($color_body_text, 20%);
+  font-weight: normal;
+
+  &:hover {
+    color: lighten($color_body_text, 50%);
+
+    .form-required {
+      color: lighten(#f00, 30%);
+    }
+  }
+}

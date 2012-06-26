@@ -23,6 +23,7 @@ body.front                     { @import "pages/page-front"; }
 body.page-news                 { @import "pages/page-news"; }
 body.page-videos               { @import "pages/page-videos"; }
 body.page-text-bundles         { @import "pages/page-text-bundles"; }
+body.page-content-contact-us   { @import "pages/page-content-contact-us"; }
 
 // Node types
 body.node-type-basic-page      { @import "nodes/node-basic-page"; }

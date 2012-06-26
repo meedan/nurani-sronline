@@ -303,9 +303,10 @@ body {
   display: none;
 }
 
-/* line 6, ../scss/_forms.scss */
+/* Common CSS between the textfield and textarea elements */
+/* line 21, ../scss/_forms.scss */
 .form-text {
-  height: 23px;
+  width: 100%;
   padding: 3px 10px;
   color: #171717;
   -webkit-border-radius: 0.2em;
@@ -318,9 +319,28 @@ body {
   -webkit-box-shadow: inset 0 0 1px 0.1px #cccccc;
   -moz-box-shadow: inset 0 0 1px 0.1px #cccccc;
   box-shadow: inset 0 0 1px 0.1px #cccccc;
+  height: 23px;
 }
 
-/* line 19, ../scss/_forms.scss */
+/* line 25, ../scss/_forms.scss */
+.form-textarea {
+  width: 100%;
+  padding: 3px 10px;
+  color: #171717;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background: #eee;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 0 1px 0.1px #cccccc;
+  -moz-box-shadow: inset 0 0 1px 0.1px #cccccc;
+  box-shadow: inset 0 0 1px 0.1px #cccccc;
+  padding: 10px 11px;
+}
+
+/* line 29, ../scss/_forms.scss */
 .form-submit {
   line-height: 30px;
   -webkit-box-sizing: border-box;
@@ -370,6 +390,22 @@ body {
   -webkit-box-shadow: #d67600 0 1px 2px inset;
   -moz-box-shadow: #d67600 0 1px 2px inset;
   box-shadow: #d67600 0 1px 2px inset;
+}
+
+/* CSS to fit the compact_forms plugin better into the sronline theme */
+/* line 35, ../scss/_forms.scss */
+.compact-form .compact-form-label {
+  padding: 6px 7px;
+  color: #7d7d7d;
+  font-weight: normal;
+}
+/* line 40, ../scss/_forms.scss */
+.compact-form .compact-form-label:hover {
+  color: #cacaca;
+}
+/* line 43, ../scss/_forms.scss */
+.compact-form .compact-form-label:hover .form-required {
+  color: #ff9999;
 }
 
 /* Global page header */
@@ -971,4 +1007,9 @@ body.front .panel-display .center-wrapper .panel-col-first {
 /* line 81, ../scss/pages/_page-front.scss */
 body.front .panel-display .center-wrapper .panel-panel {
   width: 313px;
+}
+
+/* line 1, ../scss/pages/_page-content-contact-us.scss */
+body.page-content-contact-us .webform-component {
+  width: 450px;
 }

@@ -713,5 +713,40 @@ function sronline_general_strongarm() {
   );
   $export['webform_node_types'] = $strongarm;
 
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_ids';
+  $strongarm->value = 'webform-client-form-5';
+  $export['compact_forms_ids'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_colons';
+  $strongarm->value = 0;
+  $export['compact_forms_colons'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_descriptions';
+  $strongarm->value = 1;
+  $export['compact_forms_descriptions'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_stars';
+  $strongarm->value = '1';
+  $export['compact_forms_stars'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_field_size';
+  $strongarm->value = '';
+  $export['compact_forms_field_size'] = $strongarm;
+
   return $export;
 }
