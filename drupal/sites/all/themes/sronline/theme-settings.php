@@ -1,9 +1,9 @@
 <?php
 
-function basic_settings($saved_settings, $subtheme_defaults = array()) {
+function sronline_settings($saved_settings, $subtheme_defaults = array()) {
 
   // Get the default values from the .info file.
-  $defaults = basic_theme_get_default_settings('basic');
+  $defaults = basic_theme_get_default_settings('sronline');
 
   // Merge the saved variables and their default values.
   $settings = array_merge($defaults, $saved_settings);
@@ -95,7 +95,7 @@ function basic_settings($saved_settings, $subtheme_defaults = array()) {
 /**
  * Implementation of hook_theme().
  */
-function basic_theme(&$existing, $type, $theme, $path) {
+function sronline_theme(&$existing, $type, $theme, $path) {
   // Each theme has two possible preprocess functions that can act on a hook.
   // This function applies to every hook.
   $functions[0] = $theme . '_preprocess';

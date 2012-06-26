@@ -1,4 +1,5 @@
 /* Generic rounded box */
+/* Common design elements between the Videos and News page article listings */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain) */
@@ -59,6 +60,188 @@ table {
   border-spacing: 0;
 }
 
+/* About Default Styles
+ * ---------------------
+ * default.css is used to establish general rules, browser reset, or admin user interface styles.
+ *
+ * Browser Reset
+ * -------------
+ * For a more complete reset, go to http://developer.yahoo.com/yui/reset/ */
+/* line 9, ../scss/_default.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Clear Floats Without Structural Markup
+ * ---------------------------------------
+ * http://www.positioniseverything.net/easyclearing.html */
+/* line 17, ../scss/_default.scss */
+.clearfix {
+  display: inline-block;
+}
+/* line 19, ../scss/_default.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Hides from IE-mac \ */
+/* line 27, ../scss/_default.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 30, ../scss/_default.scss */
+.clearfix {
+  display: block;
+}
+
+/* End hide from IE-mac */
+/* clear classes */
+/* line 36, ../scss/_default.scss */
+.clearleft, .clearl, .cleft {
+  clear: left;
+}
+
+/* line 39, ../scss/_default.scss */
+.clearright, .clearr, .cright {
+  clear: right;
+}
+
+/* line 42, ../scss/_default.scss */
+.clear, .clearboth, .clearall {
+  clear: both;
+}
+
+/* Float classes */
+/* line 46, ../scss/_default.scss */
+.floatleft, .fleft, .floatl {
+  float: left;
+  margin: 0 10px 5px 0;
+}
+
+/* line 50, ../scss/_default.scss */
+.floatright, .fright, .floatr {
+  float: right;
+  margin: 0 0 5px 10px;
+}
+
+/* "Skip to Main Content" link
+ * ---------------------------
+ * This link useful for both visually impaired people and those with mobility impairments
+ * who cannot use a mouse. http://www.webaim.org/techniques/css/invisiblecontent/ */
+/* line 60, ../scss/_default.scss */
+#skip a:link, #skip a:hover, #skip a:visited {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+/* line 67, ../scss/_default.scss */
+#skip a:active, #skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/* bug fix with views 2 edit links. */
+/* line 73, ../scss/_default.scss */
+div.view div.views-admin-links {
+  width: auto;
+}
+
+/* Rollover edit links for blocks. */
+/* line 77, ../scss/_default.scss */
+div.block {
+  position: relative;
+}
+/* line 79, ../scss/_default.scss */
+div.block .edit {
+  display: none;
+  position: absolute;
+  right: -20px;
+  top: -5px;
+  z-index: 40;
+  padding: 3px 8px 0;
+  font-size: 10px;
+  line-height: 16px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  /*let's get fancy! */
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0 1px 3px #888888;
+  -webkit-box-shadow: -1px 1px 2px #666666;
+}
+/* line 95, ../scss/_default.scss */
+div.block .edit a {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+/* line 100, ../scss/_default.scss */
+div.block:hover .edit {
+  display: block;
+}
+
+/* Wireframe styles. */
+/* line 118, ../scss/_default.scss */
+.with-wireframes #header,
+.with-wireframes #content-top,
+.with-wireframes #content-top > *,
+.with-wireframes #content-header,
+.with-wireframes #content-header > *,
+.with-wireframes #content-area,
+.with-wireframes #content-area > *,
+.with-wireframes #content-bottom,
+.with-wireframes #content-bottom > *,
+.with-wireframes #primary,
+.with-wireframes #secondary,
+.with-wireframes #sidebar-left-inner,
+.with-wireframes #sidebar-right-inner,
+.with-wireframes .block {
+  padding: 2px;
+  border: 1px solid #bbbbbb;
+}
+/* line 121, ../scss/_default.scss */
+.with-wireframes .node {
+  border-bottom: 1px solid #bbbbbb;
+  margin-bottom: 10px;
+}
+/* line 124, ../scss/_default.scss */
+.with-wireframes .block {
+  margin-bottom: 3px;
+}
+/* line 129, ../scss/_default.scss */
+.with-wireframes #content-top,
+.with-wireframes #content-header,
+.with-wireframes #content-area,
+.with-wireframes #content-bottom {
+  margin: 0 3px 3px;
+}
+/* line 131, ../scss/_default.scss */
+.with-wireframes #footer {
+  margin-top: 3px;
+  padding: 2px;
+  border: 1px solid #cccccc;
+}
+/* line 137, ../scss/_default.scss */
+.with-wireframes.with-navigation #content,
+.with-wireframes.with-navigation .sidebar {
+  margin-top: 50px;
+}
+/* line 139, ../scss/_default.scss */
+.with-wireframes #navigation {
+  height: 50px;
+}
+
 /* line 1, ../scss/_typography.scss */
 body {
   font-family: verdana;
@@ -109,7 +292,7 @@ body {
 }
 /* line 43, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-text {
-  width: 142px;
+  width: 138px;
 }
 /* line 46, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-submit {
@@ -495,13 +678,13 @@ blockquote.orange cite {
 }
 
 /* Main page layout structure, from basic theme's layout.sass */
-/* line 17, ../scss/_layout.scss */
+/* line 18, ../scss/_layout.scss */
 #main, #header, #footer {
   width: 960px;
   margin: 0 auto;
 }
 
-/* line 21, ../scss/_layout.scss */
+/* line 22, ../scss/_layout.scss */
 #content {
   float: left;
   width: 100%;
@@ -509,23 +692,23 @@ blockquote.orange cite {
   padding: 0;
 }
 
-/* line 27, ../scss/_layout.scss */
+/* line 28, ../scss/_layout.scss */
 .sidebar {
   float: left;
 }
 
-/* line 30, ../scss/_layout.scss */
+/* line 31, ../scss/_layout.scss */
 #sidebar-second {
   float: right;
 }
 
-/* line 33, ../scss/_layout.scss */
+/* line 34, ../scss/_layout.scss */
 #footer {
   float: none;
   clear: both;
 }
 
-/* line 41, ../scss/_layout.scss */
+/* line 42, ../scss/_layout.scss */
 #header,
 #footer,
 .mission,
@@ -534,31 +717,31 @@ blockquote.orange cite {
   clear: both;
 }
 
-/* line 46, ../scss/_layout.scss */
+/* line 47, ../scss/_layout.scss */
 .two-sidebars .center,
 .sidebar-left .center {
   margin-left: 220px;
 }
 
-/* line 50, ../scss/_layout.scss */
+/* line 51, ../scss/_layout.scss */
 #sidebar-first {
   width: 200px;
   margin-right: -220px;
 }
 
-/* line 56, ../scss/_layout.scss */
+/* line 57, ../scss/_layout.scss */
 .two-sidebars .center,
 .sidebar-right .center {
   margin-right: 320px;
 }
 
-/* line 60, ../scss/_layout.scss */
+/* line 61, ../scss/_layout.scss */
 #sidebar-second {
   width: 300px;
 }
 
 /* Styles for the main layout */
-/* line 66, ../scss/_layout.scss */
+/* line 67, ../scss/_layout.scss */
 #bg {
   height: 200%;
   left: -50%;
@@ -568,7 +751,7 @@ blockquote.orange cite {
   z-index: -9999;
 }
 
-/* line 74, ../scss/_layout.scss */
+/* line 75, ../scss/_layout.scss */
 #bg img {
   bottom: 0;
   left: 0;
@@ -580,11 +763,11 @@ blockquote.orange cite {
   top: 0;
 }
 
-/* line 84, ../scss/_layout.scss */
+/* line 85, ../scss/_layout.scss */
 #content-inner {
   background: #fff;
 }
-/* line 87, ../scss/_layout.scss */
+/* line 88, ../scss/_layout.scss */
 #content-inner #content-header, #content-inner #content-area {
   padding: 20px 30px;
 }
@@ -716,7 +899,7 @@ div.right_col {
   }
 } */
 /* Specific site sections and pages */
-/* line 21, ../scss/core.scss */
+/* line 22, ../scss/core.scss */
 body.front {
   /* FRONT PAGE */
 }
