@@ -50,5 +50,5 @@ settings[basic_rebuild_registry]     = 0
 settings[basic_breadcrumb]           = yes
 settings[basic_breadcrumb_separator] = ' » '
 settings[basic_breadcrumb_home]      = 1
-settings[basic_breadcrumb_trailing]  = 0
-settings[basic_breadcrumb_title]     = 0
+settings[basic_breadcrumb_trailing]  = 1
+settings[basic_breadcrumb_title]     = 1

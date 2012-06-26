@@ -663,7 +663,7 @@ function home_section_views_default_views() {
     'vid' => array(
       'operator' => 'in',
       'value' => array(
-        2 => '2',
+        1 => '1',
       ),
       'group' => '0',
       'exposed' => FALSE,
@@ -691,10 +691,10 @@ function home_section_views_default_views() {
       'group' => '0',
       'exposed' => TRUE,
       'expose' => array(
-        'use_operator' => 0,
         'operator' => 'tid_op',
-        'identifier' => 'tid',
         'label' => 'Select Topic …',
+        'use_operator' => 0,
+        'identifier' => 'tid',
         'optional' => 1,
         'single' => 1,
         'remember' => 0,
@@ -702,7 +702,7 @@ function home_section_views_default_views() {
       ),
       'type' => 'select',
       'limit' => TRUE,
-      'vid' => '2',
+      'vid' => '1',
       'id' => 'tid',
       'table' => 'term_node',
       'field' => 'tid',

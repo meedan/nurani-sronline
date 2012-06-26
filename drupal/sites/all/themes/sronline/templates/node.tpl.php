@@ -7,10 +7,6 @@
 
     <?php print $picture; ?>
 
-    <?php if ($submitted): ?>
-      <span class="submitted"><?php print $submitted; ?></span>
-    <?php endif; ?>
-
     <div class="content">
       <?php print $content; ?>
     </div>

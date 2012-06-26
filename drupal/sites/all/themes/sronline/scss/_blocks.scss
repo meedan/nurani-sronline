@@ -1,5 +1,5 @@
 /* General blocks style */
-.block {
+.block, .pane-block {
   @include rounded-box-with-gradient;
   padding: 18px 27px;
   margin: 0 0 20px 0;
@@ -41,7 +41,7 @@
     }
   }
   .form-text {
-    width: 142px;
+    width: 138px;
   }
   .form-submit{
     margin-left: 10px;
