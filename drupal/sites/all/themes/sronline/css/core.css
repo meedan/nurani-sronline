@@ -304,9 +304,10 @@ body {
 }
 
 /* Common CSS between the textfield and textarea elements */
-/* line 21, ../scss/_forms.scss */
+/* line 22, ../scss/_forms.scss */
 .form-text {
   width: 100%;
+  top: 4px;
   padding: 3px 10px;
   color: #171717;
   -webkit-border-radius: 0.2em;
@@ -322,9 +323,15 @@ body {
   height: 23px;
 }
 
-/* line 25, ../scss/_forms.scss */
+/* line 26, ../scss/_forms.scss */
+.resizable-textarea {
+  width: 100%;
+}
+
+/* line 29, ../scss/_forms.scss */
 .form-textarea {
   width: 100%;
+  top: 4px;
   padding: 3px 10px;
   color: #171717;
   -webkit-border-radius: 0.2em;
@@ -340,7 +347,7 @@ body {
   padding: 10px 11px;
 }
 
-/* line 29, ../scss/_forms.scss */
+/* line 33, ../scss/_forms.scss */
 .form-submit {
   line-height: 30px;
   -webkit-box-sizing: border-box;
@@ -393,17 +400,17 @@ body {
 }
 
 /* CSS to fit the compact_forms plugin better into the sronline theme */
-/* line 35, ../scss/_forms.scss */
+/* line 39, ../scss/_forms.scss */
 .compact-form .compact-form-label {
   padding: 6px 7px;
   color: #7d7d7d;
   font-weight: normal;
 }
-/* line 40, ../scss/_forms.scss */
+/* line 44, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover {
   color: #cacaca;
 }
-/* line 43, ../scss/_forms.scss */
+/* line 47, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover .form-required {
   color: #ff9999;
 }
@@ -426,15 +433,15 @@ div#header #block-search-0 .title {
   display: none;
 }
 /* line 15, ../scss/_header.scss */
-div#header #block-search-0 label {
-  display: none;
-}
-/* line 16, ../scss/_header.scss */
 div#header #block-search-0 .form-text {
   width: 153px;
   height: 25px;
 }
-/* line 20, ../scss/_header.scss */
+/* line 17, ../scss/_header.scss */
+div#header #block-search-0 .compact-form-label {
+  top: -7px;
+}
+/* line 21, ../scss/_header.scss */
 div#header #search_bar {
   float: right;
   height: 46px;
@@ -442,7 +449,7 @@ div#header #search_bar {
   position: relative;
   width: 240px;
 }
-/* line 27, ../scss/_header.scss */
+/* line 28, ../scss/_header.scss */
 div#header #searchinput {
   background-color: transparent;
   border: 0;
@@ -456,7 +463,7 @@ div#header #searchinput {
   top: 51px;
   width: 184px;
 }
-/* line 40, ../scss/_header.scss */
+/* line 41, ../scss/_header.scss */
 div#header #submit_btn {
   height: 40px;
   margin-top: 5px;
@@ -934,23 +941,6 @@ div.right_col {
     height: 286px;
   }
 } */
-/* line 10, ../scss/core.scss */
-body .node {
-  background: pink !important;
-}
-/* line 11, ../scss/core.scss */
-body .view {
-  background: aqua !important;
-}
-/* line 12, ../scss/core.scss */
-body h1 {
-  background: yellow !important;
-}
-/* line 13, ../scss/core.scss */
-body .views-field-title {
-  background: red !important;
-}
-
 /* Specific site sections and pages */
 /* line 32, ../scss/core.scss */
 body.front {

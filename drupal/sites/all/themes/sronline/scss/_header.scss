@@ -12,10 +12,11 @@ div#header {
     float:right;
     margin:10px;
     
-    label{display:none;}
     .form-text{width:153px; height:25px;}
     
-    
+    .compact-form-label {
+      top: -7px;
+    }
   }
   #search_bar {
     float: right;

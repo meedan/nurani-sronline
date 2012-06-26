@@ -5,6 +5,7 @@
 /* Common CSS between the textfield and textarea elements */
 @mixin form-field {
   width: 100%;
+  top: 4px;
   padding: 3px 10px;
   // font-size: 10px;
   // border: 0;
@@ -21,6 +22,9 @@
 .form-text {
   @include form-field;
   height: 23px;
+}
+.resizable-textarea {
+  width: 100%;
 }
 .form-textarea {
   @include form-field;
