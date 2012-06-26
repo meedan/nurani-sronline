@@ -67,7 +67,7 @@ table {
  * Browser Reset
  * -------------
  * For a more complete reset, go to http://developer.yahoo.com/yui/reset/ */
-/* line 9, ../scss/_default.scss */
+/* line 9, ../scss/default.sass */
 * {
   margin: 0;
   padding: 0;
@@ -76,11 +76,11 @@ table {
 /* Clear Floats Without Structural Markup
  * ---------------------------------------
  * http://www.positioniseverything.net/easyclearing.html */
-/* line 17, ../scss/_default.scss */
+/* line 17, ../scss/default.sass */
 .clearfix {
   display: inline-block;
 }
-/* line 19, ../scss/_default.scss */
+/* line 19, ../scss/default.sass */
 .clearfix:after {
   content: ".";
   display: block;
@@ -90,41 +90,41 @@ table {
 }
 
 /* Hides from IE-mac \ */
-/* line 27, ../scss/_default.scss */
+/* line 27, ../scss/default.sass */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 30, ../scss/_default.scss */
+/* line 30, ../scss/default.sass */
 .clearfix {
   display: block;
 }
 
 /* End hide from IE-mac */
 /* clear classes */
-/* line 36, ../scss/_default.scss */
+/* line 36, ../scss/default.sass */
 .clearleft, .clearl, .cleft {
   clear: left;
 }
 
-/* line 39, ../scss/_default.scss */
+/* line 39, ../scss/default.sass */
 .clearright, .clearr, .cright {
   clear: right;
 }
 
-/* line 42, ../scss/_default.scss */
+/* line 42, ../scss/default.sass */
 .clear, .clearboth, .clearall {
   clear: both;
 }
 
 /* Float classes */
-/* line 46, ../scss/_default.scss */
+/* line 46, ../scss/default.sass */
 .floatleft, .fleft, .floatl {
   float: left;
   margin: 0 10px 5px 0;
 }
 
-/* line 50, ../scss/_default.scss */
+/* line 50, ../scss/default.sass */
 .floatright, .fright, .floatr {
   float: right;
   margin: 0 0 5px 10px;
@@ -134,7 +134,7 @@ table {
  * ---------------------------
  * This link useful for both visually impaired people and those with mobility impairments
  * who cannot use a mouse. http://www.webaim.org/techniques/css/invisiblecontent/ */
-/* line 60, ../scss/_default.scss */
+/* line 60, ../scss/default.sass */
 #skip a:link, #skip a:hover, #skip a:visited {
   position: absolute;
   left: -10000px;
@@ -143,7 +143,7 @@ table {
   height: 1px;
   overflow: hidden;
 }
-/* line 67, ../scss/_default.scss */
+/* line 67, ../scss/default.sass */
 #skip a:active, #skip a:focus {
   position: static;
   width: auto;
@@ -151,17 +151,17 @@ table {
 }
 
 /* bug fix with views 2 edit links. */
-/* line 73, ../scss/_default.scss */
+/* line 73, ../scss/default.sass */
 div.view div.views-admin-links {
   width: auto;
 }
 
 /* Rollover edit links for blocks. */
-/* line 77, ../scss/_default.scss */
+/* line 77, ../scss/default.sass */
 div.block {
   position: relative;
 }
-/* line 79, ../scss/_default.scss */
+/* line 79, ../scss/default.sass */
 div.block .edit {
   display: none;
   position: absolute;
@@ -179,20 +179,20 @@ div.block .edit {
   -moz-box-shadow: 0 1px 3px #888888;
   -webkit-box-shadow: -1px 1px 2px #666666;
 }
-/* line 95, ../scss/_default.scss */
+/* line 95, ../scss/default.sass */
 div.block .edit a {
   display: block;
   border: 0;
   padding: 0;
   margin: 0;
 }
-/* line 100, ../scss/_default.scss */
+/* line 100, ../scss/default.sass */
 div.block:hover .edit {
   display: block;
 }
 
 /* Wireframe styles. */
-/* line 118, ../scss/_default.scss */
+/* line 105, ../scss/default.sass */
 .with-wireframes #header,
 .with-wireframes #content-top,
 .with-wireframes #content-top > *,
@@ -210,34 +210,34 @@ div.block:hover .edit {
   padding: 2px;
   border: 1px solid #bbbbbb;
 }
-/* line 121, ../scss/_default.scss */
+/* line 121, ../scss/default.sass */
 .with-wireframes .node {
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
 }
-/* line 124, ../scss/_default.scss */
+/* line 124, ../scss/default.sass */
 .with-wireframes .block {
   margin-bottom: 3px;
 }
-/* line 129, ../scss/_default.scss */
+/* line 126, ../scss/default.sass */
 .with-wireframes #content-top,
 .with-wireframes #content-header,
 .with-wireframes #content-area,
 .with-wireframes #content-bottom {
   margin: 0 3px 3px;
 }
-/* line 131, ../scss/_default.scss */
+/* line 131, ../scss/default.sass */
 .with-wireframes #footer {
   margin-top: 3px;
   padding: 2px;
   border: 1px solid #cccccc;
 }
-/* line 137, ../scss/_default.scss */
+/* line 136, ../scss/default.sass */
 .with-wireframes.with-navigation #content,
 .with-wireframes.with-navigation .sidebar {
   margin-top: 50px;
 }
-/* line 139, ../scss/_default.scss */
+/* line 139, ../scss/default.sass */
 .with-wireframes #navigation {
   height: 50px;
 }
@@ -820,7 +820,7 @@ blockquote.orange cite {
   margin-top: 80px;
   min-height: 1360px;
   padding: 20px 0 10px 15px;
-  /* position: absolute; */
+  
   width: 960px;
 }
 @mixin breadcumb {
@@ -934,8 +934,25 @@ div.right_col {
     height: 286px;
   }
 } */
+/* line 10, ../scss/core.scss */
+body .node {
+  background: pink !important;
+}
+/* line 11, ../scss/core.scss */
+body .view {
+  background: aqua !important;
+}
+/* line 12, ../scss/core.scss */
+body h1 {
+  background: yellow !important;
+}
+/* line 13, ../scss/core.scss */
+body .views-field-title {
+  background: red !important;
+}
+
 /* Specific site sections and pages */
-/* line 22, ../scss/core.scss */
+/* line 32, ../scss/core.scss */
 body.front {
   /* FRONT PAGE */
 }
@@ -1007,6 +1024,62 @@ body.front .panel-display .center-wrapper .panel-col-first {
 /* line 81, ../scss/pages/_page-front.scss */
 body.front .panel-display .center-wrapper .panel-panel {
   width: 313px;
+}
+
+/* line 5, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .attachment {
+  width: 100%;
+  margin-top: 35px;
+  height: 318px;
+  border-bottom: 1px dashed #c9c6c4;
+}
+/* line 12, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .attachment .views-field-field-news-image-fid {
+  float: left;
+  width: 286px;
+}
+/* line 14, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .attachment .views-field-title {
+  float: right;
+}
+/* line 16, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .attachment .views-field-title a {
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  width: 264px;
+  margin-top: 10px;
+}
+/* line 22, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .attachment .views-field-title a:hover {
+  text-decoration: underline;
+}
+/* line 25, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .attachment .views-field-body {
+  float: right;
+  width: 258px;
+  margin: 15px auto 30px;
+  padding: 7px;
+}
+/* line 26, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .attachment .views-field-view-node {
+  float: right;
+}
+/* line 29, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .view-content {
+  width: 100%;
+  margin-top: 35px;
+}
+/* line 36, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .view-content .views-row {
+  border-bottom: 1px dashed #c9c6c4;
+  margin-top: 5px;
+  padding: 2px;
+  height: 151px;
+}
+/* line 42, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles .view-content .views-row .views-field-field-news-image-fid {
+  float: left;
 }
 
 /* line 1, ../scss/pages/_page-content-contact-us.scss */

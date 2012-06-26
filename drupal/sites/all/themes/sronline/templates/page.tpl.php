@@ -56,8 +56,10 @@
 
           <?php if ($breadcrumb || $title || $mission || $messages || $help || $tabs): ?>
             <div id="content-header">
-
-              <?php print $breadcrumb; ?>
+              
+              <?php if ($breadcrumb): ?>
+                <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+              <?php endif; ?>
 
               <?php if ($title): ?>
                 <h1 class="title"><?php print $title; ?></h1>
