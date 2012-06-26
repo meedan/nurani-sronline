@@ -5,6 +5,14 @@
 @import "compass/css3/box-shadow";
 @import 'sassy-buttons';
 
+@mixin debug{ 
+
+  .node{background: pink !important;}
+  .view{background: aqua !important;}
+  h1{background: yellow !important;}
+  .views-field-title{ background: red !important;}
+}
+
 // Global variables
 @import "variables";
 
@@ -16,6 +24,8 @@
 // all styles.
 @import "layout";
 
+body{ @include debug;}
+
 
 /* Specific site sections and pages */
 body.front                     { @import "pages/page-front"; }
@@ -26,3 +36,4 @@ body.page-text-bundles         { @import "pages/page-text-bundles"; }
 // Node types
 body.node-type-basic-page      { @import "nodes/node-basic-page"; }
 body.node-type-webform         { @import "nodes/node-webform"; }
+

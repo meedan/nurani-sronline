@@ -19,6 +19,7 @@ regions[right] = Second sidebar
 regions[footer_block] = Footer
 
 features[] = logo
+features[] = breadcrumb
 features[] = name
 features[] = slogan
 ; features[] = mission

@@ -1,1 +1,63 @@
 // Theme the news page..
+
+.view-news-articles {
+
+  .attachment{
+      
+      width:100%;
+      margin-top:35px;
+      height: 318px;
+      border-bottom: 1px dashed #c9c6c4;
+      
+        .views-field-field-news-image-fid{float:left; width:286px;}
+        
+        .views-field-title{ 
+            float:right; 
+            a{ text-decoration:none;
+              display: block;
+              font-size: 20px;
+              width: 264px;
+              margin-top:10px;
+              
+              &:hover{text-decoration:underline;}
+            }
+         }
+        .views-field-body{float:right; width:258px; margin: 15px auto 30px; padding:7px;}
+        .views-field-view-node{float:right;}      
+  }
+
+  .view-content{
+      
+      width:100%;
+      margin-top:35px;
+      //height: 318px;
+      
+      
+      .views-row{
+        border-bottom: 1px dashed #c9c6c4;
+        margin-top:5px;
+        padding:2px;
+        height:151px;
+          
+          .views-field-field-news-image-fid{float:left;}
+          
+        
+      
+      }
+  
+  
+  }
+     
+
+    
+          
+    
+  
+  
+  
+}
+
+ 
+  
+
+
