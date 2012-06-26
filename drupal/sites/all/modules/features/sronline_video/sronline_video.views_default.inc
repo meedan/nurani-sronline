@@ -172,6 +172,7 @@ function sronline_video_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('title', 'Scriptural Reasoning Videos');
   $handler->override_option('items_per_page', 3);
   $handler->override_option('offset', 1);
   $handler->override_option('use_pager', '1');

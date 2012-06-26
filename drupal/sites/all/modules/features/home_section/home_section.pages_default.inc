@@ -46,6 +46,12 @@ function home_section_default_page_manager_pages() {
       'right' => NULL,
       'bottom' => NULL,
     ),
+    'top' => array(
+      'style' => 'default',
+    ),
+    'left' => array(
+      'style' => '-1',
+    ),
   );
   $display->cache = array();
   $display->title = '';
@@ -118,7 +124,7 @@ function home_section_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'top';
     $pane->type = 'block';
-    $pane->subtype = 'views-Featured_video_home-block_1';
+    $pane->subtype = 'views-home_page_banner-block_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -139,7 +145,7 @@ function home_section_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'top';
     $pane->type = 'block';
-    $pane->subtype = 'webform-client-block-1';
+    $pane->subtype = 'views-Featured_video_home-block_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -160,7 +166,7 @@ function home_section_default_page_manager_pages() {
     $pane->pid = 'new-6';
     $pane->panel = 'top';
     $pane->type = 'block';
-    $pane->subtype = 'views-home_page_banner-block_1';
+    $pane->subtype = 'webform-client-block-1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
