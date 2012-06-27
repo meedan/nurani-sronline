@@ -35,6 +35,8 @@ stylesheets[all][] = css/core.css
 stylesheets[all][] = libs/labels/labels.css
 
 scripts[] = libs/labels/labels.js
+scripts[] = js/jquery.equalheights.js
+scripts[] = js/sronline.js
 
 
 ; Compass Support
