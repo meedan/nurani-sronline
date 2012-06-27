@@ -1,0 +1,27 @@
+/* Removes bullets and other common styles from <ul> and <ol> lists.
+   Usage:  ul {
+             @include undo-list-styles;
+           } */
+@mixin undo-list-style {
+  padding: 0;
+
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+@mixin blocky-link($color) {
+  margin-left: -5px;
+  padding: 3px 5px;
+  display: block;
+  width: 100%;
+  color: $color;
+  text-decoration: none;
+
+  &:hover {
+    background: $color;
+    color: #fff;
+  }
+}

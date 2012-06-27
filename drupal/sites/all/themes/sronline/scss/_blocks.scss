@@ -11,17 +11,36 @@
     padding: 3px 0 0 21px;
     margin-bottom: 22px;
     overflow: hidden;
-    background: url(../images/title_blip_orange.png) 0 0 no-repeat;
+    background: url(../images/title_blip_black.png) 0 0 no-repeat;
 
     font-size: 1.4em;
     font-weight: lighter;
-    color: #FF8B00;
+    color: $default_section_color;
   }
 }
 
+/* Helpers to apply the correct colour to specific blocks */
+@mixin block-news-section {
+  .title {
+    color: $news_section_color;
+    background: url(../images/title_blip_orange.png) 0 0 no-repeat;
+  }
+}
+@mixin block-text-bundles-section {
+  .title {
+    color: $text_bundles_section_color;
+    background: url(../images/title_blip_green.png) 0 0 no-repeat;
+  }
+}
+@mixin block-videos-section {
+  .title {
+    color: $videos_section_color;
+    background: url(../images/title_blip_purple.png) 0 0 no-repeat;
+  }
+}
+
+/* Helpers to remove the background and rounded corners style from a block */
 @mixin undo-block-style {
-  //padding: 0;
-  //margin: 0;
   background: transparent;
   border: none;
 }
@@ -31,9 +50,79 @@
 }
 
 
-/* GLOBALLY VISIBLE BLOCKS */
+/* ==== GLOBALLY VISIBLE BLOCKS ==== */
+/* Menu current sub-tree block */
+#block-menu_block-1 {
+  // background: $nav_submenu_background;
+  @include background(linear-gradient(color-stops(lighten($nav_submenu_background, 50%), $nav_submenu_background)));
+
+  .title {
+    display: none;
+  }
+  ul {
+    @include undo-list-style;
+
+    li {
+      border-bottom: 1px solid $nav_submenu_separator;
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+
+      a {
+        @include blocky-link($nav_submenu_color);
+      }
+    }
+  }
+}
+
+/* Featured text bundles block */
+#block-views-text_bundles_featured-block_1 {
+  @include block-text-bundles-section;
+
+  .view-content ul {
+    @include undo-list-style;
+
+    li {
+      padding: 0 0 15px 51px;
+      background: url(../images/pdf_icon.gif) 0 0 no-repeat;
+
+      .field-content {
+        a {
+          @include blocky-link($text_bundles_section_color);
+        }
+      }
+    }
+  }
+}
+
+/* Featured testimonials block */
+#block-views-32bfceaf56e91407f76ac3a77c3d8a4b {
+  .views-row {
+    margin-bottom: 20px;
+    background: url(../images/close_quote.png) no-repeat bottom right;
+
+    .views-field-body {
+      .field-content {
+        background: url(../images/open_quote.png) no-repeat 0 0; // TODO: Coloured quotes!
+        padding-top: 15px;
+      }
+      p {
+        text-indent: 50px;
+      }
+    }
+    .views-field-field-quoted-from-value {
+      text-align: right;
+      .field-content {
+        padding-right: 50px;
+        color: lighten($color_body_text, 30%);
+      }
+    }
+  }
+}
+
 /* Newsletter block */
 #block-webform-client-block-1 {
+  @include block-news-section;
+
   .webform-component-email {
     float: left;
     .form-item {
@@ -51,4 +140,7 @@
   }
 }
 
-
+/* Featured News block */
+#block-views-news_articles_featured-block_1 {
+  @include block-news-section;
+}

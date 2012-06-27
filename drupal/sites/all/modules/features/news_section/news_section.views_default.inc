@@ -562,6 +562,7 @@ function news_section_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('title', 'Latest News');
   $handler->override_option('items_per_page', 4);
   $handler = $view->new_display('block', 'featured news homepage', 'block_1');
   $handler->override_option('block_description', '');

@@ -717,7 +717,9 @@ function sronline_general_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'compact_forms_ids';
-  $strongarm->value = 'webform-client-form-5';
+  $strongarm->value = 'search-block-form
+webform-client-form-5
+';
   $export['compact_forms_ids'] = $strongarm;
 
   $strongarm = new stdClass;

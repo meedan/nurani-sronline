@@ -177,8 +177,8 @@ function home_section_views_default_views() {
     'field_quoted_from_value' => array(
       'label' => '',
       'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
+        'alter_text' => 1,
+        'text' => '&mdash; [field_quoted_from_value]',
         'make_link' => 0,
         'path' => '',
         'absolute' => 0,
@@ -214,6 +214,9 @@ function home_section_views_default_views() {
       'table' => 'node_data_field_quoted_from',
       'field' => 'field_quoted_from_value',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
   ));
   $handler->override_option('sorts', array(

@@ -1,4 +1,8 @@
 /* Generic rounded box */
+/* Removes bullets and other common styles from <ul> and <ol> lists.
+   Usage:  ul {
+             @include undo-list-styles;
+           } */
 /* Common design elements between the Videos and News page article listings */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -274,33 +278,153 @@ body {
   padding: 3px 0 0 21px;
   margin-bottom: 22px;
   overflow: hidden;
-  background: url(../images/title_blip_orange.png) 0 0 no-repeat;
+  background: url(../images/title_blip_black.png) 0 0 no-repeat;
   font-size: 1.4em;
   font-weight: lighter;
-  color: #FF8B00;
+  color: black;
 }
 
-/* GLOBALLY VISIBLE BLOCKS */
+/* Helpers to apply the correct colour to specific blocks */
+/* Helpers to remove the background and rounded corners style from a block */
+/* ==== GLOBALLY VISIBLE BLOCKS ==== */
+/* Menu current sub-tree block */
+/* line 55, ../scss/_blocks.scss */
+#block-menu_block-1 {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e7eede));
+  background: -webkit-linear-gradient(#ffffff, #e7eede);
+  background: -moz-linear-gradient(#ffffff, #e7eede);
+  background: -o-linear-gradient(#ffffff, #e7eede);
+  background: -ms-linear-gradient(#ffffff, #e7eede);
+  background: linear-gradient(#ffffff, #e7eede);
+}
+/* line 59, ../scss/_blocks.scss */
+#block-menu_block-1 .title {
+  display: none;
+}
+/* line 62, ../scss/_blocks.scss */
+#block-menu_block-1 ul {
+  padding: 0;
+}
+/* line 8, ../scss/helpers/_lists.scss */
+#block-menu_block-1 ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* line 65, ../scss/_blocks.scss */
+#block-menu_block-1 ul li {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+/* line 70, ../scss/_blocks.scss */
+#block-menu_block-1 ul li a {
+  margin-left: -5px;
+  padding: 3px 5px;
+  display: block;
+  width: 100%;
+  color: #2a4704;
+  text-decoration: none;
+}
+/* line 23, ../scss/helpers/_lists.scss */
+#block-menu_block-1 ul li a:hover {
+  background: #2a4704;
+  color: #fff;
+}
+
+/* Featured text bundles block */
+/* line 30, ../scss/_blocks.scss */
+#block-views-text_bundles_featured-block_1 .title {
+  color: #2a4704;
+  background: url(../images/title_blip_green.png) 0 0 no-repeat;
+}
+/* line 81, ../scss/_blocks.scss */
+#block-views-text_bundles_featured-block_1 .view-content ul {
+  padding: 0;
+}
+/* line 8, ../scss/helpers/_lists.scss */
+#block-views-text_bundles_featured-block_1 .view-content ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* line 84, ../scss/_blocks.scss */
+#block-views-text_bundles_featured-block_1 .view-content ul li {
+  padding: 0 0 15px 51px;
+  background: url(../images/pdf_icon.gif) 0 0 no-repeat;
+}
+/* line 89, ../scss/_blocks.scss */
+#block-views-text_bundles_featured-block_1 .view-content ul li .field-content a {
+  margin-left: -5px;
+  padding: 3px 5px;
+  display: block;
+  width: 100%;
+  color: #2a4704;
+  text-decoration: none;
+}
+/* line 23, ../scss/helpers/_lists.scss */
+#block-views-text_bundles_featured-block_1 .view-content ul li .field-content a:hover {
+  background: #2a4704;
+  color: #fff;
+}
+
+/* Featured testimonials block */
+/* line 99, ../scss/_blocks.scss */
+#block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row {
+  margin-bottom: 20px;
+  background: url(../images/close_quote.png) no-repeat bottom right;
+}
+/* line 104, ../scss/_blocks.scss */
+#block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body .field-content {
+  background: url(../images/open_quote.png) no-repeat 0 0;
+  padding-top: 15px;
+}
+/* line 108, ../scss/_blocks.scss */
+#block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body p {
+  text-indent: 50px;
+}
+/* line 112, ../scss/_blocks.scss */
+#block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-field-quoted-from-value {
+  text-align: right;
+}
+/* line 114, ../scss/_blocks.scss */
+#block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-field-quoted-from-value .field-content {
+  padding-right: 50px;
+  color: #979797;
+}
+
 /* Newsletter block */
-/* line 37, ../scss/_blocks.scss */
+/* line 24, ../scss/_blocks.scss */
+#block-webform-client-block-1 .title {
+  color: #ff8b00;
+  background: url(../images/title_blip_orange.png) 0 0 no-repeat;
+}
+/* line 126, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email {
   float: left;
 }
-/* line 39, ../scss/_blocks.scss */
+/* line 128, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email .form-item {
   margin: 0;
 }
-/* line 43, ../scss/_blocks.scss */
+/* line 132, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-text {
   width: 138px;
 }
-/* line 46, ../scss/_blocks.scss */
+/* line 135, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-submit {
   margin-left: 10px;
 }
-/* line 49, ../scss/_blocks.scss */
+/* line 138, ../scss/_blocks.scss */
 #block-webform-client-block-1 label {
   display: none;
+}
+
+/* Featured News block */
+/* line 24, ../scss/_blocks.scss */
+#block-views-news_articles_featured-block_1 .title {
+  color: #ff8b00;
+  background: url(../images/title_blip_orange.png) 0 0 no-repeat;
 }
 
 /* Common CSS between the textfield and textarea elements */
@@ -439,7 +563,7 @@ div#header #block-search-0 {
   float: right;
   margin: 10px;
 }
-/* line 30, ../scss/_blocks.scss */
+/* line 49, ../scss/_blocks.scss */
 div#header #block-search-0 .title {
   display: none;
 }
@@ -493,7 +617,7 @@ div#header #submit_btn {
   margin: 0;
   padding: 0;
 }
-/* line 30, ../scss/_blocks.scss */
+/* line 49, ../scss/_blocks.scss */
 #block-menu_block-2 .title {
   display: none;
 }
@@ -957,7 +1081,7 @@ div.right_col {
   }
 } */
 /* Specific site sections and pages */
-/* line 32, ../scss/core.scss */
+/* line 33, ../scss/core.scss */
 body.front {
   /* FRONT PAGE */
 }
