@@ -18,7 +18,7 @@ function theme_cambridge_media_formatter_media_small($element) {
 
 function theme_cambridge_media_formatter_media_normal($element) {
   $data = _cambridge_media_data_from_element($element);
-  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 480, 288, FALSE);
+  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 308, 211, FALSE);
 }
 
 function theme_cambridge_media_formatter_media_large($element) {
