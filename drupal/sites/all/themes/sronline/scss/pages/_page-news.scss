@@ -23,12 +23,13 @@
               
               .views-field-title{ 
                 float:right; 
-                a {
+                h3 a {
                   text-decoration:none;
                   display: block;
                   font-size: 20px;
                   width: 264px;
                   margin-top:10px;
+                  color:$news_section_color;
                   
                   &:hover{ text-decoration:underline; }
                 }
@@ -47,7 +48,7 @@
      }        
 }
 
-$burnt-orange: #f8581a;
+//$burnt-orange: #f8581a;
 .view-display-id-page_1 > .view-content .views-row {      
     margin: 10px;
     border-bottom: 1px dashed #c9c6c4;
@@ -60,9 +61,11 @@ $burnt-orange: #f8581a;
     }
     .views-field-title {
       font-size: 20px;
-      a {
+      h3 a {
         text-decoration: none;
-        color: $burnt-orange;
+        color:$news_section_color;
+        
+        &:hover{ text-decoration:underline; }
       }
     }
     .views-field-field-news-image-fid {
