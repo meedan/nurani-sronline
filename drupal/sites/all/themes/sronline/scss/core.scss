@@ -17,7 +17,8 @@
 @import "variables";
 
 // Helper mixins
-@import "helpers/button";
+@import "helpers/general";
+@import "helpers/sronline-button";
 @import "helpers/rounded_box";
 @import "helpers/lists";
 @import "helpers/article-list";

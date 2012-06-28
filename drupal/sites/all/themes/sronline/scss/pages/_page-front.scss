@@ -1,13 +1,5 @@
 /* FRONT PAGE */
-#content-inner {
-  // Remove the white background on the content area
-  background: inherit;
-
-  // Remove the 
-  #content-area {
-    padding: 0 10px;
-  }
-}
+@include remove-content-background;
 
 #block-views-home_page_banner-block_1 {
   @include undo-imagecache-style;

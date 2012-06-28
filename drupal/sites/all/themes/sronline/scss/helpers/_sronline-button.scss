@@ -1,0 +1,4 @@
+@mixin sronline-button($base_color: #ff8c00, $text_size: 12px, $text_color: #fff) {
+  @include sassy-button("matte", 0.2em, $text_size, lighten($base_color, 30%), $base_color, $text_color);
+}
+

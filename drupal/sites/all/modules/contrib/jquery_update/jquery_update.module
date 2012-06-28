@@ -6,33 +6,9 @@
  */
 
 /**
- * Implements hook_jquery_update_alter().
- *
- * @see hook_jquery_update_alter()
+ * The path to the jQuery files that need to be replaced.
  */
-function jquery_update_jquery_update_alter(&$javascript) {
-  $path = drupal_get_path('module', 'jquery_update') . '/replace/';
-  $scripts = jquery_update_get_replacements();
-
-  // Replace jquery.js first.
-  $jquerypath = jquery_update_jquery_path();
-  $new_jquery = array($jquerypath => $javascript['core']['misc/jquery.js']);
-  $javascript['core'] = array_merge($new_jquery, $javascript['core']);
-  $javascript['core'][$jquerypath]['version'] = variable_get('jquery_update_jquery_version', '1.3');
-  unset($javascript['core']['misc/jquery.js']);
-
-  // Loop through each of the required replacements.
-  foreach ($scripts as $type => $replacements) {
-    foreach ($replacements as $find => $replace) {
-      // If the file to replace is loaded on this page...
-      if (isset($javascript[$type][$find])) {
-        // Create a new entry for the replacement file, and unset the original one.
-        $javascript[$type][$path . $replace] = $javascript[$type][$find];
-        unset($javascript[$type][$find]);
-      }
-    }
-  }
-}
+define('JQUERY_UPDATE_REPLACE_PATH', drupal_get_path('module', 'jquery_update') .'/replace');
 
 /**
  * Array of jQuery files to replace if jQuery is loaded.
@@ -84,13 +60,27 @@ function jquery_update_preprocess_page(&$variables) {
     // Perform the logic if either jQuery Update's jquery.js is newer than core's.
     if (variable_get('jquery_update_replace', TRUE)) {
       // Get an array of all the JavaScript files loaded by Drupal on this page.
-      $javascript = drupal_add_js();
+      $scripts = drupal_add_js();
 
-      // Invoke hook_js_alter().
-      drupal_alter('jquery_update', $javascript);
+      // Replace jquery.js first.
+      $new_jquery = array(jquery_update_jquery_path() => $scripts['core']['misc/jquery.js']);
+      $scripts['core'] = array_merge($new_jquery, $scripts['core']);
+      unset($scripts['core']['misc/jquery.js']);
 
-      // Replace with all the new JavaScript.
-      $variables['scripts'] = drupal_get_js('header', $javascript);
+      // Loop through each of the required replacements.
+      foreach (jquery_update_get_replacements() as $type => $replacements) {
+        foreach ($replacements as $find => $replace) {
+          // If the file to replace is loaded on this page...
+          if (isset($scripts[$type][$find])) {
+            // Create a new entry for the replacement file, and unset the original one.
+            $replace = JQUERY_UPDATE_REPLACE_PATH .'/'. $replace;
+            $scripts[$type][$replace] = $scripts[$type][$find];
+            unset($scripts[$type][$find]);
+          }
+        }
+      }
+
+      $variables['scripts'] = drupal_get_js('header', $scripts);
     }
   }
 }
@@ -105,8 +95,7 @@ function jquery_update_preprocess_page(&$variables) {
  */
 function jquery_update_get_version($jquery_path = NULL) {
   $version = 0;
-  $pattern = '# * jQuery JavaScript Library v([0-9\.a-z]+)#';
-
+  $pattern = '/\sv([0-9\.a-z]+)/';
   // No file is passed in so default to the file included with this module.
   if (is_null($jquery_path)) {
     $jquery_path = jquery_update_jquery_path();
@@ -117,7 +106,6 @@ function jquery_update_get_version($jquery_path = NULL) {
   if (preg_match($pattern, $jquery, $matches)) {
     $version = $matches[1];
   }
-
   return $version;
 }
 
@@ -165,16 +153,6 @@ function jquery_update_settings() {
     ),
     '#default_value' => variable_get('jquery_update_compression_type', 'min'),
   );
-  $form['jquery_update_jquery_version'] = array(
-    '#type' => 'select',
-    '#title' => t('jQuery Version'),
-    '#options' => array(
-      '1.3' => '1.3',
-      '1.7' => '1.7',
-    ),
-    '#default_value' => variable_get('jquery_update_jquery_version', '1.3'),
-    '#description' => t('Select which jQuery version branch to use.'),
-  );
 
   return system_settings_form($form);
 }
@@ -183,15 +161,6 @@ function jquery_update_settings() {
  * Return the path to the jQuery file.
  */
 function jquery_update_jquery_path() {
-  // Check whether we are to retrieve the minified version.
-  $jquery_file = array(
-    'none' => 'jquery.js',
-    'min' => 'jquery.min.js',
-  );
-  $type = variable_get('jquery_update_compression_type', 'min');
-
-  // Find the jQuery version to use.
-  $version = variable_get('jquery_update_jquery_version', '1.3');
-  $path = drupal_get_path('module', 'jquery_update') .'/replace/jquery/'. $version .'/';
-  return $path . $jquery_file[$type];
+  $jquery_file = array('none' => 'jquery.js', 'min' => 'jquery.min.js');
+  return JQUERY_UPDATE_REPLACE_PATH .'/'. $jquery_file[variable_get('jquery_update_compression_type', 'min')];
 }

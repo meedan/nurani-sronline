@@ -80,13 +80,11 @@ function sronline_general_context_default_contexts() {
     'path' => array(
       'values' => array(
         '~<front>' => '~<front>',
-        '~node/8' => '~node/8',
         '~node/5' => '~node/5',
+        '~node/add/*' => '~node/add/*',
         'node/*' => 'node/*',
         'news' => 'news',
         'news/*' => 'news/*',
-        'text-bundles' => 'text-bundles',
-        'text-bundles/*' => 'text-bundles/*',
         'videos' => 'videos',
         'videos/*' => 'videos/*',
       ),

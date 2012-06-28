@@ -4,6 +4,7 @@
            } */
 @mixin undo-list-style {
   padding: 0;
+  margin: 0;
 
   li {
     padding: 0;
@@ -12,16 +13,14 @@
   }
 }
 
-@mixin blocky-link($color) {
-  margin-left: -5px;
-  padding: 3px 5px;
-  display: block;
-  width: 100%;
-  color: $color;
-  text-decoration: none;
+@mixin pdf-list-item($link_color) {
+  padding: 0 0 15px 51px;
+  background: url(../images/pdf_icon.gif) 0 2px no-repeat;
 
-  &:hover {
-    background: $color;
-    color: #fff;
+  .field-content {
+    a {
+      @include blocky-link($link_color);
+    }
   }
 }
+

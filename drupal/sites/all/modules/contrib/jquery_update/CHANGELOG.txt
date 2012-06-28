@@ -1,4 +1,9 @@
 
+jQuery Update 6.x-3.0-alpha1, 2011-11-28
+---------------------------------
+#1067290 by fatcrobat: Upgrades to jQuery 1.7.x.
+
+
 jQuery Update 6.x-2.x, xxxx-xx-xx
 ---------------------------------
 #443718 by markus_petrux: Fixed PHP notices in jquery_update_update_6200().
