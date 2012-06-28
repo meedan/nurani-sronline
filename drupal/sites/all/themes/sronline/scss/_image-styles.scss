@@ -1,0 +1,19 @@
+/* ImageCache styles */
+
+img.imagecache {
+  padding: 3px;
+  border: solid 1px $pdf_icon_grey;
+
+  /* News: Small homepage thumbnail image; */
+  &.imagecache-Home-newsthumb-60 {
+
+  }
+}
+
+/* Use this to selectively remove the imagecache style */
+@mixin undo-imagecache-style {
+  img.imagecache {
+    padding: 0;
+    border: none;
+  }
+}

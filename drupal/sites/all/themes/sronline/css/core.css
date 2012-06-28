@@ -71,7 +71,7 @@ table {
  * Browser Reset
  * -------------
  * For a more complete reset, go to http://developer.yahoo.com/yui/reset/ */
-/* line 9, ../scss/default.sass */
+/* line 9, ../scss/_default.scss */
 * {
   margin: 0;
   padding: 0;
@@ -80,11 +80,11 @@ table {
 /* Clear Floats Without Structural Markup
  * ---------------------------------------
  * http://www.positioniseverything.net/easyclearing.html */
-/* line 17, ../scss/default.sass */
+/* line 17, ../scss/_default.scss */
 .clearfix {
   display: inline-block;
 }
-/* line 19, ../scss/default.sass */
+/* line 19, ../scss/_default.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -94,41 +94,41 @@ table {
 }
 
 /* Hides from IE-mac \ */
-/* line 27, ../scss/default.sass */
+/* line 27, ../scss/_default.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 30, ../scss/default.sass */
+/* line 30, ../scss/_default.scss */
 .clearfix {
   display: block;
 }
 
 /* End hide from IE-mac */
 /* clear classes */
-/* line 36, ../scss/default.sass */
+/* line 36, ../scss/_default.scss */
 .clearleft, .clearl, .cleft {
   clear: left;
 }
 
-/* line 39, ../scss/default.sass */
+/* line 39, ../scss/_default.scss */
 .clearright, .clearr, .cright {
   clear: right;
 }
 
-/* line 42, ../scss/default.sass */
+/* line 42, ../scss/_default.scss */
 .clear, .clearboth, .clearall {
   clear: both;
 }
 
 /* Float classes */
-/* line 46, ../scss/default.sass */
+/* line 46, ../scss/_default.scss */
 .floatleft, .fleft, .floatl {
   float: left;
   margin: 0 10px 5px 0;
 }
 
-/* line 50, ../scss/default.sass */
+/* line 50, ../scss/_default.scss */
 .floatright, .fright, .floatr {
   float: right;
   margin: 0 0 5px 10px;
@@ -138,7 +138,7 @@ table {
  * ---------------------------
  * This link useful for both visually impaired people and those with mobility impairments
  * who cannot use a mouse. http://www.webaim.org/techniques/css/invisiblecontent/ */
-/* line 60, ../scss/default.sass */
+/* line 60, ../scss/_default.scss */
 #skip a:link, #skip a:hover, #skip a:visited {
   position: absolute;
   left: -10000px;
@@ -147,7 +147,7 @@ table {
   height: 1px;
   overflow: hidden;
 }
-/* line 67, ../scss/default.sass */
+/* line 67, ../scss/_default.scss */
 #skip a:active, #skip a:focus {
   position: static;
   width: auto;
@@ -155,17 +155,17 @@ table {
 }
 
 /* bug fix with views 2 edit links. */
-/* line 73, ../scss/default.sass */
+/* line 73, ../scss/_default.scss */
 div.view div.views-admin-links {
   width: auto;
 }
 
 /* Rollover edit links for blocks. */
-/* line 77, ../scss/default.sass */
+/* line 77, ../scss/_default.scss */
 div.block {
   position: relative;
 }
-/* line 79, ../scss/default.sass */
+/* line 79, ../scss/_default.scss */
 div.block .edit {
   display: none;
   position: absolute;
@@ -183,20 +183,20 @@ div.block .edit {
   -moz-box-shadow: 0 1px 3px #888888;
   -webkit-box-shadow: -1px 1px 2px #666666;
 }
-/* line 95, ../scss/default.sass */
+/* line 95, ../scss/_default.scss */
 div.block .edit a {
   display: block;
   border: 0;
   padding: 0;
   margin: 0;
 }
-/* line 100, ../scss/default.sass */
+/* line 100, ../scss/_default.scss */
 div.block:hover .edit {
   display: block;
 }
 
 /* Wireframe styles. */
-/* line 105, ../scss/default.sass */
+/* line 118, ../scss/_default.scss */
 .with-wireframes #header,
 .with-wireframes #content-top,
 .with-wireframes #content-top > *,
@@ -214,34 +214,34 @@ div.block:hover .edit {
   padding: 2px;
   border: 1px solid #bbbbbb;
 }
-/* line 121, ../scss/default.sass */
+/* line 121, ../scss/_default.scss */
 .with-wireframes .node {
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
 }
-/* line 124, ../scss/default.sass */
+/* line 124, ../scss/_default.scss */
 .with-wireframes .block {
   margin-bottom: 3px;
 }
-/* line 126, ../scss/default.sass */
+/* line 129, ../scss/_default.scss */
 .with-wireframes #content-top,
 .with-wireframes #content-header,
 .with-wireframes #content-area,
 .with-wireframes #content-bottom {
   margin: 0 3px 3px;
 }
-/* line 131, ../scss/default.sass */
+/* line 131, ../scss/_default.scss */
 .with-wireframes #footer {
   margin-top: 3px;
   padding: 2px;
   border: 1px solid #cccccc;
 }
-/* line 136, ../scss/default.sass */
+/* line 137, ../scss/_default.scss */
 .with-wireframes.with-navigation #content,
 .with-wireframes.with-navigation .sidebar {
   margin-top: 50px;
 }
-/* line 139, ../scss/default.sass */
+/* line 139, ../scss/_default.scss */
 .with-wireframes #navigation {
   height: 50px;
 }
@@ -254,6 +254,15 @@ body {
   color: #4a4a4a;
 }
 
+/* ImageCache styles */
+/* line 3, ../scss/_image-styles.scss */
+img.imagecache {
+  padding: 3px;
+  border: solid 1px #c9c6c4;
+  /* News: Small homepage thumbnail image; */
+}
+
+/* Use this to selectively remove the imagecache style */
 /* General blocks style */
 /* line 2, ../scss/_blocks.scss */
 .block, .pane-block {
@@ -431,6 +440,19 @@ body {
 #block-views-news_articles_featured-block_1 .title {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
+}
+/* line 157, ../scss/_blocks.scss */
+#block-views-news_articles_featured-block_1 .view-news-articles-featured .views-row {
+  clear: left;
+  margin-bottom: 20px;
+}
+/* line 161, ../scss/_blocks.scss */
+#block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-field-news-image-fid {
+  float: left;
+}
+/* line 164, ../scss/_blocks.scss */
+#block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-title, #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-body {
+  margin-left: 88px;
 }
 
 /* Common CSS between the textfield and textarea elements */
@@ -862,13 +884,13 @@ blockquote.orange cite {
 }
 
 /* Main page layout structure, from basic theme's layout.sass */
-/* line 18, ../scss/_layout.scss */
+/* line 19, ../scss/_layout.scss */
 #main, #header, #footer {
   width: 960px;
   margin: 0 auto;
 }
 
-/* line 22, ../scss/_layout.scss */
+/* line 23, ../scss/_layout.scss */
 #content {
   float: left;
   width: 100%;
@@ -876,23 +898,23 @@ blockquote.orange cite {
   padding: 0;
 }
 
-/* line 28, ../scss/_layout.scss */
+/* line 29, ../scss/_layout.scss */
 .sidebar {
   float: left;
 }
 
-/* line 31, ../scss/_layout.scss */
+/* line 32, ../scss/_layout.scss */
 #sidebar-second {
   float: right;
 }
 
-/* line 34, ../scss/_layout.scss */
+/* line 35, ../scss/_layout.scss */
 #footer {
   float: none;
   clear: both;
 }
 
-/* line 42, ../scss/_layout.scss */
+/* line 43, ../scss/_layout.scss */
 #header,
 #footer,
 .mission,
@@ -901,31 +923,31 @@ blockquote.orange cite {
   clear: both;
 }
 
-/* line 47, ../scss/_layout.scss */
+/* line 48, ../scss/_layout.scss */
 .two-sidebars .center,
 .sidebar-left .center {
   margin-left: 220px;
 }
 
-/* line 51, ../scss/_layout.scss */
+/* line 52, ../scss/_layout.scss */
 #sidebar-first {
   width: 200px;
   margin-right: -220px;
 }
 
-/* line 57, ../scss/_layout.scss */
+/* line 58, ../scss/_layout.scss */
 .two-sidebars .center,
 .sidebar-right .center {
   margin-right: 320px;
 }
 
-/* line 61, ../scss/_layout.scss */
+/* line 62, ../scss/_layout.scss */
 #sidebar-second {
   width: 300px;
 }
 
 /* Styles for the main layout */
-/* line 67, ../scss/_layout.scss */
+/* line 68, ../scss/_layout.scss */
 #bg {
   height: 200%;
   left: -50%;
@@ -935,7 +957,7 @@ blockquote.orange cite {
   z-index: -9999;
 }
 
-/* line 75, ../scss/_layout.scss */
+/* line 76, ../scss/_layout.scss */
 #bg img {
   bottom: 0;
   left: 0;
@@ -947,15 +969,15 @@ blockquote.orange cite {
   top: 0;
 }
 
-/* line 85, ../scss/_layout.scss */
+/* line 86, ../scss/_layout.scss */
 #content-inner {
   background: #fff;
 }
-/* line 88, ../scss/_layout.scss */
+/* line 89, ../scss/_layout.scss */
 #content-inner #content-area {
   padding: 0 40px 30px 40px;
 }
-/* line 91, ../scss/_layout.scss */
+/* line 92, ../scss/_layout.scss */
 #content-inner #content-header {
   padding: 20px 40px 10px 40px;
 }
@@ -1105,20 +1127,25 @@ body.front #block-views-home_page_banner-block_1 {
   width: 611px;
   float: left;
 }
-/* line 18, ../scss/pages/_page-front.scss */
+/* line 15, ../scss/_image-styles.scss */
+body.front #block-views-home_page_banner-block_1 img.imagecache {
+  padding: 0;
+  border: none;
+}
+/* line 20, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 .block-inner {
   width: 610px;
   height: 312px;
   overflow: hidden;
 }
-/* line 25, ../scss/pages/_page-front.scss */
+/* line 27, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li {
   float: left;
   list-style-type: none;
   display: block;
   position: relative;
 }
-/* line 31, ../scss/pages/_page-front.scss */
+/* line 33, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li .views-field-teaser {
   position: absolute;
   width: 370px;
@@ -1127,36 +1154,41 @@ body.front #block-views-home_page_banner-block_1 li .views-field-teaser {
   left: 0px;
   background: #fff;
 }
-/* line 39, ../scss/pages/_page-front.scss */
+/* line 41, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li .views-field-teaser .field-content {
   overflow: hidden;
   height: 50px;
 }
-/* line 54, ../scss/pages/_page-front.scss */
+/* line 56, ../scss/pages/_page-front.scss */
 body.front #block-views-Featured_video_home-block_1 {
   padding: 3px;
   width: 293px;
   float: right;
 }
-/* line 60, ../scss/pages/_page-front.scss */
+/* line 62, ../scss/pages/_page-front.scss */
 body.front #block-webform-client-block-1 {
   width: 243px;
   height: 83px;
   float: right;
 }
-/* line 65, ../scss/pages/_page-front.scss */
+/* line 67, ../scss/pages/_page-front.scss */
 body.front #block-webform-client-block-1 .form-text {
   width: 135px;
 }
-/* line 73, ../scss/pages/_page-front.scss */
+/* line 74, ../scss/pages/_page-front.scss */
+body.front #block-views-text_bundles_featured-block_1 .view-content ul li {
+  padding: 0 0 38px 51px;
+  background: url(../images/pdf.gif) 0 0 no-repeat;
+}
+/* line 84, ../scss/pages/_page-front.scss */
 body.front .panel-display .panel-col-top .panel-region-separator {
   display: none;
 }
-/* line 78, ../scss/pages/_page-front.scss */
+/* line 89, ../scss/pages/_page-front.scss */
 body.front .panel-display .center-wrapper .panel-col-first {
   clear: both;
 }
-/* line 81, ../scss/pages/_page-front.scss */
+/* line 92, ../scss/pages/_page-front.scss */
 body.front .panel-display .center-wrapper .panel-panel {
   width: 313px;
 }

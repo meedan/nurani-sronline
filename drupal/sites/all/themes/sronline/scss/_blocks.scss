@@ -152,4 +152,17 @@
 /* Featured News block */
 #block-views-news_articles_featured-block_1 {
   @include block-news-section;
+
+  .view-news-articles-featured {
+    .views-row {
+      clear: left;
+      margin-bottom: 20px;
+    }
+    .views-field-field-news-image-fid {
+      float: left;
+    }
+    .views-field-title, .views-field-body {
+      margin-left: 88px;
+    }
+  }
 }

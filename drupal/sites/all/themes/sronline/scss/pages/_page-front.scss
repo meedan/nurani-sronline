@@ -10,6 +10,8 @@
 }
 
 #block-views-home_page_banner-block_1 {
+  @include undo-imagecache-style;
+
   padding: 4px;
   width: 611px;
   float: left;
@@ -64,6 +66,15 @@
 
   .form-text {
     width: 135px;
+  }
+}
+
+#block-views-text_bundles_featured-block_1 {
+  .view-content ul {
+    li {
+      padding: 0 0 38px 51px;
+      background: url(../images/pdf.gif) 0 0 no-repeat;
+    }
   }
 }
 
