@@ -5,7 +5,7 @@
 
      .attachment {
 
-      //margin-top:35px;
+      margin-top:35px;
       height: 318px;
       border-bottom: 1px dashed #c9c6c4;
       
@@ -47,17 +47,6 @@
      }        
 }
 
-
-.view-display-id-page_1 {
-
-  & > .view-content {
-
-  } 
-}
-
-.view-content {
-
-}
 $burnt-orange: #f8581a;
 .view-display-id-page_1 > .view-content .views-row {      
     margin: 10px;
@@ -79,7 +68,6 @@ $burnt-orange: #f8581a;
     .views-field-field-news-image-fid {
       float:left!important;           
     }
-    //.views-field-view-node { }
     .views-field-body{
         float:right; 
         width: 70%;
