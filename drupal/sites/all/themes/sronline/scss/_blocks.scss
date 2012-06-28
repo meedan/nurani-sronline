@@ -38,6 +38,12 @@
     background: url(../images/title_blip_purple.png) 0 0 no-repeat;
   }
 }
+@mixin block-testimonials-section {
+  .title {
+    color: $testimonials_section_color;
+    background: url(../images/title_blip_grey.png) 0 0 no-repeat;
+  }
+}
 
 /* Helpers to remove the background and rounded corners style from a block */
 @mixin undo-block-style {
@@ -96,6 +102,8 @@
 
 /* Featured testimonials block */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b {
+  @include block-testimonials-section;
+
   .views-row {
     margin-bottom: 20px;
     background: url(../images/close_quote.png) no-repeat bottom right;
@@ -113,7 +121,7 @@
       text-align: right;
       .field-content {
         padding-right: 50px;
-        color: lighten($color_body_text, 30%);
+        color: $testimonials_section_color;
       }
     }
   }

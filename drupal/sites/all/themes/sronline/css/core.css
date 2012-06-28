@@ -288,7 +288,7 @@ body {
 /* Helpers to remove the background and rounded corners style from a block */
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */
 /* Menu current sub-tree block */
-/* line 55, ../scss/_blocks.scss */
+/* line 61, ../scss/_blocks.scss */
 #block-menu_block-1 {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e7eede));
   background: -webkit-linear-gradient(#ffffff, #e7eede);
@@ -297,11 +297,11 @@ body {
   background: -ms-linear-gradient(#ffffff, #e7eede);
   background: linear-gradient(#ffffff, #e7eede);
 }
-/* line 59, ../scss/_blocks.scss */
+/* line 65, ../scss/_blocks.scss */
 #block-menu_block-1 .title {
   display: none;
 }
-/* line 62, ../scss/_blocks.scss */
+/* line 68, ../scss/_blocks.scss */
 #block-menu_block-1 ul {
   padding: 0;
 }
@@ -311,13 +311,13 @@ body {
   margin: 0;
   list-style: none;
 }
-/* line 65, ../scss/_blocks.scss */
+/* line 71, ../scss/_blocks.scss */
 #block-menu_block-1 ul li {
   border-bottom: 1px solid #cccccc;
   padding-bottom: 6px;
   margin-bottom: 6px;
 }
-/* line 70, ../scss/_blocks.scss */
+/* line 76, ../scss/_blocks.scss */
 #block-menu_block-1 ul li a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -338,7 +338,7 @@ body {
   color: #2a4704;
   background: url(../images/title_blip_green.png) 0 0 no-repeat;
 }
-/* line 81, ../scss/_blocks.scss */
+/* line 87, ../scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul {
   padding: 0;
 }
@@ -348,12 +348,12 @@ body {
   margin: 0;
   list-style: none;
 }
-/* line 84, ../scss/_blocks.scss */
+/* line 90, ../scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li {
   padding: 0 0 15px 51px;
   background: url(../images/pdf_icon.gif) 0 0 no-repeat;
 }
-/* line 89, ../scss/_blocks.scss */
+/* line 95, ../scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li .field-content a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -369,28 +369,33 @@ body {
 }
 
 /* Featured testimonials block */
-/* line 99, ../scss/_blocks.scss */
+/* line 42, ../scss/_blocks.scss */
+#block-views-32bfceaf56e91407f76ac3a77c3d8a4b .title {
+  color: #666666;
+  background: url(../images/title_blip_grey.png) 0 0 no-repeat;
+}
+/* line 107, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row {
   margin-bottom: 20px;
   background: url(../images/close_quote.png) no-repeat bottom right;
 }
-/* line 104, ../scss/_blocks.scss */
+/* line 112, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body .field-content {
   background: url(../images/open_quote.png) no-repeat 0 0;
   padding-top: 15px;
 }
-/* line 108, ../scss/_blocks.scss */
+/* line 116, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body p {
   text-indent: 50px;
 }
-/* line 112, ../scss/_blocks.scss */
+/* line 120, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-field-quoted-from-value {
   text-align: right;
 }
-/* line 114, ../scss/_blocks.scss */
+/* line 122, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-field-quoted-from-value .field-content {
   padding-right: 50px;
-  color: #979797;
+  color: #666666;
 }
 
 /* Newsletter block */
@@ -399,23 +404,23 @@ body {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
 }
-/* line 126, ../scss/_blocks.scss */
+/* line 134, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email {
   float: left;
 }
-/* line 128, ../scss/_blocks.scss */
+/* line 136, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email .form-item {
   margin: 0;
 }
-/* line 132, ../scss/_blocks.scss */
+/* line 140, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-text {
   width: 138px;
 }
-/* line 135, ../scss/_blocks.scss */
+/* line 143, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-submit {
   margin-left: 10px;
 }
-/* line 138, ../scss/_blocks.scss */
+/* line 146, ../scss/_blocks.scss */
 #block-webform-client-block-1 label {
   display: none;
 }
@@ -563,7 +568,7 @@ div#header #block-search-0 {
   float: right;
   margin: 10px;
 }
-/* line 49, ../scss/_blocks.scss */
+/* line 55, ../scss/_blocks.scss */
 div#header #block-search-0 .title {
   display: none;
 }
@@ -617,7 +622,7 @@ div#header #submit_btn {
   margin: 0;
   padding: 0;
 }
-/* line 49, ../scss/_blocks.scss */
+/* line 55, ../scss/_blocks.scss */
 #block-menu_block-2 .title {
   display: none;
 }
