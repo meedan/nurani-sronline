@@ -1,9 +1,34 @@
+#footer {
+  margin-bottom: 50px !important;
 
+  .footer {
+    background: url(../images/footer_img.gif) no-repeat 0 0;
+    width: 960px;
+    height: 60px;
+    margin-bottom: 10px;
 
-@mixin footer{ #footer_top{ background:url(../images/footer.png) no-repeat;height: 60px;  padding: 42px; position: absolute; width: 961px}
-  #bottom_footer{ background:url(../images/footer_img.gif) no-repeat; width:961px; height:60px; margin-top:67px; position:absolute;}
+    &.footer-logos {
+      text-align: center;
+      a {
+        display: inline-block;
+        margin-right: 20px;
+        padding-top: 5px;
+      }
+    }
+
+    &.footer-info {
+      color: $color_body_text_light;
+      font-size: 0.8em;
+
+      .footer-info-left {
+        float: left;
+        margin: 10px 0 0 20px;
+      }
+      .footer-info-right {
+        float: right;
+        margin: 10px 20px 0 0;
+        text-align: right;
+      }
+    }
+  }
 }
-#footer.home{ @include footer; margin: 1155px 20px;}
-#footer.news, #footer.about{ @include footer; margin: 1459px 14px;}
-#footer.videos{ @include footer; margin: 1516px 14px;}
-#footer.contact{ @include footer; margin: 823px 13px;}

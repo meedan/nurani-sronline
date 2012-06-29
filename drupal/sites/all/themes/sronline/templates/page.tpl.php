@@ -117,10 +117,25 @@
       <!-- ______________________ FOOTER _______________________ -->
 
       <div id="footer">
-        <?php print $footer_message; ?>
-        <?php print $footer_block; ?>
+        <div class="footer footer-logos">
+          <a href="http://www.divinity.cam.ac.uk"><img src="<?php print $theme_path; ?>/images/logo_cam.png" alt="University of Cambridge Logo" /></a>
+          <a href="#"><img src="<?php print $theme_path; ?>/images/logo_digital_economy.png" alt="Digital Economy Logo" /></a>
+          <a href="http://meedan.org"><img src="<?php print $theme_path; ?>/images/logo_meedan.png" alt="Meedan Logo" /></a>
+        </div>
 
-        <?php if (!empty($secondary_links)){ print theme('links', $secondary_links, array('id' => 'secondary', 'class' => 'links sub-menu')); } ?>
+        <div class="footer footer-info">
+          <div class="footer-info-left">
+            <p>Faculty of Divinity, West Road, Cambridge CB3 9BS</p>
+            <p>
+              <span>Telephone: +44 (0) 1223 763002</span>
+              <span>Fax: +44 (0) 1223 763003</span>
+              <span>Email: <a href="mailto:faculty-office@divinity.cam.ac.uk">faculty-office@divinity.cam.ac.uk</a></span>
+            </p>
+          </div>
+          <div class="footer-info-right">
+            <?php if (!empty($secondary_links)){ print theme('links', $secondary_links, array('id' => 'secondary', 'class' => 'links sub-menu')); } ?>
+          </div>
+        </div>
       </div> <!-- /footer -->
 
     </div> <!-- /page -->

@@ -10,10 +10,9 @@ regions[navigation] = navigation
 regions[content_top_left] = Content top (on the left)
 regions[content_top_right] = Content top (on the right)
 regions[content] = content
-
 regions[left] = first sidebar
 regions[right] = Second sidebar
-regions[footer_block] = Footer
+regions[footer] = Footer
 
 features[] = logo
 features[] = breadcrumb
