@@ -1,13 +1,11 @@
 /* ImageCache styles */
 img.imagecache {
-  padding: 3px;
-  border: solid 1px $pdf_icon_grey;
+  @include bordered-box;
 }
 
 /* Use this to selectively remove the imagecache style */
 @mixin undo-imagecache-style {
   img.imagecache {
-    padding: auto;
-    border: auto;
+    @include undo-bordered-box;
   }
 }

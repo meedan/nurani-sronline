@@ -694,10 +694,10 @@ function home_section_views_default_views() {
       'group' => '0',
       'exposed' => TRUE,
       'expose' => array(
-        'operator' => 'tid_op',
-        'label' => 'Select Topic …',
         'use_operator' => 0,
+        'operator' => 'tid_op',
         'identifier' => 'tid',
+        'label' => 'Select a text topic from our library:',
         'optional' => 1,
         'single' => 1,
         'remember' => 0,
@@ -712,6 +712,9 @@ function home_section_views_default_views() {
       'hierarchy' => 0,
       'relationship' => 'none',
       'reduce_duplicates' => 0,
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
     'keys' => array(
       'operator' => 'optional',

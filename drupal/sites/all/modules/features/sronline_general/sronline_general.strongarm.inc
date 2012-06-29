@@ -718,8 +718,9 @@ function sronline_general_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'compact_forms_ids';
   $strongarm->value = 'search-block-form
+webform-client-form-1
 webform-client-form-5
-';
+views-exposed-form-text-bundles-page-1';
   $export['compact_forms_ids'] = $strongarm;
 
   $strongarm = new stdClass;

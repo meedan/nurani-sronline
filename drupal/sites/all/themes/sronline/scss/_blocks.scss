@@ -80,7 +80,7 @@
     float: right;
 
     .form-text {
-      width: 135px;
+      width: 130px;
     }
   }
 }
@@ -165,14 +165,11 @@
     }
   }
   .form-text {
-    width: 138px;
+    width: 130px;
   }
-  .form-submit{
+  #edit-actions {
+    float: left;
     margin-left: 10px;
-    display:block;
-  }
-  label{
-    display:none;
   }
 }
 

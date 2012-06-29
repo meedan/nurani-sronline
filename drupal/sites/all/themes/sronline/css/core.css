@@ -1,6 +1,7 @@
 /* Removes the white background from the content area and cleans up the padding
    to allow for custom page layout, block placement.  Very useful for Panels
    pages. */
+/* Simple bordered box */
 /* Generic rounded box */
 /* Removes bullets and other common styles from <ul> and <ol> lists.
    Usage:  ul {
@@ -313,7 +314,7 @@ img.imagecache {
 }
 /* line 82, ../scss/_blocks.scss */
 #content-top #block-webform-client-block-1 .form-text {
-  width: 135px;
+  width: 130px;
 }
 
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */
@@ -446,16 +447,12 @@ img.imagecache {
 }
 /* line 167, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-text {
-  width: 138px;
+  width: 130px;
 }
 /* line 170, ../scss/_blocks.scss */
-#block-webform-client-block-1 .form-submit {
+#block-webform-client-block-1 #edit-actions {
+  float: left;
   margin-left: 10px;
-  display: block;
-}
-/* line 174, ../scss/_blocks.scss */
-#block-webform-client-block-1 label {
-  display: none;
 }
 
 /* Featured News block */
@@ -464,16 +461,16 @@ img.imagecache {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
 }
-/* line 184, ../scss/_blocks.scss */
+/* line 181, ../scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-row {
   clear: left;
   margin-bottom: 20px;
 }
-/* line 188, ../scss/_blocks.scss */
+/* line 185, ../scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-field-news-image-fid {
   float: left;
 }
-/* line 191, ../scss/_blocks.scss */
+/* line 188, ../scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-title, #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-body {
   margin-left: 88px;
 }
@@ -571,11 +568,6 @@ img.imagecache {
   font-size: 0.8em;
 }
 
-/* line 45, ../scss/_forms.scss */
-#edit-actions {
-  margin-top: 20px;
-}
-
 /* CSS to fit the compact_forms plugin better into the sronline theme */
 /* line 51, ../scss/_forms.scss */
 .compact-form .compact-form-label {
@@ -612,16 +604,58 @@ div#header #block-search-0 {
 div#header #block-search-0 .title {
   display: none;
 }
-/* line 15, ../scss/_header.scss */
+/* line 70, ../scss/_forms.scss */
+div#header #block-search-0 input.form-submit {
+  font-size: 1.2em;
+  padding: 0.3em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(70%, #c9c9c9));
+  background: -webkit-linear-gradient(#ffffff, #c9c9c9 70%);
+  background: -moz-linear-gradient(#ffffff, #c9c9c9 70%);
+  background: -o-linear-gradient(#ffffff, #c9c9c9 70%);
+  background: -ms-linear-gradient(#ffffff, #c9c9c9 70%);
+  background: linear-gradient(#ffffff, #c9c9c9 70%);
+  -webkit-box-shadow: white 0 1px 0 inset;
+  -moz-box-shadow: white 0 1px 0 inset;
+  box-shadow: white 0 1px 0 inset;
+  border: 1px solid #bdbdbd;
+  color: #7d7d7d;
+  text-shadow: white 0 1px 0;
+}
+/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div#header #block-search-0 input.form-submit:hover {
+  background-color: #bdbdbd;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #f2f2f2), color-stop(75%, #bdbdbd));
+  background: -webkit-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
+  background: -moz-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
+  background: -o-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
+  background: -ms-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
+  background: linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
+}
+/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+div#header #block-search-0 input.form-submit:active {
+  -webkit-box-shadow: #b5b5b5 0 1px 2px inset;
+  -moz-box-shadow: #b5b5b5 0 1px 2px inset;
+  box-shadow: #b5b5b5 0 1px 2px inset;
+}
+/* line 17, ../scss/_header.scss */
 div#header #block-search-0 .form-text {
   width: 153px;
   height: 25px;
 }
-/* line 20, ../scss/_header.scss */
+/* line 22, ../scss/_header.scss */
 div#header #block-search-0 .compact-form-label {
   top: -1px;
 }
-/* line 24, ../scss/_header.scss */
+/* line 26, ../scss/_header.scss */
 div#header #search_bar {
   float: right;
   height: 46px;
@@ -629,7 +663,7 @@ div#header #search_bar {
   position: relative;
   width: 240px;
 }
-/* line 31, ../scss/_header.scss */
+/* line 33, ../scss/_header.scss */
 div#header #searchinput {
   background-color: transparent;
   border: 0;
@@ -643,7 +677,7 @@ div#header #searchinput {
   top: 51px;
   width: 184px;
 }
-/* line 44, ../scss/_header.scss */
+/* line 46, ../scss/_header.scss */
 div#header #submit_btn {
   height: 40px;
   margin-top: 5px;
@@ -1169,7 +1203,7 @@ body.front #block-webform-client-block-1 {
 }
 /* line 82, ../scss/_blocks.scss */
 body.front #block-webform-client-block-1 .form-text {
-  width: 135px;
+  width: 130px;
 }
 /* line 5, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 {
@@ -1177,10 +1211,10 @@ body.front #block-views-home_page_banner-block_1 {
   width: 611px;
   float: left;
 }
-/* line 9, ../scss/_image-styles.scss */
+/* line 8, ../scss/_image-styles.scss */
 body.front #block-views-home_page_banner-block_1 img.imagecache {
-  padding: auto;
-  border: auto;
+  padding: inherit;
+  border: none;
 }
 /* line 13, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 .block-inner {
@@ -1320,6 +1354,38 @@ body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-b
   clear: none;
 }
 
+/* line 16, ../scss/pages/_page-videos.scss */
+body.page-videos .view-video-articles .view-content .views-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #4a4a4a;
+}
+/* line 21, ../scss/pages/_page-videos.scss */
+body.page-videos .view-video-articles .view-content .views-row.views-row-last {
+  border-bottom: none;
+}
+/* line 25, ../scss/pages/_page-videos.scss */
+body.page-videos .view-video-articles .view-content .views-row > div {
+  margin-bottom: 20px;
+}
+/* line 29, ../scss/pages/_page-videos.scss */
+body.page-videos .view-video-articles .view-content .views-row .views-field-field-video-url-url {
+  padding: 3px;
+  border: solid 1px #c9c6c4;
+}
+/* line 36, ../scss/pages/_page-videos.scss */
+body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row {
+  clear: left;
+}
+/* line 38, ../scss/pages/_page-videos.scss */
+body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-video-url-url {
+  float: left;
+}
+/* line 41, ../scss/pages/_page-videos.scss */
+body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-title, body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-body {
+  margin-left: 331px;
+}
+
 /* line 37, ../scss/core.scss */
 body.page-text-bundles {
   /* Text Bundles page */
@@ -1385,41 +1451,8 @@ body.page-text-bundles .view-text-bundles .view-filters {
 body.page-text-bundles .view-text-bundles .view-filters form {
   padding: 10px 20px;
 }
-/* line 41, ../scss/pages/_page-text-bundles.scss */
-body.page-text-bundles .view-text-bundles .view-filters form .views-exposed-widgets {
-  margin: 0;
-}
-/* line 44, ../scss/pages/_page-text-bundles.scss */
-body.page-text-bundles .view-text-bundles .view-filters form .views-exposed-widget {
-  padding: 0;
-  margin-right: 35px;
-  display: inline-block;
-}
-/* line 50, ../scss/pages/_page-text-bundles.scss */
-body.page-text-bundles .view-text-bundles .view-filters form .views-widget-filter-tid {
-  padding-top: 3px;
-}
-/* line 53, ../scss/pages/_page-text-bundles.scss */
-body.page-text-bundles .view-text-bundles .view-filters form .views-widget-filter-tid label {
-  color: #7d7d7d;
-  font-weight: normal;
-  font-size: 1.3em;
-}
-/* line 59, ../scss/pages/_page-text-bundles.scss */
-body.page-text-bundles .view-text-bundles .view-filters form .views-widget-filter-tid .views-widget {
-  display: inline-block;
-}
-/* line 64, ../scss/pages/_page-text-bundles.scss */
-body.page-text-bundles .view-text-bundles .view-filters form .views-widget-filter-keys {
-  margin-right: 38px;
-  width: 270px;
-}
-/* line 69, ../scss/pages/_page-text-bundles.scss */
-body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button {
-  margin-right: 0;
-}
-/* line 71, ../scss/pages/_page-text-bundles.scss */
-body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button input {
+/* line 70, ../scss/_forms.scss */
+body.page-text-bundles .view-text-bundles .view-filters form input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
   display: inline-block;
@@ -1443,10 +1476,9 @@ body.page-text-bundles .view-text-bundles .view-filters form .views-submit-butto
   border: 1px solid #bdbdbd;
   color: #7d7d7d;
   text-shadow: white 0 1px 0;
-  margin: 0;
 }
 /* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button input:hover {
+body.page-text-bundles .view-text-bundles .view-filters form input.form-submit:hover {
   background-color: #bdbdbd;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #f2f2f2), color-stop(75%, #bdbdbd));
   background: -webkit-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
@@ -1456,12 +1488,49 @@ body.page-text-bundles .view-text-bundles .view-filters form .views-submit-butto
   background: linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
 }
 /* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button input:active {
+body.page-text-bundles .view-text-bundles .view-filters form input.form-submit:active {
   -webkit-box-shadow: #b5b5b5 0 1px 2px inset;
   -moz-box-shadow: #b5b5b5 0 1px 2px inset;
   box-shadow: #b5b5b5 0 1px 2px inset;
 }
-/* line 80, ../scss/pages/_page-text-bundles.scss */
+/* line 43, ../scss/pages/_page-text-bundles.scss */
+body.page-text-bundles .view-text-bundles .view-filters form .views-exposed-widgets {
+  margin: 0;
+}
+/* line 46, ../scss/pages/_page-text-bundles.scss */
+body.page-text-bundles .view-text-bundles .view-filters form .views-exposed-widget {
+  padding: 0;
+  margin-right: 35px;
+  display: inline-block;
+}
+/* line 52, ../scss/pages/_page-text-bundles.scss */
+body.page-text-bundles .view-text-bundles .view-filters form .views-widget-filter-tid {
+  padding-top: 3px;
+}
+/* line 55, ../scss/pages/_page-text-bundles.scss */
+body.page-text-bundles .view-text-bundles .view-filters form .views-widget-filter-tid label {
+  color: #7d7d7d;
+  font-weight: normal;
+  font-size: 1.3em;
+}
+/* line 61, ../scss/pages/_page-text-bundles.scss */
+body.page-text-bundles .view-text-bundles .view-filters form .views-widget-filter-tid .views-widget {
+  display: inline-block;
+}
+/* line 66, ../scss/pages/_page-text-bundles.scss */
+body.page-text-bundles .view-text-bundles .view-filters form .views-widget-filter-keys {
+  margin-right: 38px;
+  width: 270px;
+}
+/* line 71, ../scss/pages/_page-text-bundles.scss */
+body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button {
+  margin-right: 0;
+}
+/* line 73, ../scss/pages/_page-text-bundles.scss */
+body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button input {
+  margin: 0;
+}
+/* line 81, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list {
   float: left;
   width: 400px;
@@ -1469,11 +1538,11 @@ body.page-text-bundles .view-text-bundles .view-content .item-list {
   margin: 0 20px 20px 0;
   padding: 20px 30px;
 }
-/* line 87, ../scss/pages/_page-text-bundles.scss */
+/* line 88, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list.item-list-even {
   margin-right: 0;
 }
-/* line 91, ../scss/pages/_page-text-bundles.scss */
+/* line 92, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list h3 {
   height: 21px;
   /* 24px - 3px padding */
@@ -1485,7 +1554,7 @@ body.page-text-bundles .view-text-bundles .view-content .item-list h3 {
   font-weight: lighter;
   color: black;
 }
-/* line 95, ../scss/pages/_page-text-bundles.scss */
+/* line 96, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul {
   padding: 0;
   margin: 0;
@@ -1496,7 +1565,7 @@ body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
   margin: 0;
   list-style: none;
 }
-/* line 98, ../scss/pages/_page-text-bundles.scss */
+/* line 99, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
   padding: 0 0 15px 51px;
   background: url(../images/pdf_icon.gif) 0 2px no-repeat;
