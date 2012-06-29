@@ -164,5 +164,17 @@
     .views-field-title, .views-field-body {
       margin-left: 88px;
     }
+    
+    .field-content{
+       
+       a{color:$news_section_color;
+       
+        &:hover{background:$news_section_color; color:#fff;}
+       
+       }
+       
+    }
+    
+     
   }
 }

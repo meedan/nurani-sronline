@@ -1,7 +1,9 @@
 // Theme the news page..
-
+h1{color:$news_section_color;}
 .view-news-articles.view-display-id-page_1 {
+     @include section-colors($news_section_color);
       width:100%;
+      
 
      .attachment {
 
@@ -23,15 +25,18 @@
               
               .views-field-title{ 
                 float:right; 
-                h3 a {
-                  text-decoration:none;
-                  display: block;
-                  font-size: 20px;
-                  width: 264px;
-                  margin-top:10px;
-                  color:$news_section_color;
-                  
-                  &:hover{ text-decoration:underline; }
+                h3{
+                    
+                   a {
+                    //text-decoration:none;
+                    //display: block;
+                    //font-size: 20px;
+                    //width: 264px;
+                    //margin-top:10px;
+                    //color:$news_section_color;
+                    
+                    //&:hover{ text-decoration:underline; }
+                  }
                 }
              }
             .views-field-body{ 

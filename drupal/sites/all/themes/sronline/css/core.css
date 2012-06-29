@@ -254,6 +254,46 @@ body {
   color: #4a4a4a;
 }
 
+/* line 8, ../scss/_typography.scss */
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+
+/* line 9, ../scss/_typography.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1.00em;
+}
+
+/* line 10, ../scss/_typography.scss */
+h3, h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+
+/* line 12, ../scss/_typography.scss */
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* line 15, ../scss/_typography.scss */
+a {
+  margin-left: -5px;
+  padding: 3px 5px;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+/* line 23, ../scss/_typography.scss */
+a:hover {
+  background: #4a4a4a;
+  color: #fff;
+}
+
 /* ImageCache styles */
 /* line 3, ../scss/_image-styles.scss */
 img.imagecache {
@@ -453,6 +493,15 @@ img.imagecache {
 /* line 164, ../scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-title, #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-body {
   margin-left: 88px;
+}
+/* line 170, ../scss/_blocks.scss */
+#block-views-news_articles_featured-block_1 .view-news-articles-featured .field-content a {
+  color: #ff8b00;
+}
+/* line 172, ../scss/_blocks.scss */
+#block-views-news_articles_featured-block_1 .view-news-articles-featured .field-content a:hover {
+  background: #ff8b00;
+  color: #fff;
 }
 
 /* Common CSS between the textfield and textarea elements */
@@ -1193,93 +1242,97 @@ body.front .panel-display .center-wrapper .panel-panel {
   width: 313px;
 }
 
+/* line 2, ../scss/pages/_page-news.scss */
+body.page-news h1 {
+  color: #ff8b00;
+}
 /* line 3, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 {
   width: 100%;
 }
-/* line 6, ../scss/pages/_page-news.scss */
+/* line 31, ../scss/_typography.scss */
+body.page-news .view-news-articles.view-display-id-page_1 a {
+  color: #ff8b00;
+}
+/* line 34, ../scss/_typography.scss */
+body.page-news .view-news-articles.view-display-id-page_1 a:hover {
+  background: #ff8b00;
+  color: #fff;
+}
+/* line 40, ../scss/_typography.scss */
+body.page-news .view-news-articles.view-display-id-page_1 h2, body.page-news .view-news-articles.view-display-id-page_1 h3, body.page-news .view-news-articles.view-display-id-page_1 h4 {
+  color: #ff8b00;
+}
+/* line 8, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 .attachment {
   margin-top: 35px;
   height: 318px;
   border-bottom: 1px dashed #c9c6c4;
 }
-/* line 12, ../scss/pages/_page-news.scss */
+/* line 14, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 14, ../scss/pages/_page-news.scss */
+/* line 16, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 16, ../scss/pages/_page-news.scss */
+/* line 18, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid {
   float: left;
   width: 256px;
 }
-/* line 19, ../scss/pages/_page-news.scss */
+/* line 21, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid img {
   max-width: 100%;
 }
-/* line 24, ../scss/pages/_page-news.scss */
+/* line 26, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-title {
   float: right;
 }
-/* line 26, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-title h3 a {
-  text-decoration: none;
-  display: block;
-  font-size: 20px;
-  width: 264px;
-  margin-top: 10px;
-  color: #ff8b00;
-}
-/* line 34, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-title h3 a:hover {
-  text-decoration: underline;
-}
-/* line 37, ../scss/pages/_page-news.scss */
+/* line 42, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-body {
   float: right;
   width: 258px;
   margin: 15px auto 30px;
   padding: 7px;
 }
-/* line 43, ../scss/pages/_page-news.scss */
+/* line 48, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-view-node {
   float: right;
 }
-/* line 52, ../scss/pages/_page-news.scss */
+/* line 57, ../scss/pages/_page-news.scss */
 body.page-news .view-display-id-page_1 > .view-content .views-row {
   margin: 10px;
   border-bottom: 1px dashed #c9c6c4;
   height: 195px;
 }
-/* line 57, ../scss/pages/_page-news.scss */
+/* line 62, ../scss/pages/_page-news.scss */
 body.page-news .view-display-id-page_1 > .view-content .views-row > div {
   float: left;
   clear: both;
   padding: 10px;
 }
-/* line 62, ../scss/pages/_page-news.scss */
+/* line 67, ../scss/pages/_page-news.scss */
 body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-title {
   font-size: 20px;
 }
-/* line 64, ../scss/pages/_page-news.scss */
+/* line 69, ../scss/pages/_page-news.scss */
 body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-title h3 a {
   text-decoration: none;
   color: #ff8b00;
 }
-/* line 68, ../scss/pages/_page-news.scss */
+/* line 73, ../scss/pages/_page-news.scss */
 body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-title h3 a:hover {
   text-decoration: underline;
 }
-/* line 71, ../scss/pages/_page-news.scss */
+/* line 76, ../scss/pages/_page-news.scss */
 body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
   float: left!important;
 }
-/* line 74, ../scss/pages/_page-news.scss */
+/* line 79, ../scss/pages/_page-news.scss */
 body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-body {
   float: right;
   width: 70%;
