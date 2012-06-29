@@ -761,36 +761,37 @@ div#header #submit_btn {
 
 /* line 1, ../scss/_footer.scss */
 #footer {
+  margin-top: 20px !important;
   margin-bottom: 50px !important;
 }
-/* line 3, ../scss/_footer.scss */
+/* line 5, ../scss/_footer.scss */
 #footer .footer {
   background: url(../images/footer_img.gif) no-repeat 0 0;
   width: 960px;
   height: 60px;
   margin-bottom: 10px;
 }
-/* line 9, ../scss/_footer.scss */
+/* line 11, ../scss/_footer.scss */
 #footer .footer.footer-logos {
   text-align: center;
 }
-/* line 11, ../scss/_footer.scss */
+/* line 13, ../scss/_footer.scss */
 #footer .footer.footer-logos a {
   display: inline-block;
   margin-right: 20px;
   padding-top: 5px;
 }
-/* line 18, ../scss/_footer.scss */
+/* line 20, ../scss/_footer.scss */
 #footer .footer.footer-info {
   color: #7d7d7d;
   font-size: 0.8em;
 }
-/* line 22, ../scss/_footer.scss */
+/* line 24, ../scss/_footer.scss */
 #footer .footer.footer-info .footer-info-left {
   float: left;
   margin: 10px 0 0 20px;
 }
-/* line 26, ../scss/_footer.scss */
+/* line 28, ../scss/_footer.scss */
 #footer .footer.footer-info .footer-info-right {
   float: right;
   margin: 10px 20px 0 0;
