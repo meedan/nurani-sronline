@@ -1,5 +1,15 @@
 @import 'compass/css3/border-radius'; 
 
+/* Simple bordered box */
+@mixin bordered-box {
+  padding: 3px;
+  border: solid 1px $pdf_icon_grey;
+}
+@mixin undo-bordered-box {
+  padding: inherit;
+  border: none;
+}
+
 /* Generic rounded box */
 @mixin rounded-box {
   border: 1px solid #b1a6b7;

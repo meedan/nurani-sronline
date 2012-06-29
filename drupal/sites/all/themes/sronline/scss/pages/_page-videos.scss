@@ -1,1 +1,47 @@
 @include article-list;
+
+// TODO: Move basically all of this over to helpers/_article-list.scss.
+//       Not doing that now to avoid crashing the SCSS that Z wrote
+//       for the pages/_page-news.scss.
+.view-video-articles {
+  // Featured video, attachment, style
+  & > .attachment {
+    .view-display-id-attachment_1 {
+      // Nothing needed here yet.
+    }
+  }
+
+  // Styles common to both the featured video and the other videos
+  .view-content {
+    .views-row {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed $color_body_text;
+
+      &.views-row-last {
+        border-bottom: none;
+      }
+
+      & > div {
+        margin-bottom: 20px;
+      }
+
+      .views-field-field-video-url-url {
+        @include bordered-box;
+      }
+    }
+  }
+
+  &.view-display-id-page_1 > .view-content {
+    .views-row {
+      clear: left;
+      .views-field-field-video-url-url {
+        float: left;
+      }
+      .views-field-title,.views-field-body {
+        margin-left: 331px;
+      }
+    }
+  }
+
+}

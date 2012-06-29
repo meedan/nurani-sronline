@@ -43,7 +43,7 @@
 }
 // Container for form buttons, eg: Submit, Cancel, etc.
 #edit-actions {
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 
 
@@ -67,5 +67,7 @@
 
 /* Grey form style */
 @mixin grey-form {
-  // Do this ....
+  input.form-submit {
+    @include sronline-button(darken($form_grey, 5%), 1.2em, $color_body_text_light);
+  }
 }

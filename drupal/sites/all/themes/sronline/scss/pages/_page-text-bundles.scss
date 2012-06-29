@@ -36,6 +36,8 @@
     border-top: 1px solid #fff;
 
     form {
+      @include grey-form;
+
       padding: 10px 20px;
 
       .views-exposed-widgets {
@@ -69,7 +71,6 @@
       .views-submit-button {
         margin-right: 0;
         input {
-          @include sronline-button(darken($form_grey, 5%), 1.2em, $color_body_text_light);
           margin: 0;
         }
       }

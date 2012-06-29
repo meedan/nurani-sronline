@@ -9,6 +9,8 @@ div#header {
 
   #block-search-0 {
     @include undo-block-style-no-title;
+    @include grey-form;
+
     float:right;
     margin:10px;
     
