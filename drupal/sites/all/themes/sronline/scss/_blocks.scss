@@ -10,6 +10,13 @@
   font-weight: lighter;
   color: $default_section_color;
 }
+@mixin undo-block-title {
+  height: auto;
+  padding: 0;
+  margin: auto;
+  background: none;
+}
+
 
 .block, .pane-block {
   @include rounded-box-with-gradient;
@@ -58,6 +65,29 @@
   @include undo-block-style;
   .title { display: none; }
 }
+
+/* Helper to manage the look of blocks in the top region.  This is reused by
+   the panels homepage layout */
+@mixin content-top-blocks {
+  #block-views-Featured_video_home-block_1 {
+    padding: 3px;
+    width: 293px;
+    float: right;
+  }
+  #block-webform-client-block-1 {
+    width: 243px;
+    height: 83px;
+    float: right;
+
+    .form-text {
+      width: 135px;
+    }
+  }
+}
+#content-top {
+  @include content-top-blocks;
+}
+
 
 
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */

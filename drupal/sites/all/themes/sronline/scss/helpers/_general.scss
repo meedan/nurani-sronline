@@ -3,7 +3,7 @@
    pages. */
 @mixin remove-content-background {
   #content-inner {
-    background: inherit;
+    background: none;
 
     #content-area {
       padding: 0 10px;

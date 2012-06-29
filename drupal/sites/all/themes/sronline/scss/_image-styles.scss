@@ -7,7 +7,7 @@ img.imagecache {
 /* Use this to selectively remove the imagecache style */
 @mixin undo-imagecache-style {
   img.imagecache {
-    padding: inherit;
-    border: inherit;
+    padding: auto;
+    border: auto;
   }
 }

@@ -86,11 +86,27 @@
 #content-inner {
   background: #fff;
 
-  #content-area {
-    padding: 0 40px 30px 40px;
+  #content-top {
+    padding: 0 10px;
+
+    #content-top-left {
+      float: left;
+      width: 620px;
+      margin-right: 27px;
+    }
+    #content-top-right {
+      width: 293px;
+      float: left;
+    }    
   }
+
   #content-header {
+    clear: both;
     padding: 20px 40px 10px 40px;
+  }
+  #content-area {
+    clear: both;
+    padding: 0 40px 30px 40px;
   }
 }
 

@@ -6,6 +6,27 @@
   display: none;
 }
 
+#block-boxes-text_bundles_intro {
+  height: 320px;
+  padding: 0;
+
+  .block-inner {
+    padding: 70px;
+    color: $color_body_text_light;
+
+    .block-title {
+      @include undo-block-title;
+      font-size: 1.8em;
+      margin-bottom: 1.0em;
+      color: $color_body_text_light;
+    }
+    .content {
+      font-size: 1.2em;
+      line-height: 2.0em;
+    }
+  }
+}
+
 .view-text-bundles {
   .view-filters {
     margin-bottom: 20px;

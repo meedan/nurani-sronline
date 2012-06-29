@@ -48,9 +48,10 @@
       <div id="content">
         <div id="content-inner" class="inner column center">
 
-          <?php if ($content_top): ?>
+          <?php if ($content_top_right || $content_top_left): ?>
             <div id="content-top">
-              <?php print $content_top; ?>
+              <div id="content-top-left"><?php print $content_top_left; ?></div>
+              <div id="content-top-right"><?php print $content_top_right; ?></div>
             </div> <!-- /#content-top -->
           <?php endif; ?>
 
