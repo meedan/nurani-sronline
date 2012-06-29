@@ -24,6 +24,9 @@
       .footer-info-left {
         float: left;
         margin: 10px 0 0 20px;
+        p span {
+          padding-right: 15px;
+        }
       }
       .footer-info-right {
         float: right;

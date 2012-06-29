@@ -791,7 +791,11 @@ div#header #submit_btn {
   float: left;
   margin: 10px 0 0 20px;
 }
-/* line 28, ../scss/_footer.scss */
+/* line 27, ../scss/_footer.scss */
+#footer .footer.footer-info .footer-info-left p span {
+  padding-right: 15px;
+}
+/* line 31, ../scss/_footer.scss */
 #footer .footer.footer-info .footer-info-right {
   float: right;
   margin: 10px 20px 0 0;
