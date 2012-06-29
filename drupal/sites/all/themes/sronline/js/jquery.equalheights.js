@@ -44,12 +44,12 @@
 		this.each(function () {
 			offset = $(this).offset();
 
-			if (group.length > 0 && offset.x < lastX) {
+			if (group.length > 0 && offset.left <= lastX) {
 				$(group).equalHeights(minHeight, maxHeight);
 				group = [];
 			}
 
-			lastX = offset.x;
+			lastX = offset.left;
 			group.push(this);
 		});
 

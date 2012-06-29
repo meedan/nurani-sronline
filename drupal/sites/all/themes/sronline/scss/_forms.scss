@@ -30,8 +30,11 @@
   @include form-field;
   padding: 10px 11px;
 }
+.form-select {
+  // TODO: Style this
+}
 .form-submit {
-  @include buttonz($color_button);
+  @include sronline-button($color_button);
 }
 // CKEditor info
 .textarea-identifier {
@@ -46,9 +49,11 @@
 
 /* CSS to fit the compact_forms plugin better into the sronline theme */
 .compact-form .compact-form-label {
-  padding: 6px 7px;
   color: lighten($color_body_text, 20%);
   font-weight: normal;
+  font-size: 1.1em;
+  top: 6px;
+  left: 12px;
 
   &:hover {
     color: lighten($color_body_text, 50%);
@@ -57,4 +62,10 @@
       color: lighten(#f00, 30%);
     }
   }
+}
+
+
+/* Grey form style */
+@mixin grey-form {
+  // Do this ....
 }

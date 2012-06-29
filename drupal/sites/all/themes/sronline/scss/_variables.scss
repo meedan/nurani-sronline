@@ -4,11 +4,13 @@ $second_sidebar_width: 300px;
 
 // Global general colours
 $color_body_text: #4A4A4A;
+$color_body_text_light: lighten($color_body_text, 20%);
 $pdf_icon_grey: #C9C6C4;
 $Page_heading_color:#562787;
 
 // Form colours
 $color_button: #ff8c00;
+$form_grey: #D6D6D6;
 
 // Navigation colours
 $nav_submenu_color: #2A4704;

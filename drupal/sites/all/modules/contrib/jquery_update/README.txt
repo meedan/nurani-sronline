@@ -14,6 +14,8 @@ Authors:
 * Jeff Robbins (jjeff)
 * Angela Byron (webchick)
 * Addison Berry (add1sun)
+* Aidan Lister (aidanlis)
+* (fatcrobat)
 
 jQuery Update module upgrades Drupal's stable version of jQuery in order to
 support the most current jQuery version available.

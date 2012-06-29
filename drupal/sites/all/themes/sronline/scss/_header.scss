@@ -12,10 +12,13 @@ div#header {
     float:right;
     margin:10px;
     
-    .form-text{width:153px; height:25px;}
+    .form-text{
+      width:153px;
+      height:25px;
+    }
     
     .compact-form-label {
-      top: -7px;
+      top: -1px;
     }
   }
   #search_bar {

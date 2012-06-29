@@ -1,13 +1,6 @@
 /* FRONT PAGE */
-#content-inner {
-  // Remove the white background on the content area
-  background: inherit;
-
-  // Remove the 
-  #content-area {
-    padding: 0 10px;
-  }
-}
+@include remove-content-background;
+@include content-top-blocks;
 
 #block-views-home_page_banner-block_1 {
   @include undo-imagecache-style;
@@ -50,22 +43,6 @@
         }
       }
     }
-  }
-}
-
-#block-views-Featured_video_home-block_1 {
-  padding: 3px;
-  width: 293px;
-  float: right;
-}
-
-#block-webform-client-block-1 {
-  width: 243px;
-  height: 83px;
-  float: right;
-
-  .form-text {
-    width: 135px;
   }
 }
 

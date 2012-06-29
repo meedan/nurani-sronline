@@ -1,4 +1,23 @@
 /* General blocks style */
+@mixin block-title {
+  height: 21px; /* 24px - 3px padding */
+  padding: 3px 0 0 21px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  background: url(../images/title_blip_black.png) 0 0 no-repeat;
+
+  font-size: 1.4em;
+  font-weight: lighter;
+  color: $default_section_color;
+}
+@mixin undo-block-title {
+  height: auto;
+  padding: 0;
+  margin: auto;
+  background: none;
+}
+
+
 .block, .pane-block {
   @include rounded-box-with-gradient;
   padding: 18px 27px;
@@ -7,15 +26,7 @@
   overflow: visible; /* Box model tweak, expands all blocks */
 
   .title {
-    height: 21px; /* 24px - 3px padding */
-    padding: 3px 0 0 21px;
-    margin-bottom: 22px;
-    overflow: hidden;
-    background: url(../images/title_blip_black.png) 0 0 no-repeat;
-
-    font-size: 1.4em;
-    font-weight: lighter;
-    color: $default_section_color;
+    @include block-title;
   }
 }
 
@@ -55,6 +66,29 @@
   .title { display: none; }
 }
 
+/* Helper to manage the look of blocks in the top region.  This is reused by
+   the panels homepage layout */
+@mixin content-top-blocks {
+  #block-views-Featured_video_home-block_1 {
+    padding: 3px;
+    width: 293px;
+    float: right;
+  }
+  #block-webform-client-block-1 {
+    width: 243px;
+    height: 83px;
+    float: right;
+
+    .form-text {
+      width: 135px;
+    }
+  }
+}
+#content-top {
+  @include content-top-blocks;
+}
+
+
 
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */
 /* Menu current sub-tree block */
@@ -88,14 +122,7 @@
     @include undo-list-style;
 
     li {
-      padding: 0 0 15px 51px;
-      background: url(../images/pdf_icon.gif) 0 0 no-repeat;
-
-      .field-content {
-        a {
-          @include blocky-link($text_bundles_section_color);
-        }
-      }
+      @include pdf-list-item($text_bundles_section_color);
     }
   }
 }

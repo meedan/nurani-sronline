@@ -5,19 +5,20 @@
 @import "compass/css3/box-shadow";
 @import 'sassy-buttons';
 
-@mixin debug{ 
+//@mixin debug{ 
 
-  .node{background: pink !important;}
-  .view{background: aqua !important;}
-  h1{background: yellow !important;}
-  .views-field-title{ background: red !important;}
-}
+  //.node{background: pink !important;}
+ // .view{background: aqua !important;}
+ // h1{background: yellow !important;}
+//  .views-field-title{ background: red !important;}
+//}
 
 // Global variables
 @import "variables";
 
 // Helper mixins
-@import "helpers/button";
+@import "helpers/general";
+@import "helpers/sronline-button";
 @import "helpers/rounded_box";
 @import "helpers/lists";
 @import "helpers/article-list";

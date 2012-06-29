@@ -1,4 +1,3 @@
-
 /**
  * Auto-attach for teaser behavior.
  *

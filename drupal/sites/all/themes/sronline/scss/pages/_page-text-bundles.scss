@@ -1,0 +1,104 @@
+/* Text Bundles page */
+@include remove-content-background;
+
+/* Hide the page title on the  */
+#content-header {
+  display: none;
+}
+
+#block-boxes-text_bundles_intro {
+  height: 320px;
+  padding: 0;
+
+  .block-inner {
+    padding: 70px;
+    color: $color_body_text_light;
+
+    .block-title {
+      @include undo-block-title;
+      font-size: 1.8em;
+      margin-bottom: 1.0em;
+      color: $color_body_text_light;
+    }
+    .content {
+      font-size: 1.2em;
+      line-height: 2.0em;
+    }
+  }
+}
+
+.view-text-bundles {
+  .view-filters {
+    margin-bottom: 20px;
+    @include background(linear-gradient(color-stops(lighten($form_grey, 10%), $form_grey)));
+    @include single-box-shadow(rgba(0, 0, 0, 0.3), 0, 1px, 4px, 0.5px);
+    @include border-radius(0.2em);
+    border-top: 1px solid #fff;
+
+    form {
+      padding: 10px 20px;
+
+      .views-exposed-widgets {
+        margin: 0;
+      }
+      .views-exposed-widget {
+        padding: 0;
+        margin-right: 35px;
+        display: inline-block;
+      }
+
+      .views-widget-filter-tid {
+        padding-top: 3px;
+
+        label {
+          color: $color_body_text_light;
+          font-weight: normal;
+          font-size: 1.3em;
+        }
+
+        .views-widget {
+          display: inline-block;
+        }
+      }
+
+      .views-widget-filter-keys {
+        margin-right: 38px;
+        width: 270px;
+      }
+
+      .views-submit-button {
+        margin-right: 0;
+        input {
+          @include sronline-button(darken($form_grey, 5%), 1.2em, $color_body_text_light);
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .view-content {
+    .item-list {
+      float: left;
+      width: 400px;
+      background: #fff;
+      margin: 0 20px 20px 0;
+      padding: 20px 30px;
+
+      &.item-list-even {
+        margin-right: 0;
+      }
+
+      h3 {
+        @include block-title;
+      }
+
+      ul {
+        @include undo-list-style;
+
+        li {
+          @include pdf-list-item($default_section_color);
+        }
+      }
+    }
+  }
+}
