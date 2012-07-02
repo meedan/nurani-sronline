@@ -1700,7 +1700,24 @@ body.page-text-bundles .view-text-bundles .view-filters form .views-submit-butto
 body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button input {
   margin: 0;
 }
-/* line 81, ../scss/pages/_page-text-bundles.scss */
+/* line 3, ../scss/_pagination.scss */
+body.page-text-bundles .view-text-bundles .view-content .item-list ul.pager li.pager-current {
+  background: #2a4704;
+}
+/* line 47, ../scss/_typography.scss */
+body.page-text-bundles .view-text-bundles .view-content a {
+  color: #2a4704;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-text-bundles .view-text-bundles .view-content a:hover {
+  background: #2a4704;
+  color: white;
+}
+/* line 51, ../scss/_typography.scss */
+body.page-text-bundles .view-text-bundles .view-content h2, body.page-text-bundles .view-text-bundles .view-content h3, body.page-text-bundles .view-text-bundles .view-content h4 {
+  color: #2a4704;
+}
+/* line 83, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list {
   float: left;
   width: 400px;
@@ -1708,11 +1725,11 @@ body.page-text-bundles .view-text-bundles .view-content .item-list {
   margin: 0 20px 20px 0;
   padding: 20px 30px;
 }
-/* line 88, ../scss/pages/_page-text-bundles.scss */
+/* line 90, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list.item-list-even {
   margin-right: 0;
 }
-/* line 92, ../scss/pages/_page-text-bundles.scss */
+/* line 94, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list h3 {
   height: 21px;
   /* 24px - 3px padding */
@@ -1723,8 +1740,10 @@ body.page-text-bundles .view-text-bundles .view-content .item-list h3 {
   font-size: 1.4em;
   font-weight: lighter;
   color: black;
+  color: #2a4704;
+  background: url(../images/title_blip_green.png) 0 0 no-repeat;
 }
-/* line 96, ../scss/pages/_page-text-bundles.scss */
+/* line 100, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul {
   padding: 0;
   margin: 0;
@@ -1735,18 +1754,18 @@ body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
   margin: 0;
   list-style: none;
 }
-/* line 99, ../scss/pages/_page-text-bundles.scss */
+/* line 103, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
   padding: 0 0 15px 51px;
   background: url(../images/pdf_icon.gif) 0 2px no-repeat;
 }
 /* line 21, ../scss/helpers/_lists.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a {
-  color: black;
+  color: #2a4704;
 }
 /* line 30, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a:hover {
-  background: black;
+  background: #2a4704;
   color: white;
 }
 
