@@ -18,10 +18,6 @@
       padding-bottom: 20px;
       border-bottom: 1px dashed $color_body_text;
 
-      &.views-row-last {
-        border-bottom: none;
-      }
-
       & > div {
         margin-bottom: 20px;
       }
@@ -32,6 +28,7 @@
     }
   }
 
+  // Styles just for the bottom section
   &.view-display-id-page_1 > .view-content {
     .views-row {
       clear: left;
@@ -40,6 +37,10 @@
       }
       .views-field-title,.views-field-body {
         margin-left: 331px;
+      }
+
+      &.views-row-last {
+        border-bottom: none;
       }
     }
   }
