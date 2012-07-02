@@ -4,6 +4,7 @@
 
 #block-views-home_page_banner-block_1 {
   @include undo-imagecache-style;
+  a { @include undo-blocky-link; }
 
   padding: 4px;
   width: 611px;
@@ -33,10 +34,10 @@
 
       .field-content {
         overflow: hidden;
-        height: 50px;
+        height: 80px;
 
         .banner-title h3 {
-          // TODO: Style up this H3
+          margin-bottom: 0.5em;
         }
         .banner-teaser {
           // TODO: Style up this teaser;

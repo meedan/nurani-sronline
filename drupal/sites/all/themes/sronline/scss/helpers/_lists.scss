@@ -19,7 +19,7 @@
 
   .field-content {
     a {
-      @include blocky-link($link_color);
+      @include blocky-link-set-color($link_color);
     }
   }
 }

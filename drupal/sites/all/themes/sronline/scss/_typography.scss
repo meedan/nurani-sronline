@@ -1,3 +1,58 @@
+/* <a> tag style which creates a strong effect on hover */
+@mixin blocky-link {
+  margin-left: -5px;
+  padding: 3px 5px;
+  display: block;
+  text-decoration: none;
+  width:100%;
+  color: $color_body_text;
+
+  &:hover {
+    background: $color_body_text;
+    color:#fff;
+  }
+}
+/* Undoes the blocky-link style, of course */
+@mixin undo-blocky-link {
+  margin: auto;
+  padding: inherit;
+  display: inline;
+  width: auto;
+  &:hover {
+    background: transparent;
+    color: $color_body_text;
+  }
+}
+/* Used in conjunction with blocky-link to colourize the link */
+@mixin blocky-link-set-color($color, $hover_text_color: #fff) {
+  color: $color;
+ 
+  &:hover {
+    background: $color;
+    color: $hover_text_color;
+  }
+}
+/* Grows a blocky-link, making it look better for <h123> tags
+   @param $size
+          A multiplier indicating the growth factor, eg: 1.2 */
+@mixin blocky-link-set-size($size) {
+  margin-left: #{$size * -5}px !important;
+  padding: #{$size * 3}px #{$size * 5}px !important;
+}
+
+/* Helper to apply colourized blocky-link style a site section or .block */
+@mixin section-colors($color){
+  a {
+    @include blocky-link-set-color($color);
+  }
+
+  h2,h3,h4 {
+    color:$color;
+  } 
+}
+
+
+/* === SITE TYPOGRAPHY === */
 body {
   font-family:verdana;
   font-size:12px;
@@ -5,41 +60,57 @@ body {
   color: $color_body_text;
 }
 
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
 
-  h1              { font-size: 2em;                      margin-bottom: 0.75em; }
-  h2,h3, h4               { font-size: 1.5em; line-height: 1;    margin-bottom: 1.00em; }
-  //h3, h4              { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
-  //h4              { font-size: 1em;   font-weight: bold; margin-bottom: 1.50em; }
-  h5              { font-size: 1em;   font-weight: bold;                        }
-  
-  
-a {
-  margin-left: -5px;
- padding: 3px 5px;
-  display: block;
-  text-decoration: none;
-  width:100%;
-  //background: $color_body_text;
-
-  &:hover {
-    background: $color_body_text;
-   color:#fff;
+  a {
+    @include blocky-link-set-size(3);
   }
-  
-} 
+}
+h2,h3,h4 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1.00em;
 
-
-@mixin section-colors($color){
-    a{
-      color: $color;
-     
-      &:hover {
-        background: $color;
-         color:#fff;
-      }
-      
-    }
-  h2,h3,h4{ color:$color;} 
+  a {
+    @include blocky-link-set-size(2);
+  }
+}
+// h3,h4 {
+//   font-size: 1.2em;
+//   line-height: 1.25;
+//   margin-bottom: 1.25em;
+// }
+// h4 {
+//   font-size: 1em;
+//   font-weight: bold;
+//   margin-bottom: 1.50em;
+// }
+h5 {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 
+#content-area,#sidebar-second {
+  a {
+    @include blocky-link;
+  }
+
+  // Undo aspects of the blocky-link style in some areas
+  .views-admin-links {
+    a {
+      display: inline;
+    }
+  }
+  a.context-block-region {
+    display: none;
+  }
+}
+#footer .footer-info {
+  a {
+    @include blocky-link;
+    display: inline;
+  }
+}

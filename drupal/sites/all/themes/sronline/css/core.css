@@ -250,7 +250,15 @@ div.block:hover .edit {
   height: 50px;
 }
 
-/* line 1, ../scss/_typography.scss */
+/* <a> tag style which creates a strong effect on hover */
+/* Undoes the blocky-link style, of course */
+/* Used in conjunction with blocky-link to colourize the link */
+/* Grows a blocky-link, making it look better for <h123> tags
+   @param $size
+          A multiplier indicating the growth factor, eg: 1.2 */
+/* Helper to apply colourized blocky-link style a site section or .block */
+/* === SITE TYPOGRAPHY === */
+/* line 56, ../scss/_typography.scss */
 body {
   font-family: verdana;
   font-size: 12px;
@@ -258,35 +266,70 @@ body {
   color: #4a4a4a;
 }
 
-/* line 9, ../scss/_typography.scss */
+/* line 63, ../scss/_typography.scss */
 h1 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
+/* line 67, ../scss/_typography.scss */
+h1 a {
+  margin-left: -15px !important;
+  padding: 9px 15px !important;
+}
 
-/* line 10, ../scss/_typography.scss */
+/* line 71, ../scss/_typography.scss */
 h2, h3, h4 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
+/* line 76, ../scss/_typography.scss */
+h2 a, h3 a, h4 a {
+  margin-left: -10px !important;
+  padding: 6px 10px !important;
+}
 
-/* line 13, ../scss/_typography.scss */
+/* line 90, ../scss/_typography.scss */
 h5 {
   font-size: 1em;
   font-weight: bold;
 }
 
-/* line 16, ../scss/_typography.scss */
-a {
+/* line 97, ../scss/_typography.scss */
+#content-area a, #sidebar-second a {
   margin-left: -5px;
   padding: 3px 5px;
   display: block;
   text-decoration: none;
   width: 100%;
+  color: #4a4a4a;
 }
-/* line 24, ../scss/_typography.scss */
-a:hover {
+/* line 10, ../scss/_typography.scss */
+#content-area a:hover, #sidebar-second a:hover {
+  background: #4a4a4a;
+  color: #fff;
+}
+/* line 103, ../scss/_typography.scss */
+#content-area .views-admin-links a, #sidebar-second .views-admin-links a {
+  display: inline;
+}
+/* line 107, ../scss/_typography.scss */
+#content-area a.context-block-region, #sidebar-second a.context-block-region {
+  display: none;
+}
+
+/* line 112, ../scss/_typography.scss */
+#footer .footer-info a {
+  margin-left: -5px;
+  padding: 3px 5px;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  color: #4a4a4a;
+  display: inline;
+}
+/* line 10, ../scss/_typography.scss */
+#footer .footer-info a:hover {
   background: #4a4a4a;
   color: #fff;
 }
@@ -354,6 +397,7 @@ img.imagecache {
 /* Menu current sub-tree block */
 /* line 95, ../scss/_blocks.scss */
 #block-menu_block-1 {
+  background: #e7eede;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e7eede));
   background: -webkit-linear-gradient(#ffffff, #e7eede);
   background: -moz-linear-gradient(#ffffff, #e7eede);
@@ -384,17 +428,12 @@ img.imagecache {
 }
 /* line 110, ../scss/_blocks.scss */
 #block-menu_block-1 ul li a {
-  margin-left: -5px;
-  padding: 3px 5px;
-  display: block;
-  width: 100%;
   color: #2a4704;
-  text-decoration: none;
 }
-/* line 22, ../scss/helpers/_general.scss */
+/* line 30, ../scss/_typography.scss */
 #block-menu_block-1 ul li a:hover {
   background: #2a4704;
-  color: #fff;
+  color: white;
 }
 
 /* Featured text bundles block */
@@ -403,16 +442,16 @@ img.imagecache {
   color: #2a4704;
   background: url(../images/title_blip_green.png) 0 0 no-repeat;
 }
-/* line 33, ../scss/_typography.scss */
+/* line 45, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 a {
   color: #2a4704;
 }
-/* line 36, ../scss/_typography.scss */
+/* line 30, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 a:hover {
   background: #2a4704;
-  color: #fff;
+  color: white;
 }
-/* line 42, ../scss/_typography.scss */
+/* line 49, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 h2, #block-views-text_bundles_featured-block_1 h3, #block-views-text_bundles_featured-block_1 h4 {
   color: #2a4704;
 }
@@ -434,17 +473,12 @@ img.imagecache {
 }
 /* line 21, ../scss/helpers/_lists.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li .field-content a {
-  margin-left: -5px;
-  padding: 3px 5px;
-  display: block;
-  width: 100%;
   color: #2a4704;
-  text-decoration: none;
 }
-/* line 22, ../scss/helpers/_general.scss */
+/* line 30, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li .field-content a:hover {
   background: #2a4704;
-  color: #fff;
+  color: white;
 }
 
 /* Featured testimonials block */
@@ -507,16 +541,16 @@ img.imagecache {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
 }
-/* line 33, ../scss/_typography.scss */
+/* line 45, ../scss/_typography.scss */
 #block-views-news_articles_featured-block_1 a {
   color: #ff8b00;
 }
-/* line 36, ../scss/_typography.scss */
+/* line 30, ../scss/_typography.scss */
 #block-views-news_articles_featured-block_1 a:hover {
   background: #ff8b00;
-  color: #fff;
+  color: white;
 }
-/* line 42, ../scss/_typography.scss */
+/* line 49, ../scss/_typography.scss */
 #block-views-news_articles_featured-block_1 h2, #block-views-news_articles_featured-block_1 h3, #block-views-news_articles_featured-block_1 h4 {
   color: #ff8b00;
 }
@@ -1234,20 +1268,32 @@ body.front #block-views-home_page_banner-block_1 img.imagecache {
   padding: inherit;
   border: none;
 }
-/* line 13, ../scss/pages/_page-front.scss */
+/* line 7, ../scss/pages/_page-front.scss */
+body.front #block-views-home_page_banner-block_1 a {
+  margin: auto;
+  padding: inherit;
+  display: inline;
+  width: auto;
+}
+/* line 21, ../scss/_typography.scss */
+body.front #block-views-home_page_banner-block_1 a:hover {
+  background: transparent;
+  color: #4a4a4a;
+}
+/* line 14, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 .block-inner {
   width: 610px;
   height: 312px;
   overflow: hidden;
 }
-/* line 20, ../scss/pages/_page-front.scss */
+/* line 21, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li {
   float: left;
   list-style-type: none;
   display: block;
   position: relative;
 }
-/* line 26, ../scss/pages/_page-front.scss */
+/* line 27, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li .views-field-teaser {
   position: absolute;
   width: 370px;
@@ -1256,25 +1302,29 @@ body.front #block-views-home_page_banner-block_1 li .views-field-teaser {
   left: 0px;
   background: #fff;
 }
-/* line 34, ../scss/pages/_page-front.scss */
+/* line 35, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li .views-field-teaser .field-content {
   overflow: hidden;
-  height: 50px;
+  height: 80px;
 }
-/* line 51, ../scss/pages/_page-front.scss */
+/* line 39, ../scss/pages/_page-front.scss */
+body.front #block-views-home_page_banner-block_1 li .views-field-teaser .field-content .banner-title h3 {
+  margin-bottom: 0.5em;
+}
+/* line 52, ../scss/pages/_page-front.scss */
 body.front #block-views-text_bundles_featured-block_1 .view-content ul li {
   padding: 0 0 38px 51px;
   background: url(../images/pdf.gif) 0 0 no-repeat;
 }
-/* line 61, ../scss/pages/_page-front.scss */
+/* line 62, ../scss/pages/_page-front.scss */
 body.front .panel-display .panel-col-top .panel-region-separator {
   display: none;
 }
-/* line 66, ../scss/pages/_page-front.scss */
+/* line 67, ../scss/pages/_page-front.scss */
 body.front .panel-display .center-wrapper .panel-col-first {
   clear: both;
 }
-/* line 69, ../scss/pages/_page-front.scss */
+/* line 70, ../scss/pages/_page-front.scss */
 body.front .panel-display .center-wrapper .panel-panel {
   width: 313px;
 }
@@ -1284,69 +1334,93 @@ body.page-news h1 {
   color: #ff8b00;
 }
 /* line 3, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 {
+body.page-news #content-area .view-news-articles.view-display-id-page_1 {
   width: 100%;
 }
-/* line 33, ../scss/_typography.scss */
-body.page-news .view-news-articles.view-display-id-page_1 a {
+/* line 45, ../scss/_typography.scss */
+body.page-news #content-area .view-news-articles.view-display-id-page_1 a {
   color: #ff8b00;
 }
-/* line 36, ../scss/_typography.scss */
-body.page-news .view-news-articles.view-display-id-page_1 a:hover {
+/* line 30, ../scss/_typography.scss */
+body.page-news #content-area .view-news-articles.view-display-id-page_1 a:hover {
   background: #ff8b00;
-  color: #fff;
+  color: white;
 }
-/* line 42, ../scss/_typography.scss */
-body.page-news .view-news-articles.view-display-id-page_1 h2, body.page-news .view-news-articles.view-display-id-page_1 h3, body.page-news .view-news-articles.view-display-id-page_1 h4 {
+/* line 49, ../scss/_typography.scss */
+body.page-news #content-area .view-news-articles.view-display-id-page_1 h2, body.page-news #content-area .view-news-articles.view-display-id-page_1 h3, body.page-news #content-area .view-news-articles.view-display-id-page_1 h4 {
   color: #ff8b00;
 }
 /* line 8, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 .attachment {
+body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment {
   clear: left;
   border-bottom: 1px dashed #c9c6c4;
 }
 /* line 13, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content {
+body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content {
   overflow: hidden;
   *zoom: 1;
 }
 /* line 16, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row {
+body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row {
   margin-bottom: 20px;
   overflow: hidden;
   *zoom: 1;
 }
 /* line 19, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid {
+body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid {
   float: left;
   margin-top: -59px;
 }
-/* line 25, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-title {
-  margin-left: 310px;
+/* line 23, ../scss/pages/_page-news.scss */
+body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid a {
+  margin: auto;
+  padding: inherit;
+  display: inline;
+  width: auto;
+}
+/* line 21, ../scss/_typography.scss */
+body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid a:hover {
+  background: transparent;
+  color: #4a4a4a;
 }
 /* line 28, ../scss/pages/_page-news.scss */
-body.page-news .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-body {
+body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-title {
+  margin-left: 310px;
+}
+/* line 31, ../scss/pages/_page-news.scss */
+body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-body {
   margin-left: 324px;
 }
-/* line 38, ../scss/pages/_page-news.scss */
-body.page-news .view-display-id-page_1 > .view-content .views-row {
+/* line 41, ../scss/pages/_page-news.scss */
+body.page-news #content-area .view-display-id-page_1 > .view-content .views-row {
   margin: 10px;
   border-bottom: 1px dashed #c9c6c4;
   height: 195px;
 }
-/* line 43, ../scss/pages/_page-news.scss */
-body.page-news .view-display-id-page_1 > .view-content .views-row > div {
+/* line 46, ../scss/pages/_page-news.scss */
+body.page-news #content-area .view-display-id-page_1 > .view-content .views-row > div {
   float: left;
   clear: both;
   padding: 10px;
 }
-/* line 50, ../scss/pages/_page-news.scss */
-body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
+/* line 53, ../scss/pages/_page-news.scss */
+body.page-news #content-area .view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
   float: left!important;
 }
-/* line 53, ../scss/pages/_page-news.scss */
-body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-body {
+/* line 56, ../scss/pages/_page-news.scss */
+body.page-news #content-area .view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a {
+  margin: auto;
+  padding: inherit;
+  display: inline;
+  width: auto;
+}
+/* line 21, ../scss/_typography.scss */
+body.page-news #content-area .view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a:hover {
+  background: transparent;
+  color: #4a4a4a;
+}
+/* line 60, ../scss/pages/_page-news.scss */
+body.page-news #content-area .view-display-id-page_1 > .view-content .views-row .views-field-body {
   float: right;
   width: 70%;
   clear: none;
@@ -1354,34 +1428,37 @@ body.page-news .view-display-id-page_1 > .view-content .views-row .views-field-b
 
 /* line 16, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles .view-content .views-row {
-  overflow: hidden;
-  *zoom: 1;
+  float: left;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #4a4a4a;
 }
-/* line 23, ../scss/pages/_page-videos.scss */
+/* line 26, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles .view-content .views-row > div {
   margin-bottom: 20px;
 }
-/* line 27, ../scss/pages/_page-videos.scss */
+/* line 30, ../scss/pages/_page-videos.scss */
+body.page-videos .view-video-articles .view-content .views-row .views-field-title {
+  margin-bottom: 0;
+}
+/* line 34, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles .view-content .views-row .views-field-field-video-url-url {
   padding: 3px;
   border: solid 1px #c9c6c4;
 }
-/* line 35, ../scss/pages/_page-videos.scss */
+/* line 42, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row {
   clear: left;
 }
-/* line 37, ../scss/pages/_page-videos.scss */
+/* line 44, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-video-url-url {
   float: left;
 }
-/* line 40, ../scss/pages/_page-videos.scss */
+/* line 47, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-title, body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-body {
   margin-left: 331px;
 }
-/* line 44, ../scss/pages/_page-videos.scss */
+/* line 51, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row.views-row-last {
   border-bottom: none;
 }
@@ -1572,17 +1649,12 @@ body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
 }
 /* line 21, ../scss/helpers/_lists.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a {
-  margin-left: -5px;
-  padding: 3px 5px;
-  display: block;
-  width: 100%;
   color: black;
-  text-decoration: none;
 }
-/* line 22, ../scss/helpers/_general.scss */
+/* line 30, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a:hover {
   background: black;
-  color: #fff;
+  color: white;
 }
 
 /* line 1, ../scss/pages/_page-content-contact-us.scss */

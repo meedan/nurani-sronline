@@ -93,7 +93,7 @@
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */
 /* Menu current sub-tree block */
 #block-menu_block-1 {
-  // background: $nav_submenu_background;
+  background: $nav_submenu_background;
   @include background(linear-gradient(color-stops(lighten($nav_submenu_background, 50%), $nav_submenu_background)));
 
   .title {
@@ -108,7 +108,7 @@
       margin-bottom: 6px;
 
       a {
-        @include blocky-link($nav_submenu_color);
+        @include blocky-link-set-color($text_bundles_section_color);
       }
     }
   }

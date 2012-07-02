@@ -10,17 +10,3 @@
     }
   }
 }
-
-@mixin blocky-link($color) {
-  margin-left: -5px;
-  padding: 3px 5px;
-  display: block;
-  width: 100%;
-  color: $color;
-  text-decoration: none;
-
-  &:hover {
-    background: $color;
-    color: #fff;
-  }
-}
