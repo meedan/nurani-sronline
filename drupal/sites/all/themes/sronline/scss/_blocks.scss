@@ -17,19 +17,6 @@
   background: none;
 }
 
-
-.block, .pane-block {
-  @include rounded-box-with-gradient;
-  padding: 18px 27px;
-  margin: 0 0 20px 0;
-  background: #fff;
-  overflow: visible; /* Box model tweak, expands all blocks */
-
-  .title {
-    @include block-title;
-  }
-}
-
 /* Helpers to apply the correct colour to specific blocks */
 @mixin block-news-section {
   .title {
@@ -88,6 +75,19 @@
   @include content-top-blocks;
 }
 
+
+/* === GENERAL BLOCK STYLE === */
+.block, .pane-block {
+  @include rounded-box-with-gradient;
+  padding: 18px 27px;
+  margin: 0 0 20px 0;
+  background: #fff;
+  overflow: visible; /* Box model tweak, expands all blocks */
+
+  .title {
+    @include block-title;
+  }
+}
 
 
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */

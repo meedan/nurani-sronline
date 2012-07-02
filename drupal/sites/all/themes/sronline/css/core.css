@@ -306,7 +306,7 @@ h5 {
 }
 
 /* line 105, ../scss/_typography.scss */
-#content-area a, #sidebar-second a {
+.content-area a, .sidebar.second a {
   margin-left: -5px;
   padding: 3px 5px;
   display: block;
@@ -315,17 +315,21 @@ h5 {
   color: #4a4a4a;
 }
 /* line 10, ../scss/_typography.scss */
-#content-area a:hover, #sidebar-second a:hover {
+.content-area a:hover, .sidebar.second a:hover {
   background: #4a4a4a;
   color: #fff;
 }
 /* line 111, ../scss/_typography.scss */
-#content-area .views-admin-links a, #sidebar-second .views-admin-links a {
+.content-area .views-admin-links a, .sidebar.second .views-admin-links a {
   display: inline;
 }
 /* line 115, ../scss/_typography.scss */
-#content-area a.context-block-region, #sidebar-second a.context-block-region {
+.content-area a.context-block-region, .sidebar.second a.context-block-region {
   display: none;
+}
+/* line 118, ../scss/_typography.scss */
+.content-area .field-items a, .sidebar.second .field-items a {
+  display: inline;
 }
 
 /* ImageCache styles */
@@ -337,7 +341,29 @@ img.imagecache {
 
 /* Use this to selectively remove the imagecache style */
 /* General blocks style */
-/* line 21, ../scss/_blocks.scss */
+/* Helpers to apply the correct colour to specific blocks */
+/* Helpers to remove the background and rounded corners style from a block */
+/* Helper to manage the look of blocks in the top region.  This is reused by
+   the panels homepage layout */
+/* line 59, ../scss/_blocks.scss */
+#content-top #block-views-Featured_video_home-block_1 {
+  padding: 3px;
+  width: 293px;
+  float: right;
+}
+/* line 64, ../scss/_blocks.scss */
+#content-top #block-webform-client-block-1 {
+  width: 243px;
+  height: 83px;
+  float: right;
+}
+/* line 69, ../scss/_blocks.scss */
+#content-top #block-webform-client-block-1 .form-text {
+  width: 130px;
+}
+
+/* === GENERAL BLOCK STYLE === */
+/* line 80, ../scss/_blocks.scss */
 .block, .pane-block {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
@@ -353,7 +379,7 @@ img.imagecache {
   overflow: visible;
   /* Box model tweak, expands all blocks */
 }
-/* line 28, ../scss/_blocks.scss */
+/* line 87, ../scss/_blocks.scss */
 .block .title, .pane-block .title {
   height: 21px;
   /* 24px - 3px padding */
@@ -364,27 +390,6 @@ img.imagecache {
   font-size: 1.4em;
   font-weight: lighter;
   color: black;
-}
-
-/* Helpers to apply the correct colour to specific blocks */
-/* Helpers to remove the background and rounded corners style from a block */
-/* Helper to manage the look of blocks in the top region.  This is reused by
-   the panels homepage layout */
-/* line 72, ../scss/_blocks.scss */
-#content-top #block-views-Featured_video_home-block_1 {
-  padding: 3px;
-  width: 293px;
-  float: right;
-}
-/* line 77, ../scss/_blocks.scss */
-#content-top #block-webform-client-block-1 {
-  width: 243px;
-  height: 83px;
-  float: right;
-}
-/* line 82, ../scss/_blocks.scss */
-#content-top #block-webform-client-block-1 .form-text {
-  width: 130px;
 }
 
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */
@@ -431,7 +436,7 @@ img.imagecache {
 }
 
 /* Featured text bundles block */
-/* line 41, ../scss/_blocks.scss */
+/* line 28, ../scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .title {
   color: #2a4704;
   background: url(../images/title_blip_green.png) 0 0 no-repeat;
@@ -476,7 +481,7 @@ img.imagecache {
 }
 
 /* Featured testimonials block */
-/* line 53, ../scss/_blocks.scss */
+/* line 40, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .title {
   color: #666666;
   background: url(../images/title_blip_grey.png) 0 0 no-repeat;
@@ -506,7 +511,7 @@ img.imagecache {
 }
 
 /* Newsletter block */
-/* line 35, ../scss/_blocks.scss */
+/* line 22, ../scss/_blocks.scss */
 #block-webform-client-block-1 .title {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
@@ -530,7 +535,7 @@ img.imagecache {
 }
 
 /* Featured News block */
-/* line 35, ../scss/_blocks.scss */
+/* line 22, ../scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .title {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
@@ -619,34 +624,34 @@ img.imagecache {
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
   background-color: #ffd199;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd199), color-stop(70%, #ff8c00));
-  background: -webkit-linear-gradient(#ffd199, #ff8c00 70%);
-  background: -moz-linear-gradient(#ffd199, #ff8c00 70%);
-  background: -o-linear-gradient(#ffd199, #ff8c00 70%);
-  background: -ms-linear-gradient(#ffd199, #ff8c00 70%);
-  background: linear-gradient(#ffd199, #ff8c00 70%);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd199), color-stop(70%, #ff8b00));
+  background: -webkit-linear-gradient(#ffd199, #ff8b00 70%);
+  background: -moz-linear-gradient(#ffd199, #ff8b00 70%);
+  background: -o-linear-gradient(#ffd199, #ff8b00 70%);
+  background: -ms-linear-gradient(#ffd199, #ff8b00 70%);
+  background: linear-gradient(#ffd199, #ff8b00 70%);
   -webkit-box-shadow: #fff3e5 0 1px 0 inset;
   -moz-box-shadow: #fff3e5 0 1px 0 inset;
   box-shadow: #fff3e5 0 1px 0 inset;
-  border: 1px solid #e67e00;
+  border: 1px solid #e67d00;
   color: white;
-  text-shadow: #f08400 0 -1px 0;
+  text-shadow: #f08300 0 -1px 0;
 }
 /* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:hover {
-  background-color: #e67e00;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #ffc680), color-stop(75%, #e67e00));
-  background: -webkit-linear-gradient(#ffc680 3%, #e67e00 75%);
-  background: -moz-linear-gradient(#ffc680 3%, #e67e00 75%);
-  background: -o-linear-gradient(#ffc680 3%, #e67e00 75%);
-  background: -ms-linear-gradient(#ffc680 3%, #e67e00 75%);
-  background: linear-gradient(#ffc680 3%, #e67e00 75%);
+  background-color: #e67d00;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #ffc580), color-stop(75%, #e67d00));
+  background: -webkit-linear-gradient(#ffc580 3%, #e67d00 75%);
+  background: -moz-linear-gradient(#ffc580 3%, #e67d00 75%);
+  background: -o-linear-gradient(#ffc580 3%, #e67d00 75%);
+  background: -ms-linear-gradient(#ffc580 3%, #e67d00 75%);
+  background: linear-gradient(#ffc580 3%, #e67d00 75%);
 }
 /* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:active {
-  -webkit-box-shadow: #d67600 0 1px 2px inset;
-  -moz-box-shadow: #d67600 0 1px 2px inset;
-  box-shadow: #d67600 0 1px 2px inset;
+  -webkit-box-shadow: #d67500 0 1px 2px inset;
+  -moz-box-shadow: #d67500 0 1px 2px inset;
+  box-shadow: #d67500 0 1px 2px inset;
 }
 
 /* line 40, ../scss/_forms.scss */
@@ -674,6 +679,75 @@ img.imagecache {
 }
 
 /* Grey form style */
+/* line 7, ../scss/_nodes.scss */
+.node .links {
+  margin-top: 20px;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
+}
+/* line 11, ../scss/_nodes.scss */
+.node .links a {
+  margin: auto;
+  padding: inherit;
+  display: inline;
+  width: auto;
+  font-size: 12px;
+  padding: 0.3em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.5;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #99ccff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99ccff), color-stop(70%, #0080ff));
+  background: -webkit-linear-gradient(#99ccff, #0080ff 70%);
+  background: -moz-linear-gradient(#99ccff, #0080ff 70%);
+  background: -o-linear-gradient(#99ccff, #0080ff 70%);
+  background: -ms-linear-gradient(#99ccff, #0080ff 70%);
+  background: linear-gradient(#99ccff, #0080ff 70%);
+  -webkit-box-shadow: #e5f2ff 0 1px 0 inset;
+  -moz-box-shadow: #e5f2ff 0 1px 0 inset;
+  box-shadow: #e5f2ff 0 1px 0 inset;
+  border: 1px solid #0073e6;
+  color: #e6e6e6;
+  text-shadow: #0078f0 0 -1px 0;
+}
+/* line 21, ../scss/_typography.scss */
+.node .links a:hover {
+  background: transparent;
+  color: #4a4a4a;
+}
+/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.node .links a:hover {
+  background-color: #0073e6;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #80c0ff), color-stop(75%, #0073e6));
+  background: -webkit-linear-gradient(#80c0ff 3%, #0073e6 75%);
+  background: -moz-linear-gradient(#80c0ff 3%, #0073e6 75%);
+  background: -o-linear-gradient(#80c0ff 3%, #0073e6 75%);
+  background: -ms-linear-gradient(#80c0ff 3%, #0073e6 75%);
+  background: linear-gradient(#80c0ff 3%, #0073e6 75%);
+}
+/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.node .links a:active {
+  -webkit-box-shadow: #006cd6 0 1px 2px inset;
+  -moz-box-shadow: #006cd6 0 1px 2px inset;
+  box-shadow: #006cd6 0 1px 2px inset;
+}
+/* line 15, ../scss/_nodes.scss */
+.node .links a:hover {
+  color: #fff;
+}
+/* line 22, ../scss/_nodes.scss */
+.node p {
+  margin-bottom: 1.5em;
+}
+
 /* Global page header */
 /* line 4, ../scss/_header.scss */
 div#header a.logo {
@@ -687,7 +761,7 @@ div#header #block-search-0 {
   float: right;
   margin: 10px;
 }
-/* line 66, ../scss/_blocks.scss */
+/* line 53, ../scss/_blocks.scss */
 div#header #block-search-0 .title {
   display: none;
 }
@@ -783,7 +857,7 @@ div#header #submit_btn {
   margin: 0;
   padding: 0;
 }
-/* line 66, ../scss/_blocks.scss */
+/* line 53, ../scss/_blocks.scss */
 #block-menu_block-2 .title {
   display: none;
 }
@@ -1235,19 +1309,19 @@ body.front #content-inner {
 body.front #content-inner #content-area {
   padding: 0 10px;
 }
-/* line 72, ../scss/_blocks.scss */
+/* line 59, ../scss/_blocks.scss */
 body.front #block-views-Featured_video_home-block_1 {
   padding: 3px;
   width: 293px;
   float: right;
 }
-/* line 77, ../scss/_blocks.scss */
+/* line 64, ../scss/_blocks.scss */
 body.front #block-webform-client-block-1 {
   width: 243px;
   height: 83px;
   float: right;
 }
-/* line 82, ../scss/_blocks.scss */
+/* line 69, ../scss/_blocks.scss */
 body.front #block-webform-client-block-1 .form-text {
   width: 130px;
 }

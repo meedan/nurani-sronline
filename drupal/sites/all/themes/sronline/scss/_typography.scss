@@ -101,7 +101,7 @@ h5 {
 }
 
 
-#content-area,#sidebar-second {
+.content-area,.sidebar.second {
   a {
     @include blocky-link;
   }
@@ -114,5 +114,8 @@ h5 {
   }
   a.context-block-region {
     display: none;
+  }
+  .field-items a {
+    display: inline;
   }
 }

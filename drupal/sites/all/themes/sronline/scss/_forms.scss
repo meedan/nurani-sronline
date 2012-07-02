@@ -34,7 +34,7 @@
   // TODO: Style this
 }
 .form-submit {
-  @include sronline-button($color_button);
+  @include sronline-button($news_section_color);
 }
 // CKEditor info
 .textarea-identifier {

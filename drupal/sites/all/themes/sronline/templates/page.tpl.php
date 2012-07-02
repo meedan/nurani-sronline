@@ -81,7 +81,7 @@
             </div> <!-- /#content-header -->
           <?php endif; ?>
 
-          <div id="content-area">
+          <div id="content-area" class="content-area">
             <?php print $content; ?>
           </div> <!-- /#content-area -->
 
