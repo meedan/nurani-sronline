@@ -31,10 +31,10 @@ stylesheets[all][] = css/core.css
 stylesheets[all][] = libs/labels/labels.css
 stylesheets[all][] = libs/chosen/chosen/chosen.css
 
+scripts[] = js/include_jquery_172.js
 scripts[] = libs/labels/labels.js
 scripts[] = js/jquery.equalheights.js
 scripts[] = js/sronline.js
-scripts[] = libs/chosen/chosen/chosen.jquery.min.js
 
 
 ; Compass Support

@@ -115,6 +115,7 @@ function sronline_preprocess_page(&$vars, $hook) {
   $vars['body_classes'] = implode(' ', $body_classes); // Concatenate with spaces
 
   $vars['theme_path'] = url(drupal_get_path('theme', 'sronline'));
+  drupal_add_js(array('theme_path' => $vars['theme_path']), 'setting');
 
   // $vars['content'] = 'HELLO!';
   // drupal_set_message('<pre>' . print_r($vars, 1) . '</pre>');
