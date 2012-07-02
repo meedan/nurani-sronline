@@ -266,36 +266,46 @@ body {
   color: #4a4a4a;
 }
 
-/* line 63, ../scss/_typography.scss */
+/* line 62, ../scss/_typography.scss */
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* line 66, ../scss/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 71, ../scss/_typography.scss */
 h1 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
-/* line 67, ../scss/_typography.scss */
+/* line 75, ../scss/_typography.scss */
 h1 a {
   margin-left: -15px !important;
   padding: 9px 15px !important;
 }
 
-/* line 71, ../scss/_typography.scss */
+/* line 79, ../scss/_typography.scss */
 h2, h3, h4 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 76, ../scss/_typography.scss */
+/* line 84, ../scss/_typography.scss */
 h2 a, h3 a, h4 a {
   margin-left: -10px !important;
   padding: 6px 10px !important;
 }
 
-/* line 90, ../scss/_typography.scss */
+/* line 98, ../scss/_typography.scss */
 h5 {
   font-size: 1em;
   font-weight: bold;
 }
 
-/* line 97, ../scss/_typography.scss */
+/* line 105, ../scss/_typography.scss */
 #content-area a, #sidebar-second a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -309,29 +319,13 @@ h5 {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 103, ../scss/_typography.scss */
+/* line 111, ../scss/_typography.scss */
 #content-area .views-admin-links a, #sidebar-second .views-admin-links a {
   display: inline;
 }
-/* line 107, ../scss/_typography.scss */
+/* line 115, ../scss/_typography.scss */
 #content-area a.context-block-region, #sidebar-second a.context-block-region {
   display: none;
-}
-
-/* line 112, ../scss/_typography.scss */
-#footer .footer-info a {
-  margin-left: -5px;
-  padding: 3px 5px;
-  display: block;
-  text-decoration: none;
-  width: 100%;
-  color: #4a4a4a;
-  display: inline;
-}
-/* line 10, ../scss/_typography.scss */
-#footer .footer-info a:hover {
-  background: #4a4a4a;
-  color: #fff;
 }
 
 /* ImageCache styles */

@@ -59,6 +59,14 @@ body {
   line-height:18px;
   color: $color_body_text;
 }
+a {
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 h1 {
   font-size: 2em;
@@ -106,11 +114,5 @@ h5 {
   }
   a.context-block-region {
     display: none;
-  }
-}
-#footer .footer-info {
-  a {
-    @include blocky-link;
-    display: inline;
   }
 }

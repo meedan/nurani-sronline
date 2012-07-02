@@ -14,7 +14,10 @@
   // Styles common to both the featured video and the other videos
   .view-content {
     .views-row {
-      @include clearfix;
+      // A better clearfix for this situation, the @include clearfix; adds
+      // overflow: hidden; which will affect the blocky-link style on the
+      // headings
+      float: left;
 
       margin-bottom: 20px;
       padding-bottom: 20px;
@@ -22,6 +25,10 @@
 
       & > div {
         margin-bottom: 20px;
+      }
+
+      .views-field-title {
+        margin-bottom: 0;
       }
 
       .views-field-field-video-url-url {
