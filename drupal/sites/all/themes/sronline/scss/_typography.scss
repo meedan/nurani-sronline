@@ -42,6 +42,8 @@
 
 /* Helper to apply colourized blocky-link style a site section or .block */
 @mixin section-colors($color){
+  @include pagination-section-color($color);
+
   a {
     @include blocky-link-set-color($color);
   }
@@ -116,6 +118,9 @@ h5 {
     display: none;
   }
   .field-items a {
+    display: inline;
+  }
+  .pager a {
     display: inline;
   }
 }

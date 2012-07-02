@@ -1,9 +1,16 @@
 @include article-list;
 
+h1 {
+  color: $videos_section_color;
+}
+
+
 // TODO: Move basically all of this over to helpers/_article-list.scss.
 //       Not doing that now to avoid crashing the SCSS that Z wrote
 //       for the pages/_page-news.scss.
 .view-video-articles {
+  @include section-colors($videos_section_color);
+
   // Featured video, attachment, style
   & > .attachment {
     .view-display-id-attachment_1 {
