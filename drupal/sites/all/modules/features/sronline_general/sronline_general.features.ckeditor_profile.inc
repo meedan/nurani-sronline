@@ -26,7 +26,7 @@ video@*.edit-body
 news_articles@*.edit-body
 ',
         'simple_toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'Superscript\',\'-\',\'Cut\',\'Copy\',\'Paste\',\'Undo\',\'Redo\',\'Scayt\',\'-\',\'Anchor\']
+    [\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'Superscript\',\'-\',\'Cut\',\'Copy\',\'Paste\',\'Undo\',\'Redo\',\'Scayt\',\'-\',\'Anchor\',\'Link\',\'Unlink\']
 ]',
         'ckeditor_path' => '%b/sites/all/libraries/ckeditor',
         'ckeditor_local_path' => '',
