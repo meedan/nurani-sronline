@@ -1,5 +1,6 @@
 // Globally applied CSS
-@import "reset";
+//@import "reset";
+@import "compass/reset";
 @import "default";
 @import "pagination";
 @import "typography";
@@ -11,6 +12,7 @@
 @import "navigation";
 @import "footer";
 @import "testimonial";
+
 
 // TODO: Have Chris look at this. Refactor this code, what is this doing?
 // #bottom { width:942px; margin:448px 30px; position:absolute; height:100%; }
