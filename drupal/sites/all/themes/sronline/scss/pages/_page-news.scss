@@ -1,6 +1,7 @@
 // Theme the news page..
 h1{color:$news_section_color;}
 .view-news-articles{
+ @include section-colors($news_section_color);
   & > .attachment {
       .views-field-field-news-image-fid{
           float:left;

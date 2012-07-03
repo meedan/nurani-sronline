@@ -1423,12 +1423,29 @@ body.front .panel-display .center-wrapper .panel-panel {
 body.page-news h1 {
   color: #ff8b00;
 }
-/* line 5, ../scss/pages/_page-news.scss */
+/* line 3, ../scss/_pagination.scss */
+body.page-news .view-news-articles .item-list ul.pager li.pager-current {
+  background: #ff8b00;
+}
+/* line 47, ../scss/_typography.scss */
+body.page-news .view-news-articles a {
+  color: #ff8b00;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-news .view-news-articles a:hover {
+  background: #ff8b00;
+  color: white;
+}
+/* line 51, ../scss/_typography.scss */
+body.page-news .view-news-articles h2, body.page-news .view-news-articles h3, body.page-news .view-news-articles h4 {
+  color: #ff8b00;
+}
+/* line 6, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles > .attachment .views-field-field-news-image-fid {
   float: left;
   margin-top: -85px;
 }
-/* line 8, ../scss/pages/_page-news.scss */
+/* line 9, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles > .attachment .views-field-field-news-image-fid a {
   margin: auto;
   padding: inherit;
@@ -1440,7 +1457,7 @@ body.page-news .view-news-articles > .attachment .views-field-field-news-image-f
   background: transparent;
   color: #4a4a4a;
 }
-/* line 13, ../scss/pages/_page-news.scss */
+/* line 14, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles > .attachment .views-field-title, body.page-news .view-news-articles > .attachment .views-field-body {
   margin-left: 331px;
 }
@@ -1467,15 +1484,15 @@ body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row.views-row-last {
   border-bottom: none;
 }
-/* line 25, ../scss/pages/_page-news.scss */
+/* line 26, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-title, body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-body {
   margin-left: 130px;
 }
-/* line 29, ../scss/pages/_page-news.scss */
+/* line 30, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
   margin-top: -33px;
 }
-/* line 32, ../scss/pages/_page-news.scss */
+/* line 33, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a {
   margin: auto;
   padding: inherit;
