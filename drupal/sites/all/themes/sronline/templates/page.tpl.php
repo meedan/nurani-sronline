@@ -118,8 +118,8 @@
 
       <div id="footer">
         <div class="footer footer-logos">
-          <a href="http://www.divinity.cam.ac.uk"><img src="<?php print $theme_path; ?>/images/logo_cam.png" alt="University of Cambridge Logo" /></a>
-          <a href="#"><img src="<?php print $theme_path; ?>/images/logo_digital_economy.png" alt="Digital Economy Logo" /></a>
+          <a href="http://www.interfaith.cam.ac.uk/"><img src="<?php print $theme_path; ?>/images/logo_cam.png" alt="University of Cambridge Logo" /></a>
+          <img src="<?php print $theme_path; ?>/images/logo_digital_economy.png" alt="Digital Economy Logo" />
           <a href="http://meedan.org"><img src="<?php print $theme_path; ?>/images/logo_meedan.png" alt="Meedan Logo" /></a>
         </div>
 

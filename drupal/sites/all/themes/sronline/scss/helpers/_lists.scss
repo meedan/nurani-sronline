@@ -24,3 +24,22 @@
   }
 }
 
+/* Green gradient style for the sub-navigation */
+@mixin sub-navigation-background {
+  background: $nav_submenu_background;
+  @include background(linear-gradient(color-stops(lighten($nav_submenu_background, 50%), $nav_submenu_background)));
+}
+
+@mixin sub-navigation-list-style {
+  @include undo-list-style;
+
+  li {
+    border-bottom: 1px solid $nav_submenu_separator;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+
+    a {
+      @include blocky-link-set-color($text_bundles_section_color);
+    }
+  }
+}
