@@ -954,7 +954,7 @@ div#header #submit_btn {
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
 }
-/* line 18, ../scss/_navigation.scss */
+/* line 19, ../scss/_navigation.scss */
 .menu-block-2 > ul {
   padding: 0;
   margin: 0;
@@ -966,7 +966,7 @@ div#header #submit_btn {
   margin: 0;
   list-style: none;
 }
-/* line 22, ../scss/_navigation.scss */
+/* line 23, ../scss/_navigation.scss */
 .menu-block-2 > ul > li {
   display: block;
   float: left;
@@ -974,11 +974,11 @@ div#header #submit_btn {
   position: relative;
   z-index: 500;
 }
-/* line 29, ../scss/_navigation.scss */
+/* line 30, ../scss/_navigation.scss */
 .menu-block-2 > ul > li.last {
   background: none;
 }
-/* line 34, ../scss/_navigation.scss */
+/* line 35, ../scss/_navigation.scss */
 .menu-block-2 > ul > li > a {
   display: block;
   text-transform: uppercase;
@@ -987,7 +987,7 @@ div#header #submit_btn {
   padding: 3px 5px;
   margin: 9px 10px;
 }
-/* line 42, ../scss/_navigation.scss */
+/* line 43, ../scss/_navigation.scss */
 .menu-block-2 > ul > li > a.active, .menu-block-2 > ul > li > a:hover {
   text-decoration: none;
   background: #2b5006;
@@ -997,7 +997,7 @@ div#header #submit_btn {
   -o-border-radius: 0.4em;
   border-radius: 0.4em;
 }
-/* line 50, ../scss/_navigation.scss */
+/* line 51, ../scss/_navigation.scss */
 .menu-block-2 > ul > li > ul {
   display: none;
   position: absolute;
@@ -1029,9 +1029,9 @@ div#header #submit_btn {
   -ms-border-bottom-left-radius: 0.5em;
   -o-border-bottom-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
-  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
 }
 /* line 9, ../scss/helpers/_lists.scss */
@@ -1055,7 +1055,7 @@ div#header #submit_btn {
   background: #2a4704;
   color: white;
 }
-/* line 60, ../scss/_navigation.scss */
+/* line 61, ../scss/_navigation.scss */
 .menu-block-2 > ul > li > ul a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -1069,7 +1069,7 @@ div#header #submit_btn {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 73, ../scss/_navigation.scss */
+/* line 75, ../scss/_navigation.scss */
 .menu-block-2 > ul > li.expanded:hover {
   background: white;
   -moz-border-radius-topleft: 0.5em;
@@ -1082,13 +1082,12 @@ div#header #submit_btn {
   -ms-border-top-right-radius: 0.5em;
   -o-border-top-right-radius: 0.5em;
   border-top-right-radius: 0.5em;
-  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-  clip: rect(-5px, -5px, 49px, auto);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 /* line 81, ../scss/_navigation.scss */
-.menu-block-2 > ul > li.expanded:hover a {
+.menu-block-2 > ul > li.expanded:hover > a {
   background: none;
   color: #2b5006;
 }
@@ -1899,4 +1898,69 @@ body.page-content-contact-us .webform-client-form {
 /* line 5, ../scss/pages/_page-content-contact-us.scss */
 body.page-content-contact-us .webform-component {
   width: 450px;
+}
+
+/* line 39, ../scss/core.scss */
+body.page-search {
+  /* Drupal search results page */
+}
+/* line 2, ../scss/pages/_page-search.scss */
+body.page-search h1 {
+  color: #ff8b00;
+}
+/* line 3, ../scss/_pagination.scss */
+body.page-search #content-area .item-list ul.pager li.pager-current {
+  background: #ff8b00;
+}
+/* line 47, ../scss/_typography.scss */
+body.page-search #content-area a {
+  color: #ff8b00;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-search #content-area a:hover {
+  background: #ff8b00;
+  color: white;
+}
+/* line 51, ../scss/_typography.scss */
+body.page-search #content-area h2, body.page-search #content-area h3, body.page-search #content-area h4 {
+  color: #ff8b00;
+}
+/* line 11, ../scss/pages/_page-search.scss */
+body.page-search #content-area #search-form .form-item {
+  margin: 0;
+}
+/* line 14, ../scss/pages/_page-search.scss */
+body.page-search #content-area #search-form .container-inline {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 17, ../scss/pages/_page-search.scss */
+body.page-search #content-area #search-form .container-inline #edit-keys-wrapper {
+  width: 500px;
+  display: inline-block;
+  margin: 0 30px 10px 0;
+}
+/* line 31, ../scss/pages/_page-search.scss */
+body.page-search #content-area > .box .content dl dt {
+  font-size: 1.2em;
+  line-height: 1;
+  margin-bottom: 0.8em;
+}
+/* line 35, ../scss/pages/_page-search.scss */
+body.page-search #content-area > .box .content dl dt a {
+  margin-left: -10px !important;
+  padding: 6px 10px !important;
+  color: #ff8b00;
+  display: inline;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-search #content-area > .box .content dl dt a:hover {
+  background: #ff8b00;
+  color: white;
+}
+/* line 41, ../scss/pages/_page-search.scss */
+body.page-search #content-area > .box .content dl dd {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #4a4a4a;
 }

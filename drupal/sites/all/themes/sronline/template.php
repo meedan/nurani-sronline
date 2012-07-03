@@ -437,6 +437,7 @@ function sronline_breadcrumb($breadcrumb) {
       $trailing_separator = $title = '';
       if (theme_get_setting('basic_breadcrumb_title')) {
         if ($title = drupal_get_title()) {
+          $title = '<span>' . $title . '</span>';
           $trailing_separator = $breadcrumb_separator;
         }
       }
