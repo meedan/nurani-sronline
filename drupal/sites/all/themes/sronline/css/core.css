@@ -813,6 +813,19 @@ img.imagecache {
 .node p {
   margin-bottom: 1.5em;
 }
+/* line 27, ../scss/_nodes.scss */
+.node > div {
+  margin-top: 10px;
+}
+/* line 29, ../scss/_nodes.scss */
+.node .field-field-news-image {
+  float: right;
+  padding: 5px;
+}
+/* line 30, ../scss/_nodes.scss */
+.node .field-field-video-url {
+  margin-bottom: 20px;
+}
 
 /* Global page header */
 /* line 4, ../scss/_header.scss */
@@ -1468,6 +1481,10 @@ body.page-news .view-news-articles .view-content .views-row {
   padding-bottom: 20px;
   border-bottom: 1px dashed #4a4a4a;
 }
+/* line 16, ../scss/helpers/_article-list.scss */
+body.page-news .view-news-articles .view-content .views-row > div {
+  margin-bottom: 20px;
+}
 /* line 20, ../scss/helpers/_article-list.scss */
 body.page-news .view-news-articles .view-content .views-row .views-field-title {
   margin-bottom: 0;
@@ -1532,6 +1549,10 @@ body.page-videos .view-video-articles .view-content .views-row {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #4a4a4a;
+}
+/* line 16, ../scss/helpers/_article-list.scss */
+body.page-videos .view-video-articles .view-content .views-row > div {
+  margin-bottom: 20px;
 }
 /* line 20, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row .views-field-title {
