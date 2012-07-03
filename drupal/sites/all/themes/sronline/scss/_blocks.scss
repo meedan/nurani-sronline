@@ -93,24 +93,13 @@
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */
 /* Menu current sub-tree block */
 #block-menu_block-1 {
-  background: $nav_submenu_background;
-  @include background(linear-gradient(color-stops(lighten($nav_submenu_background, 50%), $nav_submenu_background)));
+  @include sub-navigation-background;
 
   .title {
     display: none;
   }
   ul {
-    @include undo-list-style;
-
-    li {
-      border-bottom: 1px solid $nav_submenu_separator;
-      padding-bottom: 6px;
-      margin-bottom: 6px;
-
-      a {
-        @include blocky-link-set-color($text_bundles_section_color);
-      }
-    }
+    @include sub-navigation-list-style;
   }
 }
 

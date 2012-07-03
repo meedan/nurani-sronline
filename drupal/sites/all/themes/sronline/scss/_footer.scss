@@ -10,7 +10,7 @@
 
     &.footer-logos {
       text-align: center;
-      a {
+      a, & > img {
         display: inline-block;
         margin-right: 20px;
         padding-top: 5px;
