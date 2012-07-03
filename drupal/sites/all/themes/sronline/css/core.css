@@ -250,6 +250,38 @@ div.block:hover .edit {
   height: 50px;
 }
 
+/*  */
+/* Standard Drupal pagination */
+/* line 9, ../scss/_pagination.scss */
+.item-list {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+}
+/* line 13, ../scss/_pagination.scss */
+.item-list ul.pager {
+  text-align: right;
+  padding: 5px 0;
+}
+/* line 17, ../scss/_pagination.scss */
+.item-list ul.pager li {
+  margin: 0;
+  padding: 0;
+}
+/* line 21, ../scss/_pagination.scss */
+.item-list ul.pager li.pager-current {
+  padding: 5px 8px;
+  background: #4a4a4a;
+  color: #fff;
+}
+/* line 29, ../scss/_pagination.scss */
+.item-list ul.pager li a {
+  padding: 5px 8px;
+  margin: 0;
+  color: #4a4a4a;
+  background: #dedede;
+}
+
 /* <a> tag style which creates a strong effect on hover */
 /* Undoes the blocky-link style, of course */
 /* Used in conjunction with blocky-link to colourize the link */
@@ -258,7 +290,7 @@ div.block:hover .edit {
           A multiplier indicating the growth factor, eg: 1.2 */
 /* Helper to apply colourized blocky-link style a site section or .block */
 /* === SITE TYPOGRAPHY === */
-/* line 56, ../scss/_typography.scss */
+/* line 58, ../scss/_typography.scss */
 body {
   font-family: verdana;
   font-size: 12px;
@@ -266,46 +298,68 @@ body {
   color: #4a4a4a;
 }
 
-/* line 62, ../scss/_typography.scss */
+/* line 64, ../scss/_typography.scss */
 a {
   text-decoration: none;
   color: #000;
 }
-/* line 66, ../scss/_typography.scss */
+/* line 68, ../scss/_typography.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 71, ../scss/_typography.scss */
+/* line 73, ../scss/_typography.scss */
 h1 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
-/* line 75, ../scss/_typography.scss */
+/* line 77, ../scss/_typography.scss */
 h1 a {
   margin-left: -15px !important;
   padding: 9px 15px !important;
 }
 
-/* line 79, ../scss/_typography.scss */
+/* line 81, ../scss/_typography.scss */
 h2, h3, h4 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 84, ../scss/_typography.scss */
+/* line 86, ../scss/_typography.scss */
 h2 a, h3 a, h4 a {
   margin-left: -10px !important;
   padding: 6px 10px !important;
 }
 
-/* line 98, ../scss/_typography.scss */
+/* line 100, ../scss/_typography.scss */
 h5 {
   font-size: 1em;
   font-weight: bold;
 }
 
-/* line 105, ../scss/_typography.scss */
+/* Drupal messages */
+/* line 106, ../scss/_typography.scss */
+.messages {
+  padding: 9px;
+  margin: 1em 0;
+  color: #336600;
+  background: #ccff88;
+  border: 1px solid #bbee77;
+}
+/* line 114, ../scss/_typography.scss */
+.messages.warning {
+  color: #884400;
+  background: #ffee66;
+  border-color: #eedd55;
+}
+/* line 119, ../scss/_typography.scss */
+.messages.error {
+  color: white;
+  background: #ee6633;
+  border-color: #dd5522;
+}
+
+/* line 128, ../scss/_typography.scss */
 .content-area a, .sidebar.second a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -319,16 +373,20 @@ h5 {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 111, ../scss/_typography.scss */
+/* line 134, ../scss/_typography.scss */
 .content-area .views-admin-links a, .sidebar.second .views-admin-links a {
   display: inline;
 }
-/* line 115, ../scss/_typography.scss */
+/* line 138, ../scss/_typography.scss */
 .content-area a.context-block-region, .sidebar.second a.context-block-region {
   display: none;
 }
-/* line 118, ../scss/_typography.scss */
+/* line 141, ../scss/_typography.scss */
 .content-area .field-items a, .sidebar.second .field-items a {
+  display: inline;
+}
+/* line 144, ../scss/_typography.scss */
+.content-area .pager a, .sidebar.second .pager a {
   display: inline;
 }
 
@@ -441,7 +499,11 @@ img.imagecache {
   color: #2a4704;
   background: url(../images/title_blip_green.png) 0 0 no-repeat;
 }
-/* line 45, ../scss/_typography.scss */
+/* line 3, ../scss/_pagination.scss */
+#block-views-text_bundles_featured-block_1 .item-list ul.pager li.pager-current {
+  background: #2a4704;
+}
+/* line 47, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 a {
   color: #2a4704;
 }
@@ -450,7 +512,7 @@ img.imagecache {
   background: #2a4704;
   color: white;
 }
-/* line 49, ../scss/_typography.scss */
+/* line 51, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 h2, #block-views-text_bundles_featured-block_1 h3, #block-views-text_bundles_featured-block_1 h4 {
   color: #2a4704;
 }
@@ -540,7 +602,11 @@ img.imagecache {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
 }
-/* line 45, ../scss/_typography.scss */
+/* line 3, ../scss/_pagination.scss */
+#block-views-news_articles_featured-block_1 .item-list ul.pager li.pager-current {
+  background: #ff8b00;
+}
+/* line 47, ../scss/_typography.scss */
 #block-views-news_articles_featured-block_1 a {
   color: #ff8b00;
 }
@@ -549,7 +615,7 @@ img.imagecache {
   background: #ff8b00;
   color: white;
 }
-/* line 49, ../scss/_typography.scss */
+/* line 51, ../scss/_typography.scss */
 #block-views-news_articles_featured-block_1 h2, #block-views-news_articles_featured-block_1 h3, #block-views-news_articles_featured-block_1 h4 {
   color: #ff8b00;
 }
@@ -961,50 +1027,6 @@ div#header #submit_btn {
   float: right;
   margin: 10px 20px 0 0;
   text-align: right;
-}
-
-/* line 1, ../scss/_pagination.scss */
-#pagination {
-  border: 0;
-  margin: 10px 0;
-  padding: 0;
-  float: right;
-  width: 250px;
-}
-/* line 3, ../scss/_pagination.scss */
-#pagination li {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 22px;
-  list-style: none;
-  margin-right: 2px;
-}
-/* line 5, ../scss/_pagination.scss */
-#pagination a {
-  background: #e7e7e7;
-  margin-right: 2px;
-}
-/* line 6, ../scss/_pagination.scss */
-#pagination a:link, #pagination a:visited {
-  color: #2a4704;
-  display: block;
-  float: left;
-  padding: 10px 8px;
-  text-decoration: none;
-}
-/* line 7, ../scss/_pagination.scss */
-#pagination a:hover {
-  border: solid 1px #2a4704;
-}
-/* line 10, ../scss/_pagination.scss */
-#pagination .active {
-  background: #2a4704;
-  color: #FFFFFF;
-  font-weight: bold;
-  display: block;
-  float: left;
-  padding: 10px 8px;
 }
 
 /*purpule Quote*/
@@ -1466,6 +1488,27 @@ body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views
   color: #4a4a4a;
 }
 
+/* line 3, ../scss/pages/_page-videos.scss */
+body.page-videos h1 {
+  color: #5e288c;
+}
+/* line 3, ../scss/_pagination.scss */
+body.page-videos .view-video-articles .item-list ul.pager li.pager-current {
+  background: #5e288c;
+}
+/* line 47, ../scss/_typography.scss */
+body.page-videos .view-video-articles a {
+  color: #5e288c;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-videos .view-video-articles a:hover {
+  background: #5e288c;
+  color: white;
+}
+/* line 51, ../scss/_typography.scss */
+body.page-videos .view-video-articles h2, body.page-videos .view-video-articles h3, body.page-videos .view-video-articles h4 {
+  color: #5e288c;
+}
 /* line 6, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row {
   float: left;
@@ -1489,12 +1532,12 @@ body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .vi
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row.views-row-last {
   border-bottom: none;
 }
-/* line 18, ../scss/pages/_page-videos.scss */
+/* line 25, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles .view-content .views-row .views-field-field-video-url-url {
   padding: 3px;
   border: solid 1px #c9c6c4;
 }
-/* line 27, ../scss/pages/_page-videos.scss */
+/* line 34, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-title, body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-body {
   margin-left: 331px;
 }
@@ -1643,19 +1686,37 @@ body.page-text-bundles .view-text-bundles .view-filters form .views-submit-butto
 body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button input {
   margin: 0;
 }
-/* line 81, ../scss/pages/_page-text-bundles.scss */
+/* line 3, ../scss/_pagination.scss */
+body.page-text-bundles .view-text-bundles .view-content .item-list ul.pager li.pager-current {
+  background: #2a4704;
+}
+/* line 47, ../scss/_typography.scss */
+body.page-text-bundles .view-text-bundles .view-content a {
+  color: #2a4704;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-text-bundles .view-text-bundles .view-content a:hover {
+  background: #2a4704;
+  color: white;
+}
+/* line 51, ../scss/_typography.scss */
+body.page-text-bundles .view-text-bundles .view-content h2, body.page-text-bundles .view-text-bundles .view-content h3, body.page-text-bundles .view-text-bundles .view-content h4 {
+  color: #2a4704;
+}
+/* line 83, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list {
   float: left;
+  clear: none;
   width: 400px;
   background: #fff;
   margin: 0 20px 20px 0;
   padding: 20px 30px;
 }
-/* line 88, ../scss/pages/_page-text-bundles.scss */
+/* line 91, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list.item-list-even {
   margin-right: 0;
 }
-/* line 92, ../scss/pages/_page-text-bundles.scss */
+/* line 95, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list h3 {
   height: 21px;
   /* 24px - 3px padding */
@@ -1666,8 +1727,10 @@ body.page-text-bundles .view-text-bundles .view-content .item-list h3 {
   font-size: 1.4em;
   font-weight: lighter;
   color: black;
+  color: #2a4704;
+  background: url(../images/title_blip_green.png) 0 0 no-repeat;
 }
-/* line 96, ../scss/pages/_page-text-bundles.scss */
+/* line 101, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul {
   padding: 0;
   margin: 0;
@@ -1678,18 +1741,18 @@ body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
   margin: 0;
   list-style: none;
 }
-/* line 99, ../scss/pages/_page-text-bundles.scss */
+/* line 104, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
   padding: 0 0 15px 51px;
   background: url(../images/pdf_icon.gif) 0 2px no-repeat;
 }
 /* line 21, ../scss/helpers/_lists.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a {
-  color: black;
+  color: #2a4704;
 }
 /* line 30, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a:hover {
-  background: black;
+  background: #2a4704;
   color: white;
 }
 

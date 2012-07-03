@@ -78,8 +78,11 @@
   }
 
   .view-content {
+    @include section-colors($text_bundles_section_color);
+
     .item-list {
       float: left;
+      clear: none;
       width: 400px;
       background: #fff;
       margin: 0 20px 20px 0;
@@ -91,13 +94,15 @@
 
       h3 {
         @include block-title;
+        color: $text_bundles_section_color;
+        background: url(../images/title_blip_green.png) 0 0 no-repeat;
       }
 
       ul {
         @include undo-list-style;
 
         li {
-          @include pdf-list-item($default_section_color);
+          @include pdf-list-item($text_bundles_section_color);
         }
       }
     }

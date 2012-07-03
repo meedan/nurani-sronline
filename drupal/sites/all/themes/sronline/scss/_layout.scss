@@ -1,6 +1,7 @@
 // Globally applied CSS
 @import "reset";
 @import "default";
+@import "pagination";
 @import "typography";
 @import "image-styles";
 @import "blocks";
@@ -9,7 +10,6 @@
 @import "header";
 @import "navigation";
 @import "footer";
-@import "pagination";
 @import "testimonial";
 
 // TODO: Have Chris look at this. Refactor this code, what is this doing?
