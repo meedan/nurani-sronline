@@ -424,16 +424,19 @@ h5 {
   text-decoration: underline;
 }
 /* line 162, ../scss/_typography.scss */
+.content-area .node ul, .content-area .node ol, .sidebar.second .node ul, .sidebar.second .node ol {
+  margin-left: 30px;
+  padding: 0 0 0 5px;
+}
+/* line 163, ../scss/_typography.scss */
 .content-area .node ul, .sidebar.second .node ul {
   list-style-type: disc;
-  margin-left: 30px;
 }
-/* line 164, ../scss/_typography.scss */
+/* line 165, ../scss/_typography.scss */
 .content-area .node ol, .sidebar.second .node ol {
   list-style: decimal;
-  margin-left: 30px;
 }
-/* line 166, ../scss/_typography.scss */
+/* line 167, ../scss/_typography.scss */
 .content-area sup, .sidebar.second sup {
   font-size: xx-small;
   vertical-align: super;
