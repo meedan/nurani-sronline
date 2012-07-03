@@ -704,7 +704,7 @@ img.imagecache {
   color: white;
   text-shadow: #f08300 0 -1px 0;
 }
-/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:hover {
   background-color: #e67d00;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #ffc580), color-stop(75%, #e67d00));
@@ -714,7 +714,7 @@ img.imagecache {
   background: -ms-linear-gradient(#ffc580 3%, #e67d00 75%);
   background: linear-gradient(#ffc580 3%, #e67d00 75%);
 }
-/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:active {
   -webkit-box-shadow: #d67500 0 1px 2px inset;
   -moz-box-shadow: #d67500 0 1px 2px inset;
@@ -790,7 +790,7 @@ img.imagecache {
   background: transparent;
   color: #4a4a4a;
 }
-/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .node .links a:hover {
   background-color: #0073e6;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #80c0ff), color-stop(75%, #0073e6));
@@ -800,7 +800,7 @@ img.imagecache {
   background: -ms-linear-gradient(#80c0ff 3%, #0073e6 75%);
   background: linear-gradient(#80c0ff 3%, #0073e6 75%);
 }
-/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .node .links a:active {
   -webkit-box-shadow: #006cd6 0 1px 2px inset;
   -moz-box-shadow: #006cd6 0 1px 2px inset;
@@ -813,6 +813,19 @@ img.imagecache {
 /* line 22, ../scss/_nodes.scss */
 .node p {
   margin-bottom: 1.5em;
+}
+/* line 27, ../scss/_nodes.scss */
+.node > div {
+  margin-top: 10px;
+}
+/* line 29, ../scss/_nodes.scss */
+.node .field-field-news-image {
+  float: right;
+  padding: 5px;
+}
+/* line 30, ../scss/_nodes.scss */
+.node .field-field-video-url {
+  margin-bottom: 20px;
 }
 
 /* Global page header */
@@ -858,7 +871,7 @@ div#header #block-search-0 input.form-submit {
   color: #7d7d7d;
   text-shadow: white 0 1px 0;
 }
-/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 div#header #block-search-0 input.form-submit:hover {
   background-color: #bdbdbd;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #f2f2f2), color-stop(75%, #bdbdbd));
@@ -868,7 +881,7 @@ div#header #block-search-0 input.form-submit:hover {
   background: -ms-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
   background: linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
 }
-/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 div#header #block-search-0 input.form-submit:active {
   -webkit-box-shadow: #b5b5b5 0 1px 2px inset;
   -moz-box-shadow: #b5b5b5 0 1px 2px inset;
@@ -1521,101 +1534,90 @@ body.front .panel-display .center-wrapper .panel-panel {
 body.page-news h1 {
   color: #ff8b00;
 }
-/* line 3, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 {
-  width: 100%;
-}
 /* line 3, ../scss/_pagination.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .item-list ul.pager li.pager-current {
+body.page-news .view-news-articles .item-list ul.pager li.pager-current {
   background: #ff8b00;
 }
 /* line 47, ../scss/_typography.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 a {
+body.page-news .view-news-articles a {
   color: #ff8b00;
 }
 /* line 30, ../scss/_typography.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 a:hover {
+body.page-news .view-news-articles a:hover {
   background: #ff8b00;
   color: white;
 }
 /* line 51, ../scss/_typography.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 h2, body.page-news #content-area .view-news-articles.view-display-id-page_1 h3, body.page-news #content-area .view-news-articles.view-display-id-page_1 h4 {
+body.page-news .view-news-articles h2, body.page-news .view-news-articles h3, body.page-news .view-news-articles h4 {
   color: #ff8b00;
 }
-/* line 8, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment {
-  clear: left;
-  border-bottom: 1px dashed #c9c6c4;
+/* line 6, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles > .attachment .views-field-field-news-image-fid {
+  float: left;
+  margin-top: -85px;
 }
-/* line 13, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content {
-  overflow: hidden;
-  *zoom: 1;
+/* line 9, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles > .attachment .views-field-field-news-image-fid a {
+  margin: auto;
+  padding: inherit;
+  display: inline;
+  width: auto;
 }
-/* line 16, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row {
+/* line 21, ../scss/_typography.scss */
+body.page-news .view-news-articles > .attachment .views-field-field-news-image-fid a:hover {
+  background: transparent;
+  color: #4a4a4a;
+}
+/* line 14, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles > .attachment .views-field-title, body.page-news .view-news-articles > .attachment .views-field-body {
+  margin-left: 331px;
+}
+/* line 6, ../scss/helpers/_article-list.scss */
+body.page-news .view-news-articles .view-content .views-row {
+  float: left;
   margin-bottom: 20px;
-  overflow: hidden;
-  *zoom: 1;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #4a4a4a;
 }
-/* line 19, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid {
+/* line 16, ../scss/helpers/_article-list.scss */
+body.page-news .view-news-articles .view-content .views-row > div {
+  margin-bottom: 20px;
+}
+/* line 20, ../scss/helpers/_article-list.scss */
+body.page-news .view-news-articles .view-content .views-row .views-field-title {
+  margin-bottom: 0;
+}
+/* line 30, ../scss/helpers/_article-list.scss */
+body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row {
+  clear: left;
+}
+/* line 32, ../scss/helpers/_article-list.scss */
+body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-video-url-url, body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
   float: left;
-  margin-top: -59px;
 }
-/* line 23, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid a {
+/* line 35, ../scss/helpers/_article-list.scss */
+body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row.views-row-last {
+  border-bottom: none;
+}
+/* line 26, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-title, body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-body {
+  margin-left: 130px;
+}
+/* line 30, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
+  margin-top: -33px;
+}
+/* line 33, ../scss/pages/_page-news.scss */
+body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a {
   margin: auto;
   padding: inherit;
   display: inline;
   width: auto;
 }
 /* line 21, ../scss/_typography.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-field-news-image-fid a:hover {
+body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a:hover {
   background: transparent;
   color: #4a4a4a;
-}
-/* line 28, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-title {
-  margin-left: 310px;
-}
-/* line 31, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-news-articles.view-display-id-page_1 .attachment .view-display-id-attachment_1 div.view-content .views-row .views-field-body {
-  margin-left: 324px;
-}
-/* line 41, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-display-id-page_1 > .view-content .views-row {
-  margin: 10px;
-  border-bottom: 1px dashed #c9c6c4;
-  height: 195px;
-}
-/* line 46, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-display-id-page_1 > .view-content .views-row > div {
-  float: left;
-  clear: both;
-  padding: 10px;
-}
-/* line 53, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
-  float: left!important;
-}
-/* line 56, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a {
-  margin: auto;
-  padding: inherit;
-  display: inline;
-  width: auto;
-}
-/* line 21, ../scss/_typography.scss */
-body.page-news #content-area .view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a:hover {
-  background: transparent;
-  color: #4a4a4a;
-}
-/* line 60, ../scss/pages/_page-news.scss */
-body.page-news #content-area .view-display-id-page_1 > .view-content .views-row .views-field-body {
-  float: right;
-  width: 70%;
-  clear: none;
 }
 
 /* line 3, ../scss/pages/_page-videos.scss */
@@ -1639,41 +1641,41 @@ body.page-videos .view-video-articles a:hover {
 body.page-videos .view-video-articles h2, body.page-videos .view-video-articles h3, body.page-videos .view-video-articles h4 {
   color: #5e288c;
 }
-/* line 23, ../scss/pages/_page-videos.scss */
+/* line 6, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row {
   float: left;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #4a4a4a;
 }
-/* line 33, ../scss/pages/_page-videos.scss */
+/* line 16, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row > div {
   margin-bottom: 20px;
 }
-/* line 37, ../scss/pages/_page-videos.scss */
+/* line 20, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row .views-field-title {
   margin-bottom: 0;
 }
-/* line 41, ../scss/pages/_page-videos.scss */
+/* line 30, ../scss/helpers/_article-list.scss */
+body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row {
+  clear: left;
+}
+/* line 32, ../scss/helpers/_article-list.scss */
+body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-video-url-url, body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
+  float: left;
+}
+/* line 35, ../scss/helpers/_article-list.scss */
+body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row.views-row-last {
+  border-bottom: none;
+}
+/* line 25, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles .view-content .views-row .views-field-field-video-url-url {
   padding: 3px;
   border: solid 1px #c9c6c4;
 }
-/* line 49, ../scss/pages/_page-videos.scss */
-body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row {
-  clear: left;
-}
-/* line 51, ../scss/pages/_page-videos.scss */
-body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-video-url-url {
-  float: left;
-}
-/* line 54, ../scss/pages/_page-videos.scss */
+/* line 34, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-title, body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-body {
   margin-left: 331px;
-}
-/* line 58, ../scss/pages/_page-videos.scss */
-body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row.views-row-last {
-  border-bottom: none;
 }
 
 /* line 37, ../scss/core.scss */
@@ -1767,7 +1769,7 @@ body.page-text-bundles .view-text-bundles .view-filters form input.form-submit {
   color: #7d7d7d;
   text-shadow: white 0 1px 0;
 }
-/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body.page-text-bundles .view-text-bundles .view-filters form input.form-submit:hover {
   background-color: #bdbdbd;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #f2f2f2), color-stop(75%, #bdbdbd));
@@ -1777,7 +1779,7 @@ body.page-text-bundles .view-text-bundles .view-filters form input.form-submit:h
   background: -ms-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
   background: linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
 }
-/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body.page-text-bundles .view-text-bundles .view-filters form input.form-submit:active {
   -webkit-box-shadow: #b5b5b5 0 1px 2px inset;
   -moz-box-shadow: #b5b5b5 0 1px 2px inset;

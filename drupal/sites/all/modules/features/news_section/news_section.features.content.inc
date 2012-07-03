@@ -91,11 +91,11 @@ function news_section_content_default_fields() {
         'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'image_plain',
+        'format' => 'news-image-294_default',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'image_plain',
+        'format' => 'news-image-294_default',
         'exclude' => 0,
       ),
       '4' => array(

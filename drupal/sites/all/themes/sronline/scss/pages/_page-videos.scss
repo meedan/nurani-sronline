@@ -1,4 +1,4 @@
-@include article-list;
+//@include article-list;
 
 h1 {
   color: $videos_section_color;
@@ -17,48 +17,24 @@ h1 {
       // Nothing needed here yet.
     }
   }
-
-  // Styles common to both the featured video and the other videos
+  
+  @include article-list;
+  
   .view-content {
     .views-row {
-      // A better clearfix for this situation, the @include clearfix; adds
-      // overflow: hidden; which will affect the blocky-link style on the
-      // headings
-      float: left;
-
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px dashed $color_body_text;
-
-      & > div {
-        margin-bottom: 20px;
-      }
-
-      .views-field-title {
-        margin-bottom: 0;
-      }
-
-      .views-field-field-video-url-url {
-        @include bordered-box;
-      }
+       .views-field-field-video-url-url  {
+          @include bordered-box;
+       }
+    
     }
   }
-
-  // Styles just for the bottom section
+  
   &.view-display-id-page_1 > .view-content {
     .views-row {
-      clear: left;
-      .views-field-field-video-url-url {
-        float: left;
-      }
       .views-field-title,.views-field-body {
         margin-left: 331px;
       }
-
-      &.views-row-last {
-        border-bottom: none;
-      }
+    
     }
-  }
-
+  }  
 }

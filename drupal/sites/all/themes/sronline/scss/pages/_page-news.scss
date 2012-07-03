@@ -1,67 +1,44 @@
 // Theme the news page..
 h1{color:$news_section_color;}
-#content-area .view-news-articles.view-display-id-page_1 {
-     @include section-colors($news_section_color);
-      width:100%;
-      
-
-     .attachment {
-      clear:left;
-    
-      border-bottom: 1px dashed #c9c6c4;
-      
-        .view-display-id-attachment_1 div.view-content {
-            
-            @include clearfix;
-            .views-row {
-              margin-bottom:20px;
-              @include clearfix;
-              .views-field-field-news-image-fid { 
-                 float:left; 
-                 margin-top:-59px;
-                 
-               a {
-                 @include undo-blocky-link;
-               }
-              }
-              
-              .views-field-title{ 
-                  margin-left:310px;
-             }
-            .views-field-body{ 
-              margin-left: 324px;
+.view-news-articles{
+ @include section-colors($news_section_color);
+  & > .attachment {
+      .views-field-field-news-image-fid{
+          float:left;
+          margin-top:-85px;
+           a{
+              @include undo-blocky-link;
             }
-            
-            }
-          }      
-     }        
-}
-
-
-#content-area .view-display-id-page_1 > .view-content .views-row {      
-    margin: 10px;
-    border-bottom: 1px dashed #c9c6c4;
-    height:195px;
-    
-    & > div {
-       float: left;
-       clear: both;
-       padding: 10px; 
-    }
-    .views-field-title {
-    }
-    .views-field-field-news-image-fid {
-      float:left!important;
-
-      a {
-        @include undo-blocky-link;
       }
+      
+      .views-field-title,.views-field-body {
+        margin-left: 331px;
+      }
+
+      
+    
+  }
+  
+  @include article-list;
+  
+   &.view-display-id-page_1 > .view-content {
+    .views-row {
+      .views-field-title,.views-field-body {
+        margin-left: 130px;
+      }
+      
+      .views-field-field-news-image-fid{
+      margin-top:-33px;
+      
+       a{
+          @include undo-blocky-link;
+       }
+      
+      }
+    
     }
-    .views-field-body{
-        float:right; 
-        width: 70%;
-        clear: none;
-    }     
+  }  
+
 }
 
    
@@ -79,5 +56,5 @@ h1{color:$news_section_color;}
 
 
 
-//@include article-list;
+
 
