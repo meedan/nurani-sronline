@@ -337,7 +337,29 @@ h5 {
   font-weight: bold;
 }
 
-/* line 107, ../scss/_typography.scss */
+/* Drupal messages */
+/* line 106, ../scss/_typography.scss */
+.messages {
+  padding: 9px;
+  margin: 1em 0;
+  color: #336600;
+  background: #ccff88;
+  border: 1px solid #bbee77;
+}
+/* line 114, ../scss/_typography.scss */
+.messages.warning {
+  color: #884400;
+  background: #ffee66;
+  border-color: #eedd55;
+}
+/* line 119, ../scss/_typography.scss */
+.messages.error {
+  color: white;
+  background: #ee6633;
+  border-color: #dd5522;
+}
+
+/* line 128, ../scss/_typography.scss */
 .content-area a, .sidebar.second a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -351,19 +373,19 @@ h5 {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 113, ../scss/_typography.scss */
+/* line 134, ../scss/_typography.scss */
 .content-area .views-admin-links a, .sidebar.second .views-admin-links a {
   display: inline;
 }
-/* line 117, ../scss/_typography.scss */
+/* line 138, ../scss/_typography.scss */
 .content-area a.context-block-region, .sidebar.second a.context-block-region {
   display: none;
 }
-/* line 120, ../scss/_typography.scss */
+/* line 141, ../scss/_typography.scss */
 .content-area .field-items a, .sidebar.second .field-items a {
   display: inline;
 }
-/* line 123, ../scss/_typography.scss */
+/* line 144, ../scss/_typography.scss */
 .content-area .pager a, .sidebar.second .pager a {
   display: inline;
 }

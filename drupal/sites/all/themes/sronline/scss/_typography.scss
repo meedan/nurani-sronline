@@ -102,6 +102,27 @@ h5 {
   font-weight: bold;
 }
 
+/* Drupal messages */
+.messages {
+  padding: 9px;
+  margin: 1em 0;
+  // Default is green coloured
+  color: #336600;
+  background: #ccff88;
+  border: 1px solid #bbee77;
+
+  &.warning {
+    color: #884400;
+    background: #ffee66;
+    border-color: #eedd55;
+  }
+  &.error {
+    color: white;
+    background: #ee6633;
+    border-color: #dd5522;
+  }
+}
+
 
 .content-area,.sidebar.second {
   a {
