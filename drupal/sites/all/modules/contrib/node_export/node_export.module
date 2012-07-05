@@ -622,7 +622,8 @@ function node_export_save(&$node) {
 }
 
 /**
- * Prepare a clone of the node during import.
+ * Generates a pristine cloned node such that it is ready for import.  Note, the
+ * node_export_features module uses this function to generate cleaner exports.
  */
 function node_export_node_clone($original_node) {
     global $user;
