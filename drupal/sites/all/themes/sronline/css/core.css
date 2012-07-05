@@ -9,7 +9,7 @@
            } */
 /* Green gradient style for the sub-navigation */
 /* Common design elements between the Videos and News page article listings */
-/* line 17, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,45 +31,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -377,7 +377,7 @@ h5 {
 }
 
 /* line 133, ../scss/_typography.scss */
-.content-area a, .sidebar.second a {
+.content-area a, .sidebar.second a, #content-header a {
   margin-left: -5px;
   padding: 3px 5px;
   display: block;
@@ -386,60 +386,49 @@ h5 {
   color: #4a4a4a;
 }
 /* line 10, ../scss/_typography.scss */
-.content-area a:hover, .sidebar.second a:hover {
+.content-area a:hover, .sidebar.second a:hover, #content-header a:hover {
   background: #4a4a4a;
   color: #fff;
 }
 /* line 139, ../scss/_typography.scss */
-.content-area .views-admin-links a, .sidebar.second .views-admin-links a {
+.content-area .views-admin-links a, .sidebar.second .views-admin-links a, #content-header .views-admin-links a {
   display: inline;
 }
-/* line 143, ../scss/_typography.scss */
-.content-area a.context-block-region, .sidebar.second a.context-block-region {
-  display: none;
+/* line 144, ../scss/_typography.scss */
+.content-area .tabs a, .sidebar.second .tabs a, #content-header .tabs a {
+  display: inline;
+  padding: 0 10px;
 }
 /* line 146, ../scss/_typography.scss */
-.content-area .field-items a, .sidebar.second .field-items a {
-  display: inline;
+.content-area a.context-block-region, .sidebar.second a.context-block-region, #content-header a.context-block-region {
+  display: none;
 }
 /* line 149, ../scss/_typography.scss */
-.content-area .pager a, .sidebar.second .pager a {
+.content-area .field-items a, .sidebar.second .field-items a, #content-header .field-items a {
   display: inline;
 }
-/* line 153, ../scss/_typography.scss */
-.content-area p a, .sidebar.second p a {
+/* line 152, ../scss/_typography.scss */
+.content-area .pager a, .sidebar.second .pager a, #content-header .pager a {
+  display: inline;
+}
+/* line 156, ../scss/_typography.scss */
+.content-area p a, .content-area .breadcrumb a, .sidebar.second p a, .sidebar.second .breadcrumb a, #content-header p a, #content-header .breadcrumb a {
+  text-decoration: underline;
+  display: inline;
   margin: auto;
   padding: inherit;
   display: inline;
   width: auto;
 }
 /* line 21, ../scss/_typography.scss */
-.content-area p a:hover, .sidebar.second p a:hover {
+.content-area p a:hover, .content-area .breadcrumb a:hover, .sidebar.second p a:hover, .sidebar.second .breadcrumb a:hover, #content-header p a:hover, #content-header .breadcrumb a:hover {
   background: transparent;
   color: #4a4a4a;
 }
-/* line 157, ../scss/_typography.scss */
-.content-area p a:hover, .sidebar.second p a:hover {
+/* line 161, ../scss/_typography.scss */
+.content-area p a:hover, .content-area .breadcrumb a:hover, .sidebar.second p a:hover, .sidebar.second .breadcrumb a:hover, #content-header p a:hover, #content-header .breadcrumb a:hover {
   background: yellow;
   text-decoration: underline;
-}
-/* line 162, ../scss/_typography.scss */
-.content-area .node ul, .content-area .node ol, .sidebar.second .node ul, .sidebar.second .node ol {
-  margin-left: 30px;
-  padding: 0 0 0 5px;
-}
-/* line 163, ../scss/_typography.scss */
-.content-area .node ul, .sidebar.second .node ul {
-  list-style-type: disc;
-}
-/* line 165, ../scss/_typography.scss */
-.content-area .node ol, .sidebar.second .node ol {
-  list-style: decimal;
-}
-/* line 167, ../scss/_typography.scss */
-.content-area sup, .sidebar.second sup {
-  font-size: xx-small;
-  vertical-align: super;
 }
 
 /* ImageCache styles */
@@ -687,7 +676,12 @@ img.imagecache {
 }
 
 /* Common CSS between the textfield and textarea elements */
-/* line 22, ../scss/_forms.scss */
+/* line 25, ../scss/_forms.scss */
+.page-admin .form-text {
+  width: auto;
+}
+
+/* line 27, ../scss/_forms.scss */
 .form-text {
   width: 100%;
   top: 4px;
@@ -706,12 +700,12 @@ img.imagecache {
   height: 23px;
 }
 
-/* line 26, ../scss/_forms.scss */
+/* line 31, ../scss/_forms.scss */
 .resizable-textarea {
   width: 100%;
 }
 
-/* line 29, ../scss/_forms.scss */
+/* line 34, ../scss/_forms.scss */
 .form-textarea {
   width: 100%;
   top: 4px;
@@ -730,7 +724,7 @@ img.imagecache {
   padding: 10px 11px;
 }
 
-/* line 36, ../scss/_forms.scss */
+/* line 41, ../scss/_forms.scss */
 .form-submit {
   font-size: 12px;
   padding: 0.3em 1.5em;
@@ -756,7 +750,7 @@ img.imagecache {
   color: white;
   text-shadow: #f08300 0 -1px 0;
 }
-/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:hover {
   background-color: #e67d00;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #ffc580), color-stop(75%, #e67d00));
@@ -766,21 +760,21 @@ img.imagecache {
   background: -ms-linear-gradient(#ffc580 3%, #e67d00 75%);
   background: linear-gradient(#ffc580 3%, #e67d00 75%);
 }
-/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:active {
   -webkit-box-shadow: #d67500 0 1px 2px inset;
   -moz-box-shadow: #d67500 0 1px 2px inset;
   box-shadow: #d67500 0 1px 2px inset;
 }
 
-/* line 40, ../scss/_forms.scss */
+/* line 45, ../scss/_forms.scss */
 .textarea-identifier {
   color: #979797;
   font-size: 0.8em;
 }
 
 /* CSS to fit the compact_forms plugin better into the sronline theme */
-/* line 51, ../scss/_forms.scss */
+/* line 56, ../scss/_forms.scss */
 .compact-form .compact-form-label {
   color: #7d7d7d;
   font-weight: normal;
@@ -788,11 +782,11 @@ img.imagecache {
   top: 6px;
   left: 12px;
 }
-/* line 58, ../scss/_forms.scss */
+/* line 63, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover {
   color: #cacaca;
 }
-/* line 61, ../scss/_forms.scss */
+/* line 66, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover .form-required {
   color: #ff9999;
 }
@@ -842,7 +836,7 @@ img.imagecache {
   background: transparent;
   color: #4a4a4a;
 }
-/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .node .links a:hover {
   background-color: #0073e6;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #80c0ff), color-stop(75%, #0073e6));
@@ -852,7 +846,7 @@ img.imagecache {
   background: -ms-linear-gradient(#80c0ff 3%, #0073e6 75%);
   background: linear-gradient(#80c0ff 3%, #0073e6 75%);
 }
-/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .node .links a:active {
   -webkit-box-shadow: #006cd6 0 1px 2px inset;
   -moz-box-shadow: #006cd6 0 1px 2px inset;
@@ -865,19 +859,42 @@ img.imagecache {
 /* line 22, ../scss/_nodes.scss */
 .node p {
   margin-bottom: 1.5em;
+  line-height: 1.7em;
+  text-align: justify;
 }
-/* line 27, ../scss/_nodes.scss */
+/* line 29, ../scss/_nodes.scss */
 .node > div {
   margin-top: 10px;
 }
-/* line 29, ../scss/_nodes.scss */
+/* line 31, ../scss/_nodes.scss */
 .node .field-field-news-image {
   float: right;
-  padding: 5px;
+  margin: 5px 0 0 20px;
 }
-/* line 30, ../scss/_nodes.scss */
+/* line 32, ../scss/_nodes.scss */
 .node .field-field-video-url {
   margin-bottom: 20px;
+}
+/* line 36, ../scss/_nodes.scss */
+.node ul, .node ol {
+  margin-left: 30px;
+}
+/* line 40, ../scss/_nodes.scss */
+.node li {
+  padding: 5px;
+}
+/* line 42, ../scss/_nodes.scss */
+.node ul, .node ul li {
+  list-style-type: disc;
+}
+/* line 46, ../scss/_nodes.scss */
+.node ol, .node ol li {
+  list-style: decimal;
+}
+/* line 49, ../scss/_nodes.scss */
+.node sup {
+  font-size: xx-small;
+  vertical-align: super;
 }
 
 /* Global page header */
@@ -897,7 +914,7 @@ div#header #block-search-0 {
 div#header #block-search-0 .title {
   display: none;
 }
-/* line 70, ../scss/_forms.scss */
+/* line 75, ../scss/_forms.scss */
 div#header #block-search-0 input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
@@ -923,7 +940,7 @@ div#header #block-search-0 input.form-submit {
   color: #7d7d7d;
   text-shadow: white 0 1px 0;
 }
-/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 div#header #block-search-0 input.form-submit:hover {
   background-color: #bdbdbd;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #f2f2f2), color-stop(75%, #bdbdbd));
@@ -933,7 +950,7 @@ div#header #block-search-0 input.form-submit:hover {
   background: -ms-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
   background: linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
 }
-/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 div#header #block-search-0 input.form-submit:active {
   -webkit-box-shadow: #b5b5b5 0 1px 2px inset;
   -moz-box-shadow: #b5b5b5 0 1px 2px inset;
@@ -1246,6 +1263,11 @@ blockquote.orange cite {
 }
 
 /* line 25, ../scss/_layout.scss */
+#header {
+  margin-top: 30px;
+}
+
+/* line 26, ../scss/_layout.scss */
 #content {
   float: left;
   width: 100%;
@@ -1253,23 +1275,23 @@ blockquote.orange cite {
   padding: 0;
 }
 
-/* line 31, ../scss/_layout.scss */
+/* line 32, ../scss/_layout.scss */
 .sidebar {
   float: left;
 }
 
-/* line 34, ../scss/_layout.scss */
+/* line 35, ../scss/_layout.scss */
 #sidebar-second {
   float: right;
 }
 
-/* line 37, ../scss/_layout.scss */
+/* line 38, ../scss/_layout.scss */
 #footer {
   float: none;
   clear: both;
 }
 
-/* line 45, ../scss/_layout.scss */
+/* line 46, ../scss/_layout.scss */
 #header,
 #footer,
 .mission,
@@ -1278,31 +1300,31 @@ blockquote.orange cite {
   clear: both;
 }
 
-/* line 50, ../scss/_layout.scss */
+/* line 51, ../scss/_layout.scss */
 .two-sidebars .center,
 .sidebar-left .center {
   margin-left: 220px;
 }
 
-/* line 54, ../scss/_layout.scss */
+/* line 55, ../scss/_layout.scss */
 #sidebar-first {
   width: 200px;
   margin-right: -220px;
 }
 
-/* line 60, ../scss/_layout.scss */
+/* line 61, ../scss/_layout.scss */
 .two-sidebars .center,
 .sidebar-right .center {
   margin-right: 320px;
 }
 
-/* line 64, ../scss/_layout.scss */
+/* line 65, ../scss/_layout.scss */
 #sidebar-second {
   width: 300px;
 }
 
 /* Styles for the main layout */
-/* line 70, ../scss/_layout.scss */
+/* line 71, ../scss/_layout.scss */
 #bg {
   height: 200%;
   left: -50%;
@@ -1312,7 +1334,7 @@ blockquote.orange cite {
   z-index: -9999;
 }
 
-/* line 78, ../scss/_layout.scss */
+/* line 79, ../scss/_layout.scss */
 #bg img {
   bottom: 0;
   left: 0;
@@ -1324,31 +1346,31 @@ blockquote.orange cite {
   top: 0;
 }
 
-/* line 88, ../scss/_layout.scss */
+/* line 89, ../scss/_layout.scss */
 #content-inner {
   background: #fff;
 }
-/* line 91, ../scss/_layout.scss */
+/* line 92, ../scss/_layout.scss */
 #content-inner #content-top {
   padding: 0 10px;
 }
-/* line 94, ../scss/_layout.scss */
+/* line 95, ../scss/_layout.scss */
 #content-inner #content-top #content-top-left {
   float: left;
   width: 620px;
   margin-right: 27px;
 }
-/* line 99, ../scss/_layout.scss */
+/* line 100, ../scss/_layout.scss */
 #content-inner #content-top #content-top-right {
   width: 293px;
   float: left;
 }
-/* line 105, ../scss/_layout.scss */
+/* line 106, ../scss/_layout.scss */
 #content-inner #content-header {
   clear: both;
   padding: 20px 40px 10px 40px;
 }
-/* line 109, ../scss/_layout.scss */
+/* line 110, ../scss/_layout.scss */
 #content-inner #content-area {
   clear: both;
   padding: 0 40px 30px 40px;
@@ -1794,7 +1816,7 @@ body.page-text-bundles .view-text-bundles .view-filters {
 body.page-text-bundles .view-text-bundles .view-filters form {
   padding: 10px 20px;
 }
-/* line 70, ../scss/_forms.scss */
+/* line 75, ../scss/_forms.scss */
 body.page-text-bundles .view-text-bundles .view-filters form input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
@@ -1820,7 +1842,7 @@ body.page-text-bundles .view-text-bundles .view-filters form input.form-submit {
   color: #7d7d7d;
   text-shadow: white 0 1px 0;
 }
-/* line 10, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 10, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body.page-text-bundles .view-text-bundles .view-filters form input.form-submit:hover {
   background-color: #bdbdbd;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #f2f2f2), color-stop(75%, #bdbdbd));
@@ -1830,7 +1852,7 @@ body.page-text-bundles .view-text-bundles .view-filters form input.form-submit:h
   background: -ms-linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
   background: linear-gradient(#f2f2f2 3%, #bdbdbd 75%);
 }
-/* line 13, ../../../../../../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 13, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.0/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 body.page-text-bundles .view-text-bundles .view-filters form input.form-submit:active {
   -webkit-box-shadow: #b5b5b5 0 1px 2px inset;
   -moz-box-shadow: #b5b5b5 0 1px 2px inset;
