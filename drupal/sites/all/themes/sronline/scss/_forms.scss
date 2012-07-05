@@ -18,6 +18,11 @@
   @include single-box-shadow(#ccc, 0, 0, 1px, 0.1px, inset);
 }
 
+@mixin undo-form-field {
+  width:auto;
+}
+
+.page-admin .form-text{@include undo-form-field;}
 
 .form-text {
   @include form-field;
