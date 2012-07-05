@@ -9,6 +9,29 @@ function sronline_general_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_format';
+  $strongarm->value = array(
+    'node_code' => 'node_code',
+  );
+  $export['node_export_format'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_code';
+  $strongarm->value = 'all';
+  $export['node_export_code'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_filename';
+  $strongarm->value = 'node-export[nid-list]([node-count]-nodes).[timestamp].[format]';
+  $export['node_export_filename'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_home_banner';
   $strongarm->value = 0;
   $export['comment_anonymous_home_banner'] = $strongarm;
@@ -718,6 +741,7 @@ function sronline_general_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'compact_forms_ids';
   $strongarm->value = 'search-block-form
+search-form
 webform-client-form-1
 webform-client-form-5
 views-exposed-form-text-bundles-page-1';
@@ -750,6 +774,20 @@ views-exposed-form-text-bundles-page-1';
   $strongarm->name = 'compact_forms_field_size';
   $strongarm->value = '';
   $export['compact_forms_field_size'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_file_list';
+  $strongarm->value = '10';
+  $export['node_export_file_list'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_existing';
+  $strongarm->value = 'revision';
+  $export['node_export_existing'] = $strongarm;
 
   return $export;
 }
