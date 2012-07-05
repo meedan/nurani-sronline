@@ -79,7 +79,7 @@
 /* === GENERAL BLOCK STYLE === */
 .block, .pane-block {
   @include rounded-box-with-gradient;
-  padding: 18px 27px;
+  padding: 18px 20px 18px 27px; /* Basically "18px 27px" but adds a little grace to the right edge to avoid content falling over */
   margin: 0 0 20px 0;
   background: #fff;
   overflow: visible; /* Box model tweak, expands all blocks */
