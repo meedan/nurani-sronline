@@ -377,7 +377,7 @@ h5 {
 }
 
 /* line 133, ../scss/_typography.scss */
-.content-area a, .sidebar.second a, #content-header a {
+.node.content-area a, .node.sidebar.second a, #content-header a {
   margin-left: -5px;
   padding: 3px 5px;
   display: block;
@@ -386,33 +386,33 @@ h5 {
   color: #4a4a4a;
 }
 /* line 10, ../scss/_typography.scss */
-.content-area a:hover, .sidebar.second a:hover, #content-header a:hover {
+.node.content-area a:hover, .node.sidebar.second a:hover, #content-header a:hover {
   background: #4a4a4a;
   color: #fff;
 }
 /* line 139, ../scss/_typography.scss */
-.content-area .views-admin-links a, .sidebar.second .views-admin-links a, #content-header .views-admin-links a {
+.node.content-area .views-admin-links a, .node.sidebar.second .views-admin-links a, #content-header .views-admin-links a {
   display: inline;
 }
 /* line 144, ../scss/_typography.scss */
-.content-area .tabs a, .sidebar.second .tabs a, #content-header .tabs a {
+.node.content-area .tabs a, .node.sidebar.second .tabs a, #content-header .tabs a {
   display: inline;
   padding: 0 10px;
 }
 /* line 146, ../scss/_typography.scss */
-.content-area a.context-block-region, .sidebar.second a.context-block-region, #content-header a.context-block-region {
+.node.content-area a.context-block-region, .node.sidebar.second a.context-block-region, #content-header a.context-block-region {
   display: none;
 }
 /* line 149, ../scss/_typography.scss */
-.content-area .field-items a, .sidebar.second .field-items a, #content-header .field-items a {
+.node.content-area .field-items a, .node.sidebar.second .field-items a, #content-header .field-items a {
   display: inline;
 }
 /* line 152, ../scss/_typography.scss */
-.content-area .pager a, .sidebar.second .pager a, #content-header .pager a {
+.node.content-area .pager a, .node.sidebar.second .pager a, #content-header .pager a {
   display: inline;
 }
 /* line 156, ../scss/_typography.scss */
-.content-area p a, .content-area .breadcrumb a, .sidebar.second p a, .sidebar.second .breadcrumb a, #content-header p a, #content-header .breadcrumb a {
+.node.content-area p a, .node.content-area .breadcrumb a, .node.sidebar.second p a, .node.sidebar.second .breadcrumb a, #content-header p a, #content-header .breadcrumb a {
   text-decoration: underline;
   display: inline;
   margin: auto;
@@ -421,12 +421,12 @@ h5 {
   width: auto;
 }
 /* line 21, ../scss/_typography.scss */
-.content-area p a:hover, .content-area .breadcrumb a:hover, .sidebar.second p a:hover, .sidebar.second .breadcrumb a:hover, #content-header p a:hover, #content-header .breadcrumb a:hover {
+.node.content-area p a:hover, .node.content-area .breadcrumb a:hover, .node.sidebar.second p a:hover, .node.sidebar.second .breadcrumb a:hover, #content-header p a:hover, #content-header .breadcrumb a:hover {
   background: transparent;
   color: #4a4a4a;
 }
 /* line 161, ../scss/_typography.scss */
-.content-area p a:hover, .content-area .breadcrumb a:hover, .sidebar.second p a:hover, .sidebar.second .breadcrumb a:hover, #content-header p a:hover, #content-header .breadcrumb a:hover {
+.node.content-area p a:hover, .node.content-area .breadcrumb a:hover, .node.sidebar.second p a:hover, .node.sidebar.second .breadcrumb a:hover, #content-header p a:hover, #content-header .breadcrumb a:hover {
   background: yellow;
   text-decoration: underline;
 }

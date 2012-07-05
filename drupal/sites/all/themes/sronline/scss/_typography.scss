@@ -129,7 +129,7 @@ h5 {
 }
 
 
- .content-area, .sidebar.second, #content-header {
+ .node.content-area, .node.sidebar.second, #content-header {
   a {
     @include blocky-link;
   }
@@ -141,7 +141,7 @@ h5 {
     }
   }
   .tabs{
-    a{display:inline; padding:0 10px;}
+    a {display:inline; padding:0 10px;}
   }
   a.context-block-region {
     display: none;
