@@ -327,13 +327,12 @@ function node_export($nids, $format = NULL, $msg_t = 't') {
 function node_export_prepare_node(&$original_node) {
   // Create UUID if it's not there.
   // Currently this uses a module_exists() until UUID becomes a dependency.
-  if (module_exists('uuid')) {
-    if (!uuid_get_uuid('node', 'nid', $original_node->nid)) {
-      $original_node->uuid = uuid_set_uuid('node', 'nid', $original_node->nid);
-      // Save it so future node exports are consistent.
-      node_save($original_node);
-    }
+  if (!uuid_get_uuid('node', 'nid', $original_node->nid)) {
+    $original_node->uuid = uuid_set_uuid('node', 'nid', $original_node->nid);
+    // Save it so future node exports are consistent.
+    node_save($original_node);
   }
+
 
   $node = drupal_clone($original_node);
 
@@ -486,15 +485,40 @@ function node_export_import($code_string, $msg_t = 't') {
   $new_nid = 0;
   $messages = array();
   foreach ($nodes as $original_node) {
+    $skip = FALSE;
     $node = node_export_node_clone($original_node);
+
+    // Handle existing nodes.
+    $uuid_nid = node_export_node_get_by_uuid($node->uuid, TRUE);
+    if (!empty($uuid_nid)) {
+      $existing = variable_get('node_export_existing', 'new');
+      switch ($existing) {
+        case 'new':
+          $node->is_new = TRUE;
+          unset($node->nid);
+          unset($node->uuid);
+          break;
+        case 'revision':
+          $node->nid = $uuid_nid;
+          $node->is_new = FALSE;
+          $node->revision = 1;
+         break;
+        case 'skip':
+          $skip = TRUE;
+          break;
+      }
+    }
 
     // Let other modules do special fixing up.
     drupal_alter('node_export_node', $node, $original_node, 'import');
 
-    node_export_save($node);
-    $new_nodes[] = $node;
-    $messages[] = $msg_t("Imported node !nid: !node", array('!nid' => $node->nid, '!node' => l($node->title, 'node/'. $node->nid)));
-    $count++;
+    if (!$skip) {
+      node_export_save($node);
+      $new_nodes[] = $node;
+      $messages[] = $msg_t("Imported node !nid: !node", array('!nid' => $node->nid, '!node' => l($node->title, 'node/'. $node->nid)));
+      $count++;
+    }
+
   }
   drupal_alter('node_export', $new_nodes, 'after import', $used_format);
   $messages[] = $msg_t("!count of !total nodes were imported.  Some values may have been reset depending on Node export's configuration.", array('!total' => $total, '!count' => $count));
@@ -819,5 +843,32 @@ if (!function_exists('uuid_get_uuid')) {
   function uuid_get_uuid($table, $key, $id) {
     $uuid_table = 'uuid_'. $table;
     return db_result(db_query("SELECT uuid FROM {{$uuid_table}} WHERE $key = %d", $id));
+  }
+}
+
+/**
+ * Returns the node associated with a UUID. Has the same functionality as
+ *   node_get_by_uuid() in uuid.module but does NOT uses db_rewrite_sql.
+ *
+ * @return
+ *   Either the $node object, nid, or FALSE on failure.
+ */
+function node_export_node_get_by_uuid($uuid, $nid_only = FALSE) {
+  $nid = db_result(db_query(
+    "SELECT n.nid
+     FROM {node} AS n
+     INNER JOIN {uuid_node} AS un ON n.nid = un.nid
+     WHERE un.uuid = '%s'",
+    $uuid
+  ));
+
+  if ($nid && !$nid_only) {
+    return node_load($nid);
+  }
+  else if ($nid) {
+    return $nid;
+  }
+  else {
+    return FALSE;
   }
 }

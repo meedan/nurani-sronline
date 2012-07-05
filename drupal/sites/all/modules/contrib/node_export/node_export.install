@@ -13,12 +13,14 @@ function node_export_uninstall() {
   variable_del('node_export_code');
   variable_del('node_export_filename');
   variable_del('node_export_file_list');
-  variable_del('node_export_nodes_without_confirm');
+  variable_del('node_export_existing');
   $types = node_get_types('names');
   foreach ($types as $type => $name) {
     variable_del('node_export_reset_'. $type);
     variable_del('node_export_reset_created_'. $type);
     variable_del('node_export_reset_menu_'. $type);
+    variable_del('node_export_reset_revision_timestamp_'. $type);
+    variable_del('node_export_reset_last_comment_timestamp_'. $type);
     variable_del('node_export_reset_path_'. $type);
     variable_del('node_export_reset_book_mlid_'. $type);
   }
@@ -28,6 +30,7 @@ function node_export_uninstall() {
   variable_del('node_export_bulk_code');
   variable_del('node_export_bulk_filename');
   variable_del('node_export_omitted');
+  variable_del('node_export_nodes_without_confirm');
 }
 
 /**
@@ -56,4 +59,17 @@ function node_export_update_6300() {
     'warning'
   );
   return $ret;
+}
+
+/**
+ * Disable node export CSV.
+ */
+function node_export_update_6301() {
+  if (module_exists('node_export_csv')) {
+    drupal_set_message('<em>Node export CSV</em> is deprecated.  Please delete the ' . drupal_get_path('module', 'node_export_csv') . ' directory from the Drupal installation.', 'warning');
+    module_disable(array('node_export_csv'), FALSE);
+  }
+  return array(
+    array('success' => TRUE, 'query' => 'Node export CSV is deprecated.'),
+  );
 }

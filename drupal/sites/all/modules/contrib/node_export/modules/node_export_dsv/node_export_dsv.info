@@ -1,8 +1,6 @@
-name = Node export features
-description = Adds Features support to Node export
+name = Node export DSV
+description = "Adds DSV format to Node export"
 dependencies[] = node_export
-dependencies[] = uuid
-dependencies[] = features
 core = 6.x
 package = "Node export"
 ; Information added by drupal.org packaging script on 2012-06-17
