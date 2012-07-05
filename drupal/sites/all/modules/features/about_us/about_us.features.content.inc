@@ -213,7 +213,7 @@ function about_us_content_default_fields() {
       'max_filesize_per_file' => '',
       'max_filesize_per_node' => '',
       'label' => 'Resource',
-      'weight' => '-2',
+      'weight' => '4',
       'description' => '',
       'type' => 'filefield_widget',
       'module' => 'filefield',

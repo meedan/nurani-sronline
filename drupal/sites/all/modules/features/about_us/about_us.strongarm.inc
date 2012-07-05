@@ -75,13 +75,13 @@ function about_us_strongarm() {
   $strongarm->name = 'content_extra_weights_basic_page';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '-1',
-    'revision_information' => '0',
-    'author' => '1',
-    'options' => '2',
-    'comment_settings' => '4',
+    'body_field' => '-2',
+    'revision_information' => '-1',
+    'author' => '0',
+    'options' => '1',
+    'comment_settings' => '3',
     'menu' => '-4',
-    'path' => '3',
+    'path' => '2',
   );
   $export['content_extra_weights_basic_page'] = $strongarm;
 
