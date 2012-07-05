@@ -129,7 +129,7 @@ h5 {
 }
 
 
-.content-area,.sidebar.second {
+ .content-area, .sidebar.second, #content-header {
   a {
     @include blocky-link;
   }
@@ -139,6 +139,9 @@ h5 {
     a {
       display: inline;
     }
+  }
+  .tabs{
+    a{display:inline; padding:0 10px;}
   }
   a.context-block-region {
     display: none;
@@ -150,8 +153,9 @@ h5 {
     display: inline;
   }
   
-  p a { 
-    //text-decoration:underline; 
+   p a, .breadcrumb a{ 
+    text-decoration:underline; 
+    display:inline;
     @include undo-blocky-link;
     
     &:hover {
@@ -159,10 +163,9 @@ h5 {
     text-decoration: underline;
     }
   }
-  .node ul, .node ol{ margin-left:30px; padding: 0 0 0 5px;}
-  .node ul {list-style-type:disc; }
-  
-  .node ol{ list-style:decimal;}
-  
-  sup{font-size:xx-small; vertical-align:super;}
+ 
 }
+
+
+
+
