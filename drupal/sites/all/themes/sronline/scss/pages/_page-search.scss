@@ -6,42 +6,15 @@ h1{
 #content-area {
   @include section-colors($news_section_color);
 
-  // The search form
-  #search-form {
-    .form-item {
-      margin: 0;
-    }
-    .container-inline {
-      @include clearfix;
-
-      #edit-keys-wrapper {
-        width: 500px;
-        display: inline-block;
-        margin: 0 30px 10px 0;
-      }
-      .form-submit {
-      }
-    }
-  }
-
-  // The search results
-  & > .box {
+  @include search-results;
+  
+   & > .box {
     .content {
       dl {
         dt {
-          font-size: 1.2em;
-          line-height: 1;
-          margin-bottom: 0.8em;
           a {
-            @include blocky-link-set-size(2);
             @include blocky-link-set-color($news_section_color);
-            display: inline;
           }
-        }
-        dd {
-          margin-bottom: 20px;
-          padding-bottom: 20px;
-          border-bottom: 1px dashed $color_body_text;
         }
       }
     }

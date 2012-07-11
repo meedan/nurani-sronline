@@ -9,6 +9,7 @@
            } */
 /* Green gradient style for the sub-navigation */
 /* Common design elements between the Videos and News page article listings */
+/* Drupal search results page */
 /* line 17, ../../../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -318,44 +319,44 @@ em {
 /* line 69, ../scss/_typography.scss */
 a {
   text-decoration: none;
-  color: #000;
+  color: #5e288c;
 }
-/* line 73, ../scss/_typography.scss */
+/* line 74, ../scss/_typography.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 78, ../scss/_typography.scss */
+/* line 79, ../scss/_typography.scss */
 h1 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
-/* line 82, ../scss/_typography.scss */
+/* line 83, ../scss/_typography.scss */
 h1 a {
   margin-left: -15px !important;
   padding: 9px 15px !important;
 }
 
-/* line 86, ../scss/_typography.scss */
+/* line 87, ../scss/_typography.scss */
 h2, h3, h4 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 91, ../scss/_typography.scss */
+/* line 92, ../scss/_typography.scss */
 h2 a, h3 a, h4 a {
   margin-left: -10px !important;
   padding: 6px 10px !important;
 }
 
-/* line 105, ../scss/_typography.scss */
+/* line 106, ../scss/_typography.scss */
 h5 {
   font-size: 1em;
   font-weight: bold;
 }
 
 /* Drupal messages */
-/* line 111, ../scss/_typography.scss */
+/* line 112, ../scss/_typography.scss */
 .messages {
   padding: 9px;
   margin: 1em 0;
@@ -363,20 +364,20 @@ h5 {
   background: #ccff88;
   border: 1px solid #bbee77;
 }
-/* line 119, ../scss/_typography.scss */
+/* line 120, ../scss/_typography.scss */
 .messages.warning {
   color: #884400;
   background: #ffee66;
   border-color: #eedd55;
 }
-/* line 124, ../scss/_typography.scss */
+/* line 125, ../scss/_typography.scss */
 .messages.error {
   color: white;
   background: #ee6633;
   border-color: #dd5522;
 }
 
-/* line 133, ../scss/_typography.scss */
+/* line 134, ../scss/_typography.scss */
 .node.content-area a, .node.sidebar.second a, #content-header a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -390,29 +391,29 @@ h5 {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 139, ../scss/_typography.scss */
+/* line 140, ../scss/_typography.scss */
 .node.content-area .views-admin-links a, .node.sidebar.second .views-admin-links a, #content-header .views-admin-links a {
   display: inline;
 }
-/* line 144, ../scss/_typography.scss */
+/* line 145, ../scss/_typography.scss */
 .node.content-area .tabs a, .node.sidebar.second .tabs a, #content-header .tabs a {
   display: inline;
   padding: 0 10px;
 }
-/* line 146, ../scss/_typography.scss */
+/* line 147, ../scss/_typography.scss */
 .node.content-area a.context-block-region, .node.sidebar.second a.context-block-region, #content-header a.context-block-region {
   display: none;
 }
-/* line 149, ../scss/_typography.scss */
+/* line 150, ../scss/_typography.scss */
 .node.content-area .field-items a, .node.sidebar.second .field-items a, #content-header .field-items a {
   display: inline;
 }
-/* line 152, ../scss/_typography.scss */
+/* line 153, ../scss/_typography.scss */
 .node.content-area .pager a, .node.sidebar.second .pager a, #content-header .pager a {
   display: inline;
 }
-/* line 156, ../scss/_typography.scss */
-.node.content-area p a, .node.content-area .breadcrumb a, .node.sidebar.second p a, .node.sidebar.second .breadcrumb a, #content-header p a, #content-header .breadcrumb a {
+/* line 157, ../scss/_typography.scss */
+.node.content-area .breadcrumb a, .node.sidebar.second .breadcrumb a, #content-header .breadcrumb a {
   text-decoration: underline;
   display: inline;
   margin: auto;
@@ -421,14 +422,53 @@ h5 {
   width: auto;
 }
 /* line 21, ../scss/_typography.scss */
-.node.content-area p a:hover, .node.content-area .breadcrumb a:hover, .node.sidebar.second p a:hover, .node.sidebar.second .breadcrumb a:hover, #content-header p a:hover, #content-header .breadcrumb a:hover {
+.node.content-area .breadcrumb a:hover, .node.sidebar.second .breadcrumb a:hover, #content-header .breadcrumb a:hover {
   background: transparent;
   color: #4a4a4a;
 }
-/* line 161, ../scss/_typography.scss */
-.node.content-area p a:hover, .node.content-area .breadcrumb a:hover, .node.sidebar.second p a:hover, .node.sidebar.second .breadcrumb a:hover, #content-header p a:hover, #content-header .breadcrumb a:hover {
+/* line 162, ../scss/_typography.scss */
+.node.content-area .breadcrumb a:hover, .node.sidebar.second .breadcrumb a:hover, #content-header .breadcrumb a:hover {
   background: yellow;
   text-decoration: underline;
+}
+
+/* line 170, ../scss/_typography.scss */
+ul, ol {
+  margin-left: 30px;
+}
+
+/* line 174, ../scss/_typography.scss */
+li {
+  padding: 5px;
+}
+
+/* line 176, ../scss/_typography.scss */
+ul, ul li {
+  list-style-type: disc;
+}
+
+/* line 180, ../scss/_typography.scss */
+ol, ol li {
+  list-style: decimal;
+}
+
+/* line 183, ../scss/_typography.scss */
+sup {
+  font-size: xx-small;
+  vertical-align: super;
+}
+
+/* line 188, ../scss/_typography.scss */
+.page-admin {
+  margin: auto;
+  padding: inherit;
+  display: inline;
+  width: auto;
+}
+/* line 21, ../scss/_typography.scss */
+.page-admin:hover {
+  background: transparent;
+  color: #4a4a4a;
 }
 
 /* ImageCache styles */
@@ -874,27 +914,6 @@ img.imagecache {
 /* line 32, ../scss/_nodes.scss */
 .node .field-field-video-url {
   margin-bottom: 20px;
-}
-/* line 36, ../scss/_nodes.scss */
-.node ul, .node ol {
-  margin-left: 30px;
-}
-/* line 40, ../scss/_nodes.scss */
-.node li {
-  padding: 5px;
-}
-/* line 42, ../scss/_nodes.scss */
-.node ul, .node ul li {
-  list-style-type: disc;
-}
-/* line 46, ../scss/_nodes.scss */
-.node ol, .node ol li {
-  list-style: decimal;
-}
-/* line 49, ../scss/_nodes.scss */
-.node sup {
-  font-size: xx-small;
-  vertical-align: super;
 }
 
 /* Global page header */
@@ -1376,134 +1395,8 @@ blockquote.orange cite {
   padding: 0 40px 30px 40px;
 }
 
-/* .wrapper {
-  display: block;
-  height: 2000px;
-  margin: 0 auto;
-  width: 960px;
-}
-#main {
-  display: block;
-  height: 100%;
-  margin-top: 80px;
-  min-height: 1360px;
-  padding: 20px 0 10px 15px;
-  
-  width: 960px;
-}
-@mixin breadcumb {
-
-}
-@mixin content {
-  margin-top: 82px;
-  min-height: 1335px;
-}
-div.main_content {
-  p {
-    color: #000000;
-    display: block;
-    font-family: verdana;
-    font-size: 12px;
-    line-height: 22px;
-    padding: 10px 20px;
-  }
-}
-#contact_us {
-  p {
-    padding: 10px 40px;
-  }
-  .row {
-    float: left;
-    padding: 25px 0 0 40px;
-    width: 500px;
-  }
-  input {
-    background: url(../images/text_field.png) no-repeat;
-    color: #999;
-    height: 38px;
-    padding: 4px 10px 5px;
-    width: 443px;
-  }
-  textarea {
-    background: url(../images/text_area.png) no-repeat;
-    border: none;
-    display: block;
-    font-family: verdana;
-    font-size: 12px;
-    height: 212px;
-    line-height: 22px;
-    padding: 10px;
-    width: 444px;
-  }
-}
-h2 {
-  color: #572983;
-  display: block;
-  font-size: 27px;
-  line-height: 40px;
-  padding: 10px 0 0 22px;
-}
-#banner {
-  img {
-    height: 271px;
-    margin: 0;
-    padding: 5px 5px 0;
-    width: 560px;
-  }
-}
-@mixin rounded {
-  background-image: -moz-linear-gradient(top, #F4F4F4, #F9F9F9);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4));
-  border: 1px solid #b1a6b7;
-}
-div.right_col {
-  .sub_menu {
-    ul {
-      li {
-        border-bottom: 1px dashed #c9c6c4;
-        margin: 10px 22px 0 5px;
-        padding: 10px;
-      }
-      a {
-        &:hover {
-          background: #467707;
-          padding: 10px;
-        }
-      }
-    }
-  }
-  .about_us.newsletter {
-    margin-top: 18px;
-    width: 304px;
-  }
-  .testimonial_box {
-    height: 452px;
-    margin-top: 20px;
-    padding: 10px;
-  }
-  .text_bundles {
-    .title {
-      background: url(../images/text_bundles_03.gif) no-repeat;
-      height: 31px;
-      margin: 28px;
-      width: 137px;
-    }
-    .download {
-      .dl_icon {
-        margin: 5px;
-      }
-      a {
-        padding: 5px;
-        text-decoration: none;
-      }
-    }
-  }
-  #contact_details {
-    height: 286px;
-  }
-} */
 /* Specific site sections and pages */
-/* line 34, ../scss/core.scss */
+/* line 35, ../scss/core.scss */
 body.front {
   /* FRONT PAGE */
 }
@@ -1751,7 +1644,7 @@ body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .vi
   margin-left: 331px;
 }
 
-/* line 37, ../scss/core.scss */
+/* line 38, ../scss/core.scss */
 body.page-text-bundles {
   /* Text Bundles page */
   /* Hide the page title on the  */
@@ -1974,7 +1867,7 @@ body.page-content-contact-us .webform-component {
   width: 450px;
 }
 
-/* line 39, ../scss/core.scss */
+/* line 40, ../scss/core.scss */
 body.page-search {
   /* Drupal search results page */
 }
@@ -1999,28 +1892,28 @@ body.page-search #content-area a:hover {
 body.page-search #content-area h2, body.page-search #content-area h3, body.page-search #content-area h4 {
   color: #ff8b00;
 }
-/* line 11, ../scss/pages/_page-search.scss */
+/* line 5, ../scss/helpers/_search-results.scss */
 body.page-search #content-area #search-form .form-item {
   margin: 0;
 }
-/* line 14, ../scss/pages/_page-search.scss */
+/* line 8, ../scss/helpers/_search-results.scss */
 body.page-search #content-area #search-form .container-inline {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 17, ../scss/pages/_page-search.scss */
+/* line 11, ../scss/helpers/_search-results.scss */
 body.page-search #content-area #search-form .container-inline #edit-keys-wrapper {
   width: 500px;
   display: inline-block;
   margin: 0 30px 10px 0;
 }
-/* line 31, ../scss/pages/_page-search.scss */
+/* line 25, ../scss/helpers/_search-results.scss */
 body.page-search #content-area > .box .content dl dt {
   font-size: 1.2em;
   line-height: 1;
   margin-bottom: 0.8em;
 }
-/* line 35, ../scss/pages/_page-search.scss */
+/* line 29, ../scss/helpers/_search-results.scss */
 body.page-search #content-area > .box .content dl dt a {
   margin-left: -10px !important;
   padding: 6px 10px !important;
@@ -2032,9 +1925,109 @@ body.page-search #content-area > .box .content dl dt a:hover {
   background: #ff8b00;
   color: white;
 }
-/* line 41, ../scss/pages/_page-search.scss */
+/* line 35, ../scss/helpers/_search-results.scss */
 body.page-search #content-area > .box .content dl dd {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #4a4a4a;
+}
+/* line 15, ../scss/pages/_page-search.scss */
+body.page-search #content-area > .box .content dl dt a {
+  color: #ff8b00;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-search #content-area > .box .content dl dt a:hover {
+  background: #ff8b00;
+  color: white;
+}
+
+/* line 2, ../scss/pages/_page-search404.scss */
+body.page-search404 h1 {
+  color: #5e288c;
+}
+/* line 4, ../scss/pages/_page-search404.scss */
+body.page-search404 #content-header .messages, body.page-search404 #breadcrumb {
+  display: none;
+}
+/* line 6, ../scss/pages/_page-search404.scss */
+body.page-search404 h1 {
+  margin-left: 300px;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+/* line 3, ../scss/_pagination.scss */
+body.page-search404 #content-area .item-list ul.pager li.pager-current {
+  background: #5e288c;
+}
+/* line 47, ../scss/_typography.scss */
+body.page-search404 #content-area a {
+  color: #5e288c;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-search404 #content-area a:hover {
+  background: #5e288c;
+  color: white;
+}
+/* line 51, ../scss/_typography.scss */
+body.page-search404 #content-area h2, body.page-search404 #content-area h3, body.page-search404 #content-area h4 {
+  color: #5e288c;
+}
+/* line 16, ../scss/pages/_page-search404.scss */
+body.page-search404 #content-area #message-404 {
+  font-weight: bold;
+  margin-bottom: 1.2em;
+  margin-left: 233px;
+  margin-top: -19px;
+}
+/* line 23, ../scss/pages/_page-search404.scss */
+body.page-search404 #content-area #search-form {
+  margin-left: 150px;
+}
+/* line 5, ../scss/helpers/_search-results.scss */
+body.page-search404 #content-area #search-form .form-item {
+  margin: 0;
+}
+/* line 8, ../scss/helpers/_search-results.scss */
+body.page-search404 #content-area #search-form .container-inline {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 11, ../scss/helpers/_search-results.scss */
+body.page-search404 #content-area #search-form .container-inline #edit-keys-wrapper {
+  width: 500px;
+  display: inline-block;
+  margin: 0 30px 10px 0;
+}
+/* line 25, ../scss/helpers/_search-results.scss */
+body.page-search404 #content-area > .box .content dl dt {
+  font-size: 1.2em;
+  line-height: 1;
+  margin-bottom: 0.8em;
+}
+/* line 29, ../scss/helpers/_search-results.scss */
+body.page-search404 #content-area > .box .content dl dt a {
+  margin-left: -10px !important;
+  padding: 6px 10px !important;
+  color: #ff8b00;
+  display: inline;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-search404 #content-area > .box .content dl dt a:hover {
+  background: #ff8b00;
+  color: white;
+}
+/* line 35, ../scss/helpers/_search-results.scss */
+body.page-search404 #content-area > .box .content dl dd {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #4a4a4a;
+}
+/* line 31, ../scss/pages/_page-search404.scss */
+body.page-search404 #content-area > .box .content dl dt a {
+  color: #5e288c;
+}
+/* line 30, ../scss/_typography.scss */
+body.page-search404 #content-area > .box .content dl dt a:hover {
+  background: #5e288c;
+  color: white;
 }

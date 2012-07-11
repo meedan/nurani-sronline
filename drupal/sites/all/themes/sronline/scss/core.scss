@@ -22,6 +22,7 @@
 @import "helpers/boxes";
 @import "helpers/lists";
 @import "helpers/article-list";
+@import "helpers/search-results";
 
 // Bootstrap the SR-Online site style, the layout.scss includes and renders
 // all styles.
@@ -37,6 +38,7 @@ body.page-videos               { @import "pages/page-videos"; }
 body.page-text-bundles         { @import "pages/page-text-bundles"; }
 body.page-content-contact-us   { @import "pages/page-content-contact-us"; }
 body.page-search               { @import "pages/page-search"; }
+body.page-search404            { @import "pages/page-search404"; }
 
 // Node types
 body.node-type-basic-page      { @import "nodes/node-basic-page"; }

@@ -68,7 +68,8 @@ em{font-style: italic; font-weight: bold;}
 
 a {
   text-decoration: none;
-  color: #000;
+  //color: #000; // changed the general site links
+  color:$videos_section_color;
 
   &:hover {
     text-decoration: underline;
@@ -153,7 +154,7 @@ h5 {
     display: inline;
   }
   
-   p a, .breadcrumb a{ 
+  .breadcrumb a{ 
     text-decoration:underline; 
     display:inline;
     @include undo-blocky-link;
@@ -166,6 +167,24 @@ h5 {
  
 }
 
-
+ ul,ol{ 
+     margin-left:30px; 
+ }
+ 
+ li {padding:5px;}
+ 
+ ul, ul li{
+    list-style-type:disc;
+    
+ }
+ ol, ol li{ 
+    list-style:decimal;
+ }
+ sup{
+    font-size:xx-small;
+    vertical-align:super;
+ }
+ 
+ .page-admin{@include undo-blocky-link;}
 
 
