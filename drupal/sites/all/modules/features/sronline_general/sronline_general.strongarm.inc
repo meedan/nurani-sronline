@@ -51,29 +51,6 @@ function sronline_general_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_format';
-  $strongarm->value = array(
-    'node_code' => 'node_code',
-  );
-  $export['node_export_format'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_code';
-  $strongarm->value = 'all';
-  $export['node_export_code'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_export_filename';
-  $strongarm->value = 'node-export[nid-list]([node-count]-nodes).[timestamp].[format]';
-  $export['node_export_filename'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_home_banner';
   $strongarm->value = 0;
   $export['comment_anonymous_home_banner'] = $strongarm;
@@ -820,6 +797,43 @@ views-exposed-form-text-bundles-page-1';
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_video_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_video_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_pattern';
+  $strongarm->value = '[title-raw]';
+  $export['pathauto_node_webform_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_format';
+  $strongarm->value = array(
+    'node_code' => 'node_code',
+  );
+  $export['node_export_format'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_code';
+  $strongarm->value = 'all';
+  $export['node_export_code'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_export_filename';
+  $strongarm->value = 'node-export[nid-list]([node-count]-nodes).[timestamp].[format]';
+  $export['node_export_filename'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_export_file_list';
   $strongarm->value = '10';
   $export['node_export_file_list'] = $strongarm;
@@ -879,20 +893,6 @@ views-exposed-form-text-bundles-page-1';
   $strongarm->name = 'pathauto_node_video__pattern';
   $strongarm->value = '';
   $export['pathauto_node_video__pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_video_en_pattern';
-  $strongarm->value = '';
-  $export['pathauto_node_video_en_pattern'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_webform_pattern';
-  $strongarm->value = '[title-raw]';
-  $export['pathauto_node_webform_pattern'] = $strongarm;
 
   return $export;
 }

@@ -110,6 +110,10 @@ function sronline_general_node_export_features_default() {
     \'title\' => \'About SR\',
     \'body\' => \'<p>&nbsp;</p>
 <p>Lorem <strong>ipsum dolor</strong> sit amet, consectetur adipiscing elit. Nunc sagittis sodales vulputate. Integer porttitor, eros id iaculis mollis, <em>urna felis </em>consequat quam, id tincidunt dolor turpis vel sem. <a name="new ancor">Quisque quis</a> pharetra ipsum. Fusce tempor consequat facilisis. Morbi eros lorem, porta a porta varius, feugiat vel magna. Sed vulputate vestibulum cursus. Aliquam a vulputate mi. In rutrum eleifend felis, non tempor lorem vulputate a.</p>
+<ul>
+	<li>
+		&nbsp;</li>
+</ul>
 <p>Nulla lacinia, ante a sagittis bibendum, elit risus ultricies sem, 18<sup>th</sup> sollicitudin malesuada massa magna nec ante. Donec et lacus nulla, ut interdum nunc. Sed interdum erat vitae mi consectetur eleifend. Aenean euismod justo vel felis lobortis sed ornare mi porta. Donec ut massa erat, sit amet molest</p>
 <ul>
 	<li>

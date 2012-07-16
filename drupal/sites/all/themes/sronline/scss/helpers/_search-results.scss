@@ -27,8 +27,6 @@
           line-height: 1;
           margin-bottom: 0.8em;
           a {
-            @include blocky-link-set-size(2);
-            @include blocky-link-set-color($news_section_color);
             display: inline;
           }
         }
