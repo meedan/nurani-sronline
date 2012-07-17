@@ -130,7 +130,7 @@ h5 {
 }
 
 
- .node.content-area, .node.sidebar.second, #content-header {
+ .content-area, .sidebar.second, #content-header {
   a {
     @include blocky-link;
   }
