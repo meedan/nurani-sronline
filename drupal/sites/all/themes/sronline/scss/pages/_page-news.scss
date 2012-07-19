@@ -5,13 +5,13 @@ h1{color:$news_section_color;}
   & > .attachment {
       .views-field-field-news-image-fid{
           float:left;
-          margin-top:-85px;
+          margin-top:-57px;
            a{
               @include undo-blocky-link;
             }
       }
       
-      .views-field-title,.views-field-body {
+      .views-field-title,.views-field-view-node {
         margin-left: 331px;
       }
 
@@ -21,7 +21,7 @@ h1{color:$news_section_color;}
   
   @include article-list;
   
-   &.view-display-id-page_1 > .view-content {
+   &.view-display-id-page_1 > .views-field-view-node {
     .views-row {
       .views-field-title,.views-field-body {
         margin-left: 130px;

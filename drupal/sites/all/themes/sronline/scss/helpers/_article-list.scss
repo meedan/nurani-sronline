@@ -21,6 +21,13 @@
         margin-bottom: 0;
       }
 
+      .views-field-view-node{
+        a{
+          display:inline;
+          margin-left:2px;
+        }
+      }
+
      
     }
   }
@@ -35,6 +42,7 @@
       &.views-row-last {
         border-bottom: none;
       }
+
     }
   }
 
