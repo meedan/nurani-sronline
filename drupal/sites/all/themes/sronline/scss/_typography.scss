@@ -73,6 +73,8 @@ a {
 
   &:hover {
     text-decoration: underline;
+    //@include blocky-link;
+    display:inline;
   }
 }
 
@@ -131,9 +133,14 @@ h5 {
 
 
  .content-area, .sidebar.second, #content-header {
-  a {
-    @include blocky-link;
-  }
+ /* a {
+    @include undo-blocky-link;
+    color:$videos_section_color;
+  }*/
+  h3, h4{
+      a{@include blocky-link;}
+  } 
+   
 
   // Undo aspects of the blocky-link style in some areas
   .views-admin-links {
