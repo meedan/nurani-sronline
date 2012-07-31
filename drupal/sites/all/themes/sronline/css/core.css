@@ -324,39 +324,41 @@ a {
 /* line 74, ../scss/_typography.scss */
 a:hover {
   text-decoration: underline;
+  /*@include blocky-link;*/
+  display: inline;
 }
 
-/* line 79, ../scss/_typography.scss */
+/* line 81, ../scss/_typography.scss */
 h1 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
-/* line 83, ../scss/_typography.scss */
+/* line 85, ../scss/_typography.scss */
 h1 a {
   margin-left: -15px !important;
   padding: 9px 15px !important;
 }
 
-/* line 87, ../scss/_typography.scss */
+/* line 89, ../scss/_typography.scss */
 h2, h3, h4 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 92, ../scss/_typography.scss */
+/* line 94, ../scss/_typography.scss */
 h2 a, h3 a, h4 a {
   margin-left: -10px !important;
   padding: 6px 10px !important;
 }
 
-/* line 106, ../scss/_typography.scss */
+/* line 108, ../scss/_typography.scss */
 h5 {
   font-size: 1em;
   font-weight: bold;
 }
 
 /* Drupal messages */
-/* line 112, ../scss/_typography.scss */
+/* line 114, ../scss/_typography.scss */
 .messages {
   padding: 9px;
   margin: 1em 0;
@@ -364,21 +366,28 @@ h5 {
   background: #ccff88;
   border: 1px solid #bbee77;
 }
-/* line 120, ../scss/_typography.scss */
+/* line 122, ../scss/_typography.scss */
 .messages.warning {
   color: #884400;
   background: #ffee66;
   border-color: #eedd55;
 }
-/* line 125, ../scss/_typography.scss */
+/* line 127, ../scss/_typography.scss */
 .messages.error {
   color: white;
   background: #ee6633;
   border-color: #dd5522;
 }
 
-/* line 134, ../scss/_typography.scss */
-.content-area a, .sidebar.second a, #content-header a {
+/* line 135, ../scss/_typography.scss */
+.content-area, .sidebar.second, #content-header {
+  /* a {
+     @include undo-blocky-link;
+     color:$videos_section_color;
+   }*/
+}
+/* line 141, ../scss/_typography.scss */
+.content-area h3 a, .content-area h4 a, .sidebar.second h3 a, .sidebar.second h4 a, #content-header h3 a, #content-header h4 a {
   margin-left: -5px;
   padding: 3px 5px;
   display: block;
@@ -387,32 +396,32 @@ h5 {
   color: #4a4a4a;
 }
 /* line 10, ../scss/_typography.scss */
-.content-area a:hover, .sidebar.second a:hover, #content-header a:hover {
+.content-area h3 a:hover, .content-area h4 a:hover, .sidebar.second h3 a:hover, .sidebar.second h4 a:hover, #content-header h3 a:hover, #content-header h4 a:hover {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 140, ../scss/_typography.scss */
+/* line 147, ../scss/_typography.scss */
 .content-area .views-admin-links a, .sidebar.second .views-admin-links a, #content-header .views-admin-links a {
   display: inline;
 }
-/* line 145, ../scss/_typography.scss */
+/* line 152, ../scss/_typography.scss */
 .content-area .tabs a, .sidebar.second .tabs a, #content-header .tabs a {
   display: inline;
   padding: 0 10px;
 }
-/* line 147, ../scss/_typography.scss */
+/* line 154, ../scss/_typography.scss */
 .content-area a.context-block-region, .sidebar.second a.context-block-region, #content-header a.context-block-region {
   display: none;
 }
-/* line 150, ../scss/_typography.scss */
+/* line 157, ../scss/_typography.scss */
 .content-area .field-items a, .sidebar.second .field-items a, #content-header .field-items a {
   display: inline;
 }
-/* line 153, ../scss/_typography.scss */
+/* line 160, ../scss/_typography.scss */
 .content-area .pager a, .sidebar.second .pager a, #content-header .pager a {
   display: inline;
 }
-/* line 157, ../scss/_typography.scss */
+/* line 164, ../scss/_typography.scss */
 .content-area .breadcrumb a, .sidebar.second .breadcrumb a, #content-header .breadcrumb a {
   text-decoration: underline;
   display: inline;
@@ -426,39 +435,39 @@ h5 {
   background: transparent;
   color: #4a4a4a;
 }
-/* line 162, ../scss/_typography.scss */
+/* line 169, ../scss/_typography.scss */
 .content-area .breadcrumb a:hover, .sidebar.second .breadcrumb a:hover, #content-header .breadcrumb a:hover {
   background: yellow;
   text-decoration: underline;
 }
 
-/* line 170, ../scss/_typography.scss */
+/* line 177, ../scss/_typography.scss */
 ul, ol {
   margin-left: 30px;
 }
 
-/* line 174, ../scss/_typography.scss */
+/* line 181, ../scss/_typography.scss */
 li {
   padding: 5px;
 }
 
-/* line 176, ../scss/_typography.scss */
+/* line 183, ../scss/_typography.scss */
 ul, ul li {
   list-style-type: disc;
 }
 
-/* line 180, ../scss/_typography.scss */
+/* line 187, ../scss/_typography.scss */
 ol, ol li {
   list-style: decimal;
 }
 
-/* line 183, ../scss/_typography.scss */
+/* line 190, ../scss/_typography.scss */
 sup {
   font-size: xx-small;
   vertical-align: super;
 }
 
-/* line 188, ../scss/_typography.scss */
+/* line 195, ../scss/_typography.scss */
 .page-admin {
   margin: auto;
   padding: inherit;
