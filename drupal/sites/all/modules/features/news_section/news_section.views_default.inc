@@ -239,10 +239,11 @@ function news_section_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('items_per_page', 4);
-  $handler->override_option('offset', 1);
+  $handler->override_option('offset', 2);
   $handler->override_option('use_pager', '1');
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->override_option('title', 'Scriptural Reasoning News');
+  $handler->override_option('offset', 1);
   $handler->override_option('path', 'news');
   $handler->override_option('menu', array(
     'type' => 'none',
@@ -449,6 +450,7 @@ function news_section_views_default_views() {
     ),
   ));
   $handler->override_option('items_per_page', 1);
+  $handler->override_option('offset', 0);
   $handler->override_option('attachment_position', 'before');
   $handler->override_option('inherit_arguments', TRUE);
   $handler->override_option('inherit_exposed_filters', FALSE);
