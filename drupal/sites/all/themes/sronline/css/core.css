@@ -1389,28 +1389,29 @@ blockquote.orange cite {
 /* line 89, ../scss/_layout.scss */
 #content-inner {
   background: #fff;
+  float: left;
 }
-/* line 92, ../scss/_layout.scss */
+/* line 93, ../scss/_layout.scss */
 #content-inner #content-top {
   padding: 0 10px;
 }
-/* line 95, ../scss/_layout.scss */
+/* line 96, ../scss/_layout.scss */
 #content-inner #content-top #content-top-left {
   float: left;
   width: 620px;
   margin-right: 27px;
 }
-/* line 100, ../scss/_layout.scss */
+/* line 101, ../scss/_layout.scss */
 #content-inner #content-top #content-top-right {
   width: 293px;
   float: left;
 }
-/* line 106, ../scss/_layout.scss */
+/* line 107, ../scss/_layout.scss */
 #content-inner #content-header {
   clear: both;
   padding: 20px 40px 10px 40px;
 }
-/* line 110, ../scss/_layout.scss */
+/* line 111, ../scss/_layout.scss */
 #content-inner #content-area {
   clear: both;
   padding: 0 40px 30px 40px;
