@@ -10,7 +10,7 @@
 /* Green gradient style for the sub-navigation */
 /* Common design elements between the Videos and News page article listings */
 /* Drupal search results page */
-/* line 17, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -32,45 +32,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, /Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -82,7 +82,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * Browser Reset
  * -------------
  * For a more complete reset, go to http://developer.yahoo.com/yui/reset/ */
-/* line 9, ../scss/_default.scss */
+/* line 9, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 * {
   margin: 0;
   padding: 0;
@@ -91,11 +91,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Clear Floats Without Structural Markup
  * ---------------------------------------
  * http://www.positioniseverything.net/easyclearing.html */
-/* line 17, ../scss/_default.scss */
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .clearfix {
   display: inline-block;
 }
-/* line 19, ../scss/_default.scss */
+/* line 19, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -105,41 +105,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* Hides from IE-mac \ */
-/* line 27, ../scss/_default.scss */
+/* line 27, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 30, ../scss/_default.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .clearfix {
   display: block;
 }
 
 /* End hide from IE-mac */
 /* clear classes */
-/* line 36, ../scss/_default.scss */
+/* line 36, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .clearleft, .clearl, .cleft {
   clear: left;
 }
 
-/* line 39, ../scss/_default.scss */
+/* line 39, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .clearright, .clearr, .cright {
   clear: right;
 }
 
-/* line 42, ../scss/_default.scss */
+/* line 42, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .clear, .clearboth, .clearall {
   clear: both;
 }
 
 /* Float classes */
-/* line 46, ../scss/_default.scss */
+/* line 46, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .floatleft, .fleft, .floatl {
   float: left;
   margin: 0 10px 5px 0;
 }
 
-/* line 50, ../scss/_default.scss */
+/* line 50, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .floatright, .fright, .floatr {
   float: right;
   margin: 0 0 5px 10px;
@@ -149,7 +149,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * ---------------------------
  * This link useful for both visually impaired people and those with mobility impairments
  * who cannot use a mouse. http://www.webaim.org/techniques/css/invisiblecontent/ */
-/* line 60, ../scss/_default.scss */
+/* line 60, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 #skip a:link, #skip a:hover, #skip a:visited {
   position: absolute;
   left: -10000px;
@@ -158,7 +158,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: 1px;
   overflow: hidden;
 }
-/* line 67, ../scss/_default.scss */
+/* line 67, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 #skip a:active, #skip a:focus {
   position: static;
   width: auto;
@@ -166,17 +166,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* bug fix with views 2 edit links. */
-/* line 73, ../scss/_default.scss */
+/* line 73, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 div.view div.views-admin-links {
   width: auto;
 }
 
 /* Rollover edit links for blocks. */
-/* line 77, ../scss/_default.scss */
+/* line 77, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 div.block {
   position: relative;
 }
-/* line 79, ../scss/_default.scss */
+/* line 79, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 div.block .edit {
   display: none;
   position: absolute;
@@ -194,20 +194,20 @@ div.block .edit {
   -moz-box-shadow: 0 1px 3px #888888;
   -webkit-box-shadow: -1px 1px 2px #666666;
 }
-/* line 95, ../scss/_default.scss */
+/* line 95, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 div.block .edit a {
   display: block;
   border: 0;
   padding: 0;
   margin: 0;
 }
-/* line 100, ../scss/_default.scss */
+/* line 100, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 div.block:hover .edit {
   display: block;
 }
 
 /* Wireframe styles. */
-/* line 118, ../scss/_default.scss */
+/* line 118, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .with-wireframes #header,
 .with-wireframes #content-top,
 .with-wireframes #content-top > *,
@@ -225,63 +225,63 @@ div.block:hover .edit {
   padding: 2px;
   border: 1px solid #bbbbbb;
 }
-/* line 121, ../scss/_default.scss */
+/* line 121, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .with-wireframes .node {
   border-bottom: 1px solid #bbbbbb;
   margin-bottom: 10px;
 }
-/* line 124, ../scss/_default.scss */
+/* line 124, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .with-wireframes .block {
   margin-bottom: 3px;
 }
-/* line 129, ../scss/_default.scss */
+/* line 129, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .with-wireframes #content-top,
 .with-wireframes #content-header,
 .with-wireframes #content-area,
 .with-wireframes #content-bottom {
   margin: 0 3px 3px;
 }
-/* line 131, ../scss/_default.scss */
+/* line 131, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .with-wireframes #footer {
   margin-top: 3px;
   padding: 2px;
   border: 1px solid #cccccc;
 }
-/* line 137, ../scss/_default.scss */
+/* line 137, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .with-wireframes.with-navigation #content,
 .with-wireframes.with-navigation .sidebar {
   margin-top: 50px;
 }
-/* line 139, ../scss/_default.scss */
+/* line 139, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_default.scss */
 .with-wireframes #navigation {
   height: 50px;
 }
 
 /*  */
 /* Standard Drupal pagination */
-/* line 9, ../scss/_pagination.scss */
+/* line 9, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 .item-list {
   overflow: hidden;
   *zoom: 1;
   clear: both;
 }
-/* line 13, ../scss/_pagination.scss */
+/* line 13, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 .item-list ul.pager {
   text-align: right;
   padding: 5px 0;
 }
-/* line 17, ../scss/_pagination.scss */
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 .item-list ul.pager li {
   margin: 0;
   padding: 0;
 }
-/* line 21, ../scss/_pagination.scss */
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 .item-list ul.pager li.pager-current {
   padding: 5px 8px;
   background: #4a4a4a;
   color: #fff;
 }
-/* line 29, ../scss/_pagination.scss */
+/* line 29, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 .item-list ul.pager li a {
   padding: 5px 8px;
   margin: 0;
@@ -297,7 +297,7 @@ div.block:hover .edit {
           A multiplier indicating the growth factor, eg: 1.2 */
 /* Helper to apply colourized blocky-link style a site section or .block */
 /* === SITE TYPOGRAPHY === */
-/* line 58, ../scss/_typography.scss */
+/* line 58, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body {
   font-family: verdana;
   font-size: 12px;
@@ -305,60 +305,60 @@ body {
   color: #4a4a4a;
 }
 
-/* line 66, ../scss/_typography.scss */
+/* line 66, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 67, ../scss/_typography.scss */
+/* line 67, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 em {
   font-style: italic;
   font-weight: bold;
 }
 
-/* line 69, ../scss/_typography.scss */
+/* line 69, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 a {
   text-decoration: none;
   color: #5e288c;
 }
-/* line 74, ../scss/_typography.scss */
+/* line 74, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 a:hover {
   text-decoration: underline;
   /*@include blocky-link;*/
   display: inline;
 }
 
-/* line 81, ../scss/_typography.scss */
+/* line 81, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 h1 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
-/* line 85, ../scss/_typography.scss */
+/* line 85, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 h1 a {
   margin-left: -15px !important;
   padding: 9px 15px !important;
 }
 
-/* line 89, ../scss/_typography.scss */
+/* line 89, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 h2, h3, h4 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 94, ../scss/_typography.scss */
+/* line 94, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 h2 a, h3 a, h4 a {
   margin-left: -10px !important;
   padding: 6px 10px !important;
 }
 
-/* line 108, ../scss/_typography.scss */
+/* line 108, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 h5 {
   font-size: 1em;
   font-weight: bold;
 }
 
 /* Drupal messages */
-/* line 114, ../scss/_typography.scss */
+/* line 114, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .messages {
   padding: 9px;
   margin: 1em 0;
@@ -366,27 +366,27 @@ h5 {
   background: #ccff88;
   border: 1px solid #bbee77;
 }
-/* line 122, ../scss/_typography.scss */
+/* line 122, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .messages.warning {
   color: #884400;
   background: #ffee66;
   border-color: #eedd55;
 }
-/* line 127, ../scss/_typography.scss */
+/* line 127, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .messages.error {
   color: white;
   background: #ee6633;
   border-color: #dd5522;
 }
 
-/* line 135, ../scss/_typography.scss */
+/* line 135, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area, .sidebar.second, #content-header {
   /* a {
      @include undo-blocky-link;
      color:$videos_section_color;
    }*/
 }
-/* line 141, ../scss/_typography.scss */
+/* line 141, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area h3 a, .content-area h4 a, .sidebar.second h3 a, .sidebar.second h4 a, #content-header h3 a, #content-header h4 a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -395,33 +395,33 @@ h5 {
   width: 100%;
   color: #4a4a4a;
 }
-/* line 10, ../scss/_typography.scss */
+/* line 10, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area h3 a:hover, .content-area h4 a:hover, .sidebar.second h3 a:hover, .sidebar.second h4 a:hover, #content-header h3 a:hover, #content-header h4 a:hover {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 147, ../scss/_typography.scss */
+/* line 147, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area .views-admin-links a, .sidebar.second .views-admin-links a, #content-header .views-admin-links a {
   display: inline;
 }
-/* line 152, ../scss/_typography.scss */
+/* line 152, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area .tabs a, .sidebar.second .tabs a, #content-header .tabs a {
   display: inline;
   padding: 0 10px;
 }
-/* line 154, ../scss/_typography.scss */
+/* line 154, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area a.context-block-region, .sidebar.second a.context-block-region, #content-header a.context-block-region {
   display: none;
 }
-/* line 157, ../scss/_typography.scss */
+/* line 157, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area .field-items a, .sidebar.second .field-items a, #content-header .field-items a {
   display: inline;
 }
-/* line 160, ../scss/_typography.scss */
+/* line 160, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area .pager a, .sidebar.second .pager a, #content-header .pager a {
   display: inline;
 }
-/* line 164, ../scss/_typography.scss */
+/* line 164, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area .breadcrumb a, .sidebar.second .breadcrumb a, #content-header .breadcrumb a {
   text-decoration: underline;
   display: inline;
@@ -430,58 +430,58 @@ h5 {
   display: inline;
   width: auto;
 }
-/* line 21, ../scss/_typography.scss */
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area .breadcrumb a:hover, .sidebar.second .breadcrumb a:hover, #content-header .breadcrumb a:hover {
   background: transparent;
   color: #4a4a4a;
 }
-/* line 169, ../scss/_typography.scss */
+/* line 169, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .content-area .breadcrumb a:hover, .sidebar.second .breadcrumb a:hover, #content-header .breadcrumb a:hover {
   background: yellow;
   text-decoration: underline;
 }
 
-/* line 177, ../scss/_typography.scss */
+/* line 177, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 ul, ol {
   margin-left: 30px;
 }
 
-/* line 181, ../scss/_typography.scss */
+/* line 181, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 li {
   padding: 5px;
 }
 
-/* line 183, ../scss/_typography.scss */
+/* line 183, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 ul, ul li {
   list-style-type: disc;
 }
 
-/* line 187, ../scss/_typography.scss */
+/* line 187, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 ol, ol li {
   list-style: decimal;
 }
 
-/* line 190, ../scss/_typography.scss */
+/* line 190, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 sup {
   font-size: xx-small;
   vertical-align: super;
 }
 
-/* line 195, ../scss/_typography.scss */
+/* line 195, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .page-admin {
   margin: auto;
   padding: inherit;
   display: inline;
   width: auto;
 }
-/* line 21, ../scss/_typography.scss */
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .page-admin:hover {
   background: transparent;
   color: #4a4a4a;
 }
 
 /* ImageCache styles */
-/* line 2, ../scss/_image-styles.scss */
+/* line 2, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_image-styles.scss */
 img.imagecache {
   padding: 3px;
   border: solid 1px #c9c6c4;
@@ -493,25 +493,25 @@ img.imagecache {
 /* Helpers to remove the background and rounded corners style from a block */
 /* Helper to manage the look of blocks in the top region.  This is reused by
    the panels homepage layout */
-/* line 59, ../scss/_blocks.scss */
+/* line 59, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #content-top #block-views-Featured_video_home-block_1 {
   padding: 3px;
   width: 293px;
   float: right;
 }
-/* line 64, ../scss/_blocks.scss */
+/* line 64, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #content-top #block-webform-client-block-1 {
   width: 243px;
   height: 83px;
   float: right;
 }
-/* line 69, ../scss/_blocks.scss */
+/* line 69, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #content-top #block-webform-client-block-1 .form-text {
   width: 130px;
 }
 
 /* === GENERAL BLOCK STYLE === */
-/* line 80, ../scss/_blocks.scss */
+/* line 80, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 .block, .pane-block {
   background-image: -moz-linear-gradient(top, #f4f4f4, #f9f9f9);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4));
@@ -528,7 +528,7 @@ img.imagecache {
   overflow: visible;
   /* Box model tweak, expands all blocks */
 }
-/* line 87, ../scss/_blocks.scss */
+/* line 87, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 .block .title, .pane-block .title {
   height: 21px;
   /* 24px - 3px padding */
@@ -543,7 +543,7 @@ img.imagecache {
 
 /* ==== GLOBALLY VISIBLE BLOCKS ==== */
 /* Menu current sub-tree block */
-/* line 95, ../scss/_blocks.scss */
+/* line 95, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-menu_block-1 {
   background: #e7eede;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e7eede));
@@ -552,11 +552,11 @@ img.imagecache {
   background: -o-linear-gradient(#ffffff, #e7eede);
   background: linear-gradient(#ffffff, #e7eede);
 }
-/* line 98, ../scss/_blocks.scss */
+/* line 98, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-menu_block-1 .title {
   display: none;
 }
-/* line 101, ../scss/_blocks.scss */
+/* line 101, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-menu_block-1 ul {
   padding: 0;
   margin: 0;
@@ -577,36 +577,36 @@ img.imagecache {
 #block-menu_block-1 ul li a {
   color: #2a4704;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 #block-menu_block-1 ul li a:hover {
   background: #2a4704;
   color: white;
 }
 
 /* Featured text bundles block */
-/* line 28, ../scss/_blocks.scss */
+/* line 28, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .title {
   color: #2a4704;
   background: url(../images/title_blip_green.png) 0 0 no-repeat;
 }
-/* line 3, ../scss/_pagination.scss */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 #block-views-text_bundles_featured-block_1 .item-list ul.pager li.pager-current {
   background: #2a4704;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 a {
   color: #2a4704;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 a:hover {
   background: #2a4704;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 h2, #block-views-text_bundles_featured-block_1 h3, #block-views-text_bundles_featured-block_1 h4 {
   color: #2a4704;
 }
-/* line 111, ../scss/_blocks.scss */
+/* line 111, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul {
   padding: 0;
   margin: 0;
@@ -617,7 +617,7 @@ img.imagecache {
   margin: 0;
   list-style: none;
 }
-/* line 114, ../scss/_blocks.scss */
+/* line 114, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li {
   padding: 0 0 15px 51px;
   background: url(../images/pdf_icon.gif) 0 2px no-repeat;
@@ -626,110 +626,110 @@ img.imagecache {
 #block-views-text_bundles_featured-block_1 .view-content ul li .field-content a {
   color: #2a4704;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li .field-content a:hover {
   background: #2a4704;
   color: white;
 }
 
 /* Featured testimonials block */
-/* line 40, ../scss/_blocks.scss */
+/* line 40, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .title {
-  color: #666666;
-  background: url(../images/title_blip_grey.png) 0 0 no-repeat;
+  color: #5e288c;
+  background: url(../images/title_blip_purple.png) 0 0 no-repeat;
 }
-/* line 124, ../scss/_blocks.scss */
+/* line 124, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row {
   margin-bottom: 20px;
   background: url(../images/close_quote.png) no-repeat bottom right;
 }
-/* line 129, ../scss/_blocks.scss */
+/* line 129, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body .field-content {
   background: url(../images/open_quote.png) no-repeat 0 0;
   padding-top: 15px;
 }
-/* line 133, ../scss/_blocks.scss */
+/* line 133, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body p {
   text-indent: 50px;
 }
-/* line 137, ../scss/_blocks.scss */
+/* line 137, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-field-quoted-from-value {
   text-align: right;
 }
-/* line 139, ../scss/_blocks.scss */
+/* line 139, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-field-quoted-from-value .field-content {
   padding-right: 50px;
   color: #666666;
 }
 
 /* Newsletter block */
-/* line 22, ../scss/_blocks.scss */
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-webform-client-block-1 .title {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
 }
-/* line 151, ../scss/_blocks.scss */
+/* line 151, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email {
   float: left;
 }
-/* line 153, ../scss/_blocks.scss */
+/* line 153, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email .form-item {
   margin: 0;
 }
-/* line 157, ../scss/_blocks.scss */
+/* line 157, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-webform-client-block-1 .form-text {
   width: 130px;
 }
-/* line 160, ../scss/_blocks.scss */
+/* line 160, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-webform-client-block-1 #edit-actions {
   float: left;
   margin-left: 10px;
 }
 
 /* Featured News block */
-/* line 22, ../scss/_blocks.scss */
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .title {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
 }
-/* line 3, ../scss/_pagination.scss */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 #block-views-news_articles_featured-block_1 .item-list ul.pager li.pager-current {
   background: #ff8b00;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 #block-views-news_articles_featured-block_1 a {
   color: #ff8b00;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 #block-views-news_articles_featured-block_1 a:hover {
   background: #ff8b00;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 #block-views-news_articles_featured-block_1 h2, #block-views-news_articles_featured-block_1 h3, #block-views-news_articles_featured-block_1 h4 {
   color: #ff8b00;
 }
-/* line 172, ../scss/_blocks.scss */
+/* line 172, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-row {
   clear: left;
   margin-bottom: 20px;
 }
-/* line 176, ../scss/_blocks.scss */
+/* line 176, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-field-news-image-fid {
   float: left;
 }
-/* line 179, ../scss/_blocks.scss */
+/* line 179, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-title, #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-body {
   margin-left: 88px;
 }
 
 /* Common CSS between the textfield and textarea elements */
-/* line 25, ../scss/_forms.scss */
+/* line 25, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .page-admin .form-text {
   width: auto;
 }
 
-/* line 27, ../scss/_forms.scss */
+/* line 27, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .form-text {
   width: 100%;
   top: 4px;
@@ -748,12 +748,12 @@ img.imagecache {
   height: 23px;
 }
 
-/* line 31, ../scss/_forms.scss */
+/* line 31, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .resizable-textarea {
   width: 100%;
 }
 
-/* line 34, ../scss/_forms.scss */
+/* line 34, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .form-textarea {
   width: 100%;
   top: 4px;
@@ -772,7 +772,7 @@ img.imagecache {
   padding: 10px 11px;
 }
 
-/* line 41, ../scss/_forms.scss */
+/* line 41, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .form-submit {
   font-size: 12px;
   padding: 0.3em 1.5em;
@@ -823,14 +823,14 @@ img.imagecache {
   box-shadow: none;
 }
 
-/* line 45, ../scss/_forms.scss */
+/* line 45, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .textarea-identifier {
   color: #979797;
   font-size: 0.8em;
 }
 
 /* CSS to fit the compact_forms plugin better into the sronline theme */
-/* line 56, ../scss/_forms.scss */
+/* line 56, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .compact-form .compact-form-label {
   color: #7d7d7d;
   font-weight: normal;
@@ -838,17 +838,17 @@ img.imagecache {
   top: 6px;
   left: 12px;
 }
-/* line 63, ../scss/_forms.scss */
+/* line 63, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .compact-form .compact-form-label:hover {
   color: #cacaca;
 }
-/* line 66, ../scss/_forms.scss */
+/* line 66, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 .compact-form .compact-form-label:hover .form-required {
   color: #ff9999;
 }
 
 /* Grey form style */
-/* line 7, ../scss/_nodes.scss */
+/* line 7, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_nodes.scss */
 .node .links {
   margin-top: 20px;
   -webkit-border-radius: 0.2em;
@@ -857,7 +857,7 @@ img.imagecache {
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
 }
-/* line 11, ../scss/_nodes.scss */
+/* line 11, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_nodes.scss */
 .node .links a {
   margin: auto;
   padding: inherit;
@@ -887,7 +887,7 @@ img.imagecache {
   color: #e6e6e6;
   text-shadow: #0078f0 0 -1px 0;
 }
-/* line 21, ../scss/_typography.scss */
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .node .links a:hover {
   background: transparent;
   color: #4a4a4a;
@@ -916,48 +916,48 @@ img.imagecache {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 15, ../scss/_nodes.scss */
+/* line 15, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_nodes.scss */
 .node .links a:hover {
   color: #fff;
 }
-/* line 22, ../scss/_nodes.scss */
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_nodes.scss */
 .node p {
   margin-bottom: 1.5em;
   line-height: 1.7em;
   text-align: justify;
 }
-/* line 29, ../scss/_nodes.scss */
+/* line 29, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_nodes.scss */
 .node > div {
   margin-top: 10px;
 }
-/* line 31, ../scss/_nodes.scss */
+/* line 31, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_nodes.scss */
 .node .field-field-news-image {
   float: right;
   margin: 5px 0 0 20px;
 }
-/* line 32, ../scss/_nodes.scss */
+/* line 32, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_nodes.scss */
 .node .field-field-video-url {
   margin-bottom: 20px;
 }
 
 /* Global page header */
-/* line 4, ../scss/_header.scss */
+/* line 4, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_header.scss */
 div#header a.logo {
   height: 128px;
   width: 296px;
 }
-/* line 10, ../scss/_header.scss */
+/* line 10, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_header.scss */
 div#header #block-search-0 {
   background: transparent;
   border: none;
   float: right;
   margin: 10px;
 }
-/* line 53, ../scss/_blocks.scss */
+/* line 53, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 div#header #block-search-0 .title {
   display: none;
 }
-/* line 75, ../scss/_forms.scss */
+/* line 75, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 div#header #block-search-0 input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
@@ -1007,16 +1007,16 @@ div#header #block-search-0 input.form-submit.disabled, div#header #block-search-
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 17, ../scss/_header.scss */
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_header.scss */
 div#header #block-search-0 .form-text {
   width: 153px;
   height: 25px;
 }
-/* line 22, ../scss/_header.scss */
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_header.scss */
 div#header #block-search-0 .compact-form-label {
   top: -1px;
 }
-/* line 26, ../scss/_header.scss */
+/* line 26, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_header.scss */
 div#header #search_bar {
   float: right;
   height: 46px;
@@ -1024,7 +1024,7 @@ div#header #search_bar {
   position: relative;
   width: 240px;
 }
-/* line 33, ../scss/_header.scss */
+/* line 33, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_header.scss */
 div#header #searchinput {
   background-color: transparent;
   border: 0;
@@ -1038,7 +1038,7 @@ div#header #searchinput {
   top: 51px;
   width: 184px;
 }
-/* line 46, ../scss/_header.scss */
+/* line 46, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_header.scss */
 div#header #submit_btn {
   height: 40px;
   margin-top: 5px;
@@ -1049,7 +1049,7 @@ div#header #submit_btn {
   width: 50px;
 }
 
-/* line 3, ../scss/_navigation.scss */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 #block-menu_block-2 {
   background: transparent;
   border: none;
@@ -1057,12 +1057,12 @@ div#header #submit_btn {
   margin: 0;
   padding: 0;
 }
-/* line 53, ../scss/_blocks.scss */
+/* line 53, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 #block-menu_block-2 .title {
   display: none;
 }
 
-/* line 10, ../scss/_navigation.scss */
+/* line 10, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 {
   width: 960px;
   height: 41px;
@@ -1074,7 +1074,7 @@ div#header #submit_btn {
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
 }
-/* line 19, ../scss/_navigation.scss */
+/* line 19, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul {
   padding: 0;
   margin: 0;
@@ -1086,7 +1086,7 @@ div#header #submit_btn {
   margin: 0;
   list-style: none;
 }
-/* line 23, ../scss/_navigation.scss */
+/* line 23, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li {
   display: block;
   float: left;
@@ -1094,11 +1094,11 @@ div#header #submit_btn {
   position: relative;
   z-index: 500;
 }
-/* line 30, ../scss/_navigation.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li.last {
   background: none;
 }
-/* line 35, ../scss/_navigation.scss */
+/* line 35, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li > a {
   display: block;
   text-transform: uppercase;
@@ -1107,7 +1107,7 @@ div#header #submit_btn {
   padding: 3px 5px;
   margin: 9px 10px;
 }
-/* line 43, ../scss/_navigation.scss */
+/* line 43, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li > a.active, .menu-block-2 > ul > li > a:hover {
   text-decoration: none;
   background: #2b5006;
@@ -1117,7 +1117,7 @@ div#header #submit_btn {
   -o-border-radius: 0.4em;
   border-radius: 0.4em;
 }
-/* line 51, ../scss/_navigation.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li > ul {
   display: none;
   position: absolute;
@@ -1163,12 +1163,12 @@ div#header #submit_btn {
 .menu-block-2 > ul > li > ul li a {
   color: #2a4704;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .menu-block-2 > ul > li > ul li a:hover {
   background: #2a4704;
   color: white;
 }
-/* line 61, ../scss/_navigation.scss */
+/* line 61, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li > ul a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -1177,12 +1177,12 @@ div#header #submit_btn {
   width: 100%;
   color: #4a4a4a;
 }
-/* line 10, ../scss/_typography.scss */
+/* line 10, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 .menu-block-2 > ul > li > ul a:hover {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 75, ../scss/_navigation.scss */
+/* line 75, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li.expanded:hover {
   background: white;
   -moz-border-radius-topleft: 0.5em;
@@ -1195,53 +1195,53 @@ div#header #submit_btn {
   -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
-/* line 81, ../scss/_navigation.scss */
+/* line 81, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li.expanded:hover > a {
   background: none;
   color: #2b5006;
 }
-/* line 86, ../scss/_navigation.scss */
+/* line 86, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_navigation.scss */
 .menu-block-2 > ul > li.expanded:hover ul {
   display: block;
 }
 
-/* line 1, ../scss/_footer.scss */
+/* line 1, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_footer.scss */
 #footer {
   margin-top: 20px !important;
   margin-bottom: 50px !important;
 }
-/* line 5, ../scss/_footer.scss */
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_footer.scss */
 #footer .footer {
   background: url(../images/footer_img.gif) no-repeat 0 0;
   width: 960px;
   height: 60px;
   margin-bottom: 10px;
 }
-/* line 11, ../scss/_footer.scss */
+/* line 11, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_footer.scss */
 #footer .footer.footer-logos {
   text-align: center;
 }
-/* line 13, ../scss/_footer.scss */
+/* line 13, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_footer.scss */
 #footer .footer.footer-logos a, #footer .footer.footer-logos > img {
   display: inline-block;
   margin-right: 20px;
   padding-top: 5px;
 }
-/* line 20, ../scss/_footer.scss */
+/* line 20, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_footer.scss */
 #footer .footer.footer-info {
   color: #7d7d7d;
   font-size: 0.8em;
 }
-/* line 24, ../scss/_footer.scss */
+/* line 24, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_footer.scss */
 #footer .footer.footer-info .footer-info-left {
   float: left;
   margin: 10px 0 0 20px;
 }
-/* line 27, ../scss/_footer.scss */
+/* line 27, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_footer.scss */
 #footer .footer.footer-info .footer-info-left p span {
   padding-right: 15px;
 }
-/* line 31, ../scss/_footer.scss */
+/* line 31, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_footer.scss */
 #footer .footer.footer-info .footer-info-right {
   float: right;
   margin: 10px 20px 0 0;
@@ -1249,7 +1249,7 @@ div#header #submit_btn {
 }
 
 /*purpule Quote*/
-/* line 4, ../scss/_testimonial.scss */
+/* line 4, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
 blockquote.purpule {
   background-image: url(../images/open_quote.png);
   background-position: top left;
@@ -1258,7 +1258,7 @@ blockquote.purpule {
   padding: 16px 0 10px 10px;
   text-indent: 36px;
 }
-/* line 11, ../scss/_testimonial.scss */
+/* line 11, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
 blockquote.purpule span {
   display: block;
   background-image: url(../images/close_quote.png);
@@ -1266,13 +1266,13 @@ blockquote.purpule span {
   background-position: bottom right;
   padding-bottom: 10px;
 }
-/* line 19, ../scss/_testimonial.scss */
+/* line 19, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
 blockquote.purpule cite {
   color: #5e2c8d;
   font-weight: bold;
 }
 
-/* line 24, ../scss/_testimonial.scss */
+/* line 24, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
 blockquote.orange {
   background-image: url(../images/orange_openquote.png);
   background-position: top left;
@@ -1281,7 +1281,7 @@ blockquote.orange {
   padding: 16px 0 10px 10px;
   text-indent: 36px;
 }
-/* line 31, ../scss/_testimonial.scss */
+/* line 31, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
 blockquote.orange span {
   display: block;
   background-image: url(../images/orange_closequote.png);
@@ -1289,7 +1289,7 @@ blockquote.orange span {
   background-position: bottom right;
   padding-bottom: 10px;
 }
-/* line 38, ../scss/_testimonial.scss */
+/* line 38, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_testimonial.scss */
 blockquote.orange cite {
   color: #f15518;
   font-weight: bold;
@@ -1429,19 +1429,19 @@ body.front #content-inner {
 body.front #content-inner #content-area {
   padding: 0 10px;
 }
-/* line 59, ../scss/_blocks.scss */
+/* line 59, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 body.front #block-views-Featured_video_home-block_1 {
   padding: 3px;
   width: 293px;
   float: right;
 }
-/* line 64, ../scss/_blocks.scss */
+/* line 64, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 body.front #block-webform-client-block-1 {
   width: 243px;
   height: 83px;
   float: right;
 }
-/* line 69, ../scss/_blocks.scss */
+/* line 69, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_blocks.scss */
 body.front #block-webform-client-block-1 .form-text {
   width: 130px;
 }
@@ -1451,7 +1451,7 @@ body.front #block-views-home_page_banner-block_1 {
   width: 611px;
   float: left;
 }
-/* line 8, ../scss/_image-styles.scss */
+/* line 8, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_image-styles.scss */
 body.front #block-views-home_page_banner-block_1 img.imagecache {
   padding: inherit;
   border: none;
@@ -1463,7 +1463,7 @@ body.front #block-views-home_page_banner-block_1 a {
   display: inline;
   width: auto;
 }
-/* line 21, ../scss/_typography.scss */
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.front #block-views-home_page_banner-block_1 a:hover {
   background: transparent;
   color: #4a4a4a;
@@ -1521,20 +1521,20 @@ body.front .panel-display .center-wrapper .panel-panel {
 body.page-news h1 {
   color: #ff8b00;
 }
-/* line 3, ../scss/_pagination.scss */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 body.page-news .view-news-articles .item-list ul.pager li.pager-current {
   background: #ff8b00;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-news .view-news-articles a {
   color: #ff8b00;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-news .view-news-articles a:hover {
   background: #ff8b00;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-news .view-news-articles h2, body.page-news .view-news-articles h3, body.page-news .view-news-articles h4 {
   color: #ff8b00;
 }
@@ -1550,7 +1550,7 @@ body.page-news .view-news-articles > .attachment .views-field-field-news-image-f
   display: inline;
   width: auto;
 }
-/* line 21, ../scss/_typography.scss */
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-news .view-news-articles > .attachment .views-field-field-news-image-fid a:hover {
   background: transparent;
   color: #4a4a4a;
@@ -1606,7 +1606,7 @@ body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views
   display: inline;
   width: auto;
 }
-/* line 21, ../scss/_typography.scss */
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a:hover {
   background: transparent;
   color: #4a4a4a;
@@ -1616,20 +1616,20 @@ body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views
 body.page-videos h1 {
   color: #5e288c;
 }
-/* line 3, ../scss/_pagination.scss */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 body.page-videos .view-video-articles .item-list ul.pager li.pager-current {
   background: #5e288c;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-videos .view-video-articles a {
   color: #5e288c;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-videos .view-video-articles a:hover {
   background: #5e288c;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-videos .view-video-articles h2, body.page-videos .view-video-articles h3, body.page-videos .view-video-articles h4 {
   color: #5e288c;
 }
@@ -1739,7 +1739,7 @@ body.page-text-bundles .view-text-bundles .view-filters {
 body.page-text-bundles .view-text-bundles .view-filters form {
   padding: 10px 20px;
 }
-/* line 75, ../scss/_forms.scss */
+/* line 75, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_forms.scss */
 body.page-text-bundles .view-text-bundles .view-filters form input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
@@ -1826,20 +1826,20 @@ body.page-text-bundles .view-text-bundles .view-filters form .views-submit-butto
 body.page-text-bundles .view-text-bundles .view-filters form .views-submit-button input {
   margin: 0;
 }
-/* line 3, ../scss/_pagination.scss */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul.pager li.pager-current {
   background: #2a4704;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content a {
   color: #2a4704;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content a:hover {
   background: #2a4704;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content h2, body.page-text-bundles .view-text-bundles .view-content h3, body.page-text-bundles .view-text-bundles .view-content h4 {
   color: #2a4704;
 }
@@ -1890,7 +1890,7 @@ body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a {
   color: #2a4704;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a:hover {
   background: #2a4704;
   color: white;
@@ -1913,20 +1913,20 @@ body.page-search {
 body.page-search h1 {
   color: #ff8b00;
 }
-/* line 3, ../scss/_pagination.scss */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 body.page-search #content-area .item-list ul.pager li.pager-current {
   background: #ff8b00;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-search #content-area a {
   color: #ff8b00;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-search #content-area a:hover {
   background: #ff8b00;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-search #content-area h2, body.page-search #content-area h3, body.page-search #content-area h4 {
   color: #ff8b00;
 }
@@ -1965,7 +1965,7 @@ body.page-search #content-area > .box .content dl dd {
 body.page-search #content-area > .box .content dl dt a {
   color: #ff8b00;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-search #content-area > .box .content dl dt a:hover {
   background: #ff8b00;
   color: white;
@@ -1985,20 +1985,20 @@ body.page-search404 h1 {
   margin-top: 20px;
   font-weight: bolder;
 }
-/* line 3, ../scss/_pagination.scss */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_pagination.scss */
 body.page-search404 #content-area .item-list ul.pager li.pager-current {
   background: #5e288c;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-search404 #content-area a {
   color: #5e288c;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-search404 #content-area a:hover {
   background: #5e288c;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-search404 #content-area h2, body.page-search404 #content-area h3, body.page-search404 #content-area h4 {
   color: #5e288c;
 }
@@ -2048,7 +2048,7 @@ body.page-search404 #content-area > .box .content dl dd {
 body.page-search404 #content-area > .box .content dl dt a {
   color: #5e288c;
 }
-/* line 30, ../scss/_typography.scss */
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/meedan-sronline/drupal/sites/all/themes/sronline/scss/_typography.scss */
 body.page-search404 #content-area > .box .content dl dt a:hover {
   background: #5e288c;
   color: white;
