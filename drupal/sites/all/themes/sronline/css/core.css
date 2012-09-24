@@ -1694,12 +1694,12 @@ body.page-text-bundles #content-header {
 }
 /* line 9, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles #block-boxes-text_bundles_intro {
-  height: 320px;
+  /*height: 320px;*/
   padding: 0;
 }
 /* line 13, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles #block-boxes-text_bundles_intro .block-inner {
-  padding: 70px;
+  padding: 40px;
   color: #7d7d7d;
 }
 /* line 17, ../scss/pages/_page-text-bundles.scss */
