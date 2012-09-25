@@ -27,7 +27,7 @@
 @mixin block-text-bundles-section {
   .title {
     color: $text_bundles_section_color;
-    background: url(../images/title_blip_green.png) 0 0 no-repeat;
+    background: url(../images/title_blip_green2.png) 0 0 no-repeat;
   }
 }
 @mixin block-videos-section {
@@ -123,11 +123,11 @@
 
   .views-row {
     margin-bottom: 20px;
-    background: url(../images/close_quote.png) no-repeat bottom right;
+    background: url(../images/purpule_closequote.png) no-repeat bottom right;
 
     .views-field-body {
       .field-content {
-        background: url(../images/open_quote.png) no-repeat 0 0; // TODO: Coloured quotes!
+        background: url(../images/purpule_openquote.png) no-repeat 0 0; // TODO: Coloured quotes!
         padding-top: 15px;
       }
       p {

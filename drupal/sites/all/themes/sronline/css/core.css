@@ -575,36 +575,36 @@ img.imagecache {
 }
 /* line 41, ../scss/helpers/_lists.scss */
 #block-menu_block-1 ul li a {
-  color: #2a4704;
+  color: #477707;
 }
 /* line 30, ../scss/_typography.scss */
 #block-menu_block-1 ul li a:hover {
-  background: #2a4704;
+  background: #477707;
   color: white;
 }
 
 /* Featured text bundles block */
 /* line 28, ../scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .title {
-  color: #2a4704;
-  background: url(../images/title_blip_green.png) 0 0 no-repeat;
+  color: #477707;
+  background: url(../images/title_blip_green2.png) 0 0 no-repeat;
 }
 /* line 3, ../scss/_pagination.scss */
 #block-views-text_bundles_featured-block_1 .item-list ul.pager li.pager-current {
-  background: #2a4704;
+  background: #477707;
 }
 /* line 47, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 a {
-  color: #2a4704;
+  color: #477707;
 }
 /* line 30, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 a:hover {
-  background: #2a4704;
+  background: #477707;
   color: white;
 }
 /* line 51, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 h2, #block-views-text_bundles_featured-block_1 h3, #block-views-text_bundles_featured-block_1 h4 {
-  color: #2a4704;
+  color: #477707;
 }
 /* line 111, ../scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul {
@@ -624,11 +624,11 @@ img.imagecache {
 }
 /* line 21, ../scss/helpers/_lists.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li .field-content a {
-  color: #2a4704;
+  color: #477707;
 }
 /* line 30, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li .field-content a:hover {
-  background: #2a4704;
+  background: #477707;
   color: white;
 }
 
@@ -641,11 +641,11 @@ img.imagecache {
 /* line 124, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row {
   margin-bottom: 20px;
-  background: url(../images/close_quote.png) no-repeat bottom right;
+  background: url(../images/purpule_closequote.png) no-repeat bottom right;
 }
 /* line 129, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body .field-content {
-  background: url(../images/open_quote.png) no-repeat 0 0;
+  background: url(../images/purpule_openquote.png) no-repeat 0 0;
   padding-top: 15px;
 }
 /* line 133, ../scss/_blocks.scss */
@@ -1161,11 +1161,11 @@ div#header #submit_btn {
 }
 /* line 41, ../scss/helpers/_lists.scss */
 .menu-block-2 > ul > li > ul li a {
-  color: #2a4704;
+  color: #477707;
 }
 /* line 30, ../scss/_typography.scss */
 .menu-block-2 > ul > li > ul li a:hover {
-  background: #2a4704;
+  background: #477707;
   color: white;
 }
 /* line 61, ../scss/_navigation.scss */
@@ -1829,20 +1829,20 @@ body.page-text-bundles .view-text-bundles .view-filters form .views-submit-butto
 }
 /* line 3, ../scss/_pagination.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul.pager li.pager-current {
-  background: #2a4704;
+  background: #477707;
 }
 /* line 47, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content a {
-  color: #2a4704;
+  color: #477707;
 }
 /* line 30, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content a:hover {
-  background: #2a4704;
+  background: #477707;
   color: white;
 }
 /* line 51, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content h2, body.page-text-bundles .view-text-bundles .view-content h3, body.page-text-bundles .view-text-bundles .view-content h4 {
-  color: #2a4704;
+  color: #477707;
 }
 /* line 83, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list {
@@ -1868,8 +1868,8 @@ body.page-text-bundles .view-text-bundles .view-content .item-list h3 {
   font-size: 1.4em;
   font-weight: lighter;
   color: black;
-  color: #2a4704;
-  background: url(../images/title_blip_green.png) 0 0 no-repeat;
+  color: #477707;
+  background: url(../images/title_blip_green2.png) 0 0 no-repeat;
 }
 /* line 101, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul {
@@ -1889,11 +1889,11 @@ body.page-text-bundles .view-text-bundles .view-content .item-list ul li {
 }
 /* line 21, ../scss/helpers/_lists.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a {
-  color: #2a4704;
+  color: #477707;
 }
 /* line 30, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content .item-list ul li .field-content a:hover {
-  background: #2a4704;
+  background: #477707;
   color: white;
 }
 
