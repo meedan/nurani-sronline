@@ -168,9 +168,10 @@ function about_us_content_default_fields() {
     'field_name' => 'field_resource',
     'type_name' => 'basic_page',
     'display_settings' => array(
+      'weight' => '4',
+      'parent' => '',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
