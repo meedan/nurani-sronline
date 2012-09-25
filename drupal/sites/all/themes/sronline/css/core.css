@@ -1418,7 +1418,7 @@ blockquote.orange cite {
 }
 
 /* Specific site sections and pages */
-/* line 28, ../scss/core.scss */
+/* line 29, ../scss/core.scss */
 body.front {
   /* FRONT PAGE */
 }
@@ -1676,7 +1676,7 @@ body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .vi
   margin-left: 331px;
 }
 
-/* line 31, ../scss/core.scss */
+/* line 32, ../scss/core.scss */
 body.page-text-bundles {
   /* Text Bundles page */
   /* Hide the page title on the  */
@@ -1906,7 +1906,7 @@ body.page-content-contact-us .webform-component {
   width: 450px;
 }
 
-/* line 33, ../scss/core.scss */
+/* line 34, ../scss/core.scss */
 body.page-search {
   /* Drupal search results page */
 }
@@ -2053,4 +2053,14 @@ body.page-search404 #content-area > .box .content dl dt a {
 body.page-search404 #content-area > .box .content dl dt a:hover {
   background: #5e288c;
   color: white;
+}
+
+/* line 5, ../scss/helpers/_doc-styles.scss */
+body.node-type-basic-page .node-inner .filefield-icon {
+  margin: 0 10px -12px 0;
+}
+
+/* line 5, ../scss/helpers/_doc-styles.scss */
+body.node-type-news-articles .node-inner .filefield-icon {
+  margin: 0 10px -12px 0;
 }

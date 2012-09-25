@@ -11,6 +11,7 @@
 
 // Helper mixins
 @import "helpers/general";
+@import "helpers/doc-styles";
 @import "helpers/sronline-button";
 @import "helpers/boxes";
 @import "helpers/lists";
@@ -36,4 +37,5 @@ body.page-search404            { @import "pages/page-search404"; }
 // Node types
 body.node-type-basic-page      { @import "nodes/node-basic-page"; }
 body.node-type-webform         { @import "nodes/node-webform"; }
+body.node-type-news-articles   { @import "nodes/node-news-page"; }
 
