@@ -40,6 +40,8 @@
 }
 .form-submit {
   @include sronline-button($news_section_color);
+  margin-left:6px;
+  margin-top:2px;
 }
 // CKEditor info
 .textarea-identifier {

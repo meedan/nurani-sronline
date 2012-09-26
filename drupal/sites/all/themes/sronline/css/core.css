@@ -683,7 +683,7 @@ img.imagecache {
 /* line 160, ../scss/_blocks.scss */
 #block-webform-client-block-1 #edit-actions {
   float: left;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
 }
 
 /* Featured News block */
@@ -797,6 +797,8 @@ img.imagecache {
   border: 1px solid #e67d00;
   color: white;
   text-shadow: #f08300 0 -1px 0;
+  margin-left: 6px;
+  margin-top: 2px;
 }
 /* line 16, ../../../../../../../../../../../Users/zeebalogun/.rvm/gems/ruby-1.9.3-p194/gems/sassy-buttons-0.1.1/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 .form-submit:hover {
@@ -823,14 +825,14 @@ img.imagecache {
   box-shadow: none;
 }
 
-/* line 45, ../scss/_forms.scss */
+/* line 47, ../scss/_forms.scss */
 .textarea-identifier {
   color: #979797;
   font-size: 0.8em;
 }
 
 /* CSS to fit the compact_forms plugin better into the sronline theme */
-/* line 56, ../scss/_forms.scss */
+/* line 58, ../scss/_forms.scss */
 .compact-form .compact-form-label {
   color: #7d7d7d;
   font-weight: normal;
@@ -838,11 +840,11 @@ img.imagecache {
   top: 6px;
   left: 12px;
 }
-/* line 63, ../scss/_forms.scss */
+/* line 65, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover {
   color: #cacaca;
 }
-/* line 66, ../scss/_forms.scss */
+/* line 68, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover .form-required {
   color: #ff9999;
 }
@@ -957,7 +959,7 @@ div#header #block-search-0 {
 div#header #block-search-0 .title {
   display: none;
 }
-/* line 75, ../scss/_forms.scss */
+/* line 77, ../scss/_forms.scss */
 div#header #block-search-0 input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
@@ -1104,7 +1106,7 @@ div#header #submit_btn {
   text-transform: uppercase;
   font-size: 1.1em;
   color: #fff;
-  padding: 3px 5px;
+  padding: 3px 20px;
   margin: 9px 10px;
 }
 /* line 43, ../scss/_navigation.scss */
@@ -1740,7 +1742,7 @@ body.page-text-bundles .view-text-bundles .view-filters {
 body.page-text-bundles .view-text-bundles .view-filters form {
   padding: 10px 20px;
 }
-/* line 75, ../scss/_forms.scss */
+/* line 77, ../scss/_forms.scss */
 body.page-text-bundles .view-text-bundles .view-filters form input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
