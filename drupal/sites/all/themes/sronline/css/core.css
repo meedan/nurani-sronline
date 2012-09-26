@@ -2055,12 +2055,20 @@ body.page-search404 #content-area > .box .content dl dt a:hover {
   color: white;
 }
 
-/* line 5, ../scss/helpers/_doc-styles.scss */
+/* line 4, ../scss/helpers/_doc-styles.scss */
+body.node-type-basic-page .node-inner .filefield-file {
+  padding: 10px;
+}
+/* line 10, ../scss/helpers/_doc-styles.scss */
 body.node-type-basic-page .node-inner .filefield-icon {
   margin: 0 10px -12px 0;
 }
 
-/* line 5, ../scss/helpers/_doc-styles.scss */
+/* line 4, ../scss/helpers/_doc-styles.scss */
+body.node-type-news-articles .node-inner .filefield-file {
+  padding: 10px;
+}
+/* line 10, ../scss/helpers/_doc-styles.scss */
 body.node-type-news-articles .node-inner .filefield-icon {
   margin: 0 10px -12px 0;
 }
