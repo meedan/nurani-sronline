@@ -125,11 +125,11 @@
 
         <div class="footer footer-info">
           <div class="footer-info-left">
-            <p>Faculty of Divinity, West Road, Cambridge CB3 9BS</p>
+            <p> Cambridge Inter-faith Programme, Faculty of Divinity, West Road, Cambridge. CB3 9BS.</p>
             <p>
-              <span>Telephone: +44 (0) 1223 763002</span>
-              <span>Fax: +44 (0) 1223 763003</span>
-              <span>Email: <a href="mailto:faculty-office@divinity.cam.ac.uk">faculty-office@divinity.cam.ac.uk</a></span>
+              <span>Telephone: +44 (0)1223 763 013</span>
+              <!-- <span>Fax: +44 (0) 1223 763003</span> -->
+              <span>Email: <a href="mailto:team@interfaith.cam.ac.uk ">team@interfaith.cam.ac.uk </a></span>
             </p>
           </div>
           <div class="footer-info-right">

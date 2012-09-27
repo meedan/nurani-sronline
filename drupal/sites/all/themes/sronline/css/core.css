@@ -534,7 +534,7 @@ img.imagecache {
   /* 24px - 3px padding */
   padding: 3px 0 0 21px;
   margin-bottom: 22px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background: url(../images/title_blip_black.png) 0 0 no-repeat;
   font-size: 1.4em;
   font-weight: lighter;
@@ -724,14 +724,15 @@ img.imagecache {
 }
 
 /* Common CSS between the textfield and textarea elements */
-/* line 25, ../scss/_forms.scss */
+/* line 27, ../scss/_forms.scss */
 .page-admin .form-text {
   width: auto;
 }
 
-/* line 27, ../scss/_forms.scss */
+/* line 29, ../scss/_forms.scss */
 .form-text {
   width: 100%;
+  /*width: 450px;*/
   top: 4px;
   padding: 3px 10px;
   color: #171717;
@@ -748,14 +749,15 @@ img.imagecache {
   height: 23px;
 }
 
-/* line 31, ../scss/_forms.scss */
+/* line 33, ../scss/_forms.scss */
 .resizable-textarea {
   width: 100%;
 }
 
-/* line 34, ../scss/_forms.scss */
+/* line 36, ../scss/_forms.scss */
 .form-textarea {
   width: 100%;
+  /*width: 450px;*/
   top: 4px;
   padding: 3px 10px;
   color: #171717;
@@ -772,7 +774,7 @@ img.imagecache {
   padding: 10px 11px;
 }
 
-/* line 41, ../scss/_forms.scss */
+/* line 43, ../scss/_forms.scss */
 .form-submit {
   font-size: 12px;
   padding: 0.3em 1.5em;
@@ -825,14 +827,14 @@ img.imagecache {
   box-shadow: none;
 }
 
-/* line 47, ../scss/_forms.scss */
+/* line 49, ../scss/_forms.scss */
 .textarea-identifier {
   color: #979797;
   font-size: 0.8em;
 }
 
 /* CSS to fit the compact_forms plugin better into the sronline theme */
-/* line 58, ../scss/_forms.scss */
+/* line 60, ../scss/_forms.scss */
 .compact-form .compact-form-label {
   color: #7d7d7d;
   font-weight: normal;
@@ -840,11 +842,11 @@ img.imagecache {
   top: 6px;
   left: 12px;
 }
-/* line 65, ../scss/_forms.scss */
+/* line 67, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover {
   color: #cacaca;
 }
-/* line 68, ../scss/_forms.scss */
+/* line 70, ../scss/_forms.scss */
 .compact-form .compact-form-label:hover .form-required {
   color: #ff9999;
 }
@@ -959,7 +961,7 @@ div#header #block-search-0 {
 div#header #block-search-0 .title {
   display: none;
 }
-/* line 77, ../scss/_forms.scss */
+/* line 79, ../scss/_forms.scss */
 div#header #block-search-0 input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
@@ -1703,7 +1705,7 @@ body.page-text-bundles #block-boxes-text_bundles_intro {
 /* line 13, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles #block-boxes-text_bundles_intro .block-inner {
   padding: 40px;
-  color: #7d7d7d;
+  color: #4a4a4a;
 }
 /* line 17, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles #block-boxes-text_bundles_intro .block-inner .block-title {
@@ -1713,7 +1715,7 @@ body.page-text-bundles #block-boxes-text_bundles_intro .block-inner .block-title
   background: none;
   font-size: 1.8em;
   margin-bottom: 1.0em;
-  color: #7d7d7d;
+  color: #4a4a4a;
 }
 /* line 23, ../scss/pages/_page-text-bundles.scss */
 body.page-text-bundles #block-boxes-text_bundles_intro .block-inner .content {
@@ -1742,7 +1744,7 @@ body.page-text-bundles .view-text-bundles .view-filters {
 body.page-text-bundles .view-text-bundles .view-filters form {
   padding: 10px 20px;
 }
-/* line 77, ../scss/_forms.scss */
+/* line 79, ../scss/_forms.scss */
 body.page-text-bundles .view-text-bundles .view-filters form input.form-submit {
   font-size: 1.2em;
   padding: 0.3em 1.5em;
@@ -1865,7 +1867,7 @@ body.page-text-bundles .view-text-bundles .view-content .item-list h3 {
   /* 24px - 3px padding */
   padding: 3px 0 0 21px;
   margin-bottom: 22px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background: url(../images/title_blip_black.png) 0 0 no-repeat;
   font-size: 1.4em;
   font-weight: lighter;
@@ -2064,6 +2066,11 @@ body.node-type-basic-page .node-inner .filefield-file {
 /* line 10, ../scss/helpers/_doc-styles.scss */
 body.node-type-basic-page .node-inner .filefield-icon {
   margin: 0 10px -12px 0;
+}
+
+/* line 6, ../scss/nodes/_node-webform.scss */
+body.node-type-webform .node-type-webform .node-inner .resizable-textarea, body.node-type-webform .node-type-webform .node-inner .form-text {
+  width: 450px;
 }
 
 /* line 4, ../scss/helpers/_doc-styles.scss */
