@@ -4,7 +4,9 @@
 
 /* Common CSS between the textfield and textarea elements */
 @mixin form-field {
+  
   width: 100%;
+  /*width: 450px;*/
   top: 4px;
   padding: 3px 10px;
   // font-size: 10px;
