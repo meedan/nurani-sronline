@@ -12,13 +12,13 @@
 
   .block-inner {
     padding: 40px;
-    color: $color_body_text_light;
+    color: $color_body_text;
 
     .block-title {
       @include undo-block-title;
       font-size: 1.8em;
       margin-bottom: 1.0em;
-      color: $color_body_text_light;
+      color: $color_body_text;
     }
     .content {
       font-size: 1.2em;
