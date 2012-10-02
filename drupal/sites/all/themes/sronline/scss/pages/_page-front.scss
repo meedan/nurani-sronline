@@ -26,15 +26,16 @@
 
     .views-field-teaser {
       position: absolute;
-      width: 370px;
-      padding: 20px;
+      width: 250px;
+      padding: 10px;
       bottom: 25px;
       left: 0px;
       background: #fff;
+      background-color: rgba(0,0,255,0.5);
 
       .field-content {
         overflow: hidden;
-        height: 80px;
+        height: 40px;
 
         .banner-title h3 {
           margin-bottom: 0.5em;

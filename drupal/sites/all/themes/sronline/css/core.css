@@ -1489,35 +1489,36 @@ body.front #block-views-home_page_banner-block_1 li {
 /* line 27, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li .views-field-teaser {
   position: absolute;
-  width: 370px;
-  padding: 20px;
+  width: 250px;
+  padding: 10px;
   bottom: 25px;
   left: 0px;
   background: #fff;
+  background-color: rgba(0, 0, 255, 0.5);
 }
-/* line 35, ../scss/pages/_page-front.scss */
+/* line 36, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li .views-field-teaser .field-content {
   overflow: hidden;
-  height: 80px;
+  height: 40px;
 }
-/* line 39, ../scss/pages/_page-front.scss */
+/* line 40, ../scss/pages/_page-front.scss */
 body.front #block-views-home_page_banner-block_1 li .views-field-teaser .field-content .banner-title h3 {
   margin-bottom: 0.5em;
 }
-/* line 52, ../scss/pages/_page-front.scss */
+/* line 53, ../scss/pages/_page-front.scss */
 body.front #block-views-text_bundles_featured-block_1 .view-content ul li {
   padding: 0 0 38px 51px;
   background: url(../images/pdf.gif) 0 0 no-repeat;
 }
-/* line 62, ../scss/pages/_page-front.scss */
+/* line 63, ../scss/pages/_page-front.scss */
 body.front .panel-display .panel-col-top .panel-region-separator {
   display: none;
 }
-/* line 67, ../scss/pages/_page-front.scss */
+/* line 68, ../scss/pages/_page-front.scss */
 body.front .panel-display .center-wrapper .panel-col-first {
   clear: both;
 }
-/* line 70, ../scss/pages/_page-front.scss */
+/* line 71, ../scss/pages/_page-front.scss */
 body.front .panel-display .center-wrapper .panel-panel {
   width: 313px;
 }
