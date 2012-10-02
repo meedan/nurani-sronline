@@ -1393,7 +1393,6 @@ blockquote.orange cite {
 /* line 89, ../scss/_layout.scss */
 #content-inner {
   background: #fff;
-  float: left;
 }
 /* line 93, ../scss/_layout.scss */
 #content-inner #content-top {
@@ -1522,9 +1521,13 @@ body.front .panel-display .center-wrapper .panel-panel {
   width: 313px;
 }
 
-/* line 2, ../scss/pages/_page-news.scss */
+/* line 3, ../scss/pages/_page-news.scss */
 body.page-news h1 {
   color: #ff8b00;
+}
+/* line 7, ../scss/pages/_page-news.scss */
+body.page-news #content-inner {
+  float: left;
 }
 /* line 3, ../scss/_pagination.scss */
 body.page-news .view-news-articles .item-list ul.pager li.pager-current {
@@ -1543,12 +1546,12 @@ body.page-news .view-news-articles a:hover {
 body.page-news .view-news-articles h2, body.page-news .view-news-articles h3, body.page-news .view-news-articles h4 {
   color: #ff8b00;
 }
-/* line 6, ../scss/pages/_page-news.scss */
+/* line 16, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles > .attachment .views-field-field-news-image-fid {
   float: left;
   margin-top: -57px;
 }
-/* line 9, ../scss/pages/_page-news.scss */
+/* line 19, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles > .attachment .views-field-field-news-image-fid a {
   margin: auto;
   padding: inherit;
@@ -1560,51 +1563,51 @@ body.page-news .view-news-articles > .attachment .views-field-field-news-image-f
   background: transparent;
   color: #4a4a4a;
 }
-/* line 14, ../scss/pages/_page-news.scss */
+/* line 24, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles > .attachment .views-field-title, body.page-news .view-news-articles > .attachment .views-field-view-node {
   margin-left: 331px;
 }
-/* line 6, ../scss/helpers/_article-list.scss */
+/* line 7, ../scss/helpers/_article-list.scss */
 body.page-news .view-news-articles .view-content .views-row {
   float: left;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #4a4a4a;
 }
-/* line 16, ../scss/helpers/_article-list.scss */
+/* line 17, ../scss/helpers/_article-list.scss */
 body.page-news .view-news-articles .view-content .views-row > div {
   margin-bottom: 20px;
 }
-/* line 20, ../scss/helpers/_article-list.scss */
+/* line 21, ../scss/helpers/_article-list.scss */
 body.page-news .view-news-articles .view-content .views-row .views-field-title {
   margin-bottom: 0;
 }
-/* line 25, ../scss/helpers/_article-list.scss */
+/* line 26, ../scss/helpers/_article-list.scss */
 body.page-news .view-news-articles .view-content .views-row .views-field-view-node a {
   display: inline;
   margin-left: 2px;
 }
-/* line 37, ../scss/helpers/_article-list.scss */
+/* line 38, ../scss/helpers/_article-list.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row {
   clear: left;
 }
-/* line 39, ../scss/helpers/_article-list.scss */
+/* line 40, ../scss/helpers/_article-list.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-video-url-url, body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
   float: left;
 }
-/* line 42, ../scss/helpers/_article-list.scss */
+/* line 43, ../scss/helpers/_article-list.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row.views-row-last {
   border-bottom: none;
 }
-/* line 26, ../scss/pages/_page-news.scss */
+/* line 36, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-title, body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-view-node {
   margin-left: 130px;
 }
-/* line 30, ../scss/pages/_page-news.scss */
+/* line 40, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
   margin-top: -33px;
 }
-/* line 33, ../scss/pages/_page-news.scss */
+/* line 43, ../scss/pages/_page-news.scss */
 body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid a {
   margin: auto;
   padding: inherit;
@@ -1620,6 +1623,10 @@ body.page-news .view-news-articles.view-display-id-page_1 > .view-content .views
 /* line 3, ../scss/pages/_page-videos.scss */
 body.page-videos h1 {
   color: #5e288c;
+}
+/* line 7, ../scss/pages/_page-videos.scss */
+body.page-videos #content-inner {
+  float: left;
 }
 /* line 3, ../scss/_pagination.scss */
 body.page-videos .view-video-articles .item-list ul.pager li.pager-current {
@@ -1638,44 +1645,44 @@ body.page-videos .view-video-articles a:hover {
 body.page-videos .view-video-articles h2, body.page-videos .view-video-articles h3, body.page-videos .view-video-articles h4 {
   color: #5e288c;
 }
-/* line 6, ../scss/helpers/_article-list.scss */
+/* line 7, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row {
   float: left;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #4a4a4a;
 }
-/* line 16, ../scss/helpers/_article-list.scss */
+/* line 17, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row > div {
   margin-bottom: 20px;
 }
-/* line 20, ../scss/helpers/_article-list.scss */
+/* line 21, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row .views-field-title {
   margin-bottom: 0;
 }
-/* line 25, ../scss/helpers/_article-list.scss */
+/* line 26, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles .view-content .views-row .views-field-view-node a {
   display: inline;
   margin-left: 2px;
 }
-/* line 37, ../scss/helpers/_article-list.scss */
+/* line 38, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row {
   clear: left;
 }
-/* line 39, ../scss/helpers/_article-list.scss */
+/* line 40, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-video-url-url, body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-field-news-image-fid {
   float: left;
 }
-/* line 42, ../scss/helpers/_article-list.scss */
+/* line 43, ../scss/helpers/_article-list.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row.views-row-last {
   border-bottom: none;
 }
-/* line 25, ../scss/pages/_page-videos.scss */
+/* line 29, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles .view-content .views-row .views-field-field-video-url-url {
   padding: 3px;
   border: solid 1px #c9c6c4;
 }
-/* line 34, ../scss/pages/_page-videos.scss */
+/* line 38, ../scss/pages/_page-videos.scss */
 body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-title, body.page-videos .view-video-articles.view-display-id-page_1 > .view-content .views-row .views-field-body {
   margin-left: 331px;
 }

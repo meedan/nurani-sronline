@@ -4,6 +4,10 @@ h1 {
   color: $videos_section_color;
 }
 
+ #content-inner{
+     float:left;
+   }
+
 
 // TODO: Move basically all of this over to helpers/_article-list.scss.
 //       Not doing that now to avoid crashing the SCSS that Z wrote

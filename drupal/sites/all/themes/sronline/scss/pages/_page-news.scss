@@ -1,5 +1,15 @@
 // Theme the news page..
+
 h1{color:$news_section_color;}
+
+
+  
+   #content-inner{
+     float:left;
+   }
+
+
+
 .view-news-articles{
  @include section-colors($news_section_color);
   & > .attachment {

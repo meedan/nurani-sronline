@@ -2,6 +2,7 @@
 @mixin article-list {
 
 // Styles common to both the featured video and the other videos
+
 .view-content {
     .views-row {
       // A better clearfix for this situation, the @include clearfix; adds
