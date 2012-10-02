@@ -428,7 +428,7 @@ function home_section_views_default_views() {
       'alter' => array(
         'alter_text' => 1,
         'text' => '<div class="banner-title"><h3>[title]</h3></div>
-<div class="banner-teaser">[teaser]</div>',
+',
         'make_link' => 0,
         'path' => '',
         'absolute' => 0,
@@ -439,7 +439,7 @@ function home_section_views_default_views() {
         'suffix' => '',
         'target' => '',
         'help' => '',
-        'trim' => 0,
+        'trim' => 1,
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
