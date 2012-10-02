@@ -75,15 +75,15 @@ function sronline_video_strongarm() {
   $strongarm->name = 'content_extra_weights_video';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '-2',
-    'revision_information' => '-1',
-    'author' => '0',
-    'options' => '2',
-    'comment_settings' => '3',
-    'language' => '1',
-    'translation' => '5',
+    'body_field' => '-1',
+    'revision_information' => '0',
+    'author' => '1',
+    'options' => '3',
+    'comment_settings' => '4',
+    'language' => '2',
+    'translation' => '6',
     'menu' => '-4',
-    'path' => '4',
+    'path' => '5',
   );
   $export['content_extra_weights_video'] = $strongarm;
 

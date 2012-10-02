@@ -299,7 +299,7 @@ function home_section_views_default_views() {
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
-    'field_banner_image_fid' => array(
+    'field_about_image_fid' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -325,7 +325,7 @@ function home_section_views_default_views() {
       'hide_empty' => 0,
       'empty_zero' => 0,
       'hide_alter_empty' => 1,
-      'link_to_node' => 1,
+      'link_to_node' => 0,
       'label_type' => 'none',
       'format' => 'Home-image_613_linked',
       'multiple' => array(
@@ -335,9 +335,56 @@ function home_section_views_default_views() {
         'multiple_reversed' => FALSE,
       ),
       'exclude' => 0,
-      'id' => 'field_banner_image_fid',
-      'table' => 'node_data_field_banner_image',
-      'field' => 'field_banner_image_fid',
+      'id' => 'field_about_image_fid',
+      'table' => 'node_data_field_about_image',
+      'field' => 'field_about_image_fid',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_video_image_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'Home-image_613_linked',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_video_image_fid',
+      'table' => 'node_data_field_video_image',
+      'field' => 'field_video_image_fid',
+      'override' => array(
+        'button' => 'Override',
+      ),
       'relationship' => 'none',
     ),
     'title' => array(
@@ -427,7 +474,8 @@ function home_section_views_default_views() {
     'type' => array(
       'operator' => 'in',
       'value' => array(
-        'home_banner' => 'home_banner',
+        'basic_page' => 'basic_page',
+        'video' => 'video',
       ),
       'group' => '0',
       'exposed' => FALSE,
@@ -439,6 +487,9 @@ function home_section_views_default_views() {
       'table' => 'node',
       'field' => 'type',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
     'promote' => array(
       'operator' => '=',
