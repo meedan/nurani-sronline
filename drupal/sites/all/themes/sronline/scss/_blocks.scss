@@ -63,11 +63,11 @@
   }
   #block-webform-client-block-1 {
     width: 252px;
-    height: 83px;
+    /*height: 83px;*/
     float: right;
 
     .form-text {
-      width: 130px;
+      width: 200px;
     }
   }
 }
@@ -148,14 +148,16 @@
 #block-webform-client-block-1 {
   @include block-news-section;
 
-  .webform-component-email {
+  .webform-component-email, .webform-component-textfield {
     float: left;
     .form-item {
       margin: 0;
     }
   }
   .form-text {
-    width: 130px;
+    /*width: 130px;*/
+    margin-bottom: 15px;
+    width: 200px;
   }
   #edit-actions {
     float: left;
