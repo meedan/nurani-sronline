@@ -603,7 +603,8 @@ function news_section_views_default_views() {
       'alter' => array(
         'alter_text' => 1,
         'text' => '<h4>[title]</h4>
-<div>[body] [view_node] </div>
+<div>[body] [view_node]</div>
+
 ',
         'make_link' => 0,
         'path' => '',
