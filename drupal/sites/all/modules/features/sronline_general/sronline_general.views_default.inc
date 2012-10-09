@@ -11,28 +11,14 @@ function sronline_general_views_default_views() {
   $view->name = 'text_bundles_featured';
   $view->description = 'Featured text bundles block';
   $view->tag = 'sronline';
-  $view->base_table = 'node';
+  $view->base_table = 'term_data';
   $view->core = 6;
   $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->override_option('relationships', array(
-    'nodequeue_rel_queue_name' => array(
-      'label' => 'queue',
-      'required' => 1,
-      'limit' => 1,
-      'names' => array(
-        'featured_text_bundles' => 'featured_text_bundles',
-      ),
-      'id' => 'nodequeue_rel_queue_name',
-      'table' => 'node',
-      'field' => 'nodequeue_rel_queue_name',
-      'relationship' => 'none',
-    ),
-  ));
   $handler->override_option('fields', array(
-    'field_bundle_fid' => array(
-      'label' => '',
+    'tid' => array(
+      'label' => 'Term ID',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -57,28 +43,28 @@ function sronline_general_views_default_views() {
       'hide_empty' => 0,
       'empty_zero' => 0,
       'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'url_plain',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
+      'set_precision' => FALSE,
+      'precision' => 0,
+      'decimal' => '.',
+      'separator' => ',',
+      'format_plural' => 0,
+      'format_plural_singular' => '1',
+      'format_plural_plural' => '@count',
+      'prefix' => '',
+      'suffix' => '',
       'exclude' => 1,
-      'id' => 'field_bundle_fid',
-      'table' => 'node_data_field_bundle',
-      'field' => 'field_bundle_fid',
+      'id' => 'tid',
+      'table' => 'term_data',
+      'field' => 'tid',
       'relationship' => 'none',
     ),
-    'title' => array(
-      'label' => '',
+    'name' => array(
+      'label' => 'Term',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
         'make_link' => 1,
-        'path' => '[field_bundle_fid]',
+        'path' => 'text-bundles?tid=[tid]',
         'absolute' => 0,
         'link_class' => '',
         'alt' => '',
@@ -98,42 +84,28 @@ function sronline_general_views_default_views() {
       'hide_empty' => 0,
       'empty_zero' => 0,
       'hide_alter_empty' => 1,
-      'link_to_node' => 0,
+      'link_to_taxonomy' => 0,
       'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
+      'id' => 'name',
+      'table' => 'term_data',
+      'field' => 'name',
       'relationship' => 'none',
     ),
   ));
   $handler->override_option('sorts', array(
-    'position' => array(
+    'weight' => array(
       'order' => 'ASC',
-      'id' => 'position',
-      'table' => 'nodequeue_nodes',
-      'field' => 'position',
-      'relationship' => 'nodequeue_rel_queue_name',
+      'id' => 'weight',
+      'table' => 'term_data',
+      'field' => 'weight',
+      'relationship' => 'none',
     ),
   ));
   $handler->override_option('filters', array(
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'type' => array(
+    'vid' => array(
       'operator' => 'in',
       'value' => array(
-        'text_bundle' => 'text_bundle',
+        1 => '1',
       ),
       'group' => '0',
       'exposed' => FALSE,
@@ -141,9 +113,9 @@ function sronline_general_views_default_views() {
         'operator' => FALSE,
         'label' => '',
       ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
+      'id' => 'vid',
+      'table' => 'term_data',
+      'field' => 'vid',
       'relationship' => 'none',
     ),
   ));
@@ -153,10 +125,7 @@ function sronline_general_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('title', 'Text Bundles');
-  $handler->override_option('use_ajax', TRUE);
-  $handler->override_option('items_per_page', 5);
-  $handler->override_option('use_pager', 'mini');
+  $handler->override_option('items_per_page', 0);
   $handler->override_option('style_plugin', 'list');
   $handler->override_option('style_options', array(
     'grouping' => '',
