@@ -59,7 +59,7 @@ function sronline_general_views_default_views() {
       'relationship' => 'none',
     ),
     'name' => array(
-      'label' => 'Term',
+      'label' => '',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -125,6 +125,7 @@ function sronline_general_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('title', 'Text Bundles');
   $handler->override_option('items_per_page', 0);
   $handler->override_option('style_plugin', 'list');
   $handler->override_option('style_options', array(
