@@ -30,7 +30,7 @@ function home_section_imagecache_default_presets() {
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
             'width' => '613',
-            'height' => '312',
+            'height' => '395',
           ),
         ),
       ),
