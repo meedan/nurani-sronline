@@ -619,17 +619,8 @@ img.imagecache {
 }
 /* line 114, ../scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li {
-  padding: 0 0 15px 51px;
-  background: url(../images/pdf_icon.gif) 0 2px no-repeat;
-}
-/* line 21, ../scss/helpers/_lists.scss */
-#block-views-text_bundles_featured-block_1 .view-content ul li .field-content a {
-  color: #477707;
-}
-/* line 30, ../scss/_typography.scss */
-#block-views-text_bundles_featured-block_1 .view-content ul li .field-content a:hover {
-  background: #477707;
-  color: white;
+  padding: 0 0 20px 25px;
+  /*@include pdf-list-item($text_bundles_section_color);*/
 }
 
 /* Featured testimonials block */
@@ -638,25 +629,25 @@ img.imagecache {
   color: #5e288c;
   background: url(../images/title_blip_purple.png) 0 0 no-repeat;
 }
-/* line 124, ../scss/_blocks.scss */
+/* line 125, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row {
   margin-bottom: 20px;
   background: url(../images/purpule_closequote.png) no-repeat bottom right;
 }
-/* line 129, ../scss/_blocks.scss */
+/* line 130, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body .field-content {
   background: url(../images/purpule_openquote.png) no-repeat 0 0;
   padding-top: 15px;
 }
-/* line 133, ../scss/_blocks.scss */
+/* line 134, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-body p {
   text-indent: 50px;
 }
-/* line 137, ../scss/_blocks.scss */
+/* line 138, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-field-quoted-from-value {
   text-align: right;
 }
-/* line 139, ../scss/_blocks.scss */
+/* line 140, ../scss/_blocks.scss */
 #block-views-32bfceaf56e91407f76ac3a77c3d8a4b .views-row .views-field-field-quoted-from-value .field-content {
   padding-right: 50px;
   color: #666666;
@@ -668,21 +659,21 @@ img.imagecache {
   color: #ff8b00;
   background: url(../images/title_blip_orange.png) 0 0 no-repeat;
 }
-/* line 151, ../scss/_blocks.scss */
+/* line 152, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email, #block-webform-client-block-1 .webform-component-textfield {
   float: left;
 }
-/* line 153, ../scss/_blocks.scss */
+/* line 154, ../scss/_blocks.scss */
 #block-webform-client-block-1 .webform-component-email .form-item, #block-webform-client-block-1 .webform-component-textfield .form-item {
   margin: 0;
 }
-/* line 157, ../scss/_blocks.scss */
+/* line 158, ../scss/_blocks.scss */
 #block-webform-client-block-1 .form-text {
   /*width: 130px;*/
   margin-bottom: 15px;
   width: 200px;
 }
-/* line 162, ../scss/_blocks.scss */
+/* line 163, ../scss/_blocks.scss */
 #block-webform-client-block-1 #edit-actions {
   float: left;
   /*margin-left: 10px;*/
@@ -711,16 +702,16 @@ img.imagecache {
 #block-views-news_articles_featured-block_1 h2, #block-views-news_articles_featured-block_1 h3, #block-views-news_articles_featured-block_1 h4 {
   color: #ff8b00;
 }
-/* line 174, ../scss/_blocks.scss */
+/* line 175, ../scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-row {
   clear: left;
   margin-bottom: 20px;
 }
-/* line 178, ../scss/_blocks.scss */
+/* line 179, ../scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-field-news-image-fid {
   float: left;
 }
-/* line 181, ../scss/_blocks.scss */
+/* line 182, ../scss/_blocks.scss */
 #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-title, #block-views-news_articles_featured-block_1 .view-news-articles-featured .views-field-view-node {
   margin-left: 88px;
 }
@@ -1507,8 +1498,8 @@ body.front #block-views-home_page_banner-block_1 li .views-field-teaser .field-c
 }
 /* line 53, ../scss/pages/_page-front.scss */
 body.front #block-views-text_bundles_featured-block_1 .view-content ul li {
-  padding: 0 0 38px 51px;
-  background: url(../images/pdf.gif) 0 0 no-repeat;
+  padding: 0 0 20px 25px;
+  /* background: url(../images/pdf.gif) 0 0 no-repeat;*/
 }
 /* line 63, ../scss/pages/_page-front.scss */
 body.front .panel-display .panel-col-top .panel-region-separator {
