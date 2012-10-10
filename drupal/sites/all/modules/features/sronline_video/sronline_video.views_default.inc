@@ -16,6 +16,25 @@ function sronline_video_views_default_views() {
   $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('relationships', array(
+    'nodequeue_rel_queue_name' => array(
+      'label' => 'queue',
+      'required' => 1,
+      'limit' => 1,
+      'names' => array(
+        'videos_page_listing' => 'videos_page_listing',
+        'featured_news_articles' => 0,
+        'featured_text_bundles' => 0,
+      ),
+      'id' => 'nodequeue_rel_queue_name',
+      'table' => 'node',
+      'field' => 'nodequeue_rel_queue_name',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
   $handler->override_option('fields', array(
     'nid' => array(
       'label' => 'Nid',
@@ -158,13 +177,15 @@ function sronline_video_views_default_views() {
     ),
   ));
   $handler->override_option('sorts', array(
-    'created' => array(
-      'order' => 'DESC',
-      'granularity' => 'second',
-      'id' => 'created',
-      'table' => 'node',
-      'field' => 'created',
-      'relationship' => 'none',
+    'position' => array(
+      'order' => 'ASC',
+      'id' => 'position',
+      'table' => 'nodequeue_nodes',
+      'field' => 'position',
+      'relationship' => 'nodequeue_rel_queue_name',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
   ));
   $handler->override_option('filters', array(

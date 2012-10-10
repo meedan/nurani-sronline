@@ -11,6 +11,38 @@ function sronline_video_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_default_fe_nodequeue_queue().
+ */
+function sronline_video_default_fe_nodequeue_queue() {
+  $export = array();
+
+  $fe_nodequeue_queue = new stdClass;
+  $fe_nodequeue_queue->name = 'videos_page_listing';
+  $fe_nodequeue_queue->title = 'Videos listing';
+  $fe_nodequeue_queue->subqueue_title = '';
+  $fe_nodequeue_queue->size = '4';
+  $fe_nodequeue_queue->link = 'Feature videos';
+  $fe_nodequeue_queue->link_remove = 'Unfeature videos';
+  $fe_nodequeue_queue->owner = 'nodequeue';
+  $fe_nodequeue_queue->show_in_ui = '1';
+  $fe_nodequeue_queue->show_in_tab = '1';
+  $fe_nodequeue_queue->show_in_links = '1';
+  $fe_nodequeue_queue->reference = '0';
+  $fe_nodequeue_queue->reverse = '0';
+  $fe_nodequeue_queue->i18n = '1';
+  $fe_nodequeue_queue->types = array(
+    0 => 'video',
+  );
+  $fe_nodequeue_queue->roles = array();
+  $fe_nodequeue_queue->count = 0;
+  $fe_nodequeue_queue->machine_name = 'videos_page_listing';
+
+  $export['videos_page_listing'] = $fe_nodequeue_queue;
+
+  return $export;
+}
+
+/**
  * Implementation of hook_imagecache_default_presets().
  */
 function sronline_video_imagecache_default_presets() {
