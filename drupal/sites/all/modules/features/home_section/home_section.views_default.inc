@@ -154,7 +154,7 @@ function home_section_views_default_views() {
         'suffix' => '',
         'target' => '',
         'help' => '',
-        'trim' => 1,
+        'trim' => 0,
         'max_length' => '200',
         'word_boundary' => 1,
         'ellipsis' => 1,
