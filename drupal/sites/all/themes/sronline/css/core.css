@@ -303,62 +303,63 @@ body {
   font-size: 12px;
   line-height: 18px;
   color: #4a4a4a;
+  background: top center #c9c5c2;
 }
 
-/* line 68, ../scss/_typography.scss */
+/* line 69, ../scss/_typography.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 69, ../scss/_typography.scss */
+/* line 70, ../scss/_typography.scss */
 em {
   font-style: italic;
   font-weight: bold;
 }
 
-/* line 71, ../scss/_typography.scss */
+/* line 72, ../scss/_typography.scss */
 a {
   text-decoration: none;
   color: #5e288c;
 }
-/* line 76, ../scss/_typography.scss */
+/* line 77, ../scss/_typography.scss */
 a:hover {
   text-decoration: underline;
   /*@include blocky-link;*/
   display: inline;
 }
 
-/* line 83, ../scss/_typography.scss */
+/* line 84, ../scss/_typography.scss */
 h1 {
   font-size: 1.8em;
   margin-bottom: 0.75em;
 }
-/* line 87, ../scss/_typography.scss */
+/* line 88, ../scss/_typography.scss */
 h1 a {
   margin-left: -15px !important;
   padding: 9px 15px !important;
 }
 
-/* line 91, ../scss/_typography.scss */
+/* line 92, ../scss/_typography.scss */
 h2, h3, h4 {
   font-size: 1.2em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 96, ../scss/_typography.scss */
+/* line 97, ../scss/_typography.scss */
 h2 a, h3 a, h4 a {
   margin-left: -10px !important;
   padding: 6px 10px !important;
 }
 
-/* line 110, ../scss/_typography.scss */
+/* line 111, ../scss/_typography.scss */
 h5 {
   font-size: 1em;
   font-weight: bold;
 }
 
 /* Drupal messages */
-/* line 116, ../scss/_typography.scss */
+/* line 117, ../scss/_typography.scss */
 .messages {
   padding: 9px;
   margin: 1em 0;
@@ -366,27 +367,27 @@ h5 {
   background: #ccff88;
   border: 1px solid #bbee77;
 }
-/* line 124, ../scss/_typography.scss */
+/* line 125, ../scss/_typography.scss */
 .messages.warning {
   color: #884400;
   background: #ffee66;
   border-color: #eedd55;
 }
-/* line 129, ../scss/_typography.scss */
+/* line 130, ../scss/_typography.scss */
 .messages.error {
   color: white;
   background: #ee6633;
   border-color: #dd5522;
 }
 
-/* line 137, ../scss/_typography.scss */
+/* line 138, ../scss/_typography.scss */
 .content-area, .sidebar.second, #content-header {
   /* a {
      @include undo-blocky-link;
      color:$videos_section_color;
    }*/
 }
-/* line 143, ../scss/_typography.scss */
+/* line 144, ../scss/_typography.scss */
 .content-area h3 a, .content-area h4 a, .sidebar.second h3 a, .sidebar.second h4 a, #content-header h3 a, #content-header h4 a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -400,28 +401,28 @@ h5 {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 149, ../scss/_typography.scss */
+/* line 150, ../scss/_typography.scss */
 .content-area .views-admin-links a, .sidebar.second .views-admin-links a, #content-header .views-admin-links a {
   display: inline;
 }
-/* line 154, ../scss/_typography.scss */
+/* line 155, ../scss/_typography.scss */
 .content-area .tabs a, .sidebar.second .tabs a, #content-header .tabs a {
   display: inline;
   padding: 0 10px;
 }
-/* line 156, ../scss/_typography.scss */
+/* line 157, ../scss/_typography.scss */
 .content-area a.context-block-region, .sidebar.second a.context-block-region, #content-header a.context-block-region {
   display: none;
 }
-/* line 159, ../scss/_typography.scss */
+/* line 160, ../scss/_typography.scss */
 .content-area .field-items a, .sidebar.second .field-items a, #content-header .field-items a {
   display: inline;
 }
-/* line 162, ../scss/_typography.scss */
+/* line 163, ../scss/_typography.scss */
 .content-area .pager a, .sidebar.second .pager a, #content-header .pager a {
   display: inline;
 }
-/* line 166, ../scss/_typography.scss */
+/* line 167, ../scss/_typography.scss */
 .content-area .breadcrumb a, .sidebar.second .breadcrumb a, #content-header .breadcrumb a {
   text-decoration: underline;
   display: inline;
@@ -435,39 +436,39 @@ h5 {
   background: transparent;
   color: #4a4a4a;
 }
-/* line 171, ../scss/_typography.scss */
+/* line 172, ../scss/_typography.scss */
 .content-area .breadcrumb a:hover, .sidebar.second .breadcrumb a:hover, #content-header .breadcrumb a:hover {
   background: yellow;
   text-decoration: underline;
 }
 
-/* line 179, ../scss/_typography.scss */
+/* line 180, ../scss/_typography.scss */
 ul, ol {
   margin-left: 30px;
 }
 
-/* line 183, ../scss/_typography.scss */
+/* line 184, ../scss/_typography.scss */
 li {
   padding: 5px;
 }
 
-/* line 185, ../scss/_typography.scss */
+/* line 186, ../scss/_typography.scss */
 ul, ul li {
   list-style-type: disc;
 }
 
-/* line 189, ../scss/_typography.scss */
+/* line 190, ../scss/_typography.scss */
 ol, ol li {
   list-style: decimal;
 }
 
-/* line 192, ../scss/_typography.scss */
+/* line 193, ../scss/_typography.scss */
 sup {
   font-size: xx-small;
   vertical-align: super;
 }
 
-/* line 197, ../scss/_typography.scss */
+/* line 198, ../scss/_typography.scss */
 .page-admin {
   margin: auto;
   padding: inherit;
@@ -1378,8 +1379,8 @@ blockquote.orange cite {
   bottom: 0;
   left: 0;
   margin: auto;
-  min-height: 50%;
-  min-width: 50%;
+  min-height: 100%;
+  min-width: 100%;
   position: absolute;
   right: 0;
   top: 0;
