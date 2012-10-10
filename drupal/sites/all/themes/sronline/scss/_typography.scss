@@ -30,6 +30,7 @@
   &:hover {
     background: $color;
     color: $hover_text_color;
+
   }
 }
 /* Grows a blocky-link, making it look better for <h123> tags
@@ -45,6 +46,7 @@
   @include pagination-section-color($color);
 
   a {
+    padding:7px 5px;
     @include blocky-link-set-color($color);
   }
 

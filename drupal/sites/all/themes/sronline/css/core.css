@@ -297,7 +297,7 @@ div.block:hover .edit {
           A multiplier indicating the growth factor, eg: 1.2 */
 /* Helper to apply colourized blocky-link style a site section or .block */
 /* === SITE TYPOGRAPHY === */
-/* line 58, ../scss/_typography.scss */
+/* line 60, ../scss/_typography.scss */
 body {
   font-family: verdana;
   font-size: 12px;
@@ -305,60 +305,60 @@ body {
   color: #4a4a4a;
 }
 
-/* line 66, ../scss/_typography.scss */
+/* line 68, ../scss/_typography.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 67, ../scss/_typography.scss */
+/* line 69, ../scss/_typography.scss */
 em {
   font-style: italic;
   font-weight: bold;
 }
 
-/* line 69, ../scss/_typography.scss */
+/* line 71, ../scss/_typography.scss */
 a {
   text-decoration: none;
   color: #5e288c;
 }
-/* line 74, ../scss/_typography.scss */
+/* line 76, ../scss/_typography.scss */
 a:hover {
   text-decoration: underline;
   /*@include blocky-link;*/
   display: inline;
 }
 
-/* line 81, ../scss/_typography.scss */
+/* line 83, ../scss/_typography.scss */
 h1 {
   font-size: 1.8em;
   margin-bottom: 0.75em;
 }
-/* line 85, ../scss/_typography.scss */
+/* line 87, ../scss/_typography.scss */
 h1 a {
   margin-left: -15px !important;
   padding: 9px 15px !important;
 }
 
-/* line 89, ../scss/_typography.scss */
+/* line 91, ../scss/_typography.scss */
 h2, h3, h4 {
   font-size: 1.2em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 94, ../scss/_typography.scss */
+/* line 96, ../scss/_typography.scss */
 h2 a, h3 a, h4 a {
   margin-left: -10px !important;
   padding: 6px 10px !important;
 }
 
-/* line 108, ../scss/_typography.scss */
+/* line 110, ../scss/_typography.scss */
 h5 {
   font-size: 1em;
   font-weight: bold;
 }
 
 /* Drupal messages */
-/* line 114, ../scss/_typography.scss */
+/* line 116, ../scss/_typography.scss */
 .messages {
   padding: 9px;
   margin: 1em 0;
@@ -366,27 +366,27 @@ h5 {
   background: #ccff88;
   border: 1px solid #bbee77;
 }
-/* line 122, ../scss/_typography.scss */
+/* line 124, ../scss/_typography.scss */
 .messages.warning {
   color: #884400;
   background: #ffee66;
   border-color: #eedd55;
 }
-/* line 127, ../scss/_typography.scss */
+/* line 129, ../scss/_typography.scss */
 .messages.error {
   color: white;
   background: #ee6633;
   border-color: #dd5522;
 }
 
-/* line 135, ../scss/_typography.scss */
+/* line 137, ../scss/_typography.scss */
 .content-area, .sidebar.second, #content-header {
   /* a {
      @include undo-blocky-link;
      color:$videos_section_color;
    }*/
 }
-/* line 141, ../scss/_typography.scss */
+/* line 143, ../scss/_typography.scss */
 .content-area h3 a, .content-area h4 a, .sidebar.second h3 a, .sidebar.second h4 a, #content-header h3 a, #content-header h4 a {
   margin-left: -5px;
   padding: 3px 5px;
@@ -400,28 +400,28 @@ h5 {
   background: #4a4a4a;
   color: #fff;
 }
-/* line 147, ../scss/_typography.scss */
+/* line 149, ../scss/_typography.scss */
 .content-area .views-admin-links a, .sidebar.second .views-admin-links a, #content-header .views-admin-links a {
   display: inline;
 }
-/* line 152, ../scss/_typography.scss */
+/* line 154, ../scss/_typography.scss */
 .content-area .tabs a, .sidebar.second .tabs a, #content-header .tabs a {
   display: inline;
   padding: 0 10px;
 }
-/* line 154, ../scss/_typography.scss */
+/* line 156, ../scss/_typography.scss */
 .content-area a.context-block-region, .sidebar.second a.context-block-region, #content-header a.context-block-region {
   display: none;
 }
-/* line 157, ../scss/_typography.scss */
+/* line 159, ../scss/_typography.scss */
 .content-area .field-items a, .sidebar.second .field-items a, #content-header .field-items a {
   display: inline;
 }
-/* line 160, ../scss/_typography.scss */
+/* line 162, ../scss/_typography.scss */
 .content-area .pager a, .sidebar.second .pager a, #content-header .pager a {
   display: inline;
 }
-/* line 164, ../scss/_typography.scss */
+/* line 166, ../scss/_typography.scss */
 .content-area .breadcrumb a, .sidebar.second .breadcrumb a, #content-header .breadcrumb a {
   text-decoration: underline;
   display: inline;
@@ -435,39 +435,39 @@ h5 {
   background: transparent;
   color: #4a4a4a;
 }
-/* line 169, ../scss/_typography.scss */
+/* line 171, ../scss/_typography.scss */
 .content-area .breadcrumb a:hover, .sidebar.second .breadcrumb a:hover, #content-header .breadcrumb a:hover {
   background: yellow;
   text-decoration: underline;
 }
 
-/* line 177, ../scss/_typography.scss */
+/* line 179, ../scss/_typography.scss */
 ul, ol {
   margin-left: 30px;
 }
 
-/* line 181, ../scss/_typography.scss */
+/* line 183, ../scss/_typography.scss */
 li {
   padding: 5px;
 }
 
-/* line 183, ../scss/_typography.scss */
+/* line 185, ../scss/_typography.scss */
 ul, ul li {
   list-style-type: disc;
 }
 
-/* line 187, ../scss/_typography.scss */
+/* line 189, ../scss/_typography.scss */
 ol, ol li {
   list-style: decimal;
 }
 
-/* line 190, ../scss/_typography.scss */
+/* line 192, ../scss/_typography.scss */
 sup {
   font-size: xx-small;
   vertical-align: super;
 }
 
-/* line 195, ../scss/_typography.scss */
+/* line 197, ../scss/_typography.scss */
 .page-admin {
   margin: auto;
   padding: inherit;
@@ -593,8 +593,9 @@ img.imagecache {
 #block-views-text_bundles_featured-block_1 .item-list ul.pager li.pager-current {
   background: #477707;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 48, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 a {
+  padding: 7px 5px;
   color: #477707;
 }
 /* line 30, ../scss/_typography.scss */
@@ -602,7 +603,7 @@ img.imagecache {
   background: #477707;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 53, ../scss/_typography.scss */
 #block-views-text_bundles_featured-block_1 h2, #block-views-text_bundles_featured-block_1 h3, #block-views-text_bundles_featured-block_1 h4 {
   color: #477707;
 }
@@ -619,7 +620,7 @@ img.imagecache {
 }
 /* line 114, ../scss/_blocks.scss */
 #block-views-text_bundles_featured-block_1 .view-content ul li {
-  padding: 0 0 20px 25px;
+  padding: 0 0 20px 0;
   /*@include pdf-list-item($text_bundles_section_color);*/
 }
 
@@ -689,8 +690,9 @@ img.imagecache {
 #block-views-news_articles_featured-block_1 .item-list ul.pager li.pager-current {
   background: #ff8b00;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 48, ../scss/_typography.scss */
 #block-views-news_articles_featured-block_1 a {
+  padding: 7px 5px;
   color: #ff8b00;
 }
 /* line 30, ../scss/_typography.scss */
@@ -698,7 +700,7 @@ img.imagecache {
   background: #ff8b00;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 53, ../scss/_typography.scss */
 #block-views-news_articles_featured-block_1 h2, #block-views-news_articles_featured-block_1 h3, #block-views-news_articles_featured-block_1 h4 {
   color: #ff8b00;
 }
@@ -1498,7 +1500,7 @@ body.front #block-views-home_page_banner-block_1 li .views-field-teaser .field-c
 }
 /* line 53, ../scss/pages/_page-front.scss */
 body.front #block-views-text_bundles_featured-block_1 .view-content ul li {
-  padding: 0 0 20px 25px;
+  padding: 0 0 20px 0;
   /* background: url(../images/pdf.gif) 0 0 no-repeat;*/
 }
 /* line 63, ../scss/pages/_page-front.scss */
@@ -1526,8 +1528,9 @@ body.page-news #content-inner {
 body.page-news .view-news-articles .item-list ul.pager li.pager-current {
   background: #ff8b00;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 48, ../scss/_typography.scss */
 body.page-news .view-news-articles a {
+  padding: 7px 5px;
   color: #ff8b00;
 }
 /* line 30, ../scss/_typography.scss */
@@ -1535,7 +1538,7 @@ body.page-news .view-news-articles a:hover {
   background: #ff8b00;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 53, ../scss/_typography.scss */
 body.page-news .view-news-articles h2, body.page-news .view-news-articles h3, body.page-news .view-news-articles h4 {
   color: #ff8b00;
 }
@@ -1625,8 +1628,9 @@ body.page-videos #content-inner {
 body.page-videos .view-video-articles .item-list ul.pager li.pager-current {
   background: #5e288c;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 48, ../scss/_typography.scss */
 body.page-videos .view-video-articles a {
+  padding: 7px 5px;
   color: #5e288c;
 }
 /* line 30, ../scss/_typography.scss */
@@ -1634,7 +1638,7 @@ body.page-videos .view-video-articles a:hover {
   background: #5e288c;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 53, ../scss/_typography.scss */
 body.page-videos .view-video-articles h2, body.page-videos .view-video-articles h3, body.page-videos .view-video-articles h4 {
   color: #5e288c;
 }
@@ -1835,8 +1839,9 @@ body.page-text-bundles .view-text-bundles .view-filters form .views-submit-butto
 body.page-text-bundles .view-text-bundles .view-content .item-list ul.pager li.pager-current {
   background: #477707;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 48, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content a {
+  padding: 7px 5px;
   color: #477707;
 }
 /* line 30, ../scss/_typography.scss */
@@ -1844,7 +1849,7 @@ body.page-text-bundles .view-text-bundles .view-content a:hover {
   background: #477707;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 53, ../scss/_typography.scss */
 body.page-text-bundles .view-text-bundles .view-content h2, body.page-text-bundles .view-text-bundles .view-content h3, body.page-text-bundles .view-text-bundles .view-content h4 {
   color: #477707;
 }
@@ -1922,8 +1927,9 @@ body.page-search h1 {
 body.page-search #content-area .item-list ul.pager li.pager-current {
   background: #ff8b00;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 48, ../scss/_typography.scss */
 body.page-search #content-area a {
+  padding: 7px 5px;
   color: #ff8b00;
 }
 /* line 30, ../scss/_typography.scss */
@@ -1931,7 +1937,7 @@ body.page-search #content-area a:hover {
   background: #ff8b00;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 53, ../scss/_typography.scss */
 body.page-search #content-area h2, body.page-search #content-area h3, body.page-search #content-area h4 {
   color: #ff8b00;
 }
@@ -1994,8 +2000,9 @@ body.page-search404 h1 {
 body.page-search404 #content-area .item-list ul.pager li.pager-current {
   background: #5e288c;
 }
-/* line 47, ../scss/_typography.scss */
+/* line 48, ../scss/_typography.scss */
 body.page-search404 #content-area a {
+  padding: 7px 5px;
   color: #5e288c;
 }
 /* line 30, ../scss/_typography.scss */
@@ -2003,7 +2010,7 @@ body.page-search404 #content-area a:hover {
   background: #5e288c;
   color: white;
 }
-/* line 51, ../scss/_typography.scss */
+/* line 53, ../scss/_typography.scss */
 body.page-search404 #content-area h2, body.page-search404 #content-area h3, body.page-search404 #content-area h4 {
   color: #5e288c;
 }

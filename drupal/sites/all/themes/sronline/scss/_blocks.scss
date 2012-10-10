@@ -112,7 +112,7 @@
     @include undo-list-style;
 
     li {
-      padding: 0 0 20px 25px;
+      padding: 0 0 20px 0;
       /*@include pdf-list-item($text_bundles_section_color);*/
     }
   }
