@@ -1,0 +1,179 @@
+<?php
+
+/**
+ * @file
+ * Provides wrapper functions for the s3 amazon webservices.
+ * @todo
+ * - cleand up the _video_zencoder_postback_jobs() function
+ * - Add to select random thumbnails to the download image.
+ */
+defined('VIDEO_RENDERING_PENDING') ||
+    define('VIDEO_RENDERING_PENDING', 1);
+defined('VIDEO_RENDERING_ACTIVE') ||
+    define('VIDEO_RENDERING_ACTIVE', 5);
+defined('VIDEO_RENDERING_COMPLETE') ||
+    define('VIDEO_RENDERING_COMPLETE', 10);
+defined('VIDEO_RENDERING_FAILED') ||
+    define('VIDEO_RENDERING_FAILED', 20);
+
+/**
+ * Implementation of hook_menu().
+ */
+function video_zencoder_menu() {
+  $items = array();
+  $items['postback/jobs'] = array(
+    'page callback' => '_video_zencoder_postback_jobs',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * This will handle Zencoder postback once video conversion is completed
+ *
+ * @TODO move to separate file
+ */
+function _video_zencoder_postback_jobs() {
+  ignore_user_abort(TRUE);
+  
+  $data = file_get_contents('php://input');
+  
+  if (empty($data)) {
+    watchdog('zencoder', 'Empty postback received from the Zencoder Transcoding servers.', array(), WATCHDOG_WARNING);
+    drupal_not_found();
+    return;
+  }
+
+  $result = json_decode($data);
+
+  watchdog('zencoder', 'Postback received from the Zencoder Transcoding servers.<br/><pre>@data</pre>', array('@data' => print_r($result, TRUE)), WATCHDOG_DEBUG);
+
+  $jobid = $result->job->id;
+  $zc_job_state = trim($result->job->state);
+  $zc_output_state = trim($result->output->state);
+  $state = 0;
+
+  if ($zc_output_state == 'finished' && $zc_job_state == 'finished') {
+    $state = VIDEO_RENDERING_COMPLETE;
+  }
+  elseif ($zc_output_state == 'failed' || $zc_job_state == 'failed') {
+    $state = VIDEO_RENDERING_FAILED;
+  }
+  elseif ($zc_job_state == 'processing') {
+    // This state means that one output has finished, but more outputs have still to be generated.
+    return;
+  }
+
+  module_load_include('inc', 'video_zencoder', 'transcoders/video_zencoder');
+  $zc = new video_zencoder();
+  $videodb = db_fetch_object(db_query('SELECT * FROM {video_zencoder} WHERE jobid = %d', $jobid));
+
+  if ($videodb == NULL) {
+    watchdog('zencoder', 'Received postback from Zencoder for unknown job @jobid, ignoring.', array('@jobid' => $jobid), WATCHDOG_ERROR);
+    return;
+  }
+  if ($videodb->status == VIDEO_RENDERING_COMPLETE) {
+    watchdog('zencoder', 'Received postback from Zencoder for job @jobid, which was already finished, ignoring.', array('@jobid' => $jobid), WATCHDOG_WARNING);
+    return;
+  }
+  
+  if ($state == VIDEO_RENDERING_COMPLETE) {
+    db_query('UPDATE {node} SET status = %d WHERE nid = %d', 1, $videodb->nid);
+
+    // Fetch the thumbnails
+    $video_thumb_path = video_thumb_path($videodb);
+    $number_of_thumbs = variable_get('video_thumbs', 5);
+    $thumbsdownloaded = 0;
+    for ($i = 0; $i < $number_of_thumbs; $i++) {
+      $thumbfile = $video_thumb_path .'/'. $videodb->fid .'_'. sprintf('%04d', $i) .'.png';
+      
+      if (video_s3_get_object_info($thumbfile)) {
+        if (video_s3_get_object($thumbfile, $thumbfile)) {
+          $thumbsdownloaded++;
+        }
+        else {
+          watchdog('zencoder', 'Could not download @thumbfile from Amazon S3 to the local file system.', array('@thumbfile' => $thumbfile), WATCHDOG_ERROR);
+        }
+      }
+    }
+
+    if ($thumbsdownloaded > 0) {
+      // Update the thumbnail of the video in the node that uses this file
+      $node = node_load($videodb->nid);
+      $hasupdates = FALSE;
+      $fieldnames = array_keys(filefield_get_field_list($node->type));
+
+      // Loop through all file fields and check if the file is the file that was just converted
+      foreach ($fieldnames as $fieldname) {
+        if (!empty($node->$fieldname)) {
+          foreach ($node->$fieldname as &$element) {
+            if ($element != NULL && $element['fid'] == $videodb->fid) {
+              $element['data']['video_thumb'] = $video_thumb_path .'/'. $videodb->fid .'_0000.png';
+              $hasupdates = TRUE;
+            }
+          }
+        }
+      }
+
+      if ($hasupdates) {
+        node_save($node);
+      }
+    }
+
+    $zc->change_status($videodb->vid, VIDEO_RENDERING_COMPLETE);
+    watchdog('zencoder', 'Updated the Zencoder job @id to state @state.', array('@id' => $jobid, '@state' => $zc_output_state), WATCHDOG_INFO);
+  }
+  elseif ($state == VIDEO_RENDERING_FAILED) {
+    $zc->change_status($videodb->vid, VIDEO_RENDERING_FAILED);
+    
+    $errormsg = 'not given';
+    if (!empty($result->output->error_message)) {
+    $errormsg = $result->output->error_message;
+    }
+    $errorlink = '#';
+    if (!empty($result->output->error_link)) {
+      $errorlink = $result->output->error_link;
+    }
+    
+    watchdog('zencoder', 'Zencoder job @jobid failed to convert video.<br/>Error message: @errormessage<br/><a href="@error-link">More information about this error</a>',
+      array('@jobid' => $jobid, '@errormessage' => $errormsg, '@errorlink' => $errorlink), WATCHDOG_ERROR);
+  }
+}
+
+/**
+ * Implementation of hook_mail().
+ */
+function video_zencoder_mail($key, &$message, $params) {
+  $language = $message['language'];
+  $message['subject'] .= 'Zencoder Registration Details for Drupal Video';
+  $message['body'][] = video_zencoder_mail_default($params);
+}
+
+function video_zencoder_mail_default($params) {
+  return t(
+'Welcome to Zencoder for Drupal
+-------------------------------
+
+Your account has been created and is ready to start processing.
+
+Your account details are as below.
+
+E-mail address (login): @email
+API Key : @api_key
+Password : @password
+
+* Login URL: https://app.zencoder.com/login
+
+You can get help at the following places:
+
+* Our chat room at http://zencoder.com/chat
+* Customer forums at https://help.zencoder.com/forums
+* The help desk at https://help.zencoder.com/tickets/new
+
+We\'d love to hear from you. Let us know how we can help. Thanks!
+
+Thanks,
+-Zencoder for Drupal Team', array('@api_key' => $params['api_key'], '@password' => $params['password']));
+}
+

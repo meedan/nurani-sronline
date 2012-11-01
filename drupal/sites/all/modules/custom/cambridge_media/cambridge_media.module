@@ -1,0 +1,241 @@
+<?php
+
+define('CAMBRIDGE_MEDIA_TYPE', 'video');
+define('CAMBRIDGE_MEDIA_FIELD', 'field_video_url');
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function cambridge_media_field_formatter_info() {
+  return array(
+    'media_small' => array(
+      'label' => t('Cambridge Media: Small'),
+      'field types' => array('link'),
+    ),
+    'media_normal' => array(
+      'label' => t('Cambridge Media: Normal'),
+      'field types' => array('link'),
+    ),
+    'media_large' => array(
+      'label' => t('Cambridge Media: Large'),
+      'field types' => array('link'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cambridge_media_theme() {
+  $common = array(
+    'file' => 'cambridge_media.theme.inc'
+  );
+  return array(
+    'cambridge_media_formatter_media_small' => $common + array(
+      'arguments' => array('element' => NULL),
+    ),
+    'cambridge_media_formatter_media_normal' => $common + array(
+      'arguments' => array('element' => NULL),
+    ),
+    'cambridge_media_formatter_media_large' => $common + array(
+      'arguments' => array('element' => NULL),
+    ),
+    'cambridge_media' => $common + array(
+      'arguments' => array('media_id' => NULL, 'video_url' => NULL, 'thubmnail_path' => NULL, 'width' => 480, 'height' => 360, 'autoplay' => FALSE),
+    ),
+  );
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function cambridge_media_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id != CAMBRIDGE_MEDIA_TYPE . '_node_form') {
+    return;
+  }
+
+  $form['#validate'][] = 'cambridge_media_video_node_form_validate';
+}
+
+/**
+ * 'video_node_form' form validation callback.
+ */
+function cambridge_media_video_node_form_validate($form, &$form_state) {
+  $url = trim($form_state['values'][CAMBRIDGE_MEDIA_FIELD][0]['url']);
+
+  $data =& $form_state['values'][CAMBRIDGE_MEDIA_FIELD][0]['cambridge_media'];
+  if (!is_array($data)) {
+    $data = array();
+  }
+
+  if ($form_state['values']['vid']) {
+    $existing_data = cambridge_media_load_by_vid($form_state['values']['vid']);
+    foreach ($existing_data as $key => $value) {
+      if (!isset($data[$key])) {
+        $data[$key] = $value;
+      }
+    }
+  }
+
+  if ($url) {
+    $matches = array();
+    // Valid URL format #1: URL of media page
+    if (preg_match('@^http[s]?://upload.sms.cam.ac.uk/media/([0-9]+)@', $url, $matches)) {
+      $data['media_id'] = $matches[1];
+    }
+    // Valid URL format #2: URL of audio/video download
+    else if (preg_match('@^http[s]?://downloads.sms.cam.ac.uk/([0-9]+)@', $url, $matches)) {
+      $data['media_id'] = $matches[1];
+    }
+    else {
+      form_set_error(CAMBRIDGE_MEDIA_FIELD, t("Video URL is invalid, must be a Cambridge Streaming Media Service URL (ie: <em>http://upload.sms.cam.ac.uk/media/123456</em>)."));
+    }
+  }
+}
+
+function cambridge_media_load_by_nid($nid) {
+  return (array) db_fetch_array(db_query("SELECT * FROM {cambridge_media} WHERE nid = %d ORDER BY vid DESC", $nid));
+}
+
+function cambridge_media_load_by_vid($vid) {
+  return (array) db_fetch_array(db_query("SELECT * FROM {cambridge_media} WHERE vid = %d", $vid));
+}
+
+/**
+ * Implementation of hook_nodeapi().
+ */
+function cambridge_media_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'load':
+      if ($node->{CAMBRIDGE_MEDIA_FIELD}[0]) {
+        $data = cambridge_media_load_by_vid($node->vid);
+        $data['thumbnail_file'] = db_fetch_object(db_query("SELECT * FROM {files} WHERE fid = %d", $data['thumbnail_fid']));
+        $node->{CAMBRIDGE_MEDIA_FIELD}[0]['cambridge_media'] = $data;
+      }
+      break;
+
+    case 'update':
+    case 'insert':
+      $data = $node->{CAMBRIDGE_MEDIA_FIELD}[0]['cambridge_media'];
+      $data = cambridge_media_fetch_download_and_thumbnail($data);
+  
+      if ($data) {
+        cambridge_media_save($node->nid, $node->vid, $data);
+      }
+      break;
+  }
+}
+
+/**
+ * Creates or updates a {cambridge_media} record.
+ */
+function cambridge_media_save($nid, $vid, $data) {
+  $record = db_fetch_object(db_query("SELECT * FROM {cambridge_media} WHERE vid = %d", $vid));
+
+  if (!$record) {
+    $record = (object) array();
+  }
+
+  unset($data['id']); // Carrying the PK forward cause inserts to become updates
+  foreach($data as $key => $value) {
+    $record->$key = $value;
+  }
+
+  $record->nid = $nid;
+  $record->vid = $vid;
+
+  return drupal_write_record('cambridge_media', $record, $record->id ? array('id') : array());
+}
+
+/**
+ * Scrapes the Cambridge Streaming Media Service page for this media to capture
+ * the thumbnail URL and download URL of the media item.
+ */
+function cambridge_media_fetch_download_and_thumbnail($data) {
+  if (!$data['media_id']) {
+    return FALSE;
+  }
+
+  $media_url = 'http://upload.sms.cam.ac.uk/media/' . $data['media_id'];
+  $result = drupal_http_request($media_url);
+
+  if ($result->code != 200 || !$result->data) {
+    return FALSE;
+  }
+
+  // Fetch the thumbnail image URL
+  $matches = array();
+  if (preg_match_all('@<img class="icon" src="(/image/[0-9]+)[^"]*"@', $result->data, $matches) && isset($matches[1][0])) {
+    $data['thumbnail_url'] = 'http://upload.sms.cam.ac.uk' . $matches[1][0];
+    $data['thumbnail_fid'] = cambridge_media_download_thumbnail($data['thumbnail_url'], $data['media_id'], $data['thumbnail_fid']);
+  }
+  else {
+    $data['thumbnail_url'] = FALSE;
+    $data['thumbnail_fid'] = FALSE;
+  }
+
+  // Fetch the download URL
+  $matches = array();
+
+  if (preg_match_all('@http://downloads.sms.cam.ac.uk/mediaplayer.swf\?file=(http[s]?://downloads.sms.cam.ac.uk/' . $data['media_id'] . '/[0-9]+.mp4)@', $result->data, $matches) && isset($matches[1][0])) {
+    $data['download_url'] = $matches[1][0];
+  }
+  else {
+    $data['download_url'] = FALSE;
+  }
+
+  return $data;
+}
+
+/**
+ * Fetches a remote image onto the local disk and saves it to the
+ * {files} directory.
+ */
+function cambridge_media_download_thumbnail($url, $media_id, $old_fid) {
+  $result = drupal_http_request($url);
+
+  if ($result->code != 200 || !$result->data) {
+    return FALSE;
+  }
+
+  $directory = file_directory_path() . '/cambridge_media';
+  if (!is_dir($directory) && !@mkdir($directory)) {
+    return FALSE;
+  }
+
+  if ($old_fid) {
+    $old_file = db_fetch_object(db_query("SELECT * FROM {files} WHERE fid = %d", $old_fid));
+    if ($old_file) {
+      $old_md5 = md5_file($old_file->filepath);
+      $new_md5 = md5($result->data);
+
+      // Short circuit, no need to replace the file if the thumbnail
+      // has not changed.  Just return the old {files}.fid.
+      if ($old_md5 == $new_md5) {
+        return $old_file->fid;
+      }
+
+      file_delete($old_file->filepath);
+      db_query("DELETE FROM {files} WHERE fid = %d", $old_file->fid);
+    }
+  }
+
+  $filepath = $directory . '/' . $media_id . '.jpg';
+  $filepath = file_save_data($result->data, $filepath, FILE_EXISTS_RENAME);
+
+  if ($filepath) {
+    $file = (object) array();
+    $file->uid       = $GLOBALS['user']->uid;
+    $file->filename  = basename($filepath);
+    $file->filepath  = $filepath;
+    $file->filemime  = 'image/jpeg';
+    $file->filesize  = filesize($filepath);
+    $file->status    = FILE_STATUS_PERMANENT;
+    $file->timestamp = time();
+    drupal_write_record('files', $file, array());
+
+    return $file->fid;
+  }
+
+  return FALSE;
+}

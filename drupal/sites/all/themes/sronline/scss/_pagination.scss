@@ -1,0 +1,37 @@
+/*  */
+@mixin pagination-section-color($color) {
+  .item-list ul.pager li.pager-current {
+    background: $color;
+  }
+}
+
+/* Standard Drupal pagination */
+.item-list {
+  @include clearfix;
+  clear: both;
+
+  ul.pager {
+    text-align: right;
+    padding: 5px 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      &.pager-current {
+        padding: 5px 8px;
+        background: $color_body_text;
+        color: #fff;
+      }
+      &.pager-last {
+      }
+
+      a {
+        padding: 5px 8px;
+        margin: 0;
+        color: $color_body_text;
+        background: $pagination_grey;
+      }
+    }
+  }  
+}

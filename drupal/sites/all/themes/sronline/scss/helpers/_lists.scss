@@ -1,0 +1,45 @@
+/* Removes bullets and other common styles from <ul> and <ol> lists.
+   Usage:  ul {
+             @include undo-list-styles;
+           } */
+@mixin undo-list-style {
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+@mixin pdf-list-item($link_color) {
+  padding: 0 0 15px 51px;
+  background: url(../images/pdf_icon.gif) 0 2px no-repeat;
+
+  .field-content {
+    a {
+      @include blocky-link-set-color($link_color);
+    }
+  }
+}
+
+/* Green gradient style for the sub-navigation */
+@mixin sub-navigation-background {
+  background: $nav_submenu_background;
+  @include background(linear-gradient(color-stops(lighten($nav_submenu_background, 50%), $nav_submenu_background)));
+}
+
+@mixin sub-navigation-list-style {
+  @include undo-list-style;
+
+  li {
+    border-bottom: 1px solid $nav_submenu_separator;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+
+    a {
+      @include blocky-link-set-color($text_bundles_section_color);
+    }
+  }
+}

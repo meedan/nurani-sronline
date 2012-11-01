@@ -1,0 +1,82 @@
+
+// Theme textarea textfield button input[type=submit] ... etc.
+// Do sassybuttons stuff....
+
+/* Common CSS between the textfield and textarea elements */
+@mixin form-field {
+  
+  width: 100%;
+  /*width: 450px;*/
+  top: 4px;
+  padding: 3px 10px;
+  // font-size: 10px;
+  // border: 0;
+  color: darken($color_body_text, 20%);
+
+  @include border-radius(0.2em);
+  background: #eee;
+  border: 1px solid #ccc;
+
+  @include single-box-shadow(#ccc, 0, 0, 1px, 0.1px, inset);
+}
+
+@mixin undo-form-field {
+  width:auto;
+}
+
+.page-admin .form-text{@include undo-form-field;}
+
+.form-text {
+  @include form-field;
+  height: 23px;
+}
+.resizable-textarea {
+  width: 100%;
+}
+.form-textarea {
+  @include form-field;
+  padding: 10px 11px;
+}
+.form-select {
+  // TODO: Style this
+}
+.form-submit {
+  @include sronline-button($news_section_color);
+  margin-left:6px;
+  margin-top:2px;
+}
+// CKEditor info
+.textarea-identifier {
+  color: lighten($color_body_text, 30%);
+  font-size: 0.8em;
+}
+// Container for form buttons, eg: Submit, Cancel, etc.
+#edit-actions {
+  // margin-top: 20px;
+}
+
+
+/* CSS to fit the compact_forms plugin better into the sronline theme */
+.compact-form .compact-form-label {
+  color: lighten($color_body_text, 20%);
+  font-weight: normal;
+  font-size: 1.1em;
+  top: 6px;
+  left: 12px;
+
+  &:hover {
+    color: lighten($color_body_text, 50%);
+
+    .form-required {
+      color: lighten(#f00, 30%);
+    }
+  }
+}
+
+
+/* Grey form style */
+@mixin grey-form {
+  input.form-submit {
+    @include sronline-button(darken($form_grey, 5%), 1.2em, $color_body_text_light);
+  }
+}

@@ -1,0 +1,39 @@
+
+h1{color:$videos_section_color;}
+
+#content-header .messages, #breadcrumb {display:none;}
+
+h1{
+    margin-left: 300px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+
+#content-area {
+  @include section-colors($videos_section_color);
+
+  #message-404{
+    font-weight: bold;
+    margin-bottom: 1.2em;
+    margin-left: 233px;
+    margin-top: -19px;
+  }
+  
+  #search-form{margin-left:150px;}
+  
+  @include search-results;
+  
+   & > .box {
+    .content {
+      dl {
+        dt {
+          a {
+            @include blocky-link-set-color($videos_section_color);
+          }
+        }
+      }
+    }
+  }
+
+}

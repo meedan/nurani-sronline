@@ -1,0 +1,6 @@
+name = SR-Online Webform
+description = Alterations to the SR-Online webforms (Newsletter / Contact Us).
+core = 6.x
+version = 6.x-1.0
+package = SR-Online
+dependencies[] = webform

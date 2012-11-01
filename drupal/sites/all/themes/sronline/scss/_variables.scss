@@ -1,0 +1,33 @@
+// Sidebar widths.
+$first_sidebar_width: 200px;
+$second_sidebar_width: 300px;
+
+// Global general colours
+$color_body_text: #4A4A4A;
+$color_body_text_light: lighten($color_body_text, 20%);
+$pdf_icon_grey: #C9C6C4;
+$Page_heading_color:#562787;
+
+// Form colours
+$form_grey: #D6D6D6;
+$form_blue: #0080ff;
+
+// Navigation colours and variables
+$nav_z_index: 500;
+$nav_active_color: #2b5006;
+
+// Sub-navigation colours
+$nav_submenu_color: #2A4704;
+$nav_submenu_background: #E7EEDE;
+$nav_submenu_separator: #ccc;
+
+// Pagination
+$pagination_grey: #DEDEDE;
+
+// Section colours
+$default_section_color: #000;
+$news_section_color: #FF8B00;
+$text_bundles_section_color: #477707;
+$videos_section_color: #5E288C;
+$testimonials_section_color: #666;
+

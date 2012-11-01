@@ -86,7 +86,7 @@ function uuid_admin() {
   $form['settings']['sync'] = array(
     '#type' => 'submit',
     '#value' => t('Create missing UUIDs'),
-    '#submit' => array('uuid_sync'),
+    '#submit' => array('uuid_sync_submit'),
     '#weight' => 10,
   );
 
@@ -94,9 +94,16 @@ function uuid_admin() {
 }
 
 /**
+ * Submit handler for sync
+ */
+function uuid_sync_submit($form, &$form_state) {
+  return uuid_sync();
+}
+
+/**
  * Ensure all content and users have UUIDs, if they are supposed to.
  */
-function uuid_sync() {
+function uuid_sync($types = NULL) {
   // Users.
   if (variable_get('uuid_automatic_for_users', FALSE)) {
     $result = db_query("SELECT uid FROM {users} WHERE uid NOT IN (SELECT uid FROM {uuid_users})");
@@ -113,7 +120,9 @@ function uuid_sync() {
     }
   }
 
-  $types = variable_get('uuid_automatic_for_nodes', array());
+  if (!$types) {
+    $types = variable_get('uuid_automatic_for_nodes', array());
+  }
 
   // Remove disabled node types.
   $types = array_filter($types);

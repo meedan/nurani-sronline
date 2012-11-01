@@ -1,0 +1,98 @@
+@import "compass/css3";
+
+ 
+#nav{
+  width:960px;
+  height:41px;
+  background: url(../images/nav_bg.jpg) repeat-x center top;
+  margin:30px auto 0px auto;
+  padding:0px 20px 0px 20px;
+  position:absolute;
+  border-radius:6px;
+}
+
+ul.nav_main,
+ul.nav_main li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.nav_main {
+	position: relative;
+	z-index: 597;
+}
+
+ul.nav_main li:hover > ul {
+	visibility: visible;
+	color:#2a4704;
+} 
+ul.nav_main li.hover,
+ul.nav_main li:hover {
+	position: relative;
+	z-index: 599;
+	border-radius:6px;
+	cursor: pointer;
+	background: url(../images/Hover_bg.jpg) repeat-x left top;
+}
+
+ul.nav_main li {
+	float:left;
+	display:block;
+	height: 45px;
+	color: #999;
+	font: 14px Verdana;
+	background: url(../images/spacer.jpg) no-repeat right center;
+}
+ul.nav_main li a {
+	display:block;
+	padding: 11px 20px 0 20px;
+	height: 35px;
+	color: #fff;
+	font: 16px verdana;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+ul.nav_main li a:hover{
+	color:#2a4704;
+}
+
+
+ul.nav_sub {
+	visibility: hidden;
+	position: absolute;
+	padding:17px;
+	top: 39px;
+	left: 0px;
+	z-index: 598;
+	background: url(../images/drop_down_bg.jpg) repeat-x left top;
+	border-top-right-radius:6px;
+  border-bottom-right-radius:6px;
+  border-bottom-left-radius:6px;
+
+}
+
+
+ul.nav_sub li {
+	list-style:none;
+	display:block;
+	padding: 0;
+	height: 45px;
+	float: none;
+	width:188px;
+	border-bottom: 1px solid #e5e5e5;
+	background: none;
+	
+}
+
+ul.nav_sub li a {
+  color:#999;
+	list-style:none;
+	display:block;
+	//padding: 0 0 6px 0;
+	height: 25px;
+	float: none;
+	width:145px;
+	background: none;
+	font: 12px Arial, Helvetica, sans-serif;	
+}
+ul.nav_sub li a:hover{ background:#2a4704; color:#fff;}

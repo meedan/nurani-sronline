@@ -1,0 +1,3 @@
+<?php
+
+include_once('sronline_video.features.inc');

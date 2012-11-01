@@ -1,0 +1,41 @@
+// Things we downloaded..
+@import 'compass';
+@import 'compass/css3';
+@import 'compass/css3/border-radius'; 
+@import "compass/css3/box-shadow";
+@import 'sassy-buttons';
+
+
+// Global variables
+@import "variables";
+
+// Helper mixins
+@import "helpers/general";
+@import "helpers/doc-styles";
+@import "helpers/sronline-button";
+@import "helpers/boxes";
+@import "helpers/lists";
+@import "helpers/article-list";
+@import "helpers/search-results";
+
+// Bootstrap the SR-Online site style, the layout.scss includes and renders
+// all styles.
+@import "layout";
+
+// body.admin-menu { @include debug; }
+
+
+/* Specific site sections and pages */
+body.front                     { @import "pages/page-front"; }
+body.page-news                 { @import "pages/page-news"; }
+body.page-videos               { @import "pages/page-videos"; }
+body.page-text-bundles         { @import "pages/page-text-bundles"; }
+body.page-content-contact-us   { @import "pages/page-content-contact-us"; }
+body.page-search               { @import "pages/page-search"; }
+body.page-search404            { @import "pages/page-search404"; }
+
+// Node types
+body.node-type-basic-page      { @import "nodes/node-basic-page"; }
+body.node-type-webform         { @import "nodes/node-webform"; }
+body.node-type-news-articles   { @import "nodes/node-news-page"; }
+

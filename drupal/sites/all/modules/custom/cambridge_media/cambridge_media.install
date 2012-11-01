@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function cambridge_media_install() {
+  drupal_install_schema('cambridge_media');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function cambridge_media_uninstall() {
+  drupal_uninstall_schema('cambridge_media');
+}
+
+/**
+ * Implements hook_schema().
+ */
+function cambridge_media_schema() {
+  $schema['cambridge_media'] = array(
+    'description' => 'Table of Cambridge Media data.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a media item.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'nid' => array(
+        'description' => 'The {node}.nid for this media.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'vid' => array(
+        'description' => 'The {node}.vid for this media.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'media_id' => array(
+        'description' => 'The Cambridge Streaming Media Service id.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ),
+      'download_url' => array(
+        'description' => 'The Cambridge Streaming Media Service download url.',
+        'type' => 'varchar',
+        'length' => 255,
+      ),
+      'thumbnail_url' => array(
+        'description' => 'The Cambridge Streaming Media Service download url.',
+        'type' => 'varchar',
+        'length' => 255,
+      ),
+      'thumbnail_fid' => array(
+        'description' => 'The {files}.fid for the locally save thumbnail.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ),
+    ),
+    'indexes' => array(
+      'nid' => array('nid'),
+      'vid' => array('vid'),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}

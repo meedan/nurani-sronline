@@ -1,0 +1,11 @@
+/* ImageCache styles */
+img.imagecache {
+  @include bordered-box;
+}
+
+/* Use this to selectively remove the imagecache style */
+@mixin undo-imagecache-style {
+  img.imagecache {
+    @include undo-bordered-box;
+  }
+}

@@ -1,0 +1,54 @@
+From c74ca06d7f95d6decac352540fd2bcf1150341fd Mon Sep 17 00:00:00 2001
+From: James Andres <james.andres@gmail.com>
+Date: Thu, 31 May 2012 15:07:08 -0400
+Subject: [PATCH] Adding new resets for node attributes: revision_timestamp
+ and last_comment_timestamp.
+
+---
+ node_export.module    |    8 ++++++++
+ node_export.pages.inc |   10 ++++++++++
+ 2 files changed, 18 insertions(+)
+
+diff --git a/node_export.module b/node_export.module
+index 6193546..61f3346 100755
+--- a/node_export.module
++++ b/node_export.module
+@@ -618,6 +618,14 @@ function node_export_node_clone($original_node) {
+       $node->changed = NULL;
+     }
+ 
++    if (variable_get('node_export_reset_revision_timestamp_'. $node->type, TRUE)) {
++      $node->revision_timestamp = NULL;
++    }
++
++    if (variable_get('node_export_reset_last_comment_timestamp_'. $node->type, TRUE)) {
++      $node->last_comment_timestamp = NULL;
++    }
++
+     if (variable_get('node_export_reset_menu_'. $node->type, TRUE)) {
+       $node->menu = NULL;
+     }
+diff --git a/node_export.pages.inc b/node_export.pages.inc
+index bcaa712..56ee81b 100755
+--- a/node_export.pages.inc
++++ b/node_export.pages.inc
+@@ -165,6 +165,16 @@ function node_export_settings() {
+       '#title' => t('Changed time (<em>Last updated</em> date/time)'),
+       '#default_value' => variable_get('node_export_reset_changed_'. $type, TRUE),
+     );
++    $form['publishing'][$type]['node_export_reset_revision_timestamp_'. $type] = array(
++      '#type' => 'checkbox',
++      '#title' => t('Revision changed time'),
++      '#default_value' => variable_get('node_export_reset_revision_timestamp_'. $type, TRUE),
++    );
++    $form['publishing'][$type]['node_export_reset_last_comment_timestamp_'. $type] = array(
++      '#type' => 'checkbox',
++      '#title' => t('Last comment time (date/time the last comment was made)'),
++      '#default_value' => variable_get('node_export_reset_last_comment_timestamp_'. $type, TRUE),
++    );
+     $form['publishing'][$type]['node_export_reset_menu_'. $type] = array(
+       '#type' => 'checkbox',
+       '#title' => t('Menu link'),
+-- 
+1.7.9.4
+

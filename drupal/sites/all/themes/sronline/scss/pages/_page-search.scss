@@ -1,0 +1,22 @@
+/* Drupal search results page */
+h1{
+  color: $news_section_color;
+}
+
+#content-area {
+  @include section-colors($news_section_color);
+
+  @include search-results;
+  
+   & > .box {
+    .content {
+      dl {
+        dt {
+          a {
+            @include blocky-link-set-color($news_section_color);
+          }
+        }
+      }
+    }
+  }
+}

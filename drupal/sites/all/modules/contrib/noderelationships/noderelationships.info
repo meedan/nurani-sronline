@@ -8,9 +8,9 @@ dependencies[] = modalframe
 dependencies[] = jquery_ui
 core = 6.x
 
-; Information added by drupal.org packaging script on 2011-02-25
-version = "6.x-1.x-dev"
+; Information added by drupal.org packaging script on 2012-05-22
+version = "6.x-1.6+10-dev"
 core = "6.x"
 project = "noderelationships"
-datestamp = "1298619748"
+datestamp = "1337646843"
 

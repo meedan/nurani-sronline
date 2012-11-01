@@ -1,0 +1,200 @@
+/* <a> tag style which creates a strong effect on hover */
+@mixin blocky-link {
+  margin-left: -5px;
+  padding: 3px 5px;
+  display: block;
+  text-decoration: none;
+  width:100%;
+  color: $color_body_text;
+
+  &:hover {
+    background: $color_body_text;
+    color:#fff;
+  }
+}
+/* Undoes the blocky-link style, of course */
+@mixin undo-blocky-link {
+  margin: auto;
+  padding: inherit;
+  display: inline;
+  width: auto;
+  &:hover {
+    background: transparent;
+    color: $color_body_text;
+  }
+}
+/* Used in conjunction with blocky-link to colourize the link */
+@mixin blocky-link-set-color($color, $hover_text_color: #fff) {
+  color: $color;
+ 
+  &:hover {
+    background: $color;
+    color: $hover_text_color;
+
+  }
+}
+/* Grows a blocky-link, making it look better for <h123> tags
+   @param $size
+          A multiplier indicating the growth factor, eg: 1.2 */
+@mixin blocky-link-set-size($size) {
+  margin-left: #{$size * -5}px !important;
+  padding: #{$size * 3}px #{$size * 5}px !important;
+}
+
+/* Helper to apply colourized blocky-link style a site section or .block */
+@mixin section-colors($color){
+  @include pagination-section-color($color);
+
+  a {
+    padding:7px 5px;
+    @include blocky-link-set-color($color);
+  }
+
+  h2,h3,h4 {
+    color:$color;
+  } 
+}
+
+
+/* === SITE TYPOGRAPHY === */
+body {
+  font-family:verdana;
+  font-size:12px;
+  line-height:18px;
+  color: $color_body_text;
+  background:top center #c9c5c2;
+  
+}
+
+b,strong{ font-weight:bold;}
+em{font-style: italic; font-weight: bold;}
+
+a {
+  text-decoration: none;
+  //color: #000; // changed the general site links
+  color:$videos_section_color;
+
+  &:hover {
+    text-decoration: underline;
+    /*@include blocky-link;*/
+    display:inline;
+  }
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 0.75em;
+
+  a {
+    @include blocky-link-set-size(3);
+  }
+}
+h2,h3,h4 {
+  font-size: 1.2em;
+  line-height: 1;
+  margin-bottom: 1.00em;
+
+  a {
+    @include blocky-link-set-size(2);
+  }
+}
+// h3,h4 {
+//   font-size: 1.2em;
+//   line-height: 1.25;
+//   margin-bottom: 1.25em;
+// }
+// h4 {
+//   font-size: 1em;
+//   font-weight: bold;
+//   margin-bottom: 1.50em;
+// }
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Drupal messages */
+.messages {
+  padding: 9px;
+  margin: 1em 0;
+  // Default is green coloured
+  color: #336600;
+  background: #ccff88;
+  border: 1px solid #bbee77;
+
+  &.warning {
+    color: #884400;
+    background: #ffee66;
+    border-color: #eedd55;
+  }
+  &.error {
+    color: white;
+    background: #ee6633;
+    border-color: #dd5522;
+  }
+}
+
+
+ .content-area, .sidebar.second, #content-header {
+ /* a {
+    @include undo-blocky-link;
+    color:$videos_section_color;
+  }*/
+  h3, h4{
+      a{@include blocky-link;}
+  } 
+   
+
+  // Undo aspects of the blocky-link style in some areas
+  .views-admin-links {
+    a {
+      display: inline;
+    }
+  }
+  .tabs{
+    a {display:inline; padding:0 10px;}
+  }
+  a.context-block-region {
+    display: none;
+  }
+  .field-items a {
+    display: inline;
+  }
+  .pager a {
+    display: inline;
+  }
+  
+  .breadcrumb a{ 
+    text-decoration:underline; 
+    display:inline;
+    @include undo-blocky-link;
+    
+    &:hover {
+    background:yellow; //change later... change anchor to links in Ckeditor profile.
+    text-decoration: underline;
+    }
+  }
+ 
+}
+
+ ul,ol{ 
+     margin-left:30px; 
+ }
+ 
+ li {padding:5px;}
+ 
+ ul, ul li{
+    list-style-type:disc;
+    
+ }
+ ol, ol li{ 
+    list-style:decimal;
+ }
+ sup{
+    font-size:xx-small;
+    vertical-align:super;
+ }
+ 
+ .page-admin{@include undo-blocky-link;}
+
+

@@ -1,0 +1,68 @@
+// Theme the news page..
+
+h1{color:$news_section_color;}
+  
+   #content-inner{
+     float:left;
+   }
+
+
+
+.view-news-articles{
+ @include section-colors($news_section_color);
+  & > .attachment {
+      .views-field-field-news-image-fid{
+          float:left;
+          margin-top:-57px;
+           a{
+              @include undo-blocky-link;
+            }
+      }
+      
+      .views-field-title,.views-field-view-node {
+        margin-left: 331px;
+      }
+
+      
+    
+  }
+  
+  @include article-list;
+  
+   &.view-display-id-page_1 > .view-content {
+    .views-row {
+      .views-field-title,.views-field-view-node {
+        margin-left: 130px;
+      }
+      
+      .views-field-field-news-image-fid{
+      margin-top:-33px;
+      
+       a{
+          @include undo-blocky-link;
+       }
+      
+      }
+    
+    }
+  }  
+
+}
+
+   
+
+
+      
+     
+    
+
+
+
+
+ 
+  
+
+
+
+
+

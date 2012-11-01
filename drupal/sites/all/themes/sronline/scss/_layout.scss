@@ -1,0 +1,122 @@
+// Globally applied CSS
+//@import "reset";
+@import "compass/reset";
+@import "default";
+@import "pagination";
+@import "typography";
+@import "image-styles";
+@import "blocks";
+@import "forms";
+@import "nodes";
+@import "header";
+@import "navigation";
+@import "footer";
+@import "testimonial";
+
+
+// TODO: Have Chris look at this. Refactor this code, what is this doing?
+// #bottom { width:942px; margin:448px 30px; position:absolute; height:100%; }
+
+/* Main page layout structure, from basic theme's layout.sass */
+#main, #header, #footer {
+  width: 960px;
+  margin: 0 auto;
+}
+#header{margin-top:30px;}
+#content {
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  padding: 0;
+}
+.sidebar {
+  float: left;
+}
+#sidebar-second {
+  float: right;
+}
+#footer {
+  float: none;
+  clear: both;
+}
+#header,
+#footer,
+.mission,
+.breadcrumb,
+.node {
+  clear: both;
+}
+.two-sidebars,
+.sidebar-left {
+  .center {
+    margin-left: $first_sidebar_width + 20px;
+  }
+}
+#sidebar-first {
+  width: $first_sidebar_width;
+  margin-right: -($first_sidebar_width + 20px);
+}
+.two-sidebars,
+.sidebar-right {
+  .center {
+    margin-right: $second_sidebar_width + 20px;
+  }
+}
+#sidebar-second {
+  width: $second_sidebar_width;
+}
+
+
+/* Styles for the main layout */
+#bg {
+  height: 200%;
+  left: -50%;
+  position: fixed;
+  top: 0%;
+  width: 200%;
+  z-index: -9999;
+}
+#bg img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#content-inner {
+  background: #fff;
+  #content-top {
+    padding: 0 10px;
+
+    #content-top-left {
+      float: left;
+      width: 620px;
+      margin-right: 27px;
+    }
+    #content-top-right {
+      width: 293px;
+      float: left;
+    }    
+  }
+
+  #content-header {
+    clear: both;
+    padding: 20px 40px 10px 40px;
+  }
+  #content-area {
+    clear: both;
+    padding: 0 40px 30px 40px;
+  }
+}
+
+
+
+
+
+
+
+
+

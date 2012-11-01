@@ -1,0 +1,51 @@
+/* Common design elements between the Videos and News page article listings */
+@mixin article-list {
+
+// Styles common to both the featured video and the other videos
+
+.view-content {
+    .views-row {
+      // A better clearfix for this situation, the @include clearfix; adds
+      // overflow: hidden; which will affect the blocky-link style on the
+      // headings
+      float: left;
+
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed $color_body_text;
+
+      & > div {
+        margin-bottom: 20px;
+      }
+
+      .views-field-title {
+        margin-bottom: 0;
+      }
+
+      .views-field-view-node{
+        a{
+          display:inline;
+          margin-left:2px;
+        }
+      }
+
+     
+    }
+  }
+  
+   // Styles just for the bottom section
+  &.view-display-id-page_1 > .view-content{
+    .views-row {
+      clear: left;
+      .views-field-field-video-url-url, .views-field-field-news-image-fid{
+        float: left;
+      }
+      &.views-row-last {
+        border-bottom: none;
+      }
+
+    }
+  }
+
+  
+}

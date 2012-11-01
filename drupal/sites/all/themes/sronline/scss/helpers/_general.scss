@@ -1,0 +1,12 @@
+/* Removes the white background from the content area and cleans up the padding
+   to allow for custom page layout, block placement.  Very useful for Panels
+   pages. */
+@mixin remove-content-background {
+  #content-inner {
+    background: none;
+
+    #content-area {
+      padding: 0 10px;
+    }
+  }
+}

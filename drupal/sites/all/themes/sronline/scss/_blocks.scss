@@ -1,0 +1,190 @@
+/* General blocks style */
+@mixin block-title {
+  height: 21px; /* 24px - 3px padding */
+  padding: 3px 0 0 21px;
+  margin-bottom: 22px;
+  /*overflow: hidden;*/
+  background: url(../images/title_blip_black.png) 0 0 no-repeat;
+
+  font-size: 1.4em;
+  font-weight: lighter;
+  color: $default_section_color;
+}
+@mixin undo-block-title {
+  height: auto;
+  padding: 0;
+  margin: auto;
+  background: none;
+}
+
+/* Helpers to apply the correct colour to specific blocks */
+@mixin block-news-section {
+  .title {
+    color: $news_section_color;
+    background: url(../images/title_blip_orange.png) 0 0 no-repeat;
+  }
+}
+@mixin block-text-bundles-section {
+  .title {
+    color: $text_bundles_section_color;
+    background: url(../images/title_blip_green2.png) 0 0 no-repeat;
+  }
+}
+@mixin block-videos-section {
+  .title {
+    color: $videos_section_color;
+    background: url(../images/title_blip_purple.png) 0 0 no-repeat;
+  }
+}
+@mixin block-testimonials-section {
+  .title {
+    color: $videos_section_color;
+    background: url(../images/title_blip_purple.png) 0 0 no-repeat;
+  }
+}
+
+/* Helpers to remove the background and rounded corners style from a block */
+@mixin undo-block-style {
+  background: transparent;
+  border: none;
+}
+@mixin undo-block-style-no-title {
+  @include undo-block-style;
+  .title { display: none; }
+}
+
+/* Helper to manage the look of blocks in the top region.  This is reused by
+   the panels homepage layout */
+@mixin content-top-blocks {
+  #block-views-Featured_video_home-block_1 {
+    padding: 3px;
+    width: 293px;
+    float: right;
+  }
+  #block-webform-client-block-1 {
+    width: 252px;
+    /*height: 83px;*/
+    float: right;
+
+    .form-text {
+      width: 200px;
+    }
+  }
+}
+#content-top {
+  @include content-top-blocks;
+}
+
+
+/* === GENERAL BLOCK STYLE === */
+.block, .pane-block {
+  @include rounded-box-with-gradient;
+  padding: 18px 20px 18px 27px; /* Basically "18px 27px" but adds a little grace to the right edge to avoid content falling over */
+  margin: 0 0 20px 0;
+  background: #fff;
+  overflow: visible; /* Box model tweak, expands all blocks */
+
+  .title {
+    @include block-title;
+  }
+}
+
+
+/* ==== GLOBALLY VISIBLE BLOCKS ==== */
+/* Menu current sub-tree block */
+#block-menu_block-1 {
+  @include sub-navigation-background;
+
+  .title {
+    display: none;
+  }
+  ul {
+    @include sub-navigation-list-style;
+  }
+}
+
+/* Featured text bundles block */
+#block-views-text_bundles_featured-block_1 {
+  @include block-text-bundles-section;
+  @include section-colors($text_bundles_section_color);
+
+  .view-content ul {
+    @include undo-list-style;
+
+    li {
+      padding: 0 0 20px 0;
+      /*@include pdf-list-item($text_bundles_section_color);*/
+    }
+  }
+}
+
+/* Featured testimonials block */
+#block-views-32bfceaf56e91407f76ac3a77c3d8a4b {
+  @include block-testimonials-section;
+
+  .views-row {
+    margin-bottom: 20px;
+    background: url(../images/purpule_closequote.png) no-repeat bottom right;
+
+    .views-field-body {
+      .field-content {
+        background: url(../images/purpule_openquote.png) no-repeat 0 0; // TODO: Coloured quotes!
+        padding-top: 15px;
+      }
+      p {
+        text-indent: 50px;
+      }
+    }
+    .views-field-field-quoted-from-value {
+      text-align: right;
+      .field-content {
+        padding-right: 50px;
+        color: $testimonials_section_color;
+      }
+    }
+  }
+}
+
+/* Newsletter block */
+#block-webform-client-block-1 {
+  @include block-news-section;
+
+  .webform-component-email, .webform-component-textfield {
+    float: left;
+    .form-item {
+      margin: 0;
+    }
+  }
+  .form-text {
+    /*width: 130px;*/
+    margin-bottom: 15px;
+    width: 200px;
+  }
+  #edit-actions {
+    float: left;
+    /*margin-left: 10px;*/
+  }
+}
+
+/* Featured News block */
+#block-views-news_articles_featured-block_1 {
+  @include block-news-section;
+  @include section-colors($news_section_color);
+
+  .view-news-articles-featured {
+    .views-row {
+      clear: left;
+      margin-bottom: 20px;
+    }
+    .views-field-field-news-image-fid {
+      float: left;
+    }
+    .views-field-title, .views-field-view-node {
+
+      margin-left: 88px;
+    }
+    
+    .field-content{}
+     
+  }
+}

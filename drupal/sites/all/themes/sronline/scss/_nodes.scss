@@ -1,0 +1,35 @@
+.node {
+  .submitted {
+
+  }
+
+  // TODO: Keep working on this.....
+  .links {
+    margin-top: 20px;
+    @include border-radius(0.2em);
+
+    a {
+      @include undo-blocky-link;
+      @include sronline-button($form_blue, 12px, darken(#fff, 10%));
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  // TODO: Move to typography, probably.
+  p {
+    margin-bottom: 1.5em;
+    line-height:1.7em;
+    /*text-align:justify;*/
+  }
+  
+  
+  & > div { margin-top: 10px;}
+  
+  .field-field-news-image{float:right; margin:5px 0 0 20px;}
+  .field-field-video-url{ margin-bottom: 20px;}
+ 
+  
+}

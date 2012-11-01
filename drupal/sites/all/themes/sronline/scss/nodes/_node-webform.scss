@@ -1,0 +1,11 @@
+// Theme the webform
+
+.node-type-webform{
+
+	.node-inner {
+		.resizable-textarea, .form-text{
+			width: 450px;
+		}
+
+	}
+}
