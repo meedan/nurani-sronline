@@ -13,20 +13,20 @@ function _cambridge_media_data_from_element($element) {
 
 function theme_cambridge_media_formatter_media_small($element) {
   $data = _cambridge_media_data_from_element($element);
-  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 293, 173, FALSE);
+  return theme('cambridge_media', $data['media_id'], $data['download_urls'], $data['thumbnail_file']->filepath, 293, 173, FALSE);
 }
 
 function theme_cambridge_media_formatter_media_normal($element) {
   $data = _cambridge_media_data_from_element($element);
-  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 308, 211, FALSE);
+  return theme('cambridge_media', $data['media_id'], $data['download_urls'], $data['thumbnail_file']->filepath, 308, 211, FALSE);
 }
 
 function theme_cambridge_media_formatter_media_large($element) {
   $data = _cambridge_media_data_from_element($element);
-  return theme('cambridge_media', $data['media_id'], $data['download_url'], $data['thumbnail_file']->filepath, 556, 322, FALSE);
+  return theme('cambridge_media', $data['media_id'], $data['download_urls'], $data['thumbnail_file']->filepath, 556, 322, FALSE);
 }
 
-function theme_cambridge_media($media_id, $video_url, $thubmnail_path, $width, $height, $autoplay) {
+function theme_cambridge_media($media_id, $video_urls, $thubmnail_path, $width, $height, $autoplay) {
   $path = 'sites/all/libraries/mediaelement/build';
   drupal_add_js($path . '/mediaelement-and-player.min.js');
   drupal_add_css($path . '/mediaelementplayer.min.css');
@@ -36,12 +36,22 @@ function theme_cambridge_media($media_id, $video_url, $thubmnail_path, $width, $
   $height        = filter_xss($height);
   $thubmnail_url = url($thubmnail_path);
   $preload       = 'none';
+  $mp4_video_url = NULL;
 
   $output .= '<video controls="controls" width="' . $width . '" height="' . $height . '" poster="' . $thubmnail_url . '" preload="' . $preload . '"' . ($autoplay ? ' autoplay="true"' : '') . '>';
-  $output .=   '<source type="video/mp4" src="' . filter_xss($video_url) . '" />';
+  foreach ($video_urls as $type => $video_url) {
+    switch ($type) {
+      case 'ogv':  $mime = 'video/ogg'; break;
+      case 'webm': $mime = 'video/webm'; break;
+      case 'mp4':
+                   $mp4_video_url = $video_url;
+      default:     $mime = 'video/mp4'; break;
+    }
+    $output .=   '<source type="' . $mime . '" src="' . filter_xss($video_url) . '" />';
+  }
   $output .=   '<object width="' . $width . '" height="' . $height . '" type="application/x-shockwave-flash" data="' . $path . '/flashmediaelement.swf">';
   $output .=     '<param name="movie" value="' . $path . '/flashmediaelement.swf" />';
-  $output .=     '<param name="flashvars" value="controls=true&amp;poster=' . urlencode($thubmnail_url) . '&amp;file=' . urlencode($video_url) . '" />';
+  $output .=     '<param name="flashvars" value="controls=true&amp;poster=' . urlencode($thubmnail_url) . '&amp;file=' . urlencode($mp4_video_url) . '" />';
   $output .=     '<img src="' . $thubmnail_url . '" width="' . $width . '" height="' . $height . '" title="No video playback capabilities" />';
   $output .=   '</object>';
   $output .= '</video>';
