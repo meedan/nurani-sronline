@@ -45,10 +45,12 @@ function cambridge_media_schema() {
         'unsigned' => TRUE,
         'not null' => FALSE,
       ),
-      'download_url' => array(
-        'description' => 'The Cambridge Streaming Media Service download url.',
-        'type' => 'varchar',
-        'length' => 255,
+      'download_urls' => array(
+        'description' => 'The Cambridge Streaming Media Service download urls.',
+        'type' => 'text',
+        'size' => 'big',
+        'serialize' => TRUE,
+        'not null' => FALSE,
       ),
       'thumbnail_url' => array(
         'description' => 'The Cambridge Streaming Media Service download url.',
@@ -69,4 +71,45 @@ function cambridge_media_schema() {
     'primary key' => array('id'),
   );
   return $schema;
+}
+
+/**
+ * Implementation of hook_update_N().
+ */
+function cambridge_media_update_6000() {
+  $ret = array();
+
+  db_change_field(
+    $ret,
+    'cambridge_media',
+    'download_url',
+    'download_urls',
+    array(
+      'description' => 'The Cambridge Streaming Media Service download urls.',
+      'type' => 'text',
+      'size' => 'big',
+      'serialize' => TRUE,
+    )
+  );
+  cache_clear_all('schema', 'cache');
+  cache_clear_all();
+
+  $result = db_query("SELECT * FROM {cambridge_media} ORDER BY id");
+  $count = 0;
+  $skipped = 0;
+
+  while ($media = db_fetch_object($result)) {
+    if (unserialize($media->download_urls) === FALSE) {
+      $media->download_urls = array('mp4' => $media->download_urls);
+      drupal_write_record('cambridge_media', $media, 'id');
+      $count++;
+    }
+    else {
+      $skipped++;
+    }
+  }
+
+  $ret[] = array('success' => TRUE, 'query' => "Updated $count record(s) and skipped $skipped.");
+
+  return $ret;
 }
