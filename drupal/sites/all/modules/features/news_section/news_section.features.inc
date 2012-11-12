@@ -20,7 +20,7 @@ function news_section_default_fe_nodequeue_queue() {
   $fe_nodequeue_queue->name = 'featured_news_articles';
   $fe_nodequeue_queue->title = 'featured news article';
   $fe_nodequeue_queue->subqueue_title = '';
-  $fe_nodequeue_queue->size = '4';
+  $fe_nodequeue_queue->size = '2';
   $fe_nodequeue_queue->link = 'feature news articles';
   $fe_nodequeue_queue->link_remove = 'unfeature news articles';
   $fe_nodequeue_queue->owner = 'nodequeue';
