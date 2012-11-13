@@ -281,7 +281,7 @@ function home_section_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'Testimonials');
-  $handler->override_option('items_per_page', 2);
+  $handler->override_option('items_per_page', 3);
   $handler = $view->new_display('block', 'Home page testimonial', 'block_1');
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);

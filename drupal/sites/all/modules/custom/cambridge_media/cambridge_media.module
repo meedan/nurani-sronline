@@ -41,7 +41,7 @@ function cambridge_media_theme() {
       'arguments' => array('element' => NULL),
     ),
     'cambridge_media' => $common + array(
-      'arguments' => array('media_id' => NULL, 'video_url' => NULL, 'thubmnail_path' => NULL, 'width' => 480, 'height' => 360, 'autoplay' => FALSE),
+      'arguments' => array('media_id' => NULL, 'video_urls' => NULL, 'thubmnail_path' => NULL, 'width' => 480, 'height' => 360, 'autoplay' => FALSE),
     ),
   );
 }
@@ -94,11 +94,15 @@ function cambridge_media_video_node_form_validate($form, &$form_state) {
 }
 
 function cambridge_media_load_by_nid($nid) {
-  return (array) db_fetch_array(db_query("SELECT * FROM {cambridge_media} WHERE nid = %d ORDER BY vid DESC", $nid));
+  $media = db_fetch_array(db_query("SELECT * FROM {cambridge_media} WHERE nid = %d ORDER BY vid DESC", $nid));
+  $media['download_urls'] = unserialize($media['download_urls']);
+  return $media;
 }
 
 function cambridge_media_load_by_vid($vid) {
-  return (array) db_fetch_array(db_query("SELECT * FROM {cambridge_media} WHERE vid = %d", $vid));
+  $media = db_fetch_array(db_query("SELECT * FROM {cambridge_media} WHERE vid = %d", $vid));
+  $media['download_urls'] = unserialize($media['download_urls']);
+  return $media;
 }
 
 /**
@@ -118,7 +122,7 @@ function cambridge_media_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     case 'insert':
       $data = $node->{CAMBRIDGE_MEDIA_FIELD}[0]['cambridge_media'];
       $data = cambridge_media_fetch_download_and_thumbnail($data);
-  
+
       if ($data) {
         cambridge_media_save($node->nid, $node->vid, $data);
       }
@@ -131,6 +135,7 @@ function cambridge_media_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
  */
 function cambridge_media_save($nid, $vid, $data) {
   $record = db_fetch_object(db_query("SELECT * FROM {cambridge_media} WHERE vid = %d", $vid));
+  $record->download_urls = unserialize($record->download_urls);
 
   if (!$record) {
     $record = (object) array();
@@ -177,11 +182,28 @@ function cambridge_media_fetch_download_and_thumbnail($data) {
   // Fetch the download URL
   $matches = array();
 
-  if (preg_match_all('@http://downloads.sms.cam.ac.uk/mediaplayer.swf\?file=(http[s]?://downloads.sms.cam.ac.uk/' . $data['media_id'] . '/[0-9]+.mp4)@', $result->data, $matches) && isset($matches[1][0])) {
-    $data['download_url'] = $matches[1][0];
+  if (preg_match_all('@http://downloads.sms.cam.ac.uk/mediaplayer.swf\?file=(http[s]?://downloads.sms.cam.ac.uk/' . $data['media_id'] . ')/[0-9]+.mp4@', $result->data, $matches) && isset($matches[1][0])) {
+    // Head to the public downloads listing and fetch the formats available.
+    $download_url_base = $matches[1][0];
+    $result2 = drupal_http_request($download_url_base);
+
+    if (!($result2->code == 200 || $result2->redirect_code == 200) || !$result2->data) {
+      return FALSE;
+    }
+
+    if (preg_match_all('/href="([0-9]+\.(mp4|webm|ogv))"/m', $result2->data, $matches2) && isset($matches2[1][0])) {
+      $data['download_urls'] = array();
+      foreach ($matches2[1] as $key => $file) {
+        $type = $matches2[2][$key];
+        $data['download_urls'][$type] = $download_url_base . '/' . $file;
+      }
+    }
+    else {
+      $data['download_urls'] = FALSE;
+    }
   }
   else {
-    $data['download_url'] = FALSE;
+    $data['download_urls'] = FALSE;
   }
 
   return $data;
