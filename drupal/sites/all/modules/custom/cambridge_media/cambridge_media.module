@@ -80,7 +80,7 @@ function cambridge_media_video_node_form_validate($form, &$form_state) {
   if ($url) {
     $matches = array();
     // Valid URL format #1: URL of media page
-    if (preg_match('@^http[s]?://upload.sms.cam.ac.uk/media/([0-9]+)@', $url, $matches)) {
+    if (preg_match('@/media/([0-9]+)@', $url, $matches)) {
       $data['media_id'] = $matches[1];
     }
     // Valid URL format #2: URL of audio/video download
@@ -180,26 +180,18 @@ function cambridge_media_fetch_download_and_thumbnail($data) {
   }
 
   // Fetch the download URL
+  $formats_url = 'http://upload.sms.cam.ac.uk/media/' . $data['media_id'] . '/formats';
+  $result = drupal_http_request($formats_url);
   $matches = array();
 
-  if (preg_match_all('@http://downloads.sms.cam.ac.uk/mediaplayer.swf\?file=(http[s]?://downloads.sms.cam.ac.uk/' . $data['media_id'] . ')/[0-9]+.mp4@', $result->data, $matches) && isset($matches[1][0])) {
-    // Head to the public downloads listing and fetch the formats available.
-    $download_url_base = $matches[1][0];
-    $result2 = drupal_http_request($download_url_base);
-
-    if (!($result2->code == 200 || $result2->redirect_code == 200) || !$result2->data) {
-      return FALSE;
-    }
-
-    if (preg_match_all('/href="([0-9]+\.(mp4|webm|ogv))"/m', $result2->data, $matches2) && isset($matches2[1][0])) {
-      $data['download_urls'] = array();
-      foreach ($matches2[1] as $key => $file) {
-        $type = $matches2[2][$key];
-        $data['download_urls'][$type] = $download_url_base . '/' . $file;
-      }
-    }
-    else {
-      $data['download_urls'] = FALSE;
+  if ($result->code != 200 || !$result->data) {
+    return $data['download_urls'] = FALSE;
+  }
+  else if (preg_match_all('@href="(http[s]?://[^"]+\.(mp4|webm|ogv))"@m', $result->data, $matches) && isset($matches[1][0])) {
+    $data['download_urls'] = array();
+    foreach ($matches[1] as $key => $file) {
+      $type = $matches[2][$key];
+      $data['download_urls'][$type] = $file;
     }
   }
   else {
